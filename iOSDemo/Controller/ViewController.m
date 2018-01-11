@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "TimerViewController.h"
-#import "iOSTest-Swift.h"
+#import "iOSDemo-Swift.h"
 
 
 typedef void(^myBlock)();
