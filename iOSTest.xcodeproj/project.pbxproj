@@ -145,12 +145,9 @@
 		CC3D2EAD2005F9D6009E87F6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				CC3D2EB12005FAA0009E87F6 /* UIViewController+GetViewController.h */,
-				CC3D2EB22005FAA0009E87F6 /* UIViewController+GetViewController.m */,
-				CC3D2EB42005FBAC009E87F6 /* UIView+Badge.h */,
-				CC3D2EB52005FBAC009E87F6 /* UIView+Badge.m */,
-				CCE7915020073BDA0055C51D /* UIImage+Scale.h */,
-				CCE7915120073BDA0055C51D /* UIImage+Scale.m */,
+				CCE7915520073DE80055C51D /* UIImage */,
+				CCE7915420073DDC0055C51D /* UIView */,
+				CCE7915320073DC90055C51D /* UIViewController */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -236,6 +233,33 @@
 			);
 			name = Carthage;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		CCE7915320073DC90055C51D /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC3D2EB12005FAA0009E87F6 /* UIViewController+GetViewController.h */,
+				CC3D2EB22005FAA0009E87F6 /* UIViewController+GetViewController.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		CCE7915420073DDC0055C51D /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				CC3D2EB42005FBAC009E87F6 /* UIView+Badge.h */,
+				CC3D2EB52005FBAC009E87F6 /* UIView+Badge.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		CCE7915520073DE80055C51D /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				CCE7915020073BDA0055C51D /* UIImage+Scale.h */,
+				CCE7915120073BDA0055C51D /* UIImage+Scale.m */,
+			);
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
