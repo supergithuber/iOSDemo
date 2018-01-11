@@ -19,9 +19,10 @@
 		CC40F6771E6E5F88009D144C /* iOSTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC40F6761E6E5F88009D144C /* iOSTestTests.m */; };
 		CC40F6821E6E5F88009D144C /* iOSTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC40F6811E6E5F88009D144C /* iOSTestUITests.m */; };
 		CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */; };
-		CC6A22291FE7AC6900B18D36 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6A22281FE7AC6900B18D36 /* SnapKit.framework */; };
-		CC6A222A1FE7AC7000B18D36 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC6A22281FE7AC6900B18D36 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
+		CCE7914E200739F30055C51D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE7914D200739F30055C51D /* SnapKit.framework */; };
+		CCE7914F20073A000055C51D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CCE7914D200739F30055C51D /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915120073BDA0055C51D /* UIImage+Scale.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CC6A222A1FE7AC7000B18D36 /* SnapKit.framework in Embed Frameworks */,
+				CCE7914F20073A000055C51D /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,9 +81,11 @@
 		CC40F6831E6E5F88009D144C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC6A21681FE7A39C00B18D36 /* iOSTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipHintView.swift; sourceTree = "<group>"; };
-		CC6A22281FE7AC6900B18D36 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 		CC72CD601F8F163500CADF32 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		CCE7914D200739F30055C51D /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
+		CCE7915020073BDA0055C51D /* UIImage+Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
+		CCE7915120073BDA0055C51D /* UIImage+Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC6A22291FE7AC6900B18D36 /* SnapKit.framework in Frameworks */,
+				CCE7914E200739F30055C51D /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +149,8 @@
 				CC3D2EB22005FAA0009E87F6 /* UIViewController+GetViewController.m */,
 				CC3D2EB42005FBAC009E87F6 /* UIView+Badge.h */,
 				CC3D2EB52005FBAC009E87F6 /* UIView+Badge.m */,
+				CCE7915020073BDA0055C51D /* UIImage+Scale.h */,
+				CCE7915120073BDA0055C51D /* UIImage+Scale.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -160,7 +165,7 @@
 		CC40F6501E6E5F87009D144C = {
 			isa = PBXGroup;
 			children = (
-				CC6A22271FE7AC3F00B18D36 /* Carthages */,
+				CCE7914C200739DF0055C51D /* Carthage */,
 				CC3E44DE1E9F18220003E7D1 /* Framework */,
 				CC40F65B1E6E5F88009D144C /* iOSTest */,
 				CC40F6751E6E5F88009D144C /* iOSTestTests */,
@@ -224,12 +229,12 @@
 			path = iOSTestUITests;
 			sourceTree = "<group>";
 		};
-		CC6A22271FE7AC3F00B18D36 /* Carthages */ = {
+		CCE7914C200739DF0055C51D /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				CC6A22281FE7AC6900B18D36 /* SnapKit.framework */,
+				CCE7914D200739F30055C51D /* SnapKit.framework */,
 			);
-			name = Carthages;
+			name = Carthage;
 			path = "New Group";
 			sourceTree = "<group>";
 		};
@@ -373,6 +378,7 @@
 				CC40F6641E6E5F88009D144C /* ViewController.m in Sources */,
 				CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */,
 				CC40F6611E6E5F88009D144C /* AppDelegate.m in Sources */,
+				CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */,
 				CC40F65E1E6E5F88009D144C /* main.m in Sources */,
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
 				CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */,
