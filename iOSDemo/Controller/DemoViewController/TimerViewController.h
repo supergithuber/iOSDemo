@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimerViewController : UIViewController
+
+@interface TimerViewController : WXBaseViewController
 
 @end

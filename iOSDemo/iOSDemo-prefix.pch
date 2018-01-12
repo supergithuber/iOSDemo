@@ -1,0 +1,18 @@
+//
+//  iOSDemo-prefix.pch
+//  iOSDemo
+//
+//  Created by wuxi on 2018/1/12.
+//  Copyright © 2018年 Wuxi. All rights reserved.
+//
+
+#ifndef iOSDemo_prefix_pch
+#define iOSDemo_prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#endif /* iOSDemo_prefix_pch */
+
+#import "WXBaseViewController.h"

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SemaphoreViewController : UIViewController
+@interface SemaphoreViewController : WXBaseViewController
 
 @end

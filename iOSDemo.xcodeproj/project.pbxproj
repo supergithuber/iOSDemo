@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF3002008528B009F1D9E /* OperationViewController.m */; };
 		CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30420085B02009F1D9E /* WXDemoViewController.m */; };
+		CC2BF3092008633C009F1D9E /* WXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF3082008633C009F1D9E /* WXBaseViewController.m */; };
 		CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EA92005F1C3009E87F6 /* SemaphoreViewController.m */; };
 		CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EB22005FAA0009E87F6 /* UIViewController+GetViewController.m */; };
 		CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EB52005FBAC009E87F6 /* UIView+Badge.m */; };
@@ -64,6 +65,9 @@
 		CC2BF3002008528B009F1D9E /* OperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationViewController.m; sourceTree = "<group>"; };
 		CC2BF30320085B02009F1D9E /* WXDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDemoViewController.h; sourceTree = "<group>"; };
 		CC2BF30420085B02009F1D9E /* WXDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXDemoViewController.m; sourceTree = "<group>"; };
+		CC2BF3072008633C009F1D9E /* WXBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXBaseViewController.h; sourceTree = "<group>"; };
+		CC2BF3082008633C009F1D9E /* WXBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXBaseViewController.m; sourceTree = "<group>"; };
+		CC2BF30A20086427009F1D9E /* iOSDemo-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDemo-prefix.pch"; sourceTree = "<group>"; };
 		CC3D2EA82005F1C3009E87F6 /* SemaphoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreViewController.h; sourceTree = "<group>"; };
 		CC3D2EA92005F1C3009E87F6 /* SemaphoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreViewController.m; sourceTree = "<group>"; };
 		CC3D2EB12005FAA0009E87F6 /* UIViewController+GetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GetViewController.h"; sourceTree = "<group>"; };
@@ -122,11 +126,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CC3D2EA72005F0C0009E87F6 /* Controller */ = {
+		CC2BF30620086301009F1D9E /* DemoViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CC40F6621E6E5F88009D144C /* ViewController.h */,
-				CC40F6631E6E5F88009D144C /* ViewController.m */,
 				CC72CD601F8F163500CADF32 /* TimerViewController.h */,
 				CC72CD611F8F163500CADF32 /* TimerViewController.m */,
 				CC3D2EA82005F1C3009E87F6 /* SemaphoreViewController.h */,
@@ -135,6 +137,18 @@
 				CC2BF3002008528B009F1D9E /* OperationViewController.m */,
 				CC2BF30320085B02009F1D9E /* WXDemoViewController.h */,
 				CC2BF30420085B02009F1D9E /* WXDemoViewController.m */,
+			);
+			path = DemoViewController;
+			sourceTree = "<group>";
+		};
+		CC3D2EA72005F0C0009E87F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC2BF30620086301009F1D9E /* DemoViewController */,
+				CC40F6621E6E5F88009D144C /* ViewController.h */,
+				CC40F6631E6E5F88009D144C /* ViewController.m */,
+				CC2BF3072008633C009F1D9E /* WXBaseViewController.h */,
+				CC2BF3082008633C009F1D9E /* WXBaseViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,6 +223,7 @@
 				CC40F66D1E6E5F88009D144C /* Info.plist */,
 				CC40F65C1E6E5F88009D144C /* Supporting Files */,
 				CC6A21681FE7A39C00B18D36 /* iOSDemo-Bridging-Header.h */,
+				CC2BF30A20086427009F1D9E /* iOSDemo-prefix.pch */,
 			);
 			path = iOSDemo;
 			sourceTree = "<group>";
@@ -415,6 +430,7 @@
 				CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */,
 				CC40F6641E6E5F88009D144C /* ViewController.m in Sources */,
 				CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */,
+				CC2BF3092008633C009F1D9E /* WXBaseViewController.m in Sources */,
 				CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */,
 				CC40F6611E6E5F88009D144C /* AppDelegate.m in Sources */,
 				CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */,
@@ -585,6 +601,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
+				GCC_PREFIX_HEADER = "/Users/wuxi/Documents/Xcode workspace/iOSDemo/iOSDemo/iOSDemo-prefix.pch";
 				INFOPLIST_FILE = iOSDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sivan.iOSDemo;
@@ -614,6 +631,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
+				GCC_PREFIX_HEADER = "/Users/wuxi/Documents/Xcode workspace/iOSDemo/iOSDemo/iOSDemo-prefix.pch";
 				INFOPLIST_FILE = iOSDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sivan.iOSDemo;

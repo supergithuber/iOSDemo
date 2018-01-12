@@ -1,5 +1,5 @@
 //
-//  WXDemoViewController.h
+//  WXBaseViewController.h
 //  iOSDemo
 //
 //  Created by wuxi on 2018/1/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WXDemoViewController : UIViewController
+@interface WXBaseViewController : UIViewController
 
 @end
