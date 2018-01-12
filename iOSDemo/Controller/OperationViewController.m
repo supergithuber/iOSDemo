@@ -32,6 +32,7 @@
     [operation start];
 }
 - (void)invocationFunction{
+    //打印
     NSLog(@"you are in invocation function - %@", [NSThread currentThread]);
 }
 
