@@ -10,6 +10,8 @@
 		CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF3002008528B009F1D9E /* OperationViewController.m */; };
 		CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30420085B02009F1D9E /* WXDemoViewController.m */; };
 		CC2BF3092008633C009F1D9E /* WXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF3082008633C009F1D9E /* WXBaseViewController.m */; };
+		CC2BF30D20088D73009F1D9E /* WXSerialOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30C20088D73009F1D9E /* WXSerialOperation.m */; };
+		CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30F20089037009F1D9E /* WXConcurrentOperation.m */; };
 		CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EA92005F1C3009E87F6 /* SemaphoreViewController.m */; };
 		CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EB22005FAA0009E87F6 /* UIViewController+GetViewController.m */; };
 		CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EB52005FBAC009E87F6 /* UIView+Badge.m */; };
@@ -68,6 +70,10 @@
 		CC2BF3072008633C009F1D9E /* WXBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXBaseViewController.h; sourceTree = "<group>"; };
 		CC2BF3082008633C009F1D9E /* WXBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXBaseViewController.m; sourceTree = "<group>"; };
 		CC2BF30A20086427009F1D9E /* iOSDemo-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDemo-prefix.pch"; sourceTree = "<group>"; };
+		CC2BF30B20088D73009F1D9E /* WXSerialOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSerialOperation.h; sourceTree = "<group>"; };
+		CC2BF30C20088D73009F1D9E /* WXSerialOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSerialOperation.m; sourceTree = "<group>"; };
+		CC2BF30E20089037009F1D9E /* WXConcurrentOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXConcurrentOperation.h; sourceTree = "<group>"; };
+		CC2BF30F20089037009F1D9E /* WXConcurrentOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXConcurrentOperation.m; sourceTree = "<group>"; };
 		CC3D2EA82005F1C3009E87F6 /* SemaphoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreViewController.h; sourceTree = "<group>"; };
 		CC3D2EA92005F1C3009E87F6 /* SemaphoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreViewController.m; sourceTree = "<group>"; };
 		CC3D2EB12005FAA0009E87F6 /* UIViewController+GetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GetViewController.h"; sourceTree = "<group>"; };
@@ -165,6 +171,10 @@
 		CC3D2EAC2005F56E009E87F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC2BF30B20088D73009F1D9E /* WXSerialOperation.h */,
+				CC2BF30C20088D73009F1D9E /* WXSerialOperation.m */,
+				CC2BF30E20089037009F1D9E /* WXConcurrentOperation.h */,
+				CC2BF30F20089037009F1D9E /* WXConcurrentOperation.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -429,6 +439,8 @@
 				CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */,
 				CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */,
 				CC40F6641E6E5F88009D144C /* ViewController.m in Sources */,
+				CC2BF30D20088D73009F1D9E /* WXSerialOperation.m in Sources */,
+				CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */,
 				CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */,
 				CC2BF3092008633C009F1D9E /* WXBaseViewController.m in Sources */,
 				CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */,
