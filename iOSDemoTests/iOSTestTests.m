@@ -1,6 +1,6 @@
 //
-//  iOSTestTests.m
-//  iOSTestTests
+//  iOSDemoTests.m
+//  iOSDemoTests
 //
 //  Created by Wuxi on 17/3/7.
 //  Copyright © 2017年 Wuxi. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface iOSTestTests : XCTestCase
+@interface iOSDemoTests : XCTestCase
 
 @end
 
-@implementation iOSTestTests
+@implementation iOSDemoTests
 
 - (void)setUp {
     [super setUp];

@@ -80,7 +80,7 @@
 		CC40F67D1E6E5F88009D144C /* iOSDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC40F6811E6E5F88009D144C /* iOSTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSTestUITests.m; sourceTree = "<group>"; };
 		CC40F6831E6E5F88009D144C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC6A21681FE7A39C00B18D36 /* iOSTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC6A21681FE7A39C00B18D36 /* iOSDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipHintView.swift; sourceTree = "<group>"; };
 		CC72CD601F8F163500CADF32 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 				CCE7914C200739DF0055C51D /* Carthage */,
 				CC3E44DE1E9F18220003E7D1 /* Framework */,
 				CC40F65B1E6E5F88009D144C /* iOSDemo */,
-				CC40F6751E6E5F88009D144C /* iOSTestTests */,
-				CC40F6801E6E5F88009D144C /* iOSTestUITests */,
+				CC40F6751E6E5F88009D144C /* iOSDemoTests */,
+				CC40F6801E6E5F88009D144C /* iOSDemoUITests */,
 				CC40F65A1E6E5F88009D144C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 				CC40F66A1E6E5F88009D144C /* LaunchScreen.storyboard */,
 				CC40F66D1E6E5F88009D144C /* Info.plist */,
 				CC40F65C1E6E5F88009D144C /* Supporting Files */,
-				CC6A21681FE7A39C00B18D36 /* iOSTest-Bridging-Header.h */,
+				CC6A21681FE7A39C00B18D36 /* iOSDemo-Bridging-Header.h */,
 			);
 			path = iOSDemo;
 			sourceTree = "<group>";
@@ -211,22 +211,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CC40F6751E6E5F88009D144C /* iOSTestTests */ = {
+		CC40F6751E6E5F88009D144C /* iOSDemoTests */ = {
 			isa = PBXGroup;
 			children = (
 				CC40F6761E6E5F88009D144C /* iOSTestTests.m */,
 				CC40F6781E6E5F88009D144C /* Info.plist */,
 			);
-			path = iOSTestTests;
+			path = iOSDemoTests;
 			sourceTree = "<group>";
 		};
-		CC40F6801E6E5F88009D144C /* iOSTestUITests */ = {
+		CC40F6801E6E5F88009D144C /* iOSDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
 				CC40F6811E6E5F88009D144C /* iOSTestUITests.m */,
 				CC40F6831E6E5F88009D144C /* Info.plist */,
 			);
-			path = iOSTestUITests;
+			path = iOSDemoUITests;
 			sourceTree = "<group>";
 		};
 		CCE7914C200739DF0055C51D /* Carthage */ = {
@@ -573,12 +573,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = iOSTest/Info.plist;
+				INFOPLIST_FILE = iOSDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sivan.iOSTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sivan.iOSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "iOSTest/iOSTest-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSDemo/iOSDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -602,12 +602,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = iOSTest/Info.plist;
+				INFOPLIST_FILE = iOSDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sivan.iOSTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sivan.iOSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "iOSTest/iOSTest-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSDemo/iOSDemo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -617,9 +617,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = iOSTestTests/Info.plist;
+				INFOPLIST_FILE = iOSDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sivan.com.iOSTestTests;
+				PRODUCT_BUNDLE_IDENTIFIER = sivan.com.iOSDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSDemo.app/iOSDemo";
 			};
@@ -630,9 +630,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = iOSTestTests/Info.plist;
+				INFOPLIST_FILE = iOSDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sivan.com.iOSTestTests;
+				PRODUCT_BUNDLE_IDENTIFIER = sivan.com.iOSDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSDemo.app/iOSDemo";
 			};
@@ -642,11 +642,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = iOSTestUITests/Info.plist;
+				INFOPLIST_FILE = iOSDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sivan.com.iOSTestUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = sivan.com.iOSDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = iOSTest;
+				TEST_TARGET_NAME = iOSDemo;
 			};
 			name = Debug;
 		};
@@ -654,11 +654,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = iOSTestUITests/Info.plist;
+				INFOPLIST_FILE = iOSDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sivan.com.iOSTestUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = sivan.com.iOSDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = iOSTest;
+				TEST_TARGET_NAME = iOSDemo;
 			};
 			name = Release;
 		};
