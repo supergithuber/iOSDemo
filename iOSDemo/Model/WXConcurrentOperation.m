@@ -8,11 +8,10 @@
 
 #import "WXConcurrentOperation.h"
 
-@interface WXConcurrentOperation ()
-
-@property (nonatomic, assign)BOOL isExecuting;
-@property (nonatomic, assign)BOOL isFinished;
-
+@interface WXConcurrentOperation (){
+    BOOL executing;
+    BOOL finished;
+}
 @end
 
 @implementation WXConcurrentOperation
@@ -20,7 +19,8 @@
 - (instancetype)init{
     self = [super init];
     if (self){
-        
+        executing = NO;
+        finished = NO;
     }
     return self;
 }
@@ -28,9 +28,22 @@
     
 }
 
+- (void)start{
+    
+}
+
 - (BOOL)performOperation:(NSOperation *)operation{
     return YES;
 }
 
-
+//MARK: - private
+- (BOOL)isFinished{
+    return finished;
+}
+- (BOOL)isExecuting{
+    return executing;
+}
+- (BOOL)isAsynchronous{
+    return YES;
+}
 @end
