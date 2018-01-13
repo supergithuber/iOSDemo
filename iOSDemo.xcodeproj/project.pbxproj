@@ -613,7 +613,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				GCC_PREFIX_HEADER = "/Users/wuxi/Documents/Xcode workspace/iOSDemo/iOSDemo/iOSDemo-prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDemo/iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = iOSDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sivan.iOSDemo;
@@ -643,7 +643,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				GCC_PREFIX_HEADER = "/Users/wuxi/Documents/Xcode workspace/iOSDemo/iOSDemo/iOSDemo-prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDemo/iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = iOSDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sivan.iOSDemo;
