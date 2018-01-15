@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self commonControllerViewSet];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +25,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)commonControllerViewSet{
+    self.view.backgroundColor = [UIColor whiteColor];
+}
 /*
 #pragma mark - Navigation
 
