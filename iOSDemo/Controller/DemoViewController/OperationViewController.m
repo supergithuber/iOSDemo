@@ -7,6 +7,8 @@
 //
 
 #import "OperationViewController.h"
+#import "WXSerialOperation.h"
+#import "WXConcurrentOperation.h"
 
 @interface OperationViewController ()
 
@@ -17,7 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self createBlockOperation];
+//    [self createBlockOperation];
+//    [self createSelfSerialOperation];
+    [self createSelfConcurrentOperation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,5 +57,16 @@
         NSLog(@"fourth block function - %@", [NSThread currentThread]);
     }];
     [operation start];
+}
+//MARK: - selfDefineOperation
+- (void)createSelfSerialOperation{
+    WXSerialOperation *operation = [[WXSerialOperation alloc] init];
+    [operation start];
+    
+}
+- (void)createSelfConcurrentOperation{
+    WXConcurrentOperation *operation = [[WXConcurrentOperation alloc] init];
+    [operation performOperation:operation];
+    
 }
 @end
