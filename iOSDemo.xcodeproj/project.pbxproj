@@ -27,6 +27,7 @@
 		CC40F6821E6E5F88009D144C /* iOSTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC40F6811E6E5F88009D144C /* iOSTestUITests.m */; };
 		CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
+		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
 		CCE7914E200739F30055C51D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE7914D200739F30055C51D /* SnapKit.framework */; };
 		CCE7914F20073A000055C51D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CCE7914D200739F30055C51D /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915120073BDA0055C51D /* UIImage+Scale.m */; };
@@ -106,6 +107,8 @@
 		CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipHintView.swift; sourceTree = "<group>"; };
 		CC72CD601F8F163500CADF32 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXVolumeButtonHandler.h; sourceTree = "<group>"; };
+		CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXVolumeButtonHandler.m; sourceTree = "<group>"; };
 		CCE7914D200739F30055C51D /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 		CCE7915020073BDA0055C51D /* UIImage+Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
 		CCE7915120073BDA0055C51D /* UIImage+Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
@@ -237,6 +240,7 @@
 		CC40F65B1E6E5F88009D144C /* iOSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CCA8D59420103FF100B225B6 /* Tools */,
 				CC3D2EAD2005F9D6009E87F6 /* Category */,
 				CC3D2EAC2005F56E009E87F6 /* Model */,
 				CC3D2EAB2005F553009E87F6 /* View */,
@@ -278,6 +282,15 @@
 				CC40F6831E6E5F88009D144C /* Info.plist */,
 			);
 			path = iOSDemoUITests;
+			sourceTree = "<group>";
+		};
+		CCA8D59420103FF100B225B6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */,
+				CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		CCE7914C200739DF0055C51D /* Carthage */ = {
@@ -457,6 +470,7 @@
 				CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */,
 				CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */,
 				CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */,
+				CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */,
 				CC40F6641E6E5F88009D144C /* ViewController.m in Sources */,
 				CC2BF30D20088D73009F1D9E /* WXSerialOperation.m in Sources */,
 				CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */,
