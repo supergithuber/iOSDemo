@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^WXVolumnButtonBlock)(void);
+typedef void (^WXVolumeButtonBlock)(void);
 @interface WXVolumeButtonHandler : NSObject
 
-- (instancetype)initWithUpBlock:(WXVolumnButtonBlock)upBlock downBlock:(WXVolumnButtonBlock)downBlock;
-+ (instancetype)volumnButtonHandlerWithUpBlock:(WXVolumnButtonBlock)upBlock downBlock:(WXVolumnButtonBlock)downBlock;
+- (instancetype)initWithUpBlock:(WXVolumeButtonBlock)upBlock downBlock:(WXVolumeButtonBlock)downBlock;
++ (instancetype)volumnButtonHandlerWithUpBlock:(WXVolumeButtonBlock)upBlock downBlock:(WXVolumeButtonBlock)downBlock;
 
 @end
