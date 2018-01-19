@@ -96,21 +96,36 @@ static CGFloat minVolume                    = 0.00001f;
     [self setSystemVolume:self.initialVolume];
 }
 
-//MARK: - KVO
+//MARK: - KVO，音量变化
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if (context == sessionContext){
-        
+        if (!self.isAppActive) {
+            return;
+        }
+        CGFloat oldVolume = [change[NSKeyValueChangeOldKey] floatValue];
+        CGFloat newVolume = [change[NSKeyValueChangeNewKey] floatValue];
+        if (newVolume == self.initialVolume){ return; }
+        //执行block
+        if (newVolume > oldVolume) {
+            if (self.upBlock) self.upBlock();
+        } else {
+            if (self.downBlock) self.downBlock();
+        }
+        //重置音量
+        [self setSystemVolume:self.initialVolume];
     }else{
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
 //MARK: - Notification
+//应用退到后台和返回前台
 - (void)applicationDidChangeActive:(NSNotification *)notification {
     self.isAppActive = [notification.name isEqualToString:UIApplicationDidBecomeActiveNotification];
     if (_isAppActive){
-        
+        [self setInitialVolume];
     }
 }
+//声音被打断
 - (void)audioSessionInterrupt:(NSNotification *)notification{
     NSDictionary *interuptionDict = notification.userInfo;
     NSInteger interuptionType = [[interuptionDict valueForKey:AVAudioSessionInterruptionTypeKey] integerValue];
