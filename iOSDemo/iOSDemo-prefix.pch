@@ -16,3 +16,6 @@
 #endif /* iOSDemo_prefix_pch */
 
 #import "WXBaseViewController.h"
+
+//common define
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;

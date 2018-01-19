@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 
+
 static NSString *const sessionVolumeKeyPath = @"outputVolume";
 static void *sessionContext                 = &sessionContext;
 static CGFloat maxVolume                    = 0.99999f;
@@ -43,6 +44,10 @@ static CGFloat minVolume                    = 0.00001f;
         [self setupAudioSession];
         //监听APP是否活跃
         [self initNotification];
+        WS(weakSelf);
+        [self disableSystemVolumeHUDWithCompletion:^{
+            [weakSelf setInitialVolume];
+        }];
     }
     return self;
 }
@@ -88,6 +93,7 @@ static CGFloat minVolume                    = 0.00001f;
     }else if (self.initialVolume < minVolume){
         self.initialVolume = minVolume;
     }
+    [self setSystemVolume:self.initialVolume];
 }
 
 //MARK: - KVO
