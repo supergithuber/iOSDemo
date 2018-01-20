@@ -19,3 +19,8 @@
 
 //common define
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+#define StrongSelf(strongSype) __strong __typeof(&*self)StrongSelf = self;
+//APP版本号
+#define kAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+//系统版本号
+#define kSystemVersion [[UIDevice currentDevice] systemVersion]
