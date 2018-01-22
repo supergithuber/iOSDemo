@@ -11,6 +11,7 @@
 #import "TimerViewController.h"
 #import "SemaphoreViewController.h"
 #import "OperationViewController.h"
+#import "WXCoderViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -41,11 +42,12 @@
     [self.view addSubview:self.tableView];
     
     self.sectionArray = [NSMutableArray arrayWithObjects:@"第一部分", nil];
-    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore", @"Operation", nil];
+    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore", @"Operation", @"NSCoder", nil];
     self.firstSectionController = [NSMutableArray arrayWithObjects:[[WXDemoViewController alloc] init],
                                                                     [[TimerViewController alloc] init],
                                                                     [[SemaphoreViewController alloc] init],
-                                                                    [[OperationViewController alloc] init], nil];
+                                                                    [[OperationViewController alloc] init],
+                                                                    [[WXCoderViewController alloc] init], nil];
     
 }
 

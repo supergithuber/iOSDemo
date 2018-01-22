@@ -26,6 +26,10 @@
 		CC40F6771E6E5F88009D144C /* iOSTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC40F6761E6E5F88009D144C /* iOSTestTests.m */; };
 		CC40F6821E6E5F88009D144C /* iOSTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC40F6811E6E5F88009D144C /* iOSTestUITests.m */; };
 		CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */; };
+		CC6A280B20158EB8001D3A91 /* WXUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6A280A20158EB8001D3A91 /* WXUserInfoModel.m */; };
+		CC6A280E201593A8001D3A91 /* WXCoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6A280D201593A8001D3A91 /* WXCoderViewController.m */; };
+		CC6A2811201598EF001D3A91 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6A2810201598EF001D3A91 /* Masonry.framework */; };
+		CC6A2812201598FA001D3A91 /* Masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC6A2810201598EF001D3A91 /* Masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
 		CCE7914E200739F30055C51D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE7914D200739F30055C51D /* SnapKit.framework */; };
@@ -58,6 +62,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CC6A2812201598FA001D3A91 /* Masonry.framework in Embed Frameworks */,
 				CCE7914F20073A000055C51D /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -105,6 +110,11 @@
 		CC40F6831E6E5F88009D144C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC6A21681FE7A39C00B18D36 /* iOSDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipHintView.swift; sourceTree = "<group>"; };
+		CC6A280920158EB8001D3A91 /* WXUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXUserInfoModel.h; sourceTree = "<group>"; };
+		CC6A280A20158EB8001D3A91 /* WXUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXUserInfoModel.m; sourceTree = "<group>"; };
+		CC6A280C201593A8001D3A91 /* WXCoderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCoderViewController.h; sourceTree = "<group>"; };
+		CC6A280D201593A8001D3A91 /* WXCoderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXCoderViewController.m; sourceTree = "<group>"; };
+		CC6A2810201598EF001D3A91 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Masonry.framework; sourceTree = "<group>"; };
 		CC72CD601F8F163500CADF32 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXVolumeButtonHandler.h; sourceTree = "<group>"; };
@@ -120,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6A2811201598EF001D3A91 /* Masonry.framework in Frameworks */,
 				CCE7914E200739F30055C51D /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +172,8 @@
 				CC2BF3002008528B009F1D9E /* OperationViewController.m */,
 				CC2BF30320085B02009F1D9E /* WXDemoViewController.h */,
 				CC2BF30420085B02009F1D9E /* WXDemoViewController.m */,
+				CC6A280C201593A8001D3A91 /* WXCoderViewController.h */,
+				CC6A280D201593A8001D3A91 /* WXCoderViewController.m */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -193,6 +206,8 @@
 				CC2BF30C20088D73009F1D9E /* WXSerialOperation.m */,
 				CC2BF30E20089037009F1D9E /* WXConcurrentOperation.h */,
 				CC2BF30F20089037009F1D9E /* WXConcurrentOperation.m */,
+				CC6A280920158EB8001D3A91 /* WXUserInfoModel.h */,
+				CC6A280A20158EB8001D3A91 /* WXUserInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,18 +223,11 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		CC3E44DE1E9F18220003E7D1 /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Framework;
-			sourceTree = "<group>";
-		};
 		CC40F6501E6E5F87009D144C = {
 			isa = PBXGroup;
 			children = (
+				CC6A280F201598EF001D3A91 /* Framework */,
 				CCE7914C200739DF0055C51D /* Carthage */,
-				CC3E44DE1E9F18220003E7D1 /* Framework */,
 				CC40F65B1E6E5F88009D144C /* iOSDemo */,
 				CC40F6751E6E5F88009D144C /* iOSDemoTests */,
 				CC40F6801E6E5F88009D144C /* iOSDemoUITests */,
@@ -282,6 +290,14 @@
 				CC40F6831E6E5F88009D144C /* Info.plist */,
 			);
 			path = iOSDemoUITests;
+			sourceTree = "<group>";
+		};
+		CC6A280F201598EF001D3A91 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				CC6A2810201598EF001D3A91 /* Masonry.framework */,
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 		CCA8D59420103FF100B225B6 /* Tools */ = {
@@ -484,6 +500,8 @@
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
 				CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */,
 				CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */,
+				CC6A280E201593A8001D3A91 /* WXCoderViewController.m in Sources */,
+				CC6A280B20158EB8001D3A91 /* WXUserInfoModel.m in Sources */,
 				CCE7915720074B710055C51D /* ClosureInitScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,6 +664,7 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/tvOS",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Framework",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDemo/iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = iOSDemo/Info.plist;
@@ -676,6 +695,7 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/tvOS",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Framework",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDemo/iOSDemo-Prefix.pch";
 				INFOPLIST_FILE = iOSDemo/Info.plist;
