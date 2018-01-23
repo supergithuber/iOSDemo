@@ -248,6 +248,7 @@
 		CC40F65B1E6E5F88009D144C /* iOSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CCAB7B332016DDE30077BAB8 /* Protocol */,
 				CCA8D59420103FF100B225B6 /* Tools */,
 				CC3D2EAD2005F9D6009E87F6 /* Category */,
 				CC3D2EAC2005F56E009E87F6 /* Model */,
@@ -307,6 +308,13 @@
 				CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		CCAB7B332016DDE30077BAB8 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		CCE7914C200739DF0055C51D /* Carthage */ = {

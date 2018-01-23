@@ -17,6 +17,9 @@
 
 @implementation WXCoderViewController
 
+- (void)dealloc{
+    NSLog(@"coder页面销毁");
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initButtonView];
@@ -72,6 +75,7 @@
     model.phoneNumber = 12121212;
     //归档
     [NSKeyedArchiver archiveRootObject:model toFile:[kPathDocument stringByAppendingPathComponent:@"wxUserInfo"]];
+    [self LogToResultTextView:@"测试打印"];
 }
 - (void)read:(id)sender{
     WXUserInfoModel *model = [NSKeyedUnarchiver unarchiveObjectWithFile:[kPathDocument stringByAppendingPathComponent:@"wxUserInfo"]];

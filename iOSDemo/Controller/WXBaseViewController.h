@@ -10,4 +10,8 @@
 
 @interface WXBaseViewController : UIViewController
 
+//在这个页面，以及它的子类，都有一个控制台，可以用于打印到手机上可以看到
+//摇一摇出现或者消失
+- (void)LogToResultTextView:(NSString *)string;
+
 @end
