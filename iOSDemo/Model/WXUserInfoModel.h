@@ -12,8 +12,9 @@
 @interface WXUserInfoModel : NSObject<NSCoding>
 
 @property (nonatomic, copy)NSString *name;
-@property (nonatomic, assign)NSInteger *age;
+@property (nonatomic, assign)NSInteger age;
 @property (nonatomic, copy)NSString *country;
 @property (nonatomic, assign)NSInteger phoneNumber;
+@property (nonatomic, assign)int otherAge;
 
 @end

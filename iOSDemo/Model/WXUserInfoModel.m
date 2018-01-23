@@ -28,7 +28,11 @@
         //属性名称  ivar_getName:获取类实例成员变量，只能取到本类的，父类的访问不到
         NSString *key = [NSString stringWithUTF8String:ivar_getName(ivar)];
         //归档  通过KVC取的 就没有int类型了
-        [aCoder encodeObject:[self valueForKey:key] forKey:key];
+        id varValue = [self valueForKey:key];
+        if (varValue){
+            [aCoder encodeObject:varValue forKey:key];
+        }
+        
     }
     //但凡在C语言里面 看到New Creat Copy 都需要释放
     free(ivarList); //释放

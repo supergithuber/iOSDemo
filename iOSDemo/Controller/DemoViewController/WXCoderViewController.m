@@ -68,12 +68,13 @@
 - (void)save:(id)sender{
     WXUserInfoModel *model = [WXUserInfoModel new];
     model.name = @"flowerflower";
+    model.otherAge = 12;
     model.phoneNumber = 12121212;
     //归档
     [NSKeyedArchiver archiveRootObject:model toFile:[kPathDocument stringByAppendingPathComponent:@"wxUserInfo"]];
 }
 - (void)read:(id)sender{
     WXUserInfoModel *model = [NSKeyedUnarchiver unarchiveObjectWithFile:[kPathDocument stringByAppendingPathComponent:@"wxUserInfo"]];
-    NSLog(@"%@----%ld",model.name,(long)model.phoneNumber);
+    NSLog(@"%@----%ld----%d",model.name,(long)model.phoneNumber,model.otherAge);
 }
 @end
