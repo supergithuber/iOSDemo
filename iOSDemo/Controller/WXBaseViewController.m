@@ -44,6 +44,7 @@
     self.resultTextView.textColor = [UIColor blueColor];
     [self.resultTextView setEditable:NO];
     self.resultTextView.font = [UIFont systemFontOfSize:12];
+    self.resultTextView.text = @"shake to appear or disappear myself";
     [self.view addSubview:self.resultTextView];
     
 }
