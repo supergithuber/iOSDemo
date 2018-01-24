@@ -18,11 +18,17 @@ NSString *const kAppLaunchDateKey = @"com.iOSDemo.launchDate";
 
 
 + (void)setStringValue:(NSString *)value forKey:(NSString *)key{
-    [[NSUserDefaults standardUserDefaults] setValue:value forKey:key];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    if (key && value){
+        [[NSUserDefaults standardUserDefaults] setValue:value forKey:key];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 + (NSString *)stringValueForKey:(NSString *)key{
-    return [[NSUserDefaults standardUserDefaults] stringForKey:key];
+    if (key){
+        return [[NSUserDefaults standardUserDefaults] stringForKey:key];
+    }else{
+        return nil;
+    }
 }
 
 
