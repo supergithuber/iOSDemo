@@ -36,6 +36,7 @@
 		CCE7914F20073A000055C51D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CCE7914D200739F30055C51D /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915120073BDA0055C51D /* UIImage+Scale.m */; };
 		CCE7915720074B710055C51D /* ClosureInitScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915620074B710055C51D /* ClosureInitScrollView.swift */; };
+		CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,8 @@
 		CCE7915020073BDA0055C51D /* UIImage+Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
 		CCE7915120073BDA0055C51D /* UIImage+Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
 		CCE7915620074B710055C51D /* ClosureInitScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureInitScrollView.swift; sourceTree = "<group>"; };
+		CCFB57F12018869F0030BFF1 /* WXUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXUserDefaults.h; sourceTree = "<group>"; };
+		CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXUserDefaults.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +251,7 @@
 		CC40F65B1E6E5F88009D144C /* iOSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CCFB57F02018862A0030BFF1 /* Storage */,
 				CCAB7B332016DDE30077BAB8 /* Protocol */,
 				CCA8D59420103FF100B225B6 /* Tools */,
 				CC3D2EAD2005F9D6009E87F6 /* Category */,
@@ -353,6 +357,15 @@
 				CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */,
 			);
 			path = UIImage;
+			sourceTree = "<group>";
+		};
+		CCFB57F02018862A0030BFF1 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				CCFB57F12018869F0030BFF1 /* WXUserDefaults.h */,
+				CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,6 +517,7 @@
 				CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */,
 				CC40F6611E6E5F88009D144C /* AppDelegate.m in Sources */,
 				CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */,
+				CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */,
 				CC40F65E1E6E5F88009D144C /* main.m in Sources */,
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
 				CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */,
