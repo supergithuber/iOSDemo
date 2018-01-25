@@ -39,6 +39,7 @@
 		CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */; };
 		CCFB57F8201981B90030BFF1 /* YYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFB57F7201981B80030BFF1 /* YYKit.framework */; };
 		CCFB57F9201981C40030BFF1 /* YYKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CCFB57F7201981B80030BFF1 /* YYKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CCFB57FF2019B9D20030BFF1 /* WXRotateImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB57FE2019B9D20030BFF1 /* WXRotateImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,8 @@
 		CCFB57F12018869F0030BFF1 /* WXUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXUserDefaults.h; sourceTree = "<group>"; };
 		CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXUserDefaults.m; sourceTree = "<group>"; };
 		CCFB57F7201981B80030BFF1 /* YYKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYKit.framework; path = Carthage/Build/iOS/YYKit.framework; sourceTree = SOURCE_ROOT; };
+		CCFB57FD2019B9D20030BFF1 /* WXRotateImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXRotateImageViewController.h; sourceTree = "<group>"; };
+		CCFB57FE2019B9D20030BFF1 /* WXRotateImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXRotateImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +185,8 @@
 				CC2BF30420085B02009F1D9E /* WXDemoViewController.m */,
 				CC6A280C201593A8001D3A91 /* WXCoderViewController.h */,
 				CC6A280D201593A8001D3A91 /* WXCoderViewController.m */,
+				CCFB57FD2019B9D20030BFF1 /* WXRotateImageViewController.h */,
+				CCFB57FE2019B9D20030BFF1 /* WXRotateImageViewController.m */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -266,12 +271,7 @@
 				CC3D2EA72005F0C0009E87F6 /* Controller */,
 				CC40F65F1E6E5F88009D144C /* AppDelegate.h */,
 				CC40F6601E6E5F88009D144C /* AppDelegate.m */,
-				CC40F6651E6E5F88009D144C /* Main.storyboard */,
-				CC40F66A1E6E5F88009D144C /* LaunchScreen.storyboard */,
-				CC40F66D1E6E5F88009D144C /* Info.plist */,
 				CC40F65C1E6E5F88009D144C /* Supporting Files */,
-				CC6A21681FE7A39C00B18D36 /* iOSDemo-Bridging-Header.h */,
-				CC2BF30A20086427009F1D9E /* iOSDemo-prefix.pch */,
 			);
 			path = iOSDemo;
 			sourceTree = "<group>";
@@ -279,6 +279,11 @@
 		CC40F65C1E6E5F88009D144C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CC6A21681FE7A39C00B18D36 /* iOSDemo-Bridging-Header.h */,
+				CC2BF30A20086427009F1D9E /* iOSDemo-prefix.pch */,
+				CC40F6651E6E5F88009D144C /* Main.storyboard */,
+				CC40F66A1E6E5F88009D144C /* LaunchScreen.storyboard */,
+				CC40F66D1E6E5F88009D144C /* Info.plist */,
 				CC40F65D1E6E5F88009D144C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -522,6 +527,7 @@
 				CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */,
 				CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */,
 				CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */,
+				CCFB57FF2019B9D20030BFF1 /* WXRotateImageViewController.m in Sources */,
 				CC40F6641E6E5F88009D144C /* ViewController.m in Sources */,
 				CC2BF30D20088D73009F1D9E /* WXSerialOperation.m in Sources */,
 				CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */,

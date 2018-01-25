@@ -12,6 +12,7 @@
 #import "SemaphoreViewController.h"
 #import "OperationViewController.h"
 #import "WXCoderViewController.h"
+#import "WXRotateImageViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -42,12 +43,13 @@
     [self.view addSubview:self.tableView];
     
     self.sectionArray = [NSMutableArray arrayWithObjects:@"第一部分", nil];
-    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore", @"Operation", @"NSCoder", nil];
+    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", nil];
     self.firstSectionController = [NSMutableArray arrayWithObjects:[[WXDemoViewController alloc] init],
                                                                     [[TimerViewController alloc] init],
                                                                     [[SemaphoreViewController alloc] init],
                                                                     [[OperationViewController alloc] init],
-                                                                    [[WXCoderViewController alloc] init], nil];
+                                                                    [[WXCoderViewController alloc] init],
+                                                                    [[WXRotateImageViewController alloc] init], nil];
     
 }
 
