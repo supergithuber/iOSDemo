@@ -37,6 +37,8 @@
 		CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915120073BDA0055C51D /* UIImage+Scale.m */; };
 		CCE7915720074B710055C51D /* ClosureInitScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915620074B710055C51D /* ClosureInitScrollView.swift */; };
 		CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */; };
+		CCFB57F8201981B90030BFF1 /* YYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFB57F7201981B80030BFF1 /* YYKit.framework */; };
+		CCFB57F9201981C40030BFF1 /* YYKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CCFB57F7201981B80030BFF1 /* YYKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CCFB57F9201981C40030BFF1 /* YYKit.framework in Embed Frameworks */,
 				CC6A2812201598FA001D3A91 /* Masonry.framework in Embed Frameworks */,
 				CCE7914F20073A000055C51D /* SnapKit.framework in Embed Frameworks */,
 			);
@@ -126,6 +129,7 @@
 		CCE7915620074B710055C51D /* ClosureInitScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureInitScrollView.swift; sourceTree = "<group>"; };
 		CCFB57F12018869F0030BFF1 /* WXUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXUserDefaults.h; sourceTree = "<group>"; };
 		CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXUserDefaults.m; sourceTree = "<group>"; };
+		CCFB57F7201981B80030BFF1 /* YYKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYKit.framework; path = Carthage/Build/iOS/YYKit.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCFB57F8201981B90030BFF1 /* YYKit.framework in Frameworks */,
 				CC6A2811201598EF001D3A91 /* Masonry.framework in Frameworks */,
 				CCE7914E200739F30055C51D /* SnapKit.framework in Frameworks */,
 			);
@@ -324,6 +329,7 @@
 		CCE7914C200739DF0055C51D /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				CCFB57F7201981B80030BFF1 /* YYKit.framework */,
 				CCE7914D200739F30055C51D /* SnapKit.framework */,
 			);
 			name = Carthage;
