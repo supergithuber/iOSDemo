@@ -69,10 +69,9 @@
     return YES;
 }
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    [super motionBegan:motion withEvent:event];
     if (motion == UIEventSubtypeMotionShake){
         self.resultTextView.hidden = !self.resultTextView.hidden;
-    }else{
-        [super motionBegan:motion withEvent:event];
     }
 }
 @end
