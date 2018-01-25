@@ -256,6 +256,7 @@
 		CC40F65B1E6E5F88009D144C /* iOSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CCFB57FA201983880030BFF1 /* Resources */,
 				CCFB57F02018862A0030BFF1 /* Storage */,
 				CCAB7B332016DDE30077BAB8 /* Protocol */,
 				CCA8D59420103FF100B225B6 /* Tools */,
@@ -266,7 +267,6 @@
 				CC40F65F1E6E5F88009D144C /* AppDelegate.h */,
 				CC40F6601E6E5F88009D144C /* AppDelegate.m */,
 				CC40F6651E6E5F88009D144C /* Main.storyboard */,
-				CC40F6681E6E5F88009D144C /* Assets.xcassets */,
 				CC40F66A1E6E5F88009D144C /* LaunchScreen.storyboard */,
 				CC40F66D1E6E5F88009D144C /* Info.plist */,
 				CC40F65C1E6E5F88009D144C /* Supporting Files */,
@@ -372,6 +372,14 @@
 				CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		CCFB57FA201983880030BFF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC40F6681E6E5F88009D144C /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
