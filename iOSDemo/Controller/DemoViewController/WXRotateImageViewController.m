@@ -69,7 +69,7 @@
         }];
     }
 }
-//MARK: - 获取陀螺仪数据
+//MARK: - 获取陀螺仪数据，同理，还有pull方式，按次按需获取
 - (void)getGyroDate{
     if (self.motionManager.gyroActive){
         self.motionManager.gyroUpdateInterval = 0.1;
@@ -78,7 +78,7 @@
         }];
     }
 }
-//MARK: - 获取磁力计数据
+//MARK: - 获取磁力计数据，同理，还有pull方式，按次按需获取
 - (void)Magnetometer{
     //1.判断磁力计是否可用
     if (![self.motionManager isMagnetometerAvailable]) {
@@ -93,6 +93,7 @@
     }];
     
 }
+//MARK: - get
 - (CMMotionManager *)motionManager{
     if (!_motionManager){
         _motionManager = [[CMMotionManager alloc] init];
