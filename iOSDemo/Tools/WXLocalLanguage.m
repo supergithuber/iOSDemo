@@ -9,12 +9,17 @@
 #import "WXLocalLanguage.h"
 
 @interface WXLocalLanguage()
-
+//系统UI显示的语言
 @property (nonatomic, copy)NSString* currentLanguage;
-@property (nonatomic, copy)NSString* currentRegionCode;
 
 @end
 @implementation WXLocalLanguage
 
+- (NSString *)currentLanguage{
+    return [[NSLocale preferredLanguages] firstObject];
+}
 
+- (BOOL)isChinese{
+    return [self.currentLanguage containsString:@"zh"];
+}
 @end

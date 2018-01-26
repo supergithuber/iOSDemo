@@ -19,6 +19,17 @@
 
 @implementation WXRotateImageViewController
 
+- (void)dealloc{
+    if (self.motionManager.isGyroActive){
+        [self.motionManager stopGyroUpdates];
+    }
+    if (self.motionManager.isMagnetometerActive){
+        [self.motionManager stopMagnetometerUpdates];
+    }
+    if (self.motionManager.isAccelerometerActive){
+        [self.motionManager stopAccelerometerUpdates];
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupImageView];
