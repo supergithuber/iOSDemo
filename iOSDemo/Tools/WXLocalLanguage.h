@@ -12,6 +12,7 @@
 
 @property (nonatomic, assign)BOOL isChinese;
 @property (nonatomic, assign)BOOL isChineseSimplified;
+@property (nonatomic, assign)BOOL isChineseTraditional;
 @property (nonatomic, assign)BOOL isJapanese;
 
 @end

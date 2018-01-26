@@ -22,6 +22,13 @@
 - (BOOL)isChinese{
     return [self.currentLanguage containsString:@"zh"];
 }
+- (BOOL)isChineseSimplified{
+    return [self.currentLanguage containsString:@"zh-Hant"];
+}
+- (BOOL)isChineseTraditional{
+    NSString *language = self.currentLanguage;
+    return [language containsString:@"zh-Hant"] || [language containsString:@"zh-HK"] || [language containsString:@"zh-TW"] || [language containsString:@"zh-MO"];
+}
 - (BOOL)isJapanese{
     return [self.currentLanguage containsString:@"ja"];
 }
