@@ -41,6 +41,7 @@
 		CCFB57F9201981C40030BFF1 /* YYKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CCFB57F7201981B80030BFF1 /* YYKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CCFB57FF2019B9D20030BFF1 /* WXRotateImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB57FE2019B9D20030BFF1 /* WXRotateImageViewController.m */; };
 		CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB58012019C25E0030BFF1 /* UIImage+Color.m */; };
+		CCFB5808201ACC860030BFF1 /* WXStorageBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFB5807201ACC860030BFF1 /* WXStorageBaseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,7 @@
 		CCFB57FE2019B9D20030BFF1 /* WXRotateImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXRotateImageViewController.m; sourceTree = "<group>"; };
 		CCFB58002019C25E0030BFF1 /* UIImage+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
 		CCFB58012019C25E0030BFF1 /* UIImage+Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		CCFB5807201ACC860030BFF1 /* WXStorageBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXStorageBaseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +382,7 @@
 			children = (
 				CCFB57F12018869F0030BFF1 /* WXUserDefaults.h */,
 				CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */,
+				CCFB5807201ACC860030BFF1 /* WXStorageBaseModel.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */,
 				CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */,
 				CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */,
+				CCFB5808201ACC860030BFF1 /* WXStorageBaseModel.swift in Sources */,
 				CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */,
 				CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */,
 				CCFB57FF2019B9D20030BFF1 /* WXRotateImageViewController.m in Sources */,
