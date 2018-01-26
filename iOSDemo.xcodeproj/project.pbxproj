@@ -44,6 +44,7 @@
 		CCFB5808201ACC860030BFF1 /* WXStorageBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFB5807201ACC860030BFF1 /* WXStorageBaseModel.swift */; };
 		CCFB580A201B03720030BFF1 /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFB5809201B03720030BFF1 /* DiskStorage.swift */; };
 		CCFB580C201B04FF0030BFF1 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFB580B201B04FF0030BFF1 /* AppConfiguration.swift */; };
+		CCFB580F201B19580030BFF1 /* WXLocalLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB580E201B19580030BFF1 /* WXLocalLanguage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,8 @@
 		CCFB5807201ACC860030BFF1 /* WXStorageBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXStorageBaseModel.swift; sourceTree = "<group>"; };
 		CCFB5809201B03720030BFF1 /* DiskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskStorage.swift; sourceTree = "<group>"; };
 		CCFB580B201B04FF0030BFF1 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		CCFB580D201B19580030BFF1 /* WXLocalLanguage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXLocalLanguage.h; sourceTree = "<group>"; };
+		CCFB580E201B19580030BFF1 /* WXLocalLanguage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXLocalLanguage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +332,8 @@
 			children = (
 				CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */,
 				CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */,
+				CCFB580D201B19580030BFF1 /* WXLocalLanguage.h */,
+				CCFB580E201B19580030BFF1 /* WXLocalLanguage.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -541,6 +546,7 @@
 				CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */,
 				CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */,
 				CCFB5808201ACC860030BFF1 /* WXStorageBaseModel.swift in Sources */,
+				CCFB580F201B19580030BFF1 /* WXLocalLanguage.m in Sources */,
 				CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */,
 				CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */,
 				CCFB57FF2019B9D20030BFF1 /* WXRotateImageViewController.m in Sources */,
