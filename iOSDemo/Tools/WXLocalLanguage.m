@@ -22,4 +22,7 @@
 - (BOOL)isChinese{
     return [self.currentLanguage containsString:@"zh"];
 }
+- (BOOL)isJapanese{
+    return [self.currentLanguage containsString:@"ja"];
+}
 @end
