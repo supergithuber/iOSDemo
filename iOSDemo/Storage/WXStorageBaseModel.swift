@@ -11,7 +11,7 @@ import YYKit
 //所有存储的基类，使用YYKit
 class WXStorageBaseModel: NSObject, NSCoding {
     
-    fileprivate var didUpdate: (() -> Void)?
+    var didUpdate: (() -> Void)?
     private var kvoContext = "\(Date())"
     
     deinit {

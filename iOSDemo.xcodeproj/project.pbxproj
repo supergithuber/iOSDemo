@@ -42,6 +42,8 @@
 		CCFB57FF2019B9D20030BFF1 /* WXRotateImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB57FE2019B9D20030BFF1 /* WXRotateImageViewController.m */; };
 		CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB58012019C25E0030BFF1 /* UIImage+Color.m */; };
 		CCFB5808201ACC860030BFF1 /* WXStorageBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFB5807201ACC860030BFF1 /* WXStorageBaseModel.swift */; };
+		CCFB580A201B03720030BFF1 /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFB5809201B03720030BFF1 /* DiskStorage.swift */; };
+		CCFB580C201B04FF0030BFF1 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFB580B201B04FF0030BFF1 /* AppConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,8 @@
 		CCFB58002019C25E0030BFF1 /* UIImage+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
 		CCFB58012019C25E0030BFF1 /* UIImage+Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		CCFB5807201ACC860030BFF1 /* WXStorageBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXStorageBaseModel.swift; sourceTree = "<group>"; };
+		CCFB5809201B03720030BFF1 /* DiskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskStorage.swift; sourceTree = "<group>"; };
+		CCFB580B201B04FF0030BFF1 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +387,8 @@
 				CCFB57F12018869F0030BFF1 /* WXUserDefaults.h */,
 				CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */,
 				CCFB5807201ACC860030BFF1 /* WXStorageBaseModel.swift */,
+				CCFB5809201B03720030BFF1 /* DiskStorage.swift */,
+				CCFB580B201B04FF0030BFF1 /* AppConfiguration.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -547,8 +553,10 @@
 				CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */,
 				CC40F6611E6E5F88009D144C /* AppDelegate.m in Sources */,
 				CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */,
+				CCFB580C201B04FF0030BFF1 /* AppConfiguration.swift in Sources */,
 				CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */,
 				CC40F65E1E6E5F88009D144C /* main.m in Sources */,
+				CCFB580A201B03720030BFF1 /* DiskStorage.swift in Sources */,
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
 				CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */,
 				CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */,
