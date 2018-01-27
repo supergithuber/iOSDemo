@@ -29,7 +29,39 @@
     NSString *language = self.currentLanguage;
     return [language containsString:@"zh-Hant"] || [language containsString:@"zh-HK"] || [language containsString:@"zh-TW"] || [language containsString:@"zh-MO"];
 }
+
 - (BOOL)isJapanese{
     return [self.currentLanguage containsString:@"ja"];
+}
+- (BOOL)isKorean{
+    return [self.currentLanguage containsString:@"ko"];
+}
+- (BOOL)isIndonesian{
+    return [self.currentLanguage containsString:@"id"];
+}
+
+- (BOOL)isEnglish{
+    return [self.currentLanguage containsString:@"en"];
+}
+- (BOOL)isFrench{
+    return [self.currentLanguage containsString:@"fr"];
+}
+- (BOOL)isGerman{
+    return [self.currentLanguage containsString:@"de"];
+}
+- (BOOL)isSpainish{
+    return [self.currentLanguage containsString:@"es"];
+}
+- (BOOL)isItalian{
+    return [self.currentLanguage containsString:@"it"];
+}
+- (BOOL)isPolish{
+    return [self.currentLanguage containsString:@"pl"];
+}
+- (BOOL)isPortuguese{
+    return [self.currentLanguage containsString:@"pt"];
+}
+- (BOOL)isRussian{
+    return [self.currentLanguage containsString:@"ru"];
 }
 @end
