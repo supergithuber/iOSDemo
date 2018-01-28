@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */; };
 		CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C8C200F8FE600B9B69C /* UIImageView+FaceCenter.m */; };
+		CC095C90201DA33F00B9B69C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C8F201DA33F00B9B69C /* SnapKit.framework */; };
+		CC095C92201DA34700B9B69C /* YYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C91201DA34700B9B69C /* YYKit.framework */; };
 		CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF3002008528B009F1D9E /* OperationViewController.m */; };
 		CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30420085B02009F1D9E /* WXDemoViewController.m */; };
 		CC2BF3092008633C009F1D9E /* WXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF3082008633C009F1D9E /* WXBaseViewController.m */; };
@@ -32,13 +34,9 @@
 		CC6A2812201598FA001D3A91 /* Masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC6A2810201598EF001D3A91 /* Masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
-		CCE7914E200739F30055C51D /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE7914D200739F30055C51D /* SnapKit.framework */; };
-		CCE7914F20073A000055C51D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CCE7914D200739F30055C51D /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915120073BDA0055C51D /* UIImage+Scale.m */; };
 		CCE7915720074B710055C51D /* ClosureInitScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915620074B710055C51D /* ClosureInitScrollView.swift */; };
 		CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */; };
-		CCFB57F8201981B90030BFF1 /* YYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFB57F7201981B80030BFF1 /* YYKit.framework */; };
-		CCFB57F9201981C40030BFF1 /* YYKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CCFB57F7201981B80030BFF1 /* YYKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CCFB57FF2019B9D20030BFF1 /* WXRotateImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB57FE2019B9D20030BFF1 /* WXRotateImageViewController.m */; };
 		CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB58012019C25E0030BFF1 /* UIImage+Color.m */; };
 		CCFB5808201ACC860030BFF1 /* WXStorageBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFB5807201ACC860030BFF1 /* WXStorageBaseModel.swift */; };
@@ -71,9 +69,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CCFB57F9201981C40030BFF1 /* YYKit.framework in Embed Frameworks */,
 				CC6A2812201598FA001D3A91 /* Masonry.framework in Embed Frameworks */,
-				CCE7914F20073A000055C51D /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +81,8 @@
 		CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FaceRecognizer.m"; sourceTree = "<group>"; };
 		CC095C8B200F8FE600B9B69C /* UIImageView+FaceCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FaceCenter.h"; sourceTree = "<group>"; };
 		CC095C8C200F8FE600B9B69C /* UIImageView+FaceCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+FaceCenter.m"; sourceTree = "<group>"; };
+		CC095C8F201DA33F00B9B69C /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
+		CC095C91201DA34700B9B69C /* YYKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYKit.framework; path = Carthage/Build/iOS/YYKit.framework; sourceTree = SOURCE_ROOT; };
 		CC2BF2FF2008528B009F1D9E /* OperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationViewController.h; sourceTree = "<group>"; };
 		CC2BF3002008528B009F1D9E /* OperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationViewController.m; sourceTree = "<group>"; };
 		CC2BF30320085B02009F1D9E /* WXDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDemoViewController.h; sourceTree = "<group>"; };
@@ -129,13 +127,11 @@
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXVolumeButtonHandler.h; sourceTree = "<group>"; };
 		CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXVolumeButtonHandler.m; sourceTree = "<group>"; };
-		CCE7914D200739F30055C51D /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 		CCE7915020073BDA0055C51D /* UIImage+Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
 		CCE7915120073BDA0055C51D /* UIImage+Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
 		CCE7915620074B710055C51D /* ClosureInitScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureInitScrollView.swift; sourceTree = "<group>"; };
 		CCFB57F12018869F0030BFF1 /* WXUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXUserDefaults.h; sourceTree = "<group>"; };
 		CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXUserDefaults.m; sourceTree = "<group>"; };
-		CCFB57F7201981B80030BFF1 /* YYKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYKit.framework; path = Carthage/Build/iOS/YYKit.framework; sourceTree = SOURCE_ROOT; };
 		CCFB57FD2019B9D20030BFF1 /* WXRotateImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXRotateImageViewController.h; sourceTree = "<group>"; };
 		CCFB57FE2019B9D20030BFF1 /* WXRotateImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXRotateImageViewController.m; sourceTree = "<group>"; };
 		CCFB58002019C25E0030BFF1 /* UIImage+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
@@ -152,9 +148,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCFB57F8201981B90030BFF1 /* YYKit.framework in Frameworks */,
+				CC095C92201DA34700B9B69C /* YYKit.framework in Frameworks */,
 				CC6A2811201598EF001D3A91 /* Masonry.framework in Frameworks */,
-				CCE7914E200739F30055C51D /* SnapKit.framework in Frameworks */,
+				CC095C90201DA33F00B9B69C /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +178,16 @@
 				CC095C8C200F8FE600B9B69C /* UIImageView+FaceCenter.m */,
 			);
 			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		CC095C8E201DA32E00B9B69C /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				CC095C91201DA34700B9B69C /* YYKit.framework */,
+				CC095C8F201DA33F00B9B69C /* SnapKit.framework */,
+			);
+			name = Carthage;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		CC2BF30620086301009F1D9E /* DemoViewController */ = {
@@ -251,8 +257,8 @@
 		CC40F6501E6E5F87009D144C = {
 			isa = PBXGroup;
 			children = (
+				CC095C8E201DA32E00B9B69C /* Carthage */,
 				CC6A280F201598EF001D3A91 /* Framework */,
-				CCE7914C200739DF0055C51D /* Carthage */,
 				CC40F65B1E6E5F88009D144C /* iOSDemo */,
 				CC40F6751E6E5F88009D144C /* iOSDemoTests */,
 				CC40F6801E6E5F88009D144C /* iOSDemoUITests */,
@@ -343,16 +349,6 @@
 			children = (
 			);
 			path = Protocol;
-			sourceTree = "<group>";
-		};
-		CCE7914C200739DF0055C51D /* Carthage */ = {
-			isa = PBXGroup;
-			children = (
-				CCFB57F7201981B80030BFF1 /* YYKit.framework */,
-				CCE7914D200739F30055C51D /* SnapKit.framework */,
-			);
-			name = Carthage;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		CCE7915320073DC90055C51D /* UIViewController */ = {
