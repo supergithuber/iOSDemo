@@ -24,10 +24,9 @@ class DiskStorage: NSObject {
     var appConfiguration:AppConfiguration {
         get {
             if let appConfig = diskStorage.object(forKey: kAppConfigutationKey) as? AppConfiguration {
-                //YYcache可能不支持block属性的序列化
-                appConfig.didUpdate = { [unowned self] in
-                    self.diskStorage.setObject(appConfig, forKey: kAppConfigutationKey)
-                }
+//                appConfig.didUpdate = { [unowned self] in
+//                    self.diskStorage.setObject(appConfig, forKey: kAppConfigutationKey)
+//                }
                 return appConfig
             }
             
