@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "iOSDemo-Swift.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self registerLaunchDateString];
     return YES;
 }
 
@@ -47,5 +48,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)registerLaunchDateString{
+    NSLog(@"last launch app time: %@", DiskStorage.shared.appConfiguration.lastLaunchDateString);
+    NSDate *currentDate = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"YYYY-MM-dd,HH:mm:ss";
+    NSString *currentDateString = [formatter stringFromDate:currentDate];
+    DiskStorage.shared.appConfiguration.lastLaunchDateString = currentDateString;
+}
 
 @end
