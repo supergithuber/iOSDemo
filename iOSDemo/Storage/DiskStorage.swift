@@ -24,17 +24,18 @@ class DiskStorage: NSObject {
     var appConfiguration:AppConfiguration {
         get {
             if let appConfig = diskStorage.object(forKey: kAppConfigutationKey) as? AppConfiguration {
-//                appConfig.didUpdate = { [unowned self] in
-//                    self.diskStorage.setObject(appConfig, forKey: kAppConfigutationKey)
-//                }
+                //YYcache无法把block序列化到磁盘，取出来需要重新赋值
+                appConfig.didUpdate = { [unowned self] in
+                    self.diskStorage.setObject(appConfig, forKey: kAppConfigutationKey)
+                }
                 return appConfig
             }
             
             let appConfig = AppConfiguration()
-            self.diskStorage.setObject(appConfig, forKey: kAppConfigutationKey)
             appConfig.didUpdate = { [unowned self] in
                 self.diskStorage.setObject(appConfig, forKey: kAppConfigutationKey)
             }
+            self.diskStorage.setObject(appConfig, forKey: kAppConfigutationKey)
             return appConfig
         }
     }

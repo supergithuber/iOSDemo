@@ -11,6 +11,8 @@
 		CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C8C200F8FE600B9B69C /* UIImageView+FaceCenter.m */; };
 		CC095C90201DA33F00B9B69C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C8F201DA33F00B9B69C /* SnapKit.framework */; };
 		CC095C92201DA34700B9B69C /* YYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C91201DA34700B9B69C /* YYKit.framework */; };
+		CC095C93201DB07100B9B69C /* YYKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C91201DA34700B9B69C /* YYKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC095C94201DB07100B9B69C /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C8F201DA33F00B9B69C /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF3002008528B009F1D9E /* OperationViewController.m */; };
 		CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30420085B02009F1D9E /* WXDemoViewController.m */; };
 		CC2BF3092008633C009F1D9E /* WXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF3082008633C009F1D9E /* WXBaseViewController.m */; };
@@ -69,6 +71,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CC095C93201DB07100B9B69C /* YYKit.framework in Embed Frameworks */,
+				CC095C94201DB07100B9B69C /* SnapKit.framework in Embed Frameworks */,
 				CC6A2812201598FA001D3A91 /* Masonry.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
