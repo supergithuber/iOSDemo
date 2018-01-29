@@ -30,7 +30,7 @@ class DiskStorage: NSObject {
                 }
                 return appConfig
             }
-            
+            //
             let appConfig = AppConfiguration()
             appConfig.didUpdate = { [unowned self] in
                 self.diskStorage.setObject(appConfig, forKey: kAppConfigutationKey)
