@@ -4,7 +4,7 @@ execute carthage update after downloading the demo
 
 --- 
 
-###contain
+### contain
 
 1. recognize faces in imageView
 2. recognize faces in image
