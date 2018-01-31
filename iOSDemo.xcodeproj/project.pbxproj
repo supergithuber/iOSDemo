@@ -36,6 +36,7 @@
 		CC6A2812201598FA001D3A91 /* Masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC6A2810201598EF001D3A91 /* Masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC6EB22220215E050002BA14 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB22120215E050002BA14 /* UIViewController+Alert.m */; };
 		CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB224202162250002BA14 /* WXARTextViewController.m */; };
+		CC6EB22A2021CE0B0002BA14 /* WXARText.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB2292021CE0B0002BA14 /* WXARText.m */; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
 		CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915120073BDA0055C51D /* UIImage+Scale.m */; };
@@ -133,6 +134,8 @@
 		CC6EB22120215E050002BA14 /* UIViewController+Alert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
 		CC6EB223202162250002BA14 /* WXARTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXARTextViewController.h; sourceTree = "<group>"; };
 		CC6EB224202162250002BA14 /* WXARTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXARTextViewController.m; sourceTree = "<group>"; };
+		CC6EB2282021CE0B0002BA14 /* WXARText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXARText.h; sourceTree = "<group>"; };
+		CC6EB2292021CE0B0002BA14 /* WXARText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXARText.m; sourceTree = "<group>"; };
 		CC72CD601F8F163500CADF32 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXVolumeButtonHandler.h; sourceTree = "<group>"; };
@@ -251,6 +254,8 @@
 				CC2BF30F20089037009F1D9E /* WXConcurrentOperation.m */,
 				CC6A280920158EB8001D3A91 /* WXUserInfoModel.h */,
 				CC6A280A20158EB8001D3A91 /* WXUserInfoModel.m */,
+				CC6EB2282021CE0B0002BA14 /* WXARText.h */,
+				CC6EB2292021CE0B0002BA14 /* WXARText.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -564,6 +569,7 @@
 				CC2BF30D20088D73009F1D9E /* WXSerialOperation.m in Sources */,
 				CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */,
 				CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */,
+				CC6EB22A2021CE0B0002BA14 /* WXARText.m in Sources */,
 				CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */,
 				CC2BF3092008633C009F1D9E /* WXBaseViewController.m in Sources */,
 				CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */,
