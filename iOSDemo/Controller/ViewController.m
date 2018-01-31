@@ -13,6 +13,7 @@
 #import "OperationViewController.h"
 #import "WXCoderViewController.h"
 #import "WXRotateImageViewController.h"
+#import "WXARTextViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -20,7 +21,6 @@
 
 @property (nonatomic, strong)NSMutableArray *sectionArray;
 @property (nonatomic, strong)NSMutableArray *firstSectionTitle;
-@property (nonatomic, strong)NSMutableArray *firstSectionController;
 
 @end
 
@@ -43,13 +43,7 @@
     [self.view addSubview:self.tableView];
     
     self.sectionArray = [NSMutableArray arrayWithObjects:@"第一部分", nil];
-    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", nil];
-    self.firstSectionController = [NSMutableArray arrayWithObjects:[[WXDemoViewController alloc] init],
-                                                                    [[TimerViewController alloc] init],
-                                                                    [[SemaphoreViewController alloc] init],
-                                                                    [[OperationViewController alloc] init],
-                                                                    [[WXCoderViewController alloc] init],
-                                                                    [[WXRotateImageViewController alloc] init], nil];
+    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", @"ARTextDemo", nil];
     
 }
 
@@ -72,7 +66,36 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.navigationController pushViewController:self.firstSectionController[indexPath.row] animated:YES];
+    UIViewController *controller;
+    switch (indexPath.row) {
+        case 0:
+            controller = [[WXDemoViewController alloc] init];
+            break;
+        case 1:
+            controller = [[TimerViewController alloc] init];
+            break;
+        case 2:
+            controller = [[SemaphoreViewController alloc] init];
+            break;
+        case 3:
+            controller = [[OperationViewController alloc] init];
+            break;
+        case 4:
+            controller = [[WXCoderViewController alloc] init];
+            break;
+        case 5:
+            controller = [[WXRotateImageViewController alloc] init];
+            break;
+        case 6:
+            controller = [[WXARTextViewController alloc] init];
+            break;
+        default:
+            break;
+    }
+    if (controller){
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    
 }
 
 

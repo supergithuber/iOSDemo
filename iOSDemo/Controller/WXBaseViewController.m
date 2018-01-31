@@ -18,7 +18,7 @@
 @implementation WXBaseViewController
 
 - (void)dealloc{
-    
+    NSLog(@"baseviewcontroller释放");
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,10 +49,11 @@
     
 }
 - (void)setupConstraints{
+    WS(weakSelf);
     [self.resultTextView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(self.view.mas_width);
+        make.width.mas_equalTo(weakSelf.view.mas_width);
         make.height.mas_equalTo(100);
-        make.bottom.mas_equalTo(self.view.mas_bottom);
+        make.bottom.mas_equalTo(weakSelf.view.mas_bottom);
     }];
 }
 

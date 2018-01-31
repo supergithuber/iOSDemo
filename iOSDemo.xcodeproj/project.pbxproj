@@ -34,6 +34,8 @@
 		CC6A280E201593A8001D3A91 /* WXCoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6A280D201593A8001D3A91 /* WXCoderViewController.m */; };
 		CC6A2811201598EF001D3A91 /* Masonry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6A2810201598EF001D3A91 /* Masonry.framework */; };
 		CC6A2812201598FA001D3A91 /* Masonry.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC6A2810201598EF001D3A91 /* Masonry.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC6EB22220215E050002BA14 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB22120215E050002BA14 /* UIViewController+Alert.m */; };
+		CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB224202162250002BA14 /* WXARTextViewController.m */; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
 		CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915120073BDA0055C51D /* UIImage+Scale.m */; };
@@ -127,6 +129,10 @@
 		CC6A280C201593A8001D3A91 /* WXCoderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCoderViewController.h; sourceTree = "<group>"; };
 		CC6A280D201593A8001D3A91 /* WXCoderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXCoderViewController.m; sourceTree = "<group>"; };
 		CC6A2810201598EF001D3A91 /* Masonry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Masonry.framework; sourceTree = "<group>"; };
+		CC6EB22020215E050002BA14 /* UIViewController+Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
+		CC6EB22120215E050002BA14 /* UIViewController+Alert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
+		CC6EB223202162250002BA14 /* WXARTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXARTextViewController.h; sourceTree = "<group>"; };
+		CC6EB224202162250002BA14 /* WXARTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXARTextViewController.m; sourceTree = "<group>"; };
 		CC72CD601F8F163500CADF32 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXVolumeButtonHandler.h; sourceTree = "<group>"; };
@@ -209,6 +215,8 @@
 				CC6A280D201593A8001D3A91 /* WXCoderViewController.m */,
 				CCFB57FD2019B9D20030BFF1 /* WXRotateImageViewController.h */,
 				CCFB57FE2019B9D20030BFF1 /* WXRotateImageViewController.m */,
+				CC6EB223202162250002BA14 /* WXARTextViewController.h */,
+				CC6EB224202162250002BA14 /* WXARTextViewController.m */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -360,6 +368,8 @@
 			children = (
 				CC3D2EB12005FAA0009E87F6 /* UIViewController+GetViewController.h */,
 				CC3D2EB22005FAA0009E87F6 /* UIViewController+GetViewController.m */,
+				CC6EB22020215E050002BA14 /* UIViewController+Alert.h */,
+				CC6EB22120215E050002BA14 /* UIViewController+Alert.m */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -563,12 +573,14 @@
 				CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */,
 				CC40F65E1E6E5F88009D144C /* main.m in Sources */,
 				CCFB580A201B03720030BFF1 /* DiskStorage.swift in Sources */,
+				CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */,
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
 				CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */,
 				CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */,
 				CC6A280E201593A8001D3A91 /* WXCoderViewController.m in Sources */,
 				CC6A280B20158EB8001D3A91 /* WXUserInfoModel.m in Sources */,
 				CCE7915720074B710055C51D /* ClosureInitScrollView.swift in Sources */,
+				CC6EB22220215E050002BA14 /* UIViewController+Alert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
