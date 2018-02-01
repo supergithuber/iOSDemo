@@ -8,6 +8,8 @@
 
 #import "WXARTextViewController.h"
 #import "UIViewController+Alert.h"
+#import "WXARText.h"
+#import "WXARTextNode.h"
 #import <ARKit/ARKit.h>
 
 @interface WXARTextViewController()<ARSCNViewDelegate>
@@ -25,7 +27,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     [self wx_showSingleInputTexFieldWithTitle:@"请输入文字" message:@"文字将以artext的方式显示" sureBlock:^(NSString *text) {
-        NSLog(@"输入的文字%@", text);
+        [self showARText:text];
     } cancelBlock:^{
         
     }];
@@ -61,6 +63,14 @@
     [self.view addSubview:self.sceneView];
 }
 
+- (void)showARText:(NSString *)text{
+    if (!text || text.length == 0){
+        return;
+    }
+    WXARText *arText = [[WXARText alloc] initWithString:text font:[UIFont systemFontOfSize:12] color:[UIColor redColor] depth:12];
+    WXARTextNode *textNode = [[WXARTextNode alloc] initWithDistance:1 scnText:arText scnView:self.sceneView scale:1/100.0];
+    [self.sceneView.scene.rootNode addChildNode:textNode];
+}
 //MARK: - ARSCNViewDelegate
 - (void)session:(ARSession *)session didFailWithError:(NSError *)error{
     NSLog(@"session开启失败%@", error.localizedDescription);
