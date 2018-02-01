@@ -37,6 +37,7 @@
 		CC6EB22220215E050002BA14 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB22120215E050002BA14 /* UIViewController+Alert.m */; };
 		CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB224202162250002BA14 /* WXARTextViewController.m */; };
 		CC6EB22A2021CE0B0002BA14 /* WXARText.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB2292021CE0B0002BA14 /* WXARText.m */; };
+		CC6EB22D2022B51E0002BA14 /* WXARTextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB22C2022B51E0002BA14 /* WXARTextNode.m */; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
 		CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915120073BDA0055C51D /* UIImage+Scale.m */; };
@@ -136,6 +137,8 @@
 		CC6EB224202162250002BA14 /* WXARTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXARTextViewController.m; sourceTree = "<group>"; };
 		CC6EB2282021CE0B0002BA14 /* WXARText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXARText.h; sourceTree = "<group>"; };
 		CC6EB2292021CE0B0002BA14 /* WXARText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXARText.m; sourceTree = "<group>"; };
+		CC6EB22B2022B51E0002BA14 /* WXARTextNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXARTextNode.h; sourceTree = "<group>"; };
+		CC6EB22C2022B51E0002BA14 /* WXARTextNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXARTextNode.m; sourceTree = "<group>"; };
 		CC72CD601F8F163500CADF32 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXVolumeButtonHandler.h; sourceTree = "<group>"; };
@@ -248,14 +251,13 @@
 		CC3D2EAC2005F56E009E87F6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC6EB22E2022B5400002BA14 /* ARModel */,
 				CC2BF30B20088D73009F1D9E /* WXSerialOperation.h */,
 				CC2BF30C20088D73009F1D9E /* WXSerialOperation.m */,
 				CC2BF30E20089037009F1D9E /* WXConcurrentOperation.h */,
 				CC2BF30F20089037009F1D9E /* WXConcurrentOperation.m */,
 				CC6A280920158EB8001D3A91 /* WXUserInfoModel.h */,
 				CC6A280A20158EB8001D3A91 /* WXUserInfoModel.m */,
-				CC6EB2282021CE0B0002BA14 /* WXARText.h */,
-				CC6EB2292021CE0B0002BA14 /* WXARText.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,6 +350,17 @@
 				CC6A2810201598EF001D3A91 /* Masonry.framework */,
 			);
 			path = Framework;
+			sourceTree = "<group>";
+		};
+		CC6EB22E2022B5400002BA14 /* ARModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC6EB2282021CE0B0002BA14 /* WXARText.h */,
+				CC6EB2292021CE0B0002BA14 /* WXARText.m */,
+				CC6EB22B2022B51E0002BA14 /* WXARTextNode.h */,
+				CC6EB22C2022B51E0002BA14 /* WXARTextNode.m */,
+			);
+			path = ARModel;
 			sourceTree = "<group>";
 		};
 		CCA8D59420103FF100B225B6 /* Tools */ = {
@@ -561,6 +574,7 @@
 				CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */,
 				CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */,
 				CCFB5808201ACC860030BFF1 /* WXStorageBaseModel.swift in Sources */,
+				CC6EB22D2022B51E0002BA14 /* WXARTextNode.m in Sources */,
 				CCFB580F201B19580030BFF1 /* WXLocalLanguage.m in Sources */,
 				CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */,
 				CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */,

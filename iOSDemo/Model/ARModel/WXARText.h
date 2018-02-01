@@ -10,4 +10,6 @@
 
 @interface WXARText : SCNText
 
+- (instancetype)initWithString:(NSString *)string font:(UIFont *)font color:(UIColor *)color depth:(CGFloat)depth;
+
 @end
