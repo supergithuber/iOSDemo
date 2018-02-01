@@ -59,7 +59,9 @@
     self.sceneView.scene.lightingEnvironment.intensity = 25;
     self.sceneView.pointOfView.camera.wantsHDR = YES;
     self.sceneView.showsStatistics = YES;
-    self.sceneView.debugOptions = ARSCNDebugOptionShowFeaturePoints;
+    //ARSCNDebugOptionShowFeaturePoints:显示捕捉到的特征点
+    //ARSCNDebugOptionShowWorldOrigin:显示世界坐标原点
+    self.sceneView.debugOptions = ARSCNDebugOptionShowWorldOrigin;
     [self.view addSubview:self.sceneView];
 }
 
