@@ -2,6 +2,8 @@
 
 execute carthage update after downloading the demo
 
+supported:iOS 11 or higher
+
 --- 
 
 ### contain
