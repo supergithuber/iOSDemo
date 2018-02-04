@@ -2,7 +2,7 @@
 
 execute carthage update after downloading the demo
 
-supported:iOS 11 or higher
+supported:iOS 11 or higher, iPhone 6s or later
 
 --- 
 
