@@ -26,7 +26,7 @@ typedef void(^myBlock)();
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+//    [self addPushButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,6 +44,7 @@ typedef void(^myBlock)();
     UIButton *pushButton = [UIButton buttonWithType:UIButtonTypeSystem];
     pushButton.backgroundColor = [UIColor redColor];
     pushButton.frame = CGRectMake(100, 100, 100, 100);
+    pushButton.layer.cornerRadius = 10;
     [pushButton addTarget:self action:@selector(push:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:pushButton];
