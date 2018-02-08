@@ -14,9 +14,11 @@
 		CC095C93201DB07100B9B69C /* YYKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C91201DA34700B9B69C /* YYKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC095C94201DB07100B9B69C /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C8F201DA33F00B9B69C /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC1BCE47202C2851009A0BCF /* WXLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1BCE49202C2851009A0BCF /* WXLocalizable.strings */; };
+		CC1BCE4E202C2A6E009A0BCF /* WXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1BCE4D202C2A6E009A0BCF /* WXBaseViewController.m */; };
+		CC1BCE58202C2D68009A0BCF /* WXSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1BCE57202C2D68009A0BCF /* WXSettingsViewController.m */; };
+		CC1BCE5C202C2D90009A0BCF /* WXInitTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1BCE5B202C2D90009A0BCF /* WXInitTabBarViewController.m */; };
 		CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF3002008528B009F1D9E /* OperationViewController.m */; };
 		CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30420085B02009F1D9E /* WXDemoViewController.m */; };
-		CC2BF3092008633C009F1D9E /* WXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF3082008633C009F1D9E /* WXBaseViewController.m */; };
 		CC2BF30D20088D73009F1D9E /* WXSerialOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30C20088D73009F1D9E /* WXSerialOperation.m */; };
 		CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30F20089037009F1D9E /* WXConcurrentOperation.m */; };
 		CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EA92005F1C3009E87F6 /* SemaphoreViewController.m */; };
@@ -96,12 +98,18 @@
 		CC1BCE44202C257F009A0BCF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		CC1BCE48202C2851009A0BCF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/WXLocalizable.strings"; sourceTree = "<group>"; };
 		CC1BCE4A202C2855009A0BCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WXLocalizable.strings; sourceTree = "<group>"; };
+		CC1BCE4C202C2A6E009A0BCF /* WXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXBaseViewController.h; sourceTree = "<group>"; };
+		CC1BCE4D202C2A6E009A0BCF /* WXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXBaseViewController.m; sourceTree = "<group>"; };
+		CC1BCE53202C2C99009A0BCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		CC1BCE55202C2CA0009A0BCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CC1BCE56202C2D68009A0BCF /* WXSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSettingsViewController.h; sourceTree = "<group>"; };
+		CC1BCE57202C2D68009A0BCF /* WXSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSettingsViewController.m; sourceTree = "<group>"; };
+		CC1BCE5A202C2D90009A0BCF /* WXInitTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXInitTabBarViewController.h; sourceTree = "<group>"; };
+		CC1BCE5B202C2D90009A0BCF /* WXInitTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXInitTabBarViewController.m; sourceTree = "<group>"; };
 		CC2BF2FF2008528B009F1D9E /* OperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationViewController.h; sourceTree = "<group>"; };
 		CC2BF3002008528B009F1D9E /* OperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationViewController.m; sourceTree = "<group>"; };
 		CC2BF30320085B02009F1D9E /* WXDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDemoViewController.h; sourceTree = "<group>"; };
 		CC2BF30420085B02009F1D9E /* WXDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXDemoViewController.m; sourceTree = "<group>"; };
-		CC2BF3072008633C009F1D9E /* WXBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXBaseViewController.h; sourceTree = "<group>"; };
-		CC2BF3082008633C009F1D9E /* WXBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXBaseViewController.m; sourceTree = "<group>"; };
 		CC2BF30A20086427009F1D9E /* iOSDemo-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDemo-prefix.pch"; sourceTree = "<group>"; };
 		CC2BF30B20088D73009F1D9E /* WXSerialOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSerialOperation.h; sourceTree = "<group>"; };
 		CC2BF30C20088D73009F1D9E /* WXSerialOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSerialOperation.m; sourceTree = "<group>"; };
@@ -211,6 +219,24 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		CC1BCE4B202C2A6E009A0BCF /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC1BCE4C202C2A6E009A0BCF /* WXBaseViewController.h */,
+				CC1BCE4D202C2A6E009A0BCF /* WXBaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		CC1BCE59202C2D90009A0BCF /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				CC1BCE5A202C2D90009A0BCF /* WXInitTabBarViewController.h */,
+				CC1BCE5B202C2D90009A0BCF /* WXInitTabBarViewController.m */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 		CC2BF30620086301009F1D9E /* DemoViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,11 +261,13 @@
 		CC3D2EA72005F0C0009E87F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CC1BCE59202C2D90009A0BCF /* Tabbar */,
+				CC1BCE4B202C2A6E009A0BCF /* BaseViewController */,
 				CC2BF30620086301009F1D9E /* DemoViewController */,
 				CC40F6621E6E5F88009D144C /* ViewController.h */,
 				CC40F6631E6E5F88009D144C /* ViewController.m */,
-				CC2BF3072008633C009F1D9E /* WXBaseViewController.h */,
-				CC2BF3082008633C009F1D9E /* WXBaseViewController.m */,
+				CC1BCE56202C2D68009A0BCF /* WXSettingsViewController.h */,
+				CC1BCE57202C2D68009A0BCF /* WXSettingsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -585,6 +613,7 @@
 				CCFB580F201B19580030BFF1 /* WXLocalLanguage.m in Sources */,
 				CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */,
 				CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */,
+				CC1BCE5C202C2D90009A0BCF /* WXInitTabBarViewController.m in Sources */,
 				CCFB57FF2019B9D20030BFF1 /* WXRotateImageViewController.m in Sources */,
 				CC40F6641E6E5F88009D144C /* ViewController.m in Sources */,
 				CC2BF30D20088D73009F1D9E /* WXSerialOperation.m in Sources */,
@@ -592,17 +621,18 @@
 				CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */,
 				CC6EB22A2021CE0B0002BA14 /* WXARText.m in Sources */,
 				CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */,
-				CC2BF3092008633C009F1D9E /* WXBaseViewController.m in Sources */,
 				CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */,
 				CC40F6611E6E5F88009D144C /* AppDelegate.m in Sources */,
 				CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */,
 				CCFB580C201B04FF0030BFF1 /* AppConfiguration.swift in Sources */,
+				CC1BCE58202C2D68009A0BCF /* WXSettingsViewController.m in Sources */,
 				CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */,
 				CC40F65E1E6E5F88009D144C /* main.m in Sources */,
 				CCFB580A201B03720030BFF1 /* DiskStorage.swift in Sources */,
 				CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */,
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
 				CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */,
+				CC1BCE4E202C2A6E009A0BCF /* WXBaseViewController.m in Sources */,
 				CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */,
 				CC6A280E201593A8001D3A91 /* WXCoderViewController.m in Sources */,
 				CC6A280B20158EB8001D3A91 /* WXUserInfoModel.m in Sources */,
@@ -657,6 +687,7 @@
 			children = (
 				CC40F6661E6E5F88009D144C /* Base */,
 				CC1BCE43202C257F009A0BCF /* zh-Hans */,
+				CC1BCE53202C2C99009A0BCF /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -666,6 +697,7 @@
 			children = (
 				CC40F66B1E6E5F88009D144C /* Base */,
 				CC1BCE44202C257F009A0BCF /* zh-Hans */,
+				CC1BCE55202C2CA0009A0BCF /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -794,6 +826,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSDemo/iOSDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -825,6 +858,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSDemo/iOSDemo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
