@@ -13,6 +13,7 @@
 		CC095C92201DA34700B9B69C /* YYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C91201DA34700B9B69C /* YYKit.framework */; };
 		CC095C93201DB07100B9B69C /* YYKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C91201DA34700B9B69C /* YYKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC095C94201DB07100B9B69C /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C8F201DA33F00B9B69C /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC1BCE47202C2851009A0BCF /* WXLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1BCE49202C2851009A0BCF /* WXLocalizable.strings */; };
 		CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF3002008528B009F1D9E /* OperationViewController.m */; };
 		CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30420085B02009F1D9E /* WXDemoViewController.m */; };
 		CC2BF3092008633C009F1D9E /* WXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF3082008633C009F1D9E /* WXBaseViewController.m */; };
@@ -91,6 +92,10 @@
 		CC095C8C200F8FE600B9B69C /* UIImageView+FaceCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+FaceCenter.m"; sourceTree = "<group>"; };
 		CC095C8F201DA33F00B9B69C /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 		CC095C91201DA34700B9B69C /* YYKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYKit.framework; path = Carthage/Build/iOS/YYKit.framework; sourceTree = SOURCE_ROOT; };
+		CC1BCE43202C257F009A0BCF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		CC1BCE44202C257F009A0BCF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		CC1BCE48202C2851009A0BCF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/WXLocalizable.strings"; sourceTree = "<group>"; };
+		CC1BCE4A202C2855009A0BCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WXLocalizable.strings; sourceTree = "<group>"; };
 		CC2BF2FF2008528B009F1D9E /* OperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationViewController.h; sourceTree = "<group>"; };
 		CC2BF3002008528B009F1D9E /* OperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationViewController.m; sourceTree = "<group>"; };
 		CC2BF30320085B02009F1D9E /* WXDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDemoViewController.h; sourceTree = "<group>"; };
@@ -322,6 +327,7 @@
 				CC40F66A1E6E5F88009D144C /* LaunchScreen.storyboard */,
 				CC40F66D1E6E5F88009D144C /* Info.plist */,
 				CC40F65D1E6E5F88009D144C /* main.m */,
+				CC1BCE49202C2851009A0BCF /* WXLocalizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -545,6 +551,7 @@
 			files = (
 				CC40F66C1E6E5F88009D144C /* LaunchScreen.storyboard in Resources */,
 				CC40F6691E6E5F88009D144C /* Assets.xcassets in Resources */,
+				CC1BCE47202C2851009A0BCF /* WXLocalizable.strings in Resources */,
 				CC40F6671E6E5F88009D144C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -636,10 +643,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CC1BCE49202C2851009A0BCF /* WXLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC1BCE48202C2851009A0BCF /* zh-Hans */,
+				CC1BCE4A202C2855009A0BCF /* en */,
+			);
+			name = WXLocalizable.strings;
+			sourceTree = "<group>";
+		};
 		CC40F6651E6E5F88009D144C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CC40F6661E6E5F88009D144C /* Base */,
+				CC1BCE43202C257F009A0BCF /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -648,6 +665,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CC40F66B1E6E5F88009D144C /* Base */,
+				CC1BCE44202C257F009A0BCF /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -659,6 +677,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -707,6 +726,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
