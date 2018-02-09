@@ -43,6 +43,7 @@
 		CC6EB22D2022B51E0002BA14 /* WXARTextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB22C2022B51E0002BA14 /* WXARTextNode.m */; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
+		CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */; };
 		CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915120073BDA0055C51D /* UIImage+Scale.m */; };
 		CCE7915720074B710055C51D /* ClosureInitScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915620074B710055C51D /* ClosureInitScrollView.swift */; };
 		CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */; };
@@ -156,6 +157,8 @@
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXVolumeButtonHandler.h; sourceTree = "<group>"; };
 		CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXVolumeButtonHandler.m; sourceTree = "<group>"; };
+		CCAD93F4202D3E5E00414E47 /* WXBaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXBaseNavigationViewController.h; sourceTree = "<group>"; };
+		CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXBaseNavigationViewController.m; sourceTree = "<group>"; };
 		CCE7915020073BDA0055C51D /* UIImage+Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
 		CCE7915120073BDA0055C51D /* UIImage+Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
 		CCE7915620074B710055C51D /* ClosureInitScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureInitScrollView.swift; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 			children = (
 				CC1BCE4C202C2A6E009A0BCF /* WXBaseViewController.h */,
 				CC1BCE4D202C2A6E009A0BCF /* WXBaseViewController.m */,
+				CCAD93F4202D3E5E00414E47 /* WXBaseNavigationViewController.h */,
+				CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -617,6 +622,7 @@
 				CCFB57FF2019B9D20030BFF1 /* WXRotateImageViewController.m in Sources */,
 				CC40F6641E6E5F88009D144C /* ViewController.m in Sources */,
 				CC2BF30D20088D73009F1D9E /* WXSerialOperation.m in Sources */,
+				CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */,
 				CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */,
 				CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */,
 				CC6EB22A2021CE0B0002BA14 /* WXARText.m in Sources */,

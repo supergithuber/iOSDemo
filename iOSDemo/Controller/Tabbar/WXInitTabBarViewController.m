@@ -7,6 +7,9 @@
 //
 
 #import "WXInitTabBarViewController.h"
+#import "WXBaseNavigationViewController.h"
+#import "ViewController.h"
+#import "WXSettingsViewController.h"
 
 @interface WXInitTabBarViewController ()
 
@@ -16,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initSubController];
     
 }
 
@@ -24,14 +28,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)initSubController {
+    UIViewController *viewController = [[WXBaseNavigationViewController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    viewController.tabBarItem.title = @"首页";
+    
+    UIViewController *settingsController = [[WXBaseNavigationViewController alloc] initWithRootViewController:[[WXSettingsViewController alloc] init]];
+    settingsController.tabBarItem.title = @"设置";
+    
+    [self addChildViewController:viewController];
+    [self addChildViewController:settingsController];
 }
-*/
 
 @end
