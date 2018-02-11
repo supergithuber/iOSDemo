@@ -14,6 +14,7 @@
 #import "WXCoderViewController.h"
 #import "WXRotateImageViewController.h"
 #import "WXARTextViewController.h"
+#import "PushAndPopViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -43,7 +44,7 @@
     [self.view addSubview:self.tableView];
     
     self.sectionArray = [NSMutableArray arrayWithObjects:@"第一部分", nil];
-    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", @"ARTextDemo", nil];
+    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", @"ARTextDemo",@"push and pop", nil];
     
 }
 
@@ -89,6 +90,8 @@
         case 6:
             controller = [[WXARTextViewController alloc] init];
             break;
+        case 7:
+            controller = [[PushAndPopViewController alloc] init];
         default:
             break;
     }
