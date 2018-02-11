@@ -1,21 +1,21 @@
 //
-//  WXBaseViewController.m
+//  WXConsoleViewController.m
 //  iOSDemo
 //
 //  Created by wuxi on 2018/1/12.
 //  Copyright © 2018年 Wuxi. All rights reserved.
 //
 
-#import "WXBaseViewController.h"
+#import "WXConsoleViewController.h"
 #import <Masonry/Masonry.h>
 
-@interface WXBaseViewController ()
+@interface WXConsoleViewController ()
 
 @property (nonatomic, strong)UITextView *resultTextView;
 
 @end
 
-@implementation WXBaseViewController
+@implementation WXConsoleViewController
 
 - (void)dealloc{
     NSLog(@"baseviewcontroller释放");

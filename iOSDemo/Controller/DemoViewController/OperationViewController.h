@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OperationViewController : WXBaseViewController
+@interface OperationViewController : WXConsoleViewController
 
 @end

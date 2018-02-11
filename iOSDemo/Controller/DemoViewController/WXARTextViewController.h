@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WXARTextViewController : WXBaseViewController
+@interface WXARTextViewController : WXConsoleViewController
 
 @end

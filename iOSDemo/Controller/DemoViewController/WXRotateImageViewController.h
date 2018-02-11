@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WXRotateImageViewController : WXBaseViewController
+@interface WXRotateImageViewController : WXConsoleViewController
 
 @end

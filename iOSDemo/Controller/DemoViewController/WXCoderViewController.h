@@ -6,8 +6,8 @@
 //  Copyright © 2018年 Wuxi. All rights reserved.
 //
 
-#import "WXBaseViewController.h"
+#import "WXConsoleViewController.h"
 
-@interface WXCoderViewController : WXBaseViewController
+@interface WXCoderViewController : WXConsoleViewController
 
 @end

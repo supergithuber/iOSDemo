@@ -1,5 +1,5 @@
 //
-//  WXBaseViewController.h
+//  WXConsoleViewController.h
 //  iOSDemo
 //
 //  Created by wuxi on 2018/1/12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WXBaseViewController : UIViewController
+@interface WXConsoleViewController : UIViewController
 
 //在这个页面，以及它的子类，都有一个控制台，可以用于打印到手机上可以看到
 //摇一摇出现或者消失
