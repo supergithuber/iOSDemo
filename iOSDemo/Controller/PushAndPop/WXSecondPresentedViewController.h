@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WXSecondPushedViewController : UIViewController
+@interface WXSecondPresentedViewController : UIViewController
 
 @end

@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.tableView];
-    self.names = @[@"animated"];
+    self.names = @[@"present"];
 }
 
 - (void)didReceiveMemoryWarning {

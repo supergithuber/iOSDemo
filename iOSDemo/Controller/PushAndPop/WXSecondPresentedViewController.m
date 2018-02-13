@@ -1,18 +1,18 @@
 //
-//  WXSecondPushedViewController.m
+//  WXSecondPresentedViewController.m
 //  iOSDemo
 //
 //  Created by 吴浠 on 2018/2/13.
 //  Copyright © 2018年 Wuxi. All rights reserved.
 //
 
-#import "WXSecondPushedViewController.h"
+#import "WXSecondPresentedViewController.h"
 
-@interface WXSecondPushedViewController ()
+@interface WXSecondPresentedViewController ()
 
 @end
 
-@implementation WXSecondPushedViewController
+@implementation WXSecondPresentedViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

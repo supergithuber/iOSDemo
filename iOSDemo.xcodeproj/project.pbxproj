@@ -42,7 +42,8 @@
 		CC6EB22A2021CE0B0002BA14 /* WXARText.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB2292021CE0B0002BA14 /* WXARText.m */; };
 		CC6EB22D2022B51E0002BA14 /* WXARTextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB22C2022B51E0002BA14 /* WXARTextNode.m */; };
 		CC7108562032F9B500E09BC5 /* PushAndPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7108552032F9B500E09BC5 /* PushAndPopViewController.m */; };
-		CC7108592033092E00E09BC5 /* WXSecondPushedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7108582033092E00E09BC5 /* WXSecondPushedViewController.m */; };
+		CC7108592033092E00E09BC5 /* WXSecondPresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7108582033092E00E09BC5 /* WXSecondPresentedViewController.m */; };
+		CC71085C2033111E00E09BC5 /* WXPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CC71085B2033111E00E09BC5 /* WXPresentTransition.m */; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
 		CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */; };
@@ -157,8 +158,10 @@
 		CC6EB22C2022B51E0002BA14 /* WXARTextNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXARTextNode.m; sourceTree = "<group>"; };
 		CC7108542032F9B500E09BC5 /* PushAndPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAndPopViewController.h; sourceTree = "<group>"; };
 		CC7108552032F9B500E09BC5 /* PushAndPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAndPopViewController.m; sourceTree = "<group>"; };
-		CC7108572033092E00E09BC5 /* WXSecondPushedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSecondPushedViewController.h; sourceTree = "<group>"; };
-		CC7108582033092E00E09BC5 /* WXSecondPushedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSecondPushedViewController.m; sourceTree = "<group>"; };
+		CC7108572033092E00E09BC5 /* WXSecondPresentedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSecondPresentedViewController.h; sourceTree = "<group>"; };
+		CC7108582033092E00E09BC5 /* WXSecondPresentedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSecondPresentedViewController.m; sourceTree = "<group>"; };
+		CC71085A2033111E00E09BC5 /* WXPresentTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXPresentTransition.h; sourceTree = "<group>"; };
+		CC71085B2033111E00E09BC5 /* WXPresentTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXPresentTransition.m; sourceTree = "<group>"; };
 		CC72CD601F8F163500CADF32 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXVolumeButtonHandler.h; sourceTree = "<group>"; };
@@ -414,8 +417,10 @@
 			children = (
 				CC7108542032F9B500E09BC5 /* PushAndPopViewController.h */,
 				CC7108552032F9B500E09BC5 /* PushAndPopViewController.m */,
-				CC7108572033092E00E09BC5 /* WXSecondPushedViewController.h */,
-				CC7108582033092E00E09BC5 /* WXSecondPushedViewController.m */,
+				CC7108572033092E00E09BC5 /* WXSecondPresentedViewController.h */,
+				CC7108582033092E00E09BC5 /* WXSecondPresentedViewController.m */,
+				CC71085A2033111E00E09BC5 /* WXPresentTransition.h */,
+				CC71085B2033111E00E09BC5 /* WXPresentTransition.m */,
 			);
 			path = PushAndPop;
 			sourceTree = "<group>";
@@ -628,7 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC7108592033092E00E09BC5 /* WXSecondPushedViewController.m in Sources */,
+				CC7108592033092E00E09BC5 /* WXSecondPresentedViewController.m in Sources */,
 				CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */,
 				CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */,
 				CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */,
@@ -643,6 +648,7 @@
 				CC40F6641E6E5F88009D144C /* ViewController.m in Sources */,
 				CC2BF30D20088D73009F1D9E /* WXSerialOperation.m in Sources */,
 				CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */,
+				CC71085C2033111E00E09BC5 /* WXPresentTransition.m in Sources */,
 				CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */,
 				CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */,
 				CC6EB22A2021CE0B0002BA14 /* WXARText.m in Sources */,
