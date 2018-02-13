@@ -33,6 +33,9 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.names.count;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *Identifier = @"com.iOSDemo.tableViewCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
