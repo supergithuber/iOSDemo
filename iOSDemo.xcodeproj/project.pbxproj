@@ -41,10 +41,11 @@
 		CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB224202162250002BA14 /* WXARTextViewController.m */; };
 		CC6EB22A2021CE0B0002BA14 /* WXARText.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB2292021CE0B0002BA14 /* WXARText.m */; };
 		CC6EB22D2022B51E0002BA14 /* WXARTextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6EB22C2022B51E0002BA14 /* WXARTextNode.m */; };
+		CC7108562032F9B500E09BC5 /* PushAndPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7108552032F9B500E09BC5 /* PushAndPopViewController.m */; };
+		CC7108592033092E00E09BC5 /* WXSecondPushedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7108582033092E00E09BC5 /* WXSecondPushedViewController.m */; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
 		CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */; };
-		CCD6ABAD2030264000CE3EE4 /* PushAndPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD6ABAC2030264000CE3EE4 /* PushAndPopViewController.m */; };
 		CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915120073BDA0055C51D /* UIImage+Scale.m */; };
 		CCE7915720074B710055C51D /* ClosureInitScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915620074B710055C51D /* ClosureInitScrollView.swift */; };
 		CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */; };
@@ -154,14 +155,16 @@
 		CC6EB2292021CE0B0002BA14 /* WXARText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXARText.m; sourceTree = "<group>"; };
 		CC6EB22B2022B51E0002BA14 /* WXARTextNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXARTextNode.h; sourceTree = "<group>"; };
 		CC6EB22C2022B51E0002BA14 /* WXARTextNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXARTextNode.m; sourceTree = "<group>"; };
+		CC7108542032F9B500E09BC5 /* PushAndPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAndPopViewController.h; sourceTree = "<group>"; };
+		CC7108552032F9B500E09BC5 /* PushAndPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAndPopViewController.m; sourceTree = "<group>"; };
+		CC7108572033092E00E09BC5 /* WXSecondPushedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSecondPushedViewController.h; sourceTree = "<group>"; };
+		CC7108582033092E00E09BC5 /* WXSecondPushedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSecondPushedViewController.m; sourceTree = "<group>"; };
 		CC72CD601F8F163500CADF32 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXVolumeButtonHandler.h; sourceTree = "<group>"; };
 		CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXVolumeButtonHandler.m; sourceTree = "<group>"; };
 		CCAD93F4202D3E5E00414E47 /* WXBaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXBaseNavigationViewController.h; sourceTree = "<group>"; };
 		CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXBaseNavigationViewController.m; sourceTree = "<group>"; };
-		CCD6ABAB2030264000CE3EE4 /* PushAndPopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushAndPopViewController.h; sourceTree = "<group>"; };
-		CCD6ABAC2030264000CE3EE4 /* PushAndPopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushAndPopViewController.m; sourceTree = "<group>"; };
 		CCE7915020073BDA0055C51D /* UIImage+Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
 		CCE7915120073BDA0055C51D /* UIImage+Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
 		CCE7915620074B710055C51D /* ClosureInitScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureInitScrollView.swift; sourceTree = "<group>"; };
@@ -262,8 +265,6 @@
 				CCFB57FE2019B9D20030BFF1 /* WXRotateImageViewController.m */,
 				CC6EB223202162250002BA14 /* WXARTextViewController.h */,
 				CC6EB224202162250002BA14 /* WXARTextViewController.m */,
-				CCD6ABAB2030264000CE3EE4 /* PushAndPopViewController.h */,
-				CCD6ABAC2030264000CE3EE4 /* PushAndPopViewController.m */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -271,6 +272,7 @@
 		CC3D2EA72005F0C0009E87F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CC7108532032F9B500E09BC5 /* PushAndPop */,
 				CC1BCE59202C2D90009A0BCF /* Tabbar */,
 				CC1BCE4B202C2A6E009A0BCF /* BaseViewController */,
 				CC2BF30620086301009F1D9E /* DemoViewController */,
@@ -405,6 +407,17 @@
 				CC6EB22C2022B51E0002BA14 /* WXARTextNode.m */,
 			);
 			path = ARModel;
+			sourceTree = "<group>";
+		};
+		CC7108532032F9B500E09BC5 /* PushAndPop */ = {
+			isa = PBXGroup;
+			children = (
+				CC7108542032F9B500E09BC5 /* PushAndPopViewController.h */,
+				CC7108552032F9B500E09BC5 /* PushAndPopViewController.m */,
+				CC7108572033092E00E09BC5 /* WXSecondPushedViewController.h */,
+				CC7108582033092E00E09BC5 /* WXSecondPushedViewController.m */,
+			);
+			path = PushAndPop;
 			sourceTree = "<group>";
 		};
 		CCA8D59420103FF100B225B6 /* Tools */ = {
@@ -615,13 +628,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7108592033092E00E09BC5 /* WXSecondPushedViewController.m in Sources */,
 				CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */,
 				CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */,
 				CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */,
 				CCFB5808201ACC860030BFF1 /* WXStorageBaseModel.swift in Sources */,
 				CC6EB22D2022B51E0002BA14 /* WXARTextNode.m in Sources */,
 				CCFB580F201B19580030BFF1 /* WXLocalLanguage.m in Sources */,
-				CCD6ABAD2030264000CE3EE4 /* PushAndPopViewController.m in Sources */,
+				CC7108562032F9B500E09BC5 /* PushAndPopViewController.m in Sources */,
 				CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */,
 				CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */,
 				CC1BCE5C202C2D90009A0BCF /* WXInitTabBarViewController.m in Sources */,

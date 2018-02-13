@@ -10,7 +10,8 @@
 
 //https://www.cnblogs.com/yejingtian/p/5280386.html
 //http://www.cocoachina.com/ios/20160628/16804.html
+//https://www.jianshu.com/p/45434f73019e
 
-@interface PushAndPopViewController : UIViewController
+@interface PushAndPopViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end

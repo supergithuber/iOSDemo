@@ -1,29 +1,28 @@
 //
-//  PushAndPopViewController.m
+//  WXSecondPushedViewController.m
 //  iOSDemo
 //
-//  Created by wuxi on 2018/2/11.
+//  Created by 吴浠 on 2018/2/13.
 //  Copyright © 2018年 Wuxi. All rights reserved.
 //
 
-#import "PushAndPopViewController.h"
+#import "WXSecondPushedViewController.h"
 
-@interface PushAndPopViewController ()
+@interface WXSecondPushedViewController ()
 
 @end
 
-@implementation PushAndPopViewController
+@implementation WXSecondPushedViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 
 @end
