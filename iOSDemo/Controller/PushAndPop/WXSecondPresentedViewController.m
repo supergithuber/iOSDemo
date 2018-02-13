@@ -8,11 +8,22 @@
 
 #import "WXSecondPresentedViewController.h"
 
-@interface WXSecondPresentedViewController ()
+@interface WXSecondPresentedViewController ()<UIViewControllerTransitioningDelegate>
 
 @end
 
 @implementation WXSecondPresentedViewController
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.transitioningDelegate = self;
+        //为什么要设置为Custom，在最后说明.
+        self.modalPresentationStyle = UIModalPresentationCustom;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,5 +35,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+//MARK - delegate
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+    return nil;
+}
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+    return nil;
+}
 
 @end

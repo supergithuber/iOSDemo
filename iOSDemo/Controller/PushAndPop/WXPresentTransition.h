@@ -15,4 +15,7 @@ typedef NS_ENUM(NSUInteger, WXPresentedTransitionType) {
 
 @interface WXPresentTransition : NSObject<UIViewControllerAnimatedTransitioning>
 
+- (instancetype)initWithPresentedTransitionType:(WXPresentedTransitionType)type;
++ (instancetype)transitionWithPresentedTransitionType:(WXPresentedTransitionType)type;
+
 @end
