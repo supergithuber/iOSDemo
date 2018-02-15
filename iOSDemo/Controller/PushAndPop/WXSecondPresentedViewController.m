@@ -7,6 +7,7 @@
 //
 
 #import "WXSecondPresentedViewController.h"
+#import "WXPresentTransition.h"
 
 @interface WXSecondPresentedViewController ()<UIViewControllerTransitioningDelegate>
 
@@ -19,7 +20,7 @@
     self = [super init];
     if (self) {
         self.transitioningDelegate = self;
-        //为什么要设置为Custom，在最后说明.
+        //设置为Custom
         self.modalPresentationStyle = UIModalPresentationCustom;
     }
     return self;
@@ -37,10 +38,10 @@
 
 //MARK - delegate
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
-    return nil;
+    return [WXPresentTransition transitionWithPresentedTransitionType:WXPresentedTransitionTypePresent];
 }
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
-    return nil;
+    return [WXPresentTransition transitionWithPresentedTransitionType:WXPresentedTransitionTypeDismiss];
 }
 
 @end
