@@ -7,6 +7,7 @@
 //
 
 #import "PushAndPopViewController.h"
+#import "WXSecondPresentedViewController.h"
 
 @interface PushAndPopViewController ()
 
@@ -55,8 +56,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.section) {
         case 0:
-            
+        {
+            WXSecondPresentedViewController *vc = [WXSecondPresentedViewController new];
+            [self presentViewController:vc animated:YES completion:^{
+                
+            }];
             break;
+        }
         default:
             break;
     }

@@ -38,10 +38,10 @@
 
 //MARK - delegate
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
-    return [WXPresentTransition transitionWithPresentedTransitionType:WXPresentedTransitionTypePresent];
+    return [WXPresentTransition transitionWithPresentedTransitionType:WXPresentedTransitionTypeDismiss];
 }
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
-    return [WXPresentTransition transitionWithPresentedTransitionType:WXPresentedTransitionTypeDismiss];
+    return [WXPresentTransition transitionWithPresentedTransitionType:WXPresentedTransitionTypePresent];
 }
 
 @end
