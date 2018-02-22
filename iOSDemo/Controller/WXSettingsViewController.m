@@ -7,8 +7,14 @@
 //
 
 #import "WXSettingsViewController.h"
+#import "WXChangeIconViewController.h"
 
-@interface WXSettingsViewController ()
+@interface WXSettingsViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong)UITableView *tableView;
+
+@property (nonatomic, strong)NSMutableArray *sections;
+@property (nonatomic, strong)NSMutableArray *firstSection;
 
 @end
 
@@ -16,7 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self initArray];
+    [self.view addSubview:self.tableView];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +32,49 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)initArray{
+    self.sections = [NSMutableArray arrayWithObjects:@"第一部分", nil];
+    self.firstSection = [NSMutableArray arrayWithObjects:@"更换图标", nil];
 }
-*/
+//MARK: delegate and datasource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.sections.count;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.firstSection.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString * const tableViewCellID = @"com.sivanwu.settingsTableviewCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tableViewCellID];
+    if (cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:tableViewCellID];
+    }
+    cell.textLabel.text = self.firstSection[indexPath.row];
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    UIViewController *controller = nil;
+    switch (indexPath.row) {
+        case 0:
+            controller = [[WXChangeIconViewController alloc] init];
+            break;
+            
+        default:
+            break;
+    }
+    if (controller){
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+}
+//MARK: get
+- (UITableView *)tableView{
+    if (!_tableView){
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        
+    }
+    return  _tableView;
+}
 
 @end
