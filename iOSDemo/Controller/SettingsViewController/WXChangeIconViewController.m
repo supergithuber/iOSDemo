@@ -75,7 +75,7 @@ static NSString *const kCollectionViewCellIdentifier = @"iOSDemo.IconCell";
         NSLog(@"不支持更换图标");
     }
 }
-//系统的更换图标会有弹框
+//系统的更换图标会有弹框,更换App图标时的弹框是没有title与message的
 //自己添加一个UIViewController的catogory，加入下面代码，用runtime可以拦截弹框
 //+ (void)load {
 //    static dispatch_once_t onceToken;
