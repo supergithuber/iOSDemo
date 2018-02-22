@@ -23,3 +23,4 @@ supported:iOS 11 or higher, iPhone 6s or later
 13. frequency use #define
 14. YYKit storage(disk and cache)
 15. appConfiguration
+16. dynamic change application icon
