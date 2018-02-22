@@ -45,6 +45,14 @@
 		CC7108592033092E00E09BC5 /* WXSecondPresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7108582033092E00E09BC5 /* WXSecondPresentedViewController.m */; };
 		CC71085C2033111E00E09BC5 /* WXPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = CC71085B2033111E00E09BC5 /* WXPresentTransition.m */; };
 		CC71D3BC203E64DF00CFDDEA /* WXChangeIconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC71D3BB203E64DF00CFDDEA /* WXChangeIconViewController.m */; };
+		CC71D3C4203E6AB400CFDDEA /* icon_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC71D3BE203E6AB400CFDDEA /* icon_red@3x.png */; };
+		CC71D3C5203E6AB400CFDDEA /* icon_ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC71D3BF203E6AB400CFDDEA /* icon_ball@2x.png */; };
+		CC71D3C6203E6AB400CFDDEA /* icon_blue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC71D3C0203E6AB400CFDDEA /* icon_blue@3x.png */; };
+		CC71D3C7203E6AB400CFDDEA /* icon_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC71D3C1203E6AB400CFDDEA /* icon_red@2x.png */; };
+		CC71D3C8203E6AB400CFDDEA /* icon_ball@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC71D3C2203E6AB400CFDDEA /* icon_ball@3x.png */; };
+		CC71D3C9203E6AB400CFDDEA /* icon_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC71D3C3203E6AB400CFDDEA /* icon_blue@2x.png */; };
+		CC71D3CC203E6B3900CFDDEA /* icon_demo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC71D3CA203E6B3900CFDDEA /* icon_demo@2x.png */; };
+		CC71D3CD203E6B3900CFDDEA /* icon_demo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC71D3CB203E6B3900CFDDEA /* icon_demo@3x.png */; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
 		CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */; };
@@ -165,6 +173,14 @@
 		CC71085B2033111E00E09BC5 /* WXPresentTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXPresentTransition.m; sourceTree = "<group>"; };
 		CC71D3BA203E64DF00CFDDEA /* WXChangeIconViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXChangeIconViewController.h; sourceTree = "<group>"; };
 		CC71D3BB203E64DF00CFDDEA /* WXChangeIconViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXChangeIconViewController.m; sourceTree = "<group>"; };
+		CC71D3BE203E6AB400CFDDEA /* icon_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_red@3x.png"; sourceTree = "<group>"; };
+		CC71D3BF203E6AB400CFDDEA /* icon_ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_ball@2x.png"; sourceTree = "<group>"; };
+		CC71D3C0203E6AB400CFDDEA /* icon_blue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_blue@3x.png"; sourceTree = "<group>"; };
+		CC71D3C1203E6AB400CFDDEA /* icon_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_red@2x.png"; sourceTree = "<group>"; };
+		CC71D3C2203E6AB400CFDDEA /* icon_ball@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_ball@3x.png"; sourceTree = "<group>"; };
+		CC71D3C3203E6AB400CFDDEA /* icon_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_blue@2x.png"; sourceTree = "<group>"; };
+		CC71D3CA203E6B3900CFDDEA /* icon_demo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_demo@2x.png"; sourceTree = "<group>"; };
+		CC71D3CB203E6B3900CFDDEA /* icon_demo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_demo@3x.png"; sourceTree = "<group>"; };
 		CC72CD601F8F163500CADF32 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXVolumeButtonHandler.h; sourceTree = "<group>"; };
@@ -350,6 +366,7 @@
 		CC40F65B1E6E5F88009D144C /* iOSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CC71D3BD203E697500CFDDEA /* icon */,
 				CC40F65F1E6E5F88009D144C /* AppDelegate.h */,
 				CC40F6601E6E5F88009D144C /* AppDelegate.m */,
 				CC3D2EAD2005F9D6009E87F6 /* Category */,
@@ -436,6 +453,21 @@
 				CC71D3BB203E64DF00CFDDEA /* WXChangeIconViewController.m */,
 			);
 			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		CC71D3BD203E697500CFDDEA /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				CC71D3CA203E6B3900CFDDEA /* icon_demo@2x.png */,
+				CC71D3CB203E6B3900CFDDEA /* icon_demo@3x.png */,
+				CC71D3BF203E6AB400CFDDEA /* icon_ball@2x.png */,
+				CC71D3C2203E6AB400CFDDEA /* icon_ball@3x.png */,
+				CC71D3C3203E6AB400CFDDEA /* icon_blue@2x.png */,
+				CC71D3C0203E6AB400CFDDEA /* icon_blue@3x.png */,
+				CC71D3C1203E6AB400CFDDEA /* icon_red@2x.png */,
+				CC71D3BE203E6AB400CFDDEA /* icon_red@3x.png */,
+			);
+			path = icon;
 			sourceTree = "<group>";
 		};
 		CCA8D59420103FF100B225B6 /* Tools */ = {
@@ -618,10 +650,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC71D3C5203E6AB400CFDDEA /* icon_ball@2x.png in Resources */,
 				CC40F66C1E6E5F88009D144C /* LaunchScreen.storyboard in Resources */,
+				CC71D3CC203E6B3900CFDDEA /* icon_demo@2x.png in Resources */,
+				CC71D3C4203E6AB400CFDDEA /* icon_red@3x.png in Resources */,
+				CC71D3C8203E6AB400CFDDEA /* icon_ball@3x.png in Resources */,
 				CC40F6691E6E5F88009D144C /* Assets.xcassets in Resources */,
 				CC1BCE47202C2851009A0BCF /* WXLocalizable.strings in Resources */,
+				CC71D3C6203E6AB400CFDDEA /* icon_blue@3x.png in Resources */,
+				CC71D3C9203E6AB400CFDDEA /* icon_blue@2x.png in Resources */,
 				CC40F6671E6E5F88009D144C /* Main.storyboard in Resources */,
+				CC71D3C7203E6AB400CFDDEA /* icon_red@2x.png in Resources */,
+				CC71D3CD203E6B3900CFDDEA /* icon_demo@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
