@@ -14,6 +14,7 @@ static NSString *const kCollectionViewCellIdentifier = @"iOSDemo.IconCell";
 @interface WXChangeIconViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong)UICollectionView *collectionView;
+@property (nonatomic, strong)NSMutableArray *icons;
 
 @end
 
@@ -21,7 +22,9 @@ static NSString *const kCollectionViewCellIdentifier = @"iOSDemo.IconCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.icons = [NSMutableArray arrayWithObjects:@"icon_demo", @"icon_blue", @"icon_ball", @"icon_red", nil];
     [self.view addSubview:self.collectionView];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,25 +55,24 @@ static NSString *const kCollectionViewCellIdentifier = @"iOSDemo.IconCell";
 }
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     WXIconCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCollectionViewCellIdentifier forIndexPath:indexPath];
-    switch (indexPath.row) {
-        case 0:
-            cell.image = [UIImage imageNamed:@"icon_demo"];
-            break;
-        case 1:
-            cell.image = [UIImage imageNamed:@"icon_blue"];
-            break;
-        case 2:
-            cell.image = [UIImage imageNamed:@"icon_ball"];
-            break;
-        case 3:
-            cell.image = [UIImage imageNamed:@"icon_red"];
-            break;
-        default:
-            break;
-    }
+    cell.image = [UIImage imageNamed:self.icons[indexPath.row]];
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [self changeAppIcon:self.icons[indexPath.row]];
+}
+- (void)changeAppIcon:(NSString *)iconName{
+    UIApplication *application = [UIApplication sharedApplication];
+    if ([application supportsAlternateIcons]){
+        [application setAlternateIconName:iconName completionHandler:^(NSError * _Nullable error) {
+            if (error){
+                NSLog(@"更换图标失败%@",error);
+            }else{
+                NSLog(@"更换图标成功");
+            }
+        }];
+    }else{
+        NSLog(@"不支持更换图标");
+    }
 }
 @end
