@@ -75,4 +75,32 @@ static NSString *const kCollectionViewCellIdentifier = @"iOSDemo.IconCell";
         NSLog(@"不支持更换图标");
     }
 }
+//系统的更换图标会有弹框
+//自己添加一个UIViewController的catogory，加入下面代码，用runtime可以拦截弹框
+//+ (void)load {
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        Method presentM = class_getInstanceMethod(self.class, @selector(presentViewController:animated:completion:));
+//        Method presentSwizzlingM = class_getInstanceMethod(self.class, @selector(wx_presentViewController:animated:completion:));
+//        // 交换方法实现
+//        method_exchangeImplementations(presentM, presentSwizzlingM);
+//    });
+//}
+//- (void)wx_presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion {
+//
+//    if ([viewControllerToPresent isKindOfClass:[UIAlertController class]]) {
+//        NSLog(@"title : %@",((UIAlertController *)viewControllerToPresent).title);
+//        NSLog(@"message : %@",((UIAlertController *)viewControllerToPresent).message);
+//
+//        UIAlertController *alertController = (UIAlertController *)viewControllerToPresent;
+//        if (alertController.title == nil && alertController.message == nil) {
+//            return;
+//        } else {
+//            [self wx_presentViewController:viewControllerToPresent animated:flag completion:completion];
+//            return;
+//        }
+//    }
+//
+//    [self wx_presentViewController:viewControllerToPresent animated:flag completion:completion];
+//}
 @end
