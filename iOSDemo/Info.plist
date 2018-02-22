@@ -2,6 +2,49 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundleAlternateIcons</key>
+		<dict>
+			<key>icon_ball</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>icon_ball</string>
+				</array>
+			</dict>
+			<key>icon_blue</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>icon_blue</string>
+				</array>
+			</dict>
+			<key>icon_red</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>icon_red</string>
+				</array>
+			</dict>
+			<key>icon_demo</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>icon_demo</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>icon_demo</string>
+			</array>
+			<key>UIPrerenderedIcon</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

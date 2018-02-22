@@ -53,6 +53,7 @@
 		CC71D3C9203E6AB400CFDDEA /* icon_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC71D3C3203E6AB400CFDDEA /* icon_blue@2x.png */; };
 		CC71D3CC203E6B3900CFDDEA /* icon_demo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC71D3CA203E6B3900CFDDEA /* icon_demo@2x.png */; };
 		CC71D3CD203E6B3900CFDDEA /* icon_demo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC71D3CB203E6B3900CFDDEA /* icon_demo@3x.png */; };
+		CC71D3D0203E763D00CFDDEA /* WXIconCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC71D3CF203E763D00CFDDEA /* WXIconCollectionViewCell.m */; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
 		CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */; };
@@ -181,6 +182,8 @@
 		CC71D3C3203E6AB400CFDDEA /* icon_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_blue@2x.png"; sourceTree = "<group>"; };
 		CC71D3CA203E6B3900CFDDEA /* icon_demo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_demo@2x.png"; sourceTree = "<group>"; };
 		CC71D3CB203E6B3900CFDDEA /* icon_demo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_demo@3x.png"; sourceTree = "<group>"; };
+		CC71D3CE203E763D00CFDDEA /* WXIconCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXIconCollectionViewCell.h; sourceTree = "<group>"; };
+		CC71D3CF203E763D00CFDDEA /* WXIconCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXIconCollectionViewCell.m; sourceTree = "<group>"; };
 		CC72CD601F8F163500CADF32 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXVolumeButtonHandler.h; sourceTree = "<group>"; };
@@ -312,6 +315,8 @@
 			children = (
 				CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */,
 				CCE7915620074B710055C51D /* ClosureInitScrollView.swift */,
+				CC71D3CE203E763D00CFDDEA /* WXIconCollectionViewCell.h */,
+				CC71D3CF203E763D00CFDDEA /* WXIconCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -692,6 +697,7 @@
 				CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */,
 				CCFB5808201ACC860030BFF1 /* WXStorageBaseModel.swift in Sources */,
 				CC6EB22D2022B51E0002BA14 /* WXARTextNode.m in Sources */,
+				CC71D3D0203E763D00CFDDEA /* WXIconCollectionViewCell.m in Sources */,
 				CCFB580F201B19580030BFF1 /* WXLocalLanguage.m in Sources */,
 				CC7108562032F9B500E09BC5 /* PushAndPopViewController.m in Sources */,
 				CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */,
