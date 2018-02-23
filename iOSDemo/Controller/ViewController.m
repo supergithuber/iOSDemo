@@ -15,7 +15,6 @@
 #import "WXRotateImageViewController.h"
 #import "WXARTextViewController.h"
 #import "PushAndPopViewController.h"
-#import "NSDate+dateTools.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -31,7 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTableView];
-    NSLog(@"%ld",(long)[NSDate currentTimeStamp]);
+    
 }
 
 - (void)didReceiveMemoryWarning {
