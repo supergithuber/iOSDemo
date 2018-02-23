@@ -102,6 +102,7 @@
             break;
     }
     if (controller){
+        controller.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:controller animated:YES];
     }
     

@@ -8,6 +8,7 @@
 
 #import "WXConsoleViewController.h"
 
+//用runtime解出对象的所有属性，进行归档
 @interface WXCoderViewController : WXConsoleViewController
 
 @end
