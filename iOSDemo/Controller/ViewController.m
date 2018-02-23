@@ -15,6 +15,7 @@
 #import "WXRotateImageViewController.h"
 #import "WXARTextViewController.h"
 #import "PushAndPopViewController.h"
+#import "WXQRCodeViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -45,7 +46,7 @@
     [self.view addSubview:self.tableView];
     
     self.sectionArray = [NSMutableArray arrayWithObjects:@"第一部分", nil];
-    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", @"ARTextDemo",@"push and pop", nil];
+    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", @"ARTextDemo",@"push and pop", @"scan QR code", nil];
     
 }
 
@@ -93,6 +94,10 @@
             break;
         case 7:
             controller = [[PushAndPopViewController alloc] init];
+            break;
+        case 8:
+            controller = [[WXQRCodeViewController alloc] init];
+            break;
         default:
             break;
     }

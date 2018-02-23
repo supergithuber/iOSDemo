@@ -33,6 +33,7 @@
 		CC40F6771E6E5F88009D144C /* iOSTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC40F6761E6E5F88009D144C /* iOSTestTests.m */; };
 		CC40F6821E6E5F88009D144C /* iOSTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC40F6811E6E5F88009D144C /* iOSTestUITests.m */; };
 		CC56C2F5204009E800783A9F /* NSDate+dateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CC56C2F4204009E800783A9F /* NSDate+dateTools.m */; };
+		CC56C2F820401A8700783A9F /* WXQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC56C2F720401A8700783A9F /* WXQRCodeViewController.m */; };
 		CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */; };
 		CC6A280B20158EB8001D3A91 /* WXUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6A280A20158EB8001D3A91 /* WXUserInfoModel.m */; };
 		CC6A280E201593A8001D3A91 /* WXCoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6A280D201593A8001D3A91 /* WXCoderViewController.m */; };
@@ -154,6 +155,8 @@
 		CC40F6831E6E5F88009D144C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC56C2F3204009E800783A9F /* NSDate+dateTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+dateTools.h"; sourceTree = "<group>"; };
 		CC56C2F4204009E800783A9F /* NSDate+dateTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+dateTools.m"; sourceTree = "<group>"; };
+		CC56C2F620401A8700783A9F /* WXQRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXQRCodeViewController.h; sourceTree = "<group>"; };
+		CC56C2F720401A8700783A9F /* WXQRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXQRCodeViewController.m; sourceTree = "<group>"; };
 		CC6A21681FE7A39C00B18D36 /* iOSDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipHintView.swift; sourceTree = "<group>"; };
 		CC6A280920158EB8001D3A91 /* WXUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXUserInfoModel.h; sourceTree = "<group>"; };
@@ -293,6 +296,8 @@
 				CCFB57FE2019B9D20030BFF1 /* WXRotateImageViewController.m */,
 				CC6EB223202162250002BA14 /* WXARTextViewController.h */,
 				CC6EB224202162250002BA14 /* WXARTextViewController.m */,
+				CC56C2F620401A8700783A9F /* WXQRCodeViewController.h */,
+				CC56C2F720401A8700783A9F /* WXQRCodeViewController.m */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -712,6 +717,7 @@
 				CC6EB22D2022B51E0002BA14 /* WXARTextNode.m in Sources */,
 				CC71D3D0203E763D00CFDDEA /* WXIconCollectionViewCell.m in Sources */,
 				CCFB580F201B19580030BFF1 /* WXLocalLanguage.m in Sources */,
+				CC56C2F820401A8700783A9F /* WXQRCodeViewController.m in Sources */,
 				CC7108562032F9B500E09BC5 /* PushAndPopViewController.m in Sources */,
 				CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */,
 				CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */,
