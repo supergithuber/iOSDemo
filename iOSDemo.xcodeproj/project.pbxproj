@@ -32,6 +32,7 @@
 		CC40F66C1E6E5F88009D144C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC40F66A1E6E5F88009D144C /* LaunchScreen.storyboard */; };
 		CC40F6771E6E5F88009D144C /* iOSTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC40F6761E6E5F88009D144C /* iOSTestTests.m */; };
 		CC40F6821E6E5F88009D144C /* iOSTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC40F6811E6E5F88009D144C /* iOSTestUITests.m */; };
+		CC56C2F5204009E800783A9F /* NSDate+dateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CC56C2F4204009E800783A9F /* NSDate+dateTools.m */; };
 		CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */; };
 		CC6A280B20158EB8001D3A91 /* WXUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6A280A20158EB8001D3A91 /* WXUserInfoModel.m */; };
 		CC6A280E201593A8001D3A91 /* WXCoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6A280D201593A8001D3A91 /* WXCoderViewController.m */; };
@@ -151,6 +152,8 @@
 		CC40F67D1E6E5F88009D144C /* iOSDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC40F6811E6E5F88009D144C /* iOSTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSTestUITests.m; sourceTree = "<group>"; };
 		CC40F6831E6E5F88009D144C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC56C2F3204009E800783A9F /* NSDate+dateTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+dateTools.h"; sourceTree = "<group>"; };
+		CC56C2F4204009E800783A9F /* NSDate+dateTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+dateTools.m"; sourceTree = "<group>"; };
 		CC6A21681FE7A39C00B18D36 /* iOSDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipHintView.swift; sourceTree = "<group>"; };
 		CC6A280920158EB8001D3A91 /* WXUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXUserInfoModel.h; sourceTree = "<group>"; };
@@ -338,6 +341,7 @@
 		CC3D2EAD2005F9D6009E87F6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				CC56C2F2204009BA00783A9F /* NSDate */,
 				CC095C8A200F8FA800B9B69C /* UIImageView */,
 				CCE7915520073DE80055C51D /* UIImage */,
 				CCE7915420073DDC0055C51D /* UIView */,
@@ -417,6 +421,15 @@
 				CC40F6831E6E5F88009D144C /* Info.plist */,
 			);
 			path = iOSDemoUITests;
+			sourceTree = "<group>";
+		};
+		CC56C2F2204009BA00783A9F /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				CC56C2F3204009E800783A9F /* NSDate+dateTools.h */,
+				CC56C2F4204009E800783A9F /* NSDate+dateTools.m */,
+			);
+			path = NSDate;
 			sourceTree = "<group>";
 		};
 		CC6A280F201598EF001D3A91 /* Framework */ = {
@@ -729,6 +742,7 @@
 				CC6A280E201593A8001D3A91 /* WXCoderViewController.m in Sources */,
 				CC6A280B20158EB8001D3A91 /* WXUserInfoModel.m in Sources */,
 				CCE7915720074B710055C51D /* ClosureInitScrollView.swift in Sources */,
+				CC56C2F5204009E800783A9F /* NSDate+dateTools.m in Sources */,
 				CC6EB22220215E050002BA14 /* UIViewController+Alert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
