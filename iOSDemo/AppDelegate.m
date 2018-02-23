@@ -10,6 +10,8 @@
 #import "WXInitTabBarViewController.h"
 #import "iOSDemo-Swift.h"
 
+NSString *const kAppVersionKey = @"iOSDemo.appVersion";
+
 @interface AppDelegate ()
 
 @end
@@ -22,9 +24,19 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    //是不是当前版本首次启动
+    if ([self isCurrentVersionLaunchFirstTime]){
+        NSLog(@"当前版本%@：首次启动",kAppVersion);
+    }else{
+        NSLog(@"当前版本%@：不是首次启动",kAppVersion);
+    }
+    
+    //决定root
     WXInitTabBarViewController *tabBarController = [[WXInitTabBarViewController alloc] init];
     self.window.rootViewController = tabBarController;
     
+    //记录启动时间
     [self registerLaunchDateString];
     
     return YES;
@@ -57,6 +69,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+//记录启动时间
 - (void)registerLaunchDateString{
     NSLog(@"last launch app time: %@", DiskStorage.shared.appConfiguration.lastLaunchDateString);
     NSDate *currentDate = [NSDate date];
@@ -64,6 +77,17 @@
     formatter.dateFormat = @"YYYY-MM-dd,HH:mm:ss";
     NSString *currentDateString = [formatter stringFromDate:currentDate];
     DiskStorage.shared.appConfiguration.lastLaunchDateString = currentDateString;
+}
+//是否当前版本首次启动
+- (BOOL)isCurrentVersionLaunchFirstTime{
+    NSString * appVersion = [NSUserDefaults.standardUserDefaults stringForKey:kAppVersionKey];
+    if (appVersion == nil || appVersion != kAppVersion ){
+        [NSUserDefaults.standardUserDefaults setValue:kAppVersion forKey:kAppVersionKey];
+        [NSUserDefaults.standardUserDefaults synchronize];
+        return YES;
+    }else{
+        return NO;
+    }
 }
 
 @end
