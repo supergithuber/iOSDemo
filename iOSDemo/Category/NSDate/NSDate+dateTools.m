@@ -58,4 +58,12 @@
     NSInteger timeSp = [[NSNumber numberWithDouble:[date timeIntervalSince1970]] integerValue];
     return timeSp;
 }
+
++ (NSComparisonResult)compareOneDay:(NSString *)oneDay withAnotherDay:(NSString *)anotherDay format:(NSString *)format{
+    NSDateFormatter* dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:format];
+    NSDate *oneDate = [dateFormat dateFromString:oneDay];
+    NSDate *anotherDate = [dateFormat dateFromString:anotherDay];
+    return [oneDate compare:anotherDate];
+}
 @end

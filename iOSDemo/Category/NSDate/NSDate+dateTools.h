@@ -33,4 +33,14 @@
  @return 时间戳
  */
 + (NSInteger)timeSwitchTimestamp:(NSString *)formatTime andFormatter:(NSString *)format;
+
+/**
+ 对比两个时间
+
+ @param oneDay 一个时间字符串
+ @param anotherDay 另一个时间字符串
+ @param format 这两个时间字符串对应的时间格式
+ */
+
++ (NSComparisonResult)compareOneDay:(NSString *)oneDay withAnotherDay:(NSString *)anotherDay format:(NSString *)format;
 @end
