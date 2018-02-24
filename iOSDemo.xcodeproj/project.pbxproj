@@ -35,6 +35,7 @@
 		CC56C2F5204009E800783A9F /* NSDate+dateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CC56C2F4204009E800783A9F /* NSDate+dateTools.m */; };
 		CC56C2F820401A8700783A9F /* WXQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC56C2F720401A8700783A9F /* WXQRCodeViewController.m */; };
 		CC56C30620411A5400783A9F /* WXQRCodeScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC56C30520411A5400783A9F /* WXQRCodeScanManager.m */; };
+		CC56C309204160EF00783A9F /* WXQRCodeAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC56C308204160EF00783A9F /* WXQRCodeAlbumManager.m */; };
 		CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */; };
 		CC6A280B20158EB8001D3A91 /* WXUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6A280A20158EB8001D3A91 /* WXUserInfoModel.m */; };
 		CC6A280E201593A8001D3A91 /* WXCoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6A280D201593A8001D3A91 /* WXCoderViewController.m */; };
@@ -160,6 +161,8 @@
 		CC56C2F720401A8700783A9F /* WXQRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXQRCodeViewController.m; sourceTree = "<group>"; };
 		CC56C30420411A5400783A9F /* WXQRCodeScanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXQRCodeScanManager.h; sourceTree = "<group>"; };
 		CC56C30520411A5400783A9F /* WXQRCodeScanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXQRCodeScanManager.m; sourceTree = "<group>"; };
+		CC56C307204160EF00783A9F /* WXQRCodeAlbumManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXQRCodeAlbumManager.h; sourceTree = "<group>"; };
+		CC56C308204160EF00783A9F /* WXQRCodeAlbumManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXQRCodeAlbumManager.m; sourceTree = "<group>"; };
 		CC6A21681FE7A39C00B18D36 /* iOSDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipHintView.swift; sourceTree = "<group>"; };
 		CC6A280920158EB8001D3A91 /* WXUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXUserInfoModel.h; sourceTree = "<group>"; };
@@ -454,6 +457,8 @@
 			children = (
 				CC56C30420411A5400783A9F /* WXQRCodeScanManager.h */,
 				CC56C30520411A5400783A9F /* WXQRCodeScanManager.m */,
+				CC56C307204160EF00783A9F /* WXQRCodeAlbumManager.h */,
+				CC56C308204160EF00783A9F /* WXQRCodeAlbumManager.m */,
 			);
 			path = QRCodeManager;
 			sourceTree = "<group>";
@@ -761,6 +766,7 @@
 				CC1BCE58202C2D68009A0BCF /* WXSettingsViewController.m in Sources */,
 				CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */,
 				CC40F65E1E6E5F88009D144C /* main.m in Sources */,
+				CC56C309204160EF00783A9F /* WXQRCodeAlbumManager.m in Sources */,
 				CCFB580A201B03720030BFF1 /* DiskStorage.swift in Sources */,
 				CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */,
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
