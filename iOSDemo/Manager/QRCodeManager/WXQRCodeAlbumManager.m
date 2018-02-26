@@ -83,7 +83,7 @@ static WXQRCodeAlbumManager *_instance;
     
     if (features.count == 0){
         if (self.delegate && [self.delegate respondsToSelector:@selector(WXQRCodeAlbumManagerDidReadFailed:)]){
-            
+            [self.delegate WXQRCodeAlbumManagerDidReadFailed:self];
         }
     }
 }
