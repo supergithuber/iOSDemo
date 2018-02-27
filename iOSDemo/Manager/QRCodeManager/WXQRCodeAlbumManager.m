@@ -85,6 +85,13 @@ static WXQRCodeAlbumManager *_instance;
         if (self.delegate && [self.delegate respondsToSelector:@selector(WXQRCodeAlbumManagerDidReadFailed:)]){
             [self.delegate WXQRCodeAlbumManagerDidReadFailed:self];
         }
+    } else {
+        for (CIQRCodeFeature *feature in features) {
+            NSString *resultString = feature.messageString;
+            if (self.delegate && [self.delegate respondsToSelector:@selector(WXQRCodeAlbumManager:resultString:)]){
+                [self.delegate WXQRCodeAlbumManager:self resultString:resultString];
+            }
+        }
     }
 }
 @end

@@ -12,7 +12,7 @@
 @protocol WXQRCodeAlbumDelegate<NSObject>
 //不选择图片
 - (void)WXQRCodeAlbumManagerDidCancelPickPhoto:(WXQRCodeAlbumManager *)manager;
-//读到二维码信息
+//读到二维码信息,识别到几个，回调几次
 - (void)WXQRCodeAlbumManager:(WXQRCodeAlbumManager *)manager resultString:(NSString *)resultString;
 //读取二维码信息失败
 - (void)WXQRCodeAlbumManagerDidReadFailed:(WXQRCodeAlbumManager *)manager;
