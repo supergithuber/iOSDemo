@@ -9,8 +9,9 @@
 #import "WXQRCodeViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "WXQRCodeScanManager.h"
+#import "WXQRCodeAlbumManager.h"
 
-@interface WXQRCodeViewController ()<WXQRCodeScanDelegate>
+@interface WXQRCodeViewController ()<WXQRCodeScanDelegate, WXQRCodeAlbumDelegate>
 
 @property (nonatomic, strong)WXQRCodeScanManager *scanManager;
 
@@ -25,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initNavigationBar];
     [self initUI];
     
     [self initScanManager];
@@ -33,6 +35,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
+}
+- (void)initNavigationBar{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Album" style:UIBarButtonItemStyleDone target:self action:@selector(clickRightBarButtonItem:)];
 }
 
 - (void)initUI{
@@ -54,6 +59,13 @@
 - (void)startScan{
     [self.scanManager startScanCode];
 }
+
+- (void)clickRightBarButtonItem:(UIBarButtonItem *)button{
+    WXQRCodeAlbumManager *albumManager = [WXQRCodeAlbumManager sharedInstance];
+    albumManager.delegate = self;
+    [albumManager openAlbumPickerViewController:self];
+}
+//MARK: - WXQRCodeScanDelegate
 //扫描结果
 - (void)WXQRCodeScanManager:(WXQRCodeScanManager *)manager outputMetadataObjects:(NSArray *)metadataObjects{
     if (metadataObjects != nil && metadataObjects.count > 0){
@@ -69,4 +81,6 @@
 - (void)WXQRCodeScanManager:(WXQRCodeScanManager *)manager brightnessValue:(CGFloat)brightness{
 //    NSLog(@"现在光线强度%f", brightness);
 }
+
+//MARK: -
 @end
