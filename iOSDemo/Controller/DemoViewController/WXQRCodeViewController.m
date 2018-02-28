@@ -82,5 +82,14 @@
 //    NSLog(@"现在光线强度%f", brightness);
 }
 
-//MARK: -
+//MARK: - WXQRCodeAlbumDelegate
+- (void)WXQRCodeAlbumManagerDidCancelPickPhoto:(WXQRCodeAlbumManager *)manager{
+    
+}
+- (void)WXQRCodeAlbumManagerDidReadFailed:(WXQRCodeAlbumManager *)manager{
+    [self LogToResultTextView:@"没有识别到二维码"];
+}
+- (void)WXQRCodeAlbumManager:(WXQRCodeAlbumManager *)manager resultString:(NSString *)resultString{
+    [self LogToResultTextView:[NSString stringWithFormat:@"图片二维码的内容:%@", resultString]];
+}
 @end

@@ -70,7 +70,7 @@ static WXQRCodeAlbumManager *_instance;
 
 //MARK: delegate
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
+    [self.currentViewController dismissViewControllerAnimated:true completion:nil];
     if (self.delegate && [self.delegate respondsToSelector:@selector(WXQRCodeAlbumManagerDidCancelPickPhoto:)]){
         [self.delegate WXQRCodeAlbumManagerDidCancelPickPhoto:self];
     }
@@ -85,6 +85,7 @@ static WXQRCodeAlbumManager *_instance;
         if (self.delegate && [self.delegate respondsToSelector:@selector(WXQRCodeAlbumManagerDidReadFailed:)]){
             [self.delegate WXQRCodeAlbumManagerDidReadFailed:self];
         }
+        
     } else {
         for (CIQRCodeFeature *feature in features) {
             NSString *resultString = feature.messageString;
@@ -93,5 +94,6 @@ static WXQRCodeAlbumManager *_instance;
             }
         }
     }
+    [self.currentViewController dismissViewControllerAnimated:YES completion:nil];
 }
 @end
