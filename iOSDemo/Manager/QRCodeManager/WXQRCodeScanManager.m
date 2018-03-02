@@ -104,9 +104,17 @@ static WXQRCodeScanManager *_instance = nil;
 }
 
 - (void)playSoundFileName:(NSString *)name{
+    NSString *audioFile = [[NSBundle mainBundle] pathForResource:name ofType:nil];
+    NSURL *fileUrl = [NSURL fileURLWithPath:audioFile];
+    
+    SystemSoundID soundID = 0;
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)(fileUrl), &soundID);
+    AudioServicesAddSystemSoundCompletion(soundID, NULL, NULL, soundCompleteCallback, NULL);
+    AudioServicesPlaySystemSound(soundID); // 播放音效
+}
+void soundCompleteCallback(SystemSoundID soundID, void *clientData){
     
 }
-
 - (void)lightJarDevice{
     UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleHeavy];
     [generator prepare];

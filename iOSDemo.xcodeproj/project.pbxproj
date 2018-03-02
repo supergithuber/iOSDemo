@@ -21,6 +21,7 @@
 		CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30420085B02009F1D9E /* WXDemoViewController.m */; };
 		CC2BF30D20088D73009F1D9E /* WXSerialOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30C20088D73009F1D9E /* WXSerialOperation.m */; };
 		CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30F20089037009F1D9E /* WXConcurrentOperation.m */; };
+		CC2EC36020494715000750F8 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = CC2EC35F20494715000750F8 /* sound.caf */; };
 		CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EA92005F1C3009E87F6 /* SemaphoreViewController.m */; };
 		CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EB22005FAA0009E87F6 /* UIViewController+GetViewController.m */; };
 		CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EB52005FBAC009E87F6 /* UIView+Badge.m */; };
@@ -133,6 +134,7 @@
 		CC2BF30C20088D73009F1D9E /* WXSerialOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSerialOperation.m; sourceTree = "<group>"; };
 		CC2BF30E20089037009F1D9E /* WXConcurrentOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXConcurrentOperation.h; sourceTree = "<group>"; };
 		CC2BF30F20089037009F1D9E /* WXConcurrentOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXConcurrentOperation.m; sourceTree = "<group>"; };
+		CC2EC35F20494715000750F8 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
 		CC3D2EA82005F1C3009E87F6 /* SemaphoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreViewController.h; sourceTree = "<group>"; };
 		CC3D2EA92005F1C3009E87F6 /* SemaphoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreViewController.m; sourceTree = "<group>"; };
 		CC3D2EB12005FAA0009E87F6 /* UIViewController+GetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GetViewController.h"; sourceTree = "<group>"; };
@@ -306,6 +308,14 @@
 				CC56C2F720401A8700783A9F /* WXQRCodeViewController.m */,
 			);
 			path = DemoViewController;
+			sourceTree = "<group>";
+		};
+		CC2EC35E20494715000750F8 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC2EC35F20494715000750F8 /* sound.caf */,
+			);
+			path = Files;
 			sourceTree = "<group>";
 		};
 		CC3D2EA72005F0C0009E87F6 /* Controller */ = {
@@ -585,6 +595,7 @@
 		CCFB57FA201983880030BFF1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CC2EC35E20494715000750F8 /* Files */,
 				CC40F6681E6E5F88009D144C /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -709,6 +720,7 @@
 				CC71D3C6203E6AB400CFDDEA /* icon_blue@3x.png in Resources */,
 				CC71D3C9203E6AB400CFDDEA /* icon_blue@2x.png in Resources */,
 				CC40F6671E6E5F88009D144C /* Main.storyboard in Resources */,
+				CC2EC36020494715000750F8 /* sound.caf in Resources */,
 				CC71D3C7203E6AB400CFDDEA /* icon_red@2x.png in Resources */,
 				CC71D3CD203E6B3900CFDDEA /* icon_demo@3x.png in Resources */,
 			);
