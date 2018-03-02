@@ -42,4 +42,11 @@
 //根据预览的sampleBuffer来输出光线强度，重置了下面的代理后，可以重新输出光线强度，或者取消输出光线强度
 - (void)resetBrightnessOutput;
 - (void)cancelBrightnessOutput;
+
+//播放一段声音
+- (void)playSoundFileName:(NSString *)name;
+//手机震动，就是点按iPhone7 以及以上机型home按键那种震动，需要iphone7以及以上
+- (void)lightJarDevice;
+//手机震动，来信息的时候的那种震动，需要iphone6S以及以上
+- (void)strongJarDevice;
 @end

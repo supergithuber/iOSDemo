@@ -103,6 +103,20 @@ static WXQRCodeScanManager *_instance = nil;
     [self.videoDataOutput setSampleBufferDelegate:nil queue:dispatch_get_main_queue()];
 }
 
+- (void)playSoundFileName:(NSString *)name{
+    
+}
+
+- (void)lightJarDevice{
+    UIImpactFeedbackGenerator *generator = [[UIImpactFeedbackGenerator alloc] initWithStyle:UIImpactFeedbackStyleHeavy];
+    [generator prepare];
+    [generator impactOccurred];
+}
+
+- (void)strongJarDevice{
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+}
+
 //MARK: - AVCaptureVideoDataOutputSampleBufferDelegate，输出光线强度
 - (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection{
     CFDictionaryRef metadataDict = CMCopyDictionaryOfAttachments(NULL,sampleBuffer, kCMAttachmentMode_ShouldPropagate);
