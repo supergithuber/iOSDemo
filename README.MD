@@ -26,3 +26,4 @@ supported:iOS 11 or higher, iPhone 6s or later
 16. dynamic change application icon
 17. NSDate tools
 18. Scan QRCode and recognize QRCode from Photo
+19. iPhone jar
