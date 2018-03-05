@@ -22,6 +22,7 @@
 		CC2BF30D20088D73009F1D9E /* WXSerialOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30C20088D73009F1D9E /* WXSerialOperation.m */; };
 		CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30F20089037009F1D9E /* WXConcurrentOperation.m */; };
 		CC2EC36020494715000750F8 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = CC2EC35F20494715000750F8 /* sound.caf */; };
+		CC2EC367204D3A73000750F8 /* WXBezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2EC366204D3A73000750F8 /* WXBezierViewController.m */; };
 		CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EA92005F1C3009E87F6 /* SemaphoreViewController.m */; };
 		CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EB22005FAA0009E87F6 /* UIViewController+GetViewController.m */; };
 		CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EB52005FBAC009E87F6 /* UIView+Badge.m */; };
@@ -135,6 +136,8 @@
 		CC2BF30E20089037009F1D9E /* WXConcurrentOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXConcurrentOperation.h; sourceTree = "<group>"; };
 		CC2BF30F20089037009F1D9E /* WXConcurrentOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXConcurrentOperation.m; sourceTree = "<group>"; };
 		CC2EC35F20494715000750F8 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
+		CC2EC365204D3A73000750F8 /* WXBezierViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXBezierViewController.h; sourceTree = "<group>"; };
+		CC2EC366204D3A73000750F8 /* WXBezierViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXBezierViewController.m; sourceTree = "<group>"; };
 		CC3D2EA82005F1C3009E87F6 /* SemaphoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreViewController.h; sourceTree = "<group>"; };
 		CC3D2EA92005F1C3009E87F6 /* SemaphoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreViewController.m; sourceTree = "<group>"; };
 		CC3D2EB12005FAA0009E87F6 /* UIViewController+GetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GetViewController.h"; sourceTree = "<group>"; };
@@ -306,6 +309,8 @@
 				CC6EB224202162250002BA14 /* WXARTextViewController.m */,
 				CC56C2F620401A8700783A9F /* WXQRCodeViewController.h */,
 				CC56C2F720401A8700783A9F /* WXQRCodeViewController.m */,
+				CC2EC365204D3A73000750F8 /* WXBezierViewController.h */,
+				CC2EC366204D3A73000750F8 /* WXBezierViewController.m */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -769,6 +774,7 @@
 				CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */,
 				CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */,
 				CC6EB22A2021CE0B0002BA14 /* WXARText.m in Sources */,
+				CC2EC367204D3A73000750F8 /* WXBezierViewController.m in Sources */,
 				CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */,
 				CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */,
 				CC40F6611E6E5F88009D144C /* AppDelegate.m in Sources */,
