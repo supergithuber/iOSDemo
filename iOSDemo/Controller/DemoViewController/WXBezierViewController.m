@@ -20,6 +20,7 @@
     [self drawLine];
     [self drawShape];
     [self drawOvalInRect];
+    [self getOvalOfRect];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,5 +74,19 @@
     shapeLayer.fillColor = nil;
     
     [view.layer addSublayer:shapeLayer];
+}
+- (void)getOvalOfRect{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(200, 320, 100, 100)];
+    view.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:view];
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:view.bounds];
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = path.CGPath;
+    shapeLayer.lineWidth = 2;
+    shapeLayer.strokeColor = [UIColor greenColor].CGColor;
+    shapeLayer.fillColor = nil;
+    
+    view.layer.mask = shapeLayer;
 }
 @end
