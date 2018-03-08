@@ -405,7 +405,7 @@
 				CC40F6601E6E5F88009D144C /* AppDelegate.m */,
 				CC3D2EAD2005F9D6009E87F6 /* Category */,
 				CC3D2EA72005F0C0009E87F6 /* Controller */,
-				CC71D3BD203E697500CFDDEA /* icon */,
+				CC71D3BD203E697500CFDDEA /* MyIcon */,
 				CC56C2FC20410E4400783A9F /* Manager */,
 				CC3D2EAC2005F56E009E87F6 /* Model */,
 				CCAB7B332016DDE30077BAB8 /* Protocol */,
@@ -519,7 +519,7 @@
 			path = SettingsViewController;
 			sourceTree = "<group>";
 		};
-		CC71D3BD203E697500CFDDEA /* icon */ = {
+		CC71D3BD203E697500CFDDEA /* MyIcon */ = {
 			isa = PBXGroup;
 			children = (
 				CC71D3CA203E6B3900CFDDEA /* icon_demo@2x.png */,
@@ -531,7 +531,7 @@
 				CC71D3C1203E6AB400CFDDEA /* icon_red@2x.png */,
 				CC71D3BE203E6AB400CFDDEA /* icon_red@3x.png */,
 			);
-			path = icon;
+			path = MyIcon;
 			sourceTree = "<group>";
 		};
 		CCA8D59420103FF100B225B6 /* Tools */ = {
