@@ -21,6 +21,8 @@
     [self drawShape];
     [self drawOvalInRect];
     [self getOvalOfRect];
+    [self getRoundedRect];
+    [self getPartCornerRoundedRect];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,7 +64,7 @@
     [self.view.layer addSublayer:shapeLayer];
 }
 - (void)drawOvalInRect{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(20, 320, 150, 100)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(20, 220, 150, 100)];
     view.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:view];
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:view.bounds];
@@ -76,8 +78,8 @@
     [view.layer addSublayer:shapeLayer];
 }
 - (void)getOvalOfRect{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(200, 320, 100, 100)];
-    view.backgroundColor = [UIColor orangeColor];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(200, 220, 100, 100)];
+    view.backgroundColor = [UIColor cyanColor];
     [self.view addSubview:view];
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:view.bounds];
     
@@ -86,6 +88,32 @@
     shapeLayer.lineWidth = 2;
     shapeLayer.strokeColor = [UIColor greenColor].CGColor;
     shapeLayer.fillColor = nil;
+    
+    view.layer.mask = shapeLayer;
+}
+- (void)getRoundedRect{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(20, 320, 150, 100)];
+    view.backgroundColor = [UIColor cyanColor];
+    [self.view addSubview:view];
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:view.bounds cornerRadius:20];
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = path.CGPath;
+    shapeLayer.lineWidth = 2;
+    shapeLayer.strokeColor = [UIColor greenColor].CGColor;
+    
+    view.layer.mask = shapeLayer;
+}
+- (void)getPartCornerRoundedRect{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(200, 320, 100, 100)];
+    view.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:view];
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:view.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(20, 0)];
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = path.CGPath;
+    shapeLayer.lineWidth = 2;
+    shapeLayer.strokeColor = [UIColor cyanColor].CGColor;
     
     view.layer.mask = shapeLayer;
 }

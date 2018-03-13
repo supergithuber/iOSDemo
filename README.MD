@@ -27,5 +27,5 @@ supported:iOS 11 or higher, iPhone 6s or later
 17. NSDate tools
 18. Scan QRCode and recognize QRCode from Photo
 19. iPhone jar(shake)
-20. UIBezierPath(continue)
+20. UIBezierPath
 21. run horse light(continue)
