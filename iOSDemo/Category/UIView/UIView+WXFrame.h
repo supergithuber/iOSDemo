@@ -23,8 +23,8 @@
 
 @property (nonatomic, assign)CGPoint wx_origin;
 @property (nonatomic, assign)CGPoint wx_center;
-@property (nonatomic, assign)CGPoint wx_centerY;
-@property (nonatomic, assign)CGPoint wx_centerX;
+@property (nonatomic, assign)CGFloat wx_centerY;
+@property (nonatomic, assign)CGFloat wx_centerX;
 
 
 @end
