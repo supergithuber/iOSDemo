@@ -64,6 +64,7 @@
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
 		CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */; };
 		CCD7FC952057840C00AA35AF /* UIView+WXFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD7FC942057840C00AA35AF /* UIView+WXFrame.m */; };
+		CCE21BB82059823000F992BF /* WXCyclicScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE21BB72059823000F992BF /* WXCyclicScrollLabel.m */; };
 		CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915120073BDA0055C51D /* UIImage+Scale.m */; };
 		CCE7915720074B710055C51D /* ClosureInitScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915620074B710055C51D /* ClosureInitScrollView.swift */; };
 		CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CCFB57F22018869F0030BFF1 /* WXUserDefaults.m */; };
@@ -210,6 +211,8 @@
 		CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXBaseNavigationViewController.m; sourceTree = "<group>"; };
 		CCD7FC932057840C00AA35AF /* UIView+WXFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WXFrame.h"; sourceTree = "<group>"; };
 		CCD7FC942057840C00AA35AF /* UIView+WXFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXFrame.m"; sourceTree = "<group>"; };
+		CCE21BB62059823000F992BF /* WXCyclicScrollLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCyclicScrollLabel.h; sourceTree = "<group>"; };
+		CCE21BB72059823000F992BF /* WXCyclicScrollLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXCyclicScrollLabel.m; sourceTree = "<group>"; };
 		CCE7915020073BDA0055C51D /* UIImage+Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
 		CCE7915120073BDA0055C51D /* UIImage+Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
 		CCE7915620074B710055C51D /* ClosureInitScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureInitScrollView.swift; sourceTree = "<group>"; };
@@ -349,6 +352,8 @@
 				CCE7915620074B710055C51D /* ClosureInitScrollView.swift */,
 				CC71D3CE203E763D00CFDDEA /* WXIconCollectionViewCell.h */,
 				CC71D3CF203E763D00CFDDEA /* WXIconCollectionViewCell.m */,
+				CCE21BB62059823000F992BF /* WXCyclicScrollLabel.h */,
+				CCE21BB72059823000F992BF /* WXCyclicScrollLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -768,6 +773,7 @@
 				CC56C2F820401A8700783A9F /* WXQRCodeViewController.m in Sources */,
 				CC7108562032F9B500E09BC5 /* PushAndPopViewController.m in Sources */,
 				CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */,
+				CCE21BB82059823000F992BF /* WXCyclicScrollLabel.m in Sources */,
 				CC56C30620411A5400783A9F /* WXQRCodeScanManager.m in Sources */,
 				CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */,
 				CC1BCE5C202C2D90009A0BCF /* WXInitTabBarViewController.m in Sources */,
