@@ -61,6 +61,7 @@
 		CC71D3CD203E6B3900CFDDEA /* icon_demo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CC71D3CB203E6B3900CFDDEA /* icon_demo@3x.png */; };
 		CC71D3D0203E763D00CFDDEA /* WXIconCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC71D3CF203E763D00CFDDEA /* WXIconCollectionViewCell.m */; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
+		CC7793C9205A06DC00587D86 /* WXSingleScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7793C8205A06DC00587D86 /* WXSingleScrollLabel.m */; };
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
 		CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */; };
 		CCD7FC952057840C00AA35AF /* UIView+WXFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD7FC942057840C00AA35AF /* UIView+WXFrame.m */; };
@@ -205,6 +206,8 @@
 		CC71D3CF203E763D00CFDDEA /* WXIconCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXIconCollectionViewCell.m; sourceTree = "<group>"; };
 		CC72CD601F8F163500CADF32 /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		CC7793C7205A06DC00587D86 /* WXSingleScrollLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSingleScrollLabel.h; sourceTree = "<group>"; };
+		CC7793C8205A06DC00587D86 /* WXSingleScrollLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSingleScrollLabel.m; sourceTree = "<group>"; };
 		CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXVolumeButtonHandler.h; sourceTree = "<group>"; };
 		CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXVolumeButtonHandler.m; sourceTree = "<group>"; };
 		CCAD93F4202D3E5E00414E47 /* WXBaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXBaseNavigationViewController.h; sourceTree = "<group>"; };
@@ -348,12 +351,11 @@
 		CC3D2EAB2005F553009E87F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC7793C6205A068D00587D86 /* WXScrollLabel */,
 				CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */,
 				CCE7915620074B710055C51D /* ClosureInitScrollView.swift */,
 				CC71D3CE203E763D00CFDDEA /* WXIconCollectionViewCell.h */,
 				CC71D3CF203E763D00CFDDEA /* WXIconCollectionViewCell.m */,
-				CCE21BB62059823000F992BF /* WXCyclicScrollLabel.h */,
-				CCE21BB72059823000F992BF /* WXCyclicScrollLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -540,6 +542,17 @@
 				CC71D3BE203E6AB400CFDDEA /* icon_red@3x.png */,
 			);
 			path = MyIcon;
+			sourceTree = "<group>";
+		};
+		CC7793C6205A068D00587D86 /* WXScrollLabel */ = {
+			isa = PBXGroup;
+			children = (
+				CCE21BB62059823000F992BF /* WXCyclicScrollLabel.h */,
+				CCE21BB72059823000F992BF /* WXCyclicScrollLabel.m */,
+				CC7793C7205A06DC00587D86 /* WXSingleScrollLabel.h */,
+				CC7793C8205A06DC00587D86 /* WXSingleScrollLabel.m */,
+			);
+			path = WXScrollLabel;
 			sourceTree = "<group>";
 		};
 		CCA8D59420103FF100B225B6 /* Tools */ = {
@@ -792,6 +805,7 @@
 				CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */,
 				CCD7FC952057840C00AA35AF /* UIView+WXFrame.m in Sources */,
 				CCFB580C201B04FF0030BFF1 /* AppConfiguration.swift in Sources */,
+				CC7793C9205A06DC00587D86 /* WXSingleScrollLabel.m in Sources */,
 				CC71D3BC203E64DF00CFDDEA /* WXChangeIconViewController.m in Sources */,
 				CC1BCE58202C2D68009A0BCF /* WXSettingsViewController.m in Sources */,
 				CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */,
