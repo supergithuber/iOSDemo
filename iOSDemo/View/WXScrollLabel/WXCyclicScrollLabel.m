@@ -46,7 +46,7 @@
     }
     return self;
 }
-
+//MARK: 初始化方法
 + (instancetype)scrollLabelWithTitle:(NSString *)title
                                 type:(WXScrollType)type
                             velocity:(CGFloat)velocity
@@ -70,6 +70,14 @@
     self.downLabel = downLabel;
     [self addSubview:upLabel];
     [self addSubview:downLabel];
+}
+
+- (void)beginScrolling{
+    
+}
+
+- (void)endScrolling{
+    
 }
 
 //MARK: tapGesture

@@ -31,7 +31,9 @@ typedef NS_ENUM(NSInteger, WXScrollType){
 @property (nonatomic, assign)CGFloat scrollVelocity;
 @property (nonatomic, copy) NSString *scrollTitle;
 @property (assign, nonatomic)UIEdgeInsets scrollInsets;
-
-
+//开始滚动
+- (void)beginScrolling;
+//结束滚动
+- (void)endScrolling;
 
 @end
