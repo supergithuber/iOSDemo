@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, WXScrollType){
 @property (nonatomic, assign)WXScrollType scrollType;
 @property (nonatomic, weak)id<WXCyclicScrollLabelDelegate> scrollLabelDelegate;
 
-@property (nonatomic, strong)UIFont *font;
+@property (nonatomic, strong)UIFont *scrollTextFont;
 @property (nonatomic, assign)NSTextAlignment textAliment;
 @property (nonatomic, assign)CGFloat scrollVelocity;
 @property (nonatomic, copy) NSString *scrollTitle;

@@ -71,6 +71,9 @@
     [self addSubview:upLabel];
     [self addSubview:downLabel];
 }
+- (void)setupSubviewsLayout {
+    
+}
 
 - (void)beginScrolling{
     
@@ -92,4 +95,13 @@
         [self.scrollLabelDelegate scrollLabel:self didClickWithText:tapView.text atIndex:index];
     }
 }
+
+//MARK: - set and get
+- (void)setScrollTextFont:(UIFont *)scrollTextFont{
+    _scrollTextFont = scrollTextFont;
+    _upLabel.font = scrollTextFont;
+    _downLabel.font = scrollTextFont;
+    [self setupSubviewsLayout];
+}
+
 @end
