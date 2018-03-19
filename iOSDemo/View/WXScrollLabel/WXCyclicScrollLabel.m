@@ -15,6 +15,7 @@
 @property (nonatomic, weak)WXSingleScrollLabel *downLabel;
 //文本行分割数组
 @property (strong, nonatomic) NSArray *scrollArray;
+@property (assign, nonatomic) NSInteger currentIndex;
 @property (strong, nonatomic) NSArray *scrollTexts;
 //定时器
 @property (strong, nonatomic) NSTimer *scrollTimer;
@@ -23,6 +24,7 @@
 @property (assign, nonatomic) UIViewAnimationOptions options;
 //传入参数是否为数组
 @property (assign, nonatomic) BOOL isArray;
+
 
 @end
 
@@ -120,11 +122,24 @@
 - (void)setupSubviewsLayout_Flip {
     
 }
+
+- (void)beginScrolling{
+    self.currentIndex = 0;
+    if (self.isArray){
+        [self setupInitial];
+    }
+    [self startup];
+}
+
+- (void)endScrolling{
+    [self finishTimer];
+}
+
 - (void)setupInitial {
     
 }
 
-- (void)beginScrolling{
+- (void)startup {
     if (!self.scrollTitle.length && !self.scrollArray.count) return;
     [self endScrolling];
     
@@ -133,10 +148,6 @@
     }else{
         [self startScrollWithVelocity:self.scrollVelocity];
     }
-}
-
-- (void)endScrolling{
-    [self finishTimer];
 }
 
 - (void)startScrollWithVelocity:(CGFloat)velocity{
@@ -180,6 +191,17 @@
 }
 - (void)updateScrollingType_FlipNoRepeat{
     
+}
+- (void)updateScrollText {
+    
+    NSInteger currentIndex = self.currentIndex;
+    if (currentIndex >= self.scrollArray.count) currentIndex = 0;
+    self.upLabel.text = self.scrollArray[currentIndex];
+    currentIndex ++;
+    if (currentIndex >= self.scrollArray.count) currentIndex = 0;
+    self.downLabel.text = self.scrollArray[currentIndex];
+    
+    self.currentIndex = currentIndex;
 }
 - (void)finishTimer{
     [self.timerLock lock];
