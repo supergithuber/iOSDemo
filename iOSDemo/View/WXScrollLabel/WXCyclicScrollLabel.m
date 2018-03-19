@@ -16,6 +16,9 @@
 //文本行分割数组
 @property (strong, nonatomic) NSArray *scrollArray;
 @property (strong, nonatomic) NSArray *scrollTexts;
+//定时器
+@property (strong, nonatomic) NSTimer *scrollTimer;
+@property (strong, nonatomic) NSLock *timerLock;
 
 @property (assign, nonatomic) UIViewAnimationOptions options;
 //传入参数是否为数组
@@ -122,13 +125,69 @@
 }
 
 - (void)beginScrolling{
+    if (!self.scrollTitle.length && !self.scrollArray.count) return;
+    [self endScrolling];
     
+    if (self.scrollType == WXScrollTypeFlipRepeat || self.scrollType == WXScrollTypeFlipNoRepeat){
+        
+    }else{
+        [self startScrollWithVelocity:self.scrollVelocity];
+    }
 }
 
 - (void)endScrolling{
-    
+    [self finishTimer];
 }
 
+- (void)startScrollWithVelocity:(CGFloat)velocity{
+    if (!self.scrollTitle.length && self.scrollArray.count) return;
+    
+    [self.timerLock lock];
+    WS(weakSelf);
+    self.scrollTimer = [NSTimer scheduledTimerWithTimeInterval:velocity repeats:true block:^(NSTimer * _Nonnull timer) {
+        [weakSelf updateScrolling];
+    }];
+    [[NSRunLoop mainRunLoop] addTimer:self.scrollTimer forMode:NSRunLoopCommonModes];
+    [self.timerLock unlock];
+}
+
+- (void)updateScrolling {
+    switch (self.scrollType) {
+        case WXScrollTypeLeftRight:
+            [self updateScrollingType_LeftRight];
+            break;
+        case WXScrollTypeUpDown:
+            [self updateScrollingType_UpDown];
+            break;
+        case WXScrollTypeFlipRepeat:
+            [self updateScrollingType_FlipRepeat];
+            break;
+        case WXScrollTypeFlipNoRepeat:
+            [self updateScrollingType_FlipNoRepeat];
+            break;
+        default:
+            break;
+    }
+}
+- (void)updateScrollingType_LeftRight{
+    
+}
+- (void)updateScrollingType_UpDown{
+    
+}
+- (void)updateScrollingType_FlipRepeat{
+    
+}
+- (void)updateScrollingType_FlipNoRepeat{
+    
+}
+- (void)finishTimer{
+    [self.timerLock lock];
+    [self.scrollTimer invalidate];
+    self.scrollTimer = nil;
+    self.scrollArray = nil;
+    [self.timerLock unlock];
+}
 //MARK: tapGesture
 - (void)tapLabel:(UITapGestureRecognizer *)tapGesture {
     UILabel *tapView = (UILabel *)tapGesture.view;
