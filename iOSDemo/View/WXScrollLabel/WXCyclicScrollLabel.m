@@ -18,6 +18,8 @@
 @property (strong, nonatomic) NSArray *scrollTexts;
 
 @property (assign, nonatomic) UIViewAnimationOptions options;
+//传入参数是否为数组
+@property (assign, nonatomic) BOOL isArray;
 
 @end
 
@@ -36,6 +38,8 @@
                          type:(WXScrollType)type
                      velocity:(CGFloat)velocity
                        option:(UIViewAnimationOptions)animationOptions
+                         font:(UIFont *)font
+                  scrollSpace:(CGFloat)scrollSpace
                        insets:(UIEdgeInsets)insets{
     if (self = [super init]){
         _scrollTitle = title;
@@ -43,6 +47,8 @@
         _scrollVelocity = velocity;
         _options = animationOptions;
         _scrollInsets = insets;
+        _scrollSpace = scrollSpace;
+        _scrollTextFont = font;
     }
     return self;
 }
@@ -51,11 +57,15 @@
                                 type:(WXScrollType)type
                             velocity:(CGFloat)velocity
                              options:(UIViewAnimationOptions)animationOptions
+                                font:(UIFont *)font
+                        scrolllSpace:(CGFloat)scrollSpace
                               insets:(UIEdgeInsets)insets{
     return [[self alloc] initWithTitle:title
                                   type:type
                               velocity:velocity
                                 option:animationOptions
+                                  font:font
+                           scrollSpace:scrollSpace
                                 insets:insets];
 }
 
@@ -72,6 +82,42 @@
     [self addSubview:downLabel];
 }
 - (void)setupSubviewsLayout {
+    switch (_scrollType) {
+        case WXScrollTypeLeftRight:
+            if (self.isArray){
+                [self setupInitial];
+            }else{
+                [self setupSubviewsLayout_LeftRight];
+            }
+            break;
+        case WXScrollTypeUpDown:
+            if (self.isArray){
+                [self setupInitial];
+            }else{
+                [self setupSubviewsLayout_UpDown];
+            }
+            break;
+        case WXScrollTypeFlipRepeat:{
+            [self setupSubviewsLayout_Flip];
+            
+        }
+            break;
+        case WXScrollTypeFlipNoRepeat:
+            break;
+        default:
+            break;
+    }
+}
+- (void)setupSubviewsLayout_LeftRight {
+    
+}
+- (void)setupSubviewsLayout_UpDown {
+    
+}
+- (void)setupSubviewsLayout_Flip {
+    
+}
+- (void)setupInitial {
     
 }
 
@@ -102,6 +148,24 @@
     _upLabel.font = scrollTextFont;
     _downLabel.font = scrollTextFont;
     [self setupSubviewsLayout];
+}
+- (void)setScrollSpace:(CGFloat)scrollSpace{
+    _scrollSpace = scrollSpace;
+    [self setupSubviewsLayout];
+}
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    [self setupSubviewsLayout];
+}
+- (void)setScrollTitle:(NSString *)scrollTitle{
+    _scrollTitle = scrollTitle;
+    _upLabel.text = scrollTitle;
+    _downLabel.text = scrollTitle;
+}
+- (void)setScrollTitleColor:(UIColor *)scrollTitleColor{
+    _scrollTitleColor = scrollTitleColor;
+    _upLabel.textColor = scrollTitleColor;
+    _downLabel.textColor = scrollTitleColor;
 }
 
 @end

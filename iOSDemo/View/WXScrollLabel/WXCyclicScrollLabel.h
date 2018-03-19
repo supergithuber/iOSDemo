@@ -28,9 +28,14 @@ typedef NS_ENUM(NSInteger, WXScrollType){
 
 @property (nonatomic, strong)UIFont *scrollTextFont;
 @property (nonatomic, assign)NSTextAlignment textAliment;
+
 @property (nonatomic, assign)CGFloat scrollVelocity;
 @property (nonatomic, copy) NSString *scrollTitle;
+@property (nonatomic, strong)UIColor *scrollTitleColor;
+
 @property (assign, nonatomic)UIEdgeInsets scrollInsets;
+//循环滚动的间距
+@property (assign, nonatomic) CGFloat scrollSpace;
 //开始滚动
 - (void)beginScrolling;
 //结束滚动
