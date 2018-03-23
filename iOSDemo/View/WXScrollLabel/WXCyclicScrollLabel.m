@@ -8,6 +8,7 @@
 
 #import "WXCyclicScrollLabel.h"
 #import "WXSingleScrollLabel.h"
+#import "UIView+WXFrame.h"
 
 @interface WXCyclicScrollLabel()
 
@@ -29,6 +30,10 @@
 @end
 
 @implementation WXCyclicScrollLabel
+
+- (void)dealloc {
+    [self finishTimer];
+}
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]){
@@ -86,6 +91,15 @@
     [self addSubview:upLabel];
     [self addSubview:downLabel];
 }
+
+- (void)setupScrollTitle:(NSString *)title{
+    self.upLabel.text = title;
+    self.downLabel.text = title;
+}
+
+- (void)resetScrollLabelView {
+    
+}
 - (void)setupSubviewsLayout {
     switch (_scrollType) {
         case WXScrollTypeLeftRight:
@@ -114,13 +128,38 @@
     }
 }
 - (void)setupSubviewsLayout_LeftRight {
-    
+    CGFloat labelMaxH = self.wx_height;//最大高度
+    CGFloat labelMaxW = 0;
+    CGFloat labelH = labelMaxH;//label实际高度
+    __block CGFloat labelW = 0;//label宽度，有待计算
+    self.contentOffset = CGPointZero;
+    [self setupLRUDTypeLayoutWithMaxSize:CGSizeMake(labelMaxW, labelMaxH) width:labelW height:labelH completedHandler:^(CGSize size) {
+        labelW = MAX(size.width, self.wx_width);
+        //开始布局
+        self.upLabel.frame = CGRectMake(_scrollInsets.left, 0, labelW, labelH);
+        //由于 TXScrollLabelViewTypeLeftRight\UpDown 类型 X\Y 值均不一样，此处不再block中处理！
+        self.downLabel.frame = CGRectMake(CGRectGetMaxX(self.upLabel.frame) + self.scrollSpace, 0, labelW, labelH);
+    }];
 }
 - (void)setupSubviewsLayout_UpDown {
     
 }
 - (void)setupSubviewsLayout_Flip {
     
+}
+
+- (void)setupLRUDTypeLayoutWithMaxSize:(CGSize)size
+                                 width:(CGFloat)width
+                                height:(CGFloat)height
+                      completedHandler:(void(^)(CGSize size))completedHandler {
+    CGSize scrollLabelS = [_scrollTitle boundingRectWithSize:size
+                                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                                  attributes:@{NSFontAttributeName: self.scrollTextFont} context:nil].size;
+    //回调获取布局数据
+    completedHandler(scrollLabelS);
+    if (!self.isArray) {
+        [self setupScrollTitle:_scrollTitle];
+    }
 }
 
 - (void)beginScrolling{
@@ -180,6 +219,7 @@
             break;
     }
 }
+//MARK: updateScrolling
 - (void)updateScrollingType_LeftRight{
     
 }
@@ -245,8 +285,7 @@
 }
 - (void)setScrollTitleColor:(UIColor *)scrollTitleColor{
     _scrollTitleColor = scrollTitleColor;
-    _upLabel.textColor = scrollTitleColor;
-    _downLabel.textColor = scrollTitleColor;
+    [self resetScrollLabelView];
 }
 
 @end
