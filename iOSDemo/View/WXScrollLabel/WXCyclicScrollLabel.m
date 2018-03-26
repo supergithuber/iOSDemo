@@ -56,10 +56,10 @@
     if (self = [super init]){
         _scrollTitle = title;
         _scrollType = type;
-        _scrollVelocity = velocity;
+        self.scrollVelocity = velocity;
         _options = animationOptions;
-        _scrollInsets = insets;
-        _scrollSpace = scrollSpace;
+        self.scrollInsets = insets;
+        self.scrollSpace = scrollSpace;
         _scrollTextFont = font;
     }
     return self;
@@ -223,7 +223,17 @@
 }
 //MARK: updateScrolling
 - (void)updateScrollingType_LeftRight{
-    
+    if (self.contentOffset.x >= (_scrollInsets.left + _upLabel.wx_width + _scrollSpace)){
+        if ((self.contentOffset.x > (_scrollInsets.left + self.upLabel.wx_width) - self.wx_width) &&
+            self.isArray) {
+            
+        }
+        [self endScrolling];
+        [self setContentOffset:CGPointMake(_scrollInsets.left + 1, 0)];
+        [self startup];
+    }else {
+        self.contentOffset = CGPointMake(self.contentOffset.x + 1, self.contentOffset.y);
+    }
 }
 - (void)updateScrollingType_UpDown{
     
