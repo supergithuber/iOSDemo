@@ -42,7 +42,7 @@ typedef void(^myBlock)();
 }
 //MARK: - setupScrollLabel
 - (void)setupScrollLabel{
-    WXCyclicScrollLabel *scrollLabel = [WXCyclicScrollLabel scrollLabelWithTitle:@"大促销，大甩卖，跳楼价，走过路过不要错过，错过后悔一生" type:WXScrollTypeLeftRight velocity:1 options:UIViewAnimationOptionCurveEaseInOut font:[UIFont systemFontOfSize:12] scrolllSpace:10 insets:UIEdgeInsetsMake(0, 10 , 0, 10)];
+    WXCyclicScrollLabel *scrollLabel = [WXCyclicScrollLabel scrollLabelWithTitle:@"免费，不要钱，快来抢，带刀来，随便拿 ,快来看啊，难得的机会啊，我的存在就是为了凑字数，字数多一点就可以换行了" type:WXScrollTypeLeftRight velocity:1 options:UIViewAnimationOptionCurveEaseInOut font:[UIFont systemFontOfSize:12] scrolllSpace:10 insets:UIEdgeInsetsMake(0, 10 , 0, 10)];
     scrollLabel.frame = CGRectMake(10, 100, 300, 30);
     scrollLabel.scrollLabelDelegate = self;
     [self.view addSubview:scrollLabel];
@@ -56,11 +56,20 @@ typedef void(^myBlock)();
     [self.view addSubview:upDownLabel];
     [upDownLabel beginScrolling];
     
-    WXCyclicScrollLabel *flipLabel = [WXCyclicScrollLabel scrollLabelWithTitle:@"大促销，大甩卖，跳楼价，走过路过不要错过，错过后悔一生" type:WXScrollTypeFlipRepeat velocity:1 options:UIViewAnimationOptionCurveEaseInOut font:[UIFont systemFontOfSize:12] scrolllSpace:10 insets:UIEdgeInsetsMake(0, 10 , 0, 10)];
+    WXCyclicScrollLabel *flipLabel = [WXCyclicScrollLabel scrollLabelWithTitle:@"免费，不要钱，快来抢，带刀来，随便拿 ,快来看啊，难得的机会啊，我的存在就是为了凑字数，字数多一点就可以换行了" type:WXScrollTypeFlipRepeat velocity:1 options:UIViewAnimationOptionCurveEaseInOut font:[UIFont systemFontOfSize:12] scrolllSpace:10 insets:UIEdgeInsetsMake(0, 10 , 0, 10)];
     flipLabel.frame = CGRectMake(10, 200, 300, 30);
+    flipLabel.backgroundColor = [UIColor blueColor];
     flipLabel.scrollLabelDelegate = self;
     [self.view addSubview:flipLabel];
     [flipLabel beginScrolling];
+    
+    WXCyclicScrollLabel *flipNoRepeatLabel = [WXCyclicScrollLabel scrollLabelWithTitle:@"免费，不要钱，快来抢，带刀来，随便拿 ,快来看啊，难得的机会啊，我的存在就是为了凑字数，字数多一点就可以换行了" type:WXScrollTypeFlipNoRepeat velocity:1 options:UIViewAnimationOptionCurveEaseInOut font:[UIFont systemFontOfSize:12] scrolllSpace:10 insets:UIEdgeInsetsMake(0, 10 , 0, 10)];
+    flipNoRepeatLabel.frame = CGRectMake(10, 250, 300, 30);
+    flipNoRepeatLabel.backgroundColor = [UIColor cyanColor];
+    flipNoRepeatLabel.scrollLabelDelegate = self;
+    [self.view addSubview:flipNoRepeatLabel];
+    [flipNoRepeatLabel beginScrolling];
+    
 }
 
 //MARK: - pushButton
