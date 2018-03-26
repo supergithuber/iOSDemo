@@ -86,4 +86,12 @@
 - (CGFloat)wx_centerY{
     return self.center.y;
 }
+- (void)setWx_bottom:(CGFloat)wx_bottom{
+    CGRect frame = self.frame;
+    frame.origin.y = wx_bottom - frame.size.height;
+    self.frame = frame;
+}
+- (CGFloat)wx_bottom{
+    return CGRectGetMaxY(self.frame);
+}
 @end

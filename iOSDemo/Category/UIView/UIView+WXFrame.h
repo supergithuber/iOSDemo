@@ -26,5 +26,6 @@
 @property (nonatomic, assign)CGFloat wx_centerY;
 @property (nonatomic, assign)CGFloat wx_centerX;
 
+@property (nonatomic, assign)CGFloat wx_bottom;
 
 @end

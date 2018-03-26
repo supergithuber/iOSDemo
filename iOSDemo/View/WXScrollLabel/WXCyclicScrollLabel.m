@@ -25,6 +25,8 @@
 @property (assign, nonatomic) UIViewAnimationOptions options;
 //传入参数是否为数组
 @property (assign, nonatomic) BOOL isArray;
+//是否第一次开始计时
+@property (assign, nonatomic, getter=isFirstTime) BOOL firstTime;
 
 
 @end
@@ -120,10 +122,11 @@
             break;
         case WXScrollTypeFlipRepeat:{
             [self setupSubviewsLayout_Flip];
-            
         }
             break;
-        case WXScrollTypeFlipNoRepeat:
+        case WXScrollTypeFlipNoRepeat:{
+            [self setupSubviewsLayout_Flip];
+        }
             break;
         default:
             break;
@@ -157,7 +160,10 @@
     }];
 }
 - (void)setupSubviewsLayout_Flip {
-    
+    CGFloat labelW = self.wx_width - _scrollInsets.left - _scrollInsets.right;
+    CGFloat labelX = _scrollInsets.left;
+    self.upLabel.frame = CGRectMake(labelX, 0, labelW, self.wx_height);
+    self.downLabel.frame = CGRectMake(labelX, CGRectGetMaxY(self.upLabel.frame), labelW, self.wx_height);
 }
 
 - (void)setupLRUDTypeLayoutWithMaxSize:(CGSize)size
@@ -195,7 +201,11 @@
     [self endScrolling];
     
     if (self.scrollType == WXScrollTypeFlipRepeat || self.scrollType == WXScrollTypeFlipNoRepeat){
-        
+        _firstTime = YES;
+        if (_scrollType == WXScrollTypeFlipNoRepeat) {
+            [self setupScrollTitle:[self.scrollArray firstObject]];//初次显示
+        }
+        [self startScrollWithVelocity:1];
     }else{
         [self startScrollWithVelocity:self.scrollVelocity];
     }
@@ -260,10 +270,34 @@
     }
 }
 - (void)updateScrollingType_FlipRepeat{
-    
+    [self updateRepeatTypeWithBlock:^(NSTimeInterval velocity) {
+        [self flipAnimationWithDelay:velocity];
+    }];
 }
 - (void)updateScrollingType_FlipNoRepeat{
     
+}
+- (void)flipAnimationWithDelay:(NSTimeInterval)delay {
+    [UIView transitionWithView:self.upLabel duration:delay * 0.5 options:self.options animations:^{
+        self.upLabel.wx_bottom = 0;
+        [UIView transitionWithView:self.upLabel duration:delay * 0.5 options:self.options animations:^{
+            self.downLabel.wx_originY = 0;
+        } completion:^(BOOL finished) {
+            self.upLabel.wx_originY = self.wx_height;
+            WXSingleScrollLabel *tempLabel = self.upLabel;
+            self.upLabel = self.downLabel;
+            self.downLabel = tempLabel;
+        }];
+    } completion:nil];
+}
+- (void)updateRepeatTypeWithBlock:(void(^)(NSTimeInterval))block {
+    NSTimeInterval velocity = self.scrollVelocity;
+    if (self.isFirstTime) {
+        _firstTime = NO;
+        [self endScrolling];
+        [self startScrollWithVelocity:velocity];
+    }
+    block(velocity);
 }
 - (void)updateScrollText {
     
