@@ -31,6 +31,8 @@
 
 @implementation WXCyclicScrollLabel
 
+@synthesize scrollTextFont = _scrollTextFont;
+
 - (void)dealloc {
     [self finishTimer];
 }
@@ -269,6 +271,10 @@
     _upLabel.font = scrollTextFont;
     _downLabel.font = scrollTextFont;
     [self setupSubviewsLayout];
+}
+- (UIFont *)scrollTextFont{
+    if (_scrollTextFont) return _scrollTextFont;
+    return [UIFont systemFontOfSize:14];
 }
 - (void)setScrollSpace:(CGFloat)scrollSpace{
     _scrollSpace = scrollSpace;

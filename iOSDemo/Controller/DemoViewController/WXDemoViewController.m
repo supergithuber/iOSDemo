@@ -8,10 +8,11 @@
 
 #import "WXDemoViewController.h"
 #import "TimerViewController.h"
+#import "WXCyclicScrollLabel.h"
 #import "iOSDemo-Swift.h"
 
 typedef void(^myBlock)();
-@interface WXDemoViewController ()
+@interface WXDemoViewController ()<WXCyclicScrollLabelDelegate>
 
 @property (nonatomic, weak)NSTimer *timer;
 
@@ -27,6 +28,7 @@ typedef void(^myBlock)();
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self addPushButton];
+    [self setupScrollLabel];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +39,14 @@ typedef void(^myBlock)();
 - (void)push:(UIButton *)button{
     TimerViewController *controller = [[TimerViewController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
+}
+//MARK: - setupScrollLabel
+- (void)setupScrollLabel{
+    WXCyclicScrollLabel *scrollLabel = [WXCyclicScrollLabel scrollLabelWithTitle:@"大促销，大甩卖，跳楼价，走过路过不要错过，错过后悔一生" type:WXScrollTypeLeftRight velocity:1 options:UIViewAnimationOptionCurveEaseInOut font:[UIFont systemFontOfSize:12] scrolllSpace:1 insets:UIEdgeInsetsMake(0, 10 , 0, 10)];
+    scrollLabel.frame = CGRectMake(10, 100, 300, 30);
+    scrollLabel.scrollLabelDelegate = self;
+    [self.view addSubview:scrollLabel];
+    [scrollLabel beginScrolling];
 }
 
 //MARK: - pushButton
