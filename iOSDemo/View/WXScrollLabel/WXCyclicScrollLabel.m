@@ -64,7 +64,7 @@
     }
     return self;
 }
-//MARK: 初始化方法
+//MARK: - 初始化方法
 + (instancetype)scrollLabelWithTitle:(NSString *)title
                                 type:(WXScrollType)type
                             velocity:(CGFloat)velocity
@@ -129,6 +129,7 @@
             break;
     }
 }
+//MARK: - setup
 - (void)setupSubviewsLayout_LeftRight {
     CGFloat labelMaxH = self.wx_height;//最大高度
     CGFloat labelMaxW = 0;
@@ -144,7 +145,16 @@
     }];
 }
 - (void)setupSubviewsLayout_UpDown {
+    CGFloat labelMaxH = 0;
+    CGFloat labelMaxW = self.wx_width - _scrollInsets.left - _scrollInsets.right;
+    CGFloat labelW = labelMaxW;
+    __block CGFloat labelH = 0;
     
+    [self setupLRUDTypeLayoutWithMaxSize:CGSizeMake(labelMaxW, labelMaxH) width:labelW height:labelH completedHandler:^(CGSize size) {
+        labelH = MAX(size.height, self.wx_height);
+        self.upLabel.frame = CGRectMake(_scrollInsets.left, 0, labelW, labelH);
+        self.downLabel.frame = CGRectMake(_scrollInsets.left, CGRectGetMaxY(self.upLabel.frame) + self.scrollSpace, labelW, labelH);
+    }];
 }
 - (void)setupSubviewsLayout_Flip {
     
@@ -163,7 +173,7 @@
         [self setupScrollTitle:_scrollTitle];
     }
 }
-
+//MARK: - begin animation
 - (void)beginScrolling{
     self.currentIndex = 0;
     if (self.isArray){
@@ -221,7 +231,7 @@
             break;
     }
 }
-//MARK: updateScrolling
+//MARK: - updateScrolling
 - (void)updateScrollingType_LeftRight{
     if (self.contentOffset.x >= (_scrollInsets.left + _upLabel.wx_width + _scrollSpace)){
         if ((self.contentOffset.x > (_scrollInsets.left + self.upLabel.wx_width) - self.wx_width) &&
@@ -236,7 +246,18 @@
     }
 }
 - (void)updateScrollingType_UpDown{
-    
+    if (self.contentOffset.y >= (self.upLabel.wx_height + self.scrollSpace)) {
+        /** 更新 Label.text */
+        if ((self.contentOffset.y >= (self.upLabel.wx_height)) &&
+            self.isArray) {
+            
+        }
+        [self endScrolling];
+        self.contentOffset = CGPointMake(0, 2);//y增加偏移量，防止卡顿
+        [self startup];
+    }else {
+        self.contentOffset = CGPointMake(self.contentOffset.x, self.contentOffset.y + 1);
+    }
 }
 - (void)updateScrollingType_FlipRepeat{
     
@@ -262,7 +283,7 @@
     self.scrollArray = nil;
     [self.timerLock unlock];
 }
-//MARK: tapGesture
+//MARK: - tapGesture
 - (void)tapLabel:(UITapGestureRecognizer *)tapGesture {
     UILabel *tapView = (UILabel *)tapGesture.view;
     if (!tapView || [tapView isKindOfClass:[UILabel class]]){
@@ -301,7 +322,8 @@
 }
 - (void)setScrollTitleColor:(UIColor *)scrollTitleColor{
     _scrollTitleColor = scrollTitleColor;
-    [self resetScrollLabelView];
+    _upLabel.textColor = scrollTitleColor;
+    _downLabel.textColor = scrollTitleColor;
 }
 - (void)setScrollVelocity:(CGFloat)scrollVelocity{
     CGFloat velocity = scrollVelocity;

@@ -47,6 +47,14 @@ typedef void(^myBlock)();
     scrollLabel.scrollLabelDelegate = self;
     [self.view addSubview:scrollLabel];
     [scrollLabel beginScrolling];
+    
+    WXCyclicScrollLabel *upDownLabel = [WXCyclicScrollLabel scrollLabelWithTitle:@"免费，不要钱，快来抢，带刀来，随便拿" type:WXScrollTypeUpDown velocity:2 options:UIViewAnimationOptionCurveEaseInOut font:[UIFont systemFontOfSize:12] scrolllSpace:2 insets:UIEdgeInsetsMake(0, 10 , 0, 10)];
+    upDownLabel.frame = CGRectMake(10, 150, 300, 30);
+    upDownLabel.backgroundColor = [UIColor redColor];
+    upDownLabel.scrollTitleColor = [UIColor greenColor];
+    upDownLabel.scrollLabelDelegate = self;
+    [self.view addSubview:upDownLabel];
+    [upDownLabel beginScrolling];
 }
 
 //MARK: - pushButton
