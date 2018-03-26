@@ -293,5 +293,19 @@
     _scrollTitleColor = scrollTitleColor;
     [self resetScrollLabelView];
 }
+- (void)setScrollVelocity:(CGFloat)scrollVelocity{
+    CGFloat velocity = scrollVelocity;
+    if (velocity > 5){
+        velocity = 5;
+    }else if (velocity < 0.1){
+        velocity = 0.1;
+    }
+    if (_scrollType == WXScrollTypeLeftRight || _scrollType == WXScrollTypeUpDown){
+        _scrollVelocity = velocity / 30.0;
+    }else{
+        _scrollVelocity = velocity;
+    }
+    
+}
 
 @end
