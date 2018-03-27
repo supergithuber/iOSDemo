@@ -102,7 +102,9 @@
 }
 
 - (void)resetScrollLabelView {
-    
+    [self endScrolling];
+    [self setupSubviewsLayout];
+    [self beginScrolling];
 }
 - (void)setupSubviewsLayout {
     switch (_scrollType) {
@@ -275,7 +277,15 @@
     }];
 }
 - (void)updateScrollingType_FlipNoRepeat{
+    [self updateRepeatTypeWithBlock:^(NSTimeInterval velocity) {
+        [self flipNoRepeatAnimationWithDelay:velocity];
+    }];
+}
+- (void)flipNoRepeatAnimationWithDelay:(NSTimeInterval)delay{
+    if (!self.scrollArray.count) return;
     
+    [self updateScrollText];
+    [self flipAnimationWithDelay:delay];
 }
 - (void)flipAnimationWithDelay:(NSTimeInterval)delay {
     [UIView transitionWithView:self.upLabel duration:delay * 0.5 options:self.options animations:^{
