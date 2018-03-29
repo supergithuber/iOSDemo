@@ -61,7 +61,7 @@
         self.scrollVelocity = velocity;
         _options = animationOptions;
         self.scrollInsets = insets;
-        self.scrollSpace = scrollSpace;
+        _scrollSpace = scrollSpace;
         _scrollTextFont = font;
     }
     return self;
