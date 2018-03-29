@@ -28,4 +28,5 @@ supported:iOS 11 or higher, iPhone 6s or later
 18. Scan QRCode and recognize QRCode from Photo
 19. iPhone jar(shake)
 20. UIBezierPath
-21. run horse light(continue)
+21. Apple touchID use
+22. run horse light(continue)
