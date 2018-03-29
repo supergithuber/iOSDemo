@@ -8,6 +8,7 @@
 
 #import "WXSettingsViewController.h"
 #import "WXChangeIconViewController.h"
+#import "WXFingerPrintViewController.h"
 
 @interface WXSettingsViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -34,7 +35,7 @@
 
 - (void)initArray{
     self.sections = [NSMutableArray arrayWithObjects:@"第一部分", nil];
-    self.firstSection = [NSMutableArray arrayWithObjects:@"更换图标", nil];
+    self.firstSection = [NSMutableArray arrayWithObjects:@"更换图标", @"识别指纹", nil];
 }
 //MARK: delegate and datasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -58,7 +59,8 @@
         case 0:
             controller = [[WXChangeIconViewController alloc] init];
             break;
-            
+        case 1:
+            controller = [[WXFingerPrintViewController alloc] init];
         default:
             break;
     }

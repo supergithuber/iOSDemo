@@ -23,6 +23,7 @@
 		CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30F20089037009F1D9E /* WXConcurrentOperation.m */; };
 		CC2EC36020494715000750F8 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = CC2EC35F20494715000750F8 /* sound.caf */; };
 		CC2EC367204D3A73000750F8 /* WXBezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2EC366204D3A73000750F8 /* WXBezierViewController.m */; };
+		CC34C957206C863500D00A52 /* WXFingerPrintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC34C956206C863500D00A52 /* WXFingerPrintViewController.m */; };
 		CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EA92005F1C3009E87F6 /* SemaphoreViewController.m */; };
 		CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EB22005FAA0009E87F6 /* UIViewController+GetViewController.m */; };
 		CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EB52005FBAC009E87F6 /* UIView+Badge.m */; };
@@ -141,6 +142,8 @@
 		CC2EC35F20494715000750F8 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
 		CC2EC365204D3A73000750F8 /* WXBezierViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXBezierViewController.h; sourceTree = "<group>"; };
 		CC2EC366204D3A73000750F8 /* WXBezierViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXBezierViewController.m; sourceTree = "<group>"; };
+		CC34C955206C863500D00A52 /* WXFingerPrintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXFingerPrintViewController.h; sourceTree = "<group>"; };
+		CC34C956206C863500D00A52 /* WXFingerPrintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXFingerPrintViewController.m; sourceTree = "<group>"; };
 		CC3D2EA82005F1C3009E87F6 /* SemaphoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreViewController.h; sourceTree = "<group>"; };
 		CC3D2EA92005F1C3009E87F6 /* SemaphoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemaphoreViewController.m; sourceTree = "<group>"; };
 		CC3D2EB12005FAA0009E87F6 /* UIViewController+GetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GetViewController.h"; sourceTree = "<group>"; };
@@ -525,6 +528,8 @@
 			children = (
 				CC71D3BA203E64DF00CFDDEA /* WXChangeIconViewController.h */,
 				CC71D3BB203E64DF00CFDDEA /* WXChangeIconViewController.m */,
+				CC34C955206C863500D00A52 /* WXFingerPrintViewController.h */,
+				CC34C956206C863500D00A52 /* WXFingerPrintViewController.m */,
 			);
 			path = SettingsViewController;
 			sourceTree = "<group>";
@@ -789,6 +794,7 @@
 				CCE21BB82059823000F992BF /* WXCyclicScrollLabel.m in Sources */,
 				CC56C30620411A5400783A9F /* WXQRCodeScanManager.m in Sources */,
 				CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */,
+				CC34C957206C863500D00A52 /* WXFingerPrintViewController.m in Sources */,
 				CC1BCE5C202C2D90009A0BCF /* WXInitTabBarViewController.m in Sources */,
 				CCFB57FF2019B9D20030BFF1 /* WXRotateImageViewController.m in Sources */,
 				CC40F6641E6E5F88009D144C /* ViewController.m in Sources */,
