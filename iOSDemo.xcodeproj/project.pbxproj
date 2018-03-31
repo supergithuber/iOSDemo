@@ -13,6 +13,10 @@
 		CC095C92201DA34700B9B69C /* YYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C91201DA34700B9B69C /* YYKit.framework */; };
 		CC095C93201DB07100B9B69C /* YYKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C91201DA34700B9B69C /* YYKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC095C94201DB07100B9B69C /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C8F201DA33F00B9B69C /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC0FFC86206F2BDA00179FC1 /* WXCoreMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFC85206F2BDA00179FC1 /* WXCoreMLViewController.m */; };
+		CC0FFC8E206F372800179FC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFC8A206F372800179FC1 /* main.m */; };
+		CC0FFC8F206F372800179FC1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC0FFC8D206F372800179FC1 /* Info.plist */; };
+		CC0FFC92206F3E4E00179FC1 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFC91206F3E4E00179FC1 /* GoogLeNetPlaces.mlmodel */; };
 		CC1BCE47202C2851009A0BCF /* WXLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1BCE49202C2851009A0BCF /* WXLocalizable.strings */; };
 		CC1BCE4E202C2A6E009A0BCF /* WXConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1BCE4D202C2A6E009A0BCF /* WXConsoleViewController.m */; };
 		CC1BCE58202C2D68009A0BCF /* WXSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1BCE57202C2D68009A0BCF /* WXSettingsViewController.m */; };
@@ -27,7 +31,6 @@
 		CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EA92005F1C3009E87F6 /* SemaphoreViewController.m */; };
 		CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EB22005FAA0009E87F6 /* UIViewController+GetViewController.m */; };
 		CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EB52005FBAC009E87F6 /* UIView+Badge.m */; };
-		CC40F65E1E6E5F88009D144C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC40F65D1E6E5F88009D144C /* main.m */; };
 		CC40F6611E6E5F88009D144C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC40F6601E6E5F88009D144C /* AppDelegate.m */; };
 		CC40F6641E6E5F88009D144C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC40F6631E6E5F88009D144C /* ViewController.m */; };
 		CC40F6671E6E5F88009D144C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC40F6651E6E5F88009D144C /* Main.storyboard */; };
@@ -118,6 +121,13 @@
 		CC095C8C200F8FE600B9B69C /* UIImageView+FaceCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+FaceCenter.m"; sourceTree = "<group>"; };
 		CC095C8F201DA33F00B9B69C /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = SOURCE_ROOT; };
 		CC095C91201DA34700B9B69C /* YYKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YYKit.framework; path = Carthage/Build/iOS/YYKit.framework; sourceTree = SOURCE_ROOT; };
+		CC0FFC84206F2BDA00179FC1 /* WXCoreMLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCoreMLViewController.h; sourceTree = "<group>"; };
+		CC0FFC85206F2BDA00179FC1 /* WXCoreMLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXCoreMLViewController.m; sourceTree = "<group>"; };
+		CC0FFC8A206F372800179FC1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Supporting Files/main.m"; sourceTree = "<group>"; };
+		CC0FFC8B206F372800179FC1 /* iOSDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "iOSDemo-Bridging-Header.h"; path = "Supporting Files/iOSDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC0FFC8C206F372800179FC1 /* iOSDemo-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "iOSDemo-prefix.pch"; path = "Supporting Files/iOSDemo-prefix.pch"; sourceTree = "<group>"; };
+		CC0FFC8D206F372800179FC1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		CC0FFC91206F3E4E00179FC1 /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		CC1BCE43202C257F009A0BCF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		CC1BCE44202C257F009A0BCF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		CC1BCE48202C2851009A0BCF /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/WXLocalizable.strings"; sourceTree = "<group>"; };
@@ -134,7 +144,6 @@
 		CC2BF3002008528B009F1D9E /* OperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationViewController.m; sourceTree = "<group>"; };
 		CC2BF30320085B02009F1D9E /* WXDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXDemoViewController.h; sourceTree = "<group>"; };
 		CC2BF30420085B02009F1D9E /* WXDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXDemoViewController.m; sourceTree = "<group>"; };
-		CC2BF30A20086427009F1D9E /* iOSDemo-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDemo-prefix.pch"; sourceTree = "<group>"; };
 		CC2BF30B20088D73009F1D9E /* WXSerialOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSerialOperation.h; sourceTree = "<group>"; };
 		CC2BF30C20088D73009F1D9E /* WXSerialOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSerialOperation.m; sourceTree = "<group>"; };
 		CC2BF30E20089037009F1D9E /* WXConcurrentOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXConcurrentOperation.h; sourceTree = "<group>"; };
@@ -151,7 +160,6 @@
 		CC3D2EB42005FBAC009E87F6 /* UIView+Badge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Badge.h"; sourceTree = "<group>"; };
 		CC3D2EB52005FBAC009E87F6 /* UIView+Badge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Badge.m"; sourceTree = "<group>"; };
 		CC40F6591E6E5F88009D144C /* iOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC40F65D1E6E5F88009D144C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC40F65F1E6E5F88009D144C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC40F6601E6E5F88009D144C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CC40F6621E6E5F88009D144C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -159,7 +167,6 @@
 		CC40F6661E6E5F88009D144C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC40F6681E6E5F88009D144C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC40F66B1E6E5F88009D144C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CC40F66D1E6E5F88009D144C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC40F6721E6E5F88009D144C /* iOSDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC40F6761E6E5F88009D144C /* iOSTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSTestTests.m; sourceTree = "<group>"; };
 		CC40F6781E6E5F88009D144C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -174,7 +181,6 @@
 		CC56C30520411A5400783A9F /* WXQRCodeScanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXQRCodeScanManager.m; sourceTree = "<group>"; };
 		CC56C307204160EF00783A9F /* WXQRCodeAlbumManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXQRCodeAlbumManager.h; sourceTree = "<group>"; };
 		CC56C308204160EF00783A9F /* WXQRCodeAlbumManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXQRCodeAlbumManager.m; sourceTree = "<group>"; };
-		CC6A21681FE7A39C00B18D36 /* iOSDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipHintView.swift; sourceTree = "<group>"; };
 		CC6A280920158EB8001D3A91 /* WXUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXUserInfoModel.h; sourceTree = "<group>"; };
 		CC6A280A20158EB8001D3A91 /* WXUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXUserInfoModel.m; sourceTree = "<group>"; };
@@ -282,6 +288,15 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		CC0FFC90206F3E4E00179FC1 /* CoreMLModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC0FFC91206F3E4E00179FC1 /* GoogLeNetPlaces.mlmodel */,
+			);
+			name = CoreMLModel;
+			path = "Supporting Files/CoreMLModel";
+			sourceTree = "<group>";
+		};
 		CC1BCE4B202C2A6E009A0BCF /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +338,8 @@
 				CC56C2F720401A8700783A9F /* WXQRCodeViewController.m */,
 				CC2EC365204D3A73000750F8 /* WXBezierViewController.h */,
 				CC2EC366204D3A73000750F8 /* WXBezierViewController.m */,
+				CC0FFC84206F2BDA00179FC1 /* WXCoreMLViewController.h */,
+				CC0FFC85206F2BDA00179FC1 /* WXCoreMLViewController.m */,
 			);
 			path = DemoViewController;
 			sourceTree = "<group>";
@@ -434,12 +451,13 @@
 		CC40F65C1E6E5F88009D144C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CC6A21681FE7A39C00B18D36 /* iOSDemo-Bridging-Header.h */,
-				CC2BF30A20086427009F1D9E /* iOSDemo-prefix.pch */,
+				CC0FFC90206F3E4E00179FC1 /* CoreMLModel */,
+				CC0FFC8D206F372800179FC1 /* Info.plist */,
+				CC0FFC8B206F372800179FC1 /* iOSDemo-Bridging-Header.h */,
+				CC0FFC8C206F372800179FC1 /* iOSDemo-prefix.pch */,
+				CC0FFC8A206F372800179FC1 /* main.m */,
 				CC40F6651E6E5F88009D144C /* Main.storyboard */,
 				CC40F66A1E6E5F88009D144C /* LaunchScreen.storyboard */,
-				CC40F66D1E6E5F88009D144C /* Info.plist */,
-				CC40F65D1E6E5F88009D144C /* main.m */,
 				CC1BCE49202C2851009A0BCF /* WXLocalizable.strings */,
 			);
 			name = "Supporting Files";
@@ -749,6 +767,7 @@
 				CC71D3C4203E6AB400CFDDEA /* icon_red@3x.png in Resources */,
 				CC71D3C8203E6AB400CFDDEA /* icon_ball@3x.png in Resources */,
 				CC40F6691E6E5F88009D144C /* Assets.xcassets in Resources */,
+				CC0FFC8F206F372800179FC1 /* Info.plist in Resources */,
 				CC1BCE47202C2851009A0BCF /* WXLocalizable.strings in Resources */,
 				CC71D3C6203E6AB400CFDDEA /* icon_blue@3x.png in Resources */,
 				CC71D3C9203E6AB400CFDDEA /* icon_blue@2x.png in Resources */,
@@ -785,11 +804,13 @@
 				CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */,
 				CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */,
 				CCFB5808201ACC860030BFF1 /* WXStorageBaseModel.swift in Sources */,
+				CC0FFC8E206F372800179FC1 /* main.m in Sources */,
 				CC6EB22D2022B51E0002BA14 /* WXARTextNode.m in Sources */,
 				CC71D3D0203E763D00CFDDEA /* WXIconCollectionViewCell.m in Sources */,
 				CCFB580F201B19580030BFF1 /* WXLocalLanguage.m in Sources */,
 				CC56C2F820401A8700783A9F /* WXQRCodeViewController.m in Sources */,
 				CC7108562032F9B500E09BC5 /* PushAndPopViewController.m in Sources */,
+				CC0FFC86206F2BDA00179FC1 /* WXCoreMLViewController.m in Sources */,
 				CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */,
 				CCE21BB82059823000F992BF /* WXCyclicScrollLabel.m in Sources */,
 				CC56C30620411A5400783A9F /* WXQRCodeScanManager.m in Sources */,
@@ -815,11 +836,11 @@
 				CC71D3BC203E64DF00CFDDEA /* WXChangeIconViewController.m in Sources */,
 				CC1BCE58202C2D68009A0BCF /* WXSettingsViewController.m in Sources */,
 				CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */,
-				CC40F65E1E6E5F88009D144C /* main.m in Sources */,
 				CC56C309204160EF00783A9F /* WXQRCodeAlbumManager.m in Sources */,
 				CCFB580A201B03720030BFF1 /* DiskStorage.swift in Sources */,
 				CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */,
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
+				CC0FFC92206F3E4E00179FC1 /* GoogLeNetPlaces.mlmodel in Sources */,
 				CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */,
 				CC1BCE4E202C2A6E009A0BCF /* WXConsoleViewController.m in Sources */,
 				CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */,
@@ -1006,15 +1027,15 @@
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 					"$(PROJECT_DIR)/Framework",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDemo/iOSDemo-Prefix.pch";
-				INFOPLIST_FILE = iOSDemo/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDemo/Supporting Files/iOSDemo-Prefix.pch";
+				INFOPLIST_FILE = "iOSDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sivan.iOSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "iOSDemo/iOSDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSDemo/Supporting Files/iOSDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1040,15 +1061,15 @@
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 					"$(PROJECT_DIR)/Framework",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDemo/iOSDemo-Prefix.pch";
-				INFOPLIST_FILE = iOSDemo/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDemo/Supporting Files/iOSDemo-Prefix.pch";
+				INFOPLIST_FILE = "iOSDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sivan.iOSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "iOSDemo/iOSDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSDemo/Supporting Files/iOSDemo-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

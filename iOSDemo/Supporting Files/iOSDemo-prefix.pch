@@ -1,0 +1,36 @@
+//
+//  iOSDemo-prefix.pch
+//  iOSDemo
+//
+//  Created by wuxi on 2018/1/12.
+//  Copyright © 2018年 Wuxi. All rights reserved.
+//
+
+#ifndef iOSDemo_prefix_pch
+#define iOSDemo_prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#endif /* iOSDemo_prefix_pch */
+
+#import "WXConsoleViewController.h"
+
+//common define
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+#define StrongSelf(strongSype) __strong __typeof(&*self)StrongSelf = self;
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+//APP版本号
+#define kAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+//系统版本号
+#define kSystemVersion [[UIDevice currentDevice] systemVersion]
+//获取temp
+#define kPathTemp NSTemporaryDirectory()
+//获取沙盒 Document
+#define kPathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+//获取沙盒 Cache
+#define kPathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
