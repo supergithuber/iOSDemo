@@ -7,6 +7,8 @@
 //
 
 #import "WXCoreMLViewController.h"
+#import <CoreML/CoreML.h>
+#import "GoogLeNetPlaces.h"
 
 @interface WXCoreMLViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -50,10 +52,15 @@
     [self presentViewController:controller animated:YES completion:nil];
 }
 
+- (void)analyseImageWithoutVision:(UIImage *)image{
+    if (image == nil) return;
+    
+}
 //MARK: - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     UIImage *image = info[@"UIImagePickerControllerOriginalImage"];
     self.imageView.image = image;
+    [self analyseImageWithoutVision:image];
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 @end
