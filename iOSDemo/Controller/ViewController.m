@@ -17,6 +17,7 @@
 #import "PushAndPopViewController.h"
 #import "WXQRCodeViewController.h"
 #import "WXBezierViewController.h"
+#import "WXCoreMLViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -47,7 +48,7 @@
     [self.view addSubview:self.tableView];
     
     self.sectionArray = [NSMutableArray arrayWithObjects:@"第一部分", nil];
-    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", @"ARTextDemo",@"push and pop", @"scan QR code", @"Bezier Path", nil];
+    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", @"ARTextDemo",@"push and pop", @"scan QR code", @"Bezier Path", @"CoreML(GoogLeNetPlaces)", nil];
     
 }
 
@@ -101,6 +102,10 @@
             break;
         case 9:
             controller = [[WXBezierViewController alloc] init];
+            break;
+        case 10:
+            controller = [[WXCoreMLViewController alloc] init];
+            break;
         default:
             break;
     }
