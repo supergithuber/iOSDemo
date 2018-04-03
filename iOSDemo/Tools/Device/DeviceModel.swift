@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum DeviceModel: String {
+@objc public enum DeviceModel: Int {
     //MARK: - iPhone
     case iPhone4
     case iPhone4s

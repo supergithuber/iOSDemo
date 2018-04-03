@@ -38,7 +38,6 @@ NSString *const kAppVersionKey = @"iOSDemo.appVersion";
     
     //记录启动时间
     [self registerLaunchDateString];
-    
     return YES;
 }
 

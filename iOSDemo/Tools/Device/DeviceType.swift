@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum DeviceType: String {
+@objc public enum DeviceType: Int {
     #if os(iOS)
     case iPhone
     case iPad

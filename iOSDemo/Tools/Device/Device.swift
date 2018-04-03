@@ -8,21 +8,42 @@
 
 import UIKit
 
-class Device {
+class Device: NSObject {
     
-    
+    //MARK: - public
+    static open func model() -> DeviceModel{
+        return getDevice(versionCode: getDeviceCode())
+    }
+    static open func type() -> DeviceType{
+        return getDeviceType(versionCode: getDeviceCode())
+    }
+    static open func isRetina() -> Bool{
+        return UIScreen.main.scale > 1.0
+    }
+    static open func isiPhone() -> Bool{
+        return type() == .iPhone
+    }
+    static open func isiPad() -> Bool{
+        return type() == .iPad
+    }
+    static open func isiPod() -> Bool{
+        return type() == .iPod
+    }
+    static open func isSimulator() -> Bool{
+        return type() == .simulator
+    }
     
     //MARK: - private
     /// versionCode
     ///
     /// - Returns: such as "iPhone10,1", "iPhone8,1"
-    static private func getVersionCode() -> String{
+    static private func getDeviceCode() -> String{
         var systemInfo = utsname()
         uname(&systemInfo)
         
-        let versionCode: String = String(validatingUTF8: NSString(bytes: &systemInfo.machine, length: Int(_SYS_NAMELEN), encoding: String.Encoding.ascii.rawValue)!.utf8String!)!
+        let deviceCode: String = String(validatingUTF8: NSString(bytes: &systemInfo.machine, length: Int(_SYS_NAMELEN), encoding: String.Encoding.ascii.rawValue)!.utf8String!)!
         
-        return versionCode
+        return deviceCode
     }
     
     ///
@@ -78,7 +99,7 @@ class Device {
         }
     }
     static private func getDeviceType(versionCode: String) -> DeviceType {
-        let versionCode = getVersionCode()
+        let versionCode = getDeviceCode()
         
         if versionCode.contains("iPhone") {
             return .iPhone
