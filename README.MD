@@ -29,4 +29,5 @@ supported:iOS 11 or higher, iPhone 6s or later
 19. iPhone jar(shake)
 20. UIBezierPath
 21. Apple touchID use
-22. run horse light(continue)
+22. recognize Device Model 
+23. run horse light(continue)
