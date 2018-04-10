@@ -10,4 +10,6 @@
 
 @interface WXWebBrowser : UIViewController
 
+@property (nonatomic, assign)BOOL isNavigationHidden;
+
 @end
