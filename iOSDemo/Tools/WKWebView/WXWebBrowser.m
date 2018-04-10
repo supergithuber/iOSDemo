@@ -24,6 +24,17 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    if (_isNavigationHidden){
+        self.navigationController.navigationBarHidden = NO;
+        //加一个自定义的navigationBar
+        
+    }else{
+        self.navigationController.navigationBarHidden = NO;
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
