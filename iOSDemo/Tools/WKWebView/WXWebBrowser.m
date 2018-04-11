@@ -95,10 +95,26 @@ static void *kProgressViewContext = &kProgressViewContext;
 //MARK: - KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     if ([keyPath isEqualToString:NSStringFromSelector(@selector(estimatedProgress))]){
-        
+        [self.progressView setAlpha:1.0];
+        BOOL animated = self.wkWebView.estimatedProgress > self.progressView.progress;
+        [self.progressView setProgress:self.wkWebView.estimatedProgress animated:animated];
+        //加载完成消失
+        if(self.wkWebView.estimatedProgress >= 1.0f) {
+            [UIView animateWithDuration:0.3f delay:0.3f options:UIViewAnimationOptionCurveEaseOut animations:^{
+                [self.progressView setAlpha:0.0f];
+            } completion:^(BOOL finished) {
+                [self.progressView setProgress:0.0f animated:NO];
+            }];
+        }
     }else{
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
+}
+//MARK: - WKNavigationDelegate
+//页面开始加载时
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+    
+    self.progressView.hidden = NO;
 }
 //MARK: - WKScriptMessageHandler
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
