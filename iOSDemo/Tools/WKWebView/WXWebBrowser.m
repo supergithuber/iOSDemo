@@ -174,7 +174,6 @@ static void *kProgressViewContext = &kProgressViewContext;
         configuration.userContentController = contentController;
         
         _wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:configuration];
-        
         _wkWebView.UIDelegate = self;
         _wkWebView.navigationDelegate = self;
         _wkWebView.allowsBackForwardNavigationGestures = YES; //允许手势滑动前进后退
