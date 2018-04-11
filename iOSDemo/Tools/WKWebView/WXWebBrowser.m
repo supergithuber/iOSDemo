@@ -18,6 +18,8 @@ static void *kProgressViewContext = &kProgressViewContext;
 @property (nonatomic)UIBarButtonItem *backBarButtonItem;
 @property (nonatomic)UIBarButtonItem *closeBarButtonItem;
 
+@property (nonatomic, copy)NSString *remoteURL;
+
 //进度条
 @property (nonatomic, strong)UIProgressView *progressView;
 
@@ -25,9 +27,14 @@ static void *kProgressViewContext = &kProgressViewContext;
 
 @implementation WXWebBrowser
 
+- (void)dealloc {
+    [self.wkWebView removeObserver:self forKeyPath:NSStringFromSelector(@selector(estimatedProgress))];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupView];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -47,14 +54,50 @@ static void *kProgressViewContext = &kProgressViewContext;
     [super didReceiveMemoryWarning];
     
 }
+- (void)setupView {
+    [self.view addSubview:self.wkWebView];
+    [self.view addSubview:self.progressView];
+    UIBarButtonItem *roadLoad = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(roadLoadClicked)];
+    self.navigationItem.rightBarButtonItem = roadLoad;
+}
+- (void)updateNavigationItems {
+    if ([self.wkWebView canGoBack]){
+        UIBarButtonItem *spaceButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+        spaceButtonItem.width = -6.5;
+        
+        [self.navigationItem setLeftBarButtonItems:@[spaceButtonItem,self.backBarButtonItem,self.closeBarButtonItem] animated:NO];
+    }else{
+        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+        [self.navigationItem setLeftBarButtonItems:@[self.backBarButtonItem]];
+    }
+}
+//MARK: - Action
+- (void)roadLoadClicked {
+    [self.wkWebView reload];
+}
+
 - (void)closeWebview {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 - (void)backWebview {
     if (self.wkWebView.canGoBack){
         [self.wkWebView goBack];
     }else{
         [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+//MARK: - public
+- (void)loadRemoteURLString:(NSString *)URLString{
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:URLString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+    [self.wkWebView loadRequest:request];
+}
+//MARK: - KVO
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if ([keyPath isEqualToString:NSStringFromSelector(@selector(estimatedProgress))]){
+        
+    }else{
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
 //MARK: - WKScriptMessageHandler

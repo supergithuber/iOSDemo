@@ -12,4 +12,6 @@
 
 @property (nonatomic, assign)BOOL isNavigationHidden;
 
+- (void)loadRemoteURLString:(NSString *)URLString;
+
 @end
