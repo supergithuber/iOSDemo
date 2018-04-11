@@ -10,10 +10,14 @@
 #import <WebKit/WebKit.h>
 
 static NSString *const kScriptMessageHandlerFirstKey = @"com.iOSDemo.scriptMessageHandlerFirstKey";
+static void *kProgressViewContext = &kProgressViewContext;
 
 @interface WXWebBrowser ()<WKScriptMessageHandler, WKUIDelegate, WKNavigationDelegate>
 
 @property (nonatomic, strong)WKWebView *wkWebView;
+@property (nonatomic)UIBarButtonItem *backBarButtonItem;
+@property (nonatomic)UIBarButtonItem *closeBarButtonItem;
+
 //进度条
 @property (nonatomic, strong)UIProgressView *progressView;
 
@@ -43,6 +47,20 @@ static NSString *const kScriptMessageHandlerFirstKey = @"com.iOSDemo.scriptMessa
     [super didReceiveMemoryWarning];
     
 }
+- (void)closeWebview {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (void)backWebview {
+    if (self.wkWebView.canGoBack){
+        [self.wkWebView goBack];
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+//MARK: - WKScriptMessageHandler
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
+    
+}
 //MARK: - 一些懒加载
 - (WKWebView *)wkWebView{
     if (!_wkWebView){
@@ -62,9 +80,26 @@ static NSString *const kScriptMessageHandlerFirstKey = @"com.iOSDemo.scriptMessa
         _wkWebView.UIDelegate = self;
         _wkWebView.navigationDelegate = self;
         _wkWebView.allowsBackForwardNavigationGestures = YES; //允许手势滑动前进后退
+        [_wkWebView addObserver:self forKeyPath:NSStringFromSelector(@selector(estimatedProgress)) options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:kProgressViewContext];
         
     }
     return _wkWebView;
+}
+- (UIBarButtonItem *)backBarButtonItem {
+    if (!_backBarButtonItem){
+        UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [backButton setImage:[UIImage imageNamed:@"navigation-back"] forState:UIControlStateNormal];
+        [backButton addTarget:self action:@selector(backWebview) forControlEvents:UIControlEventTouchUpInside];
+        
+        _backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    }
+    return _backBarButtonItem;
+}
+- (UIBarButtonItem *)closeBarButtonItem {
+    if (!_closeBarButtonItem){
+        _closeBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"navigation-close"] style:UIBarButtonItemStylePlain target:self action:@selector(closeWebview)];
+    }
+    return _closeBarButtonItem;
 }
 - (UIProgressView *)progressView{
     if (!_progressView){
