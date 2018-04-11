@@ -137,9 +137,16 @@ static void *kProgressViewContext = &kProgressViewContext;
 //
 //}
 // 在发送请求之前，决定是否跳转
-//- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
-//
-//}
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
+    switch (navigationAction.navigationType) {
+        case WKNavigationTypeLinkActivated:
+            break;
+        default:
+            break;
+    }
+    [self updateNavigationItems];
+    decisionHandler(WKNavigationActionPolicyAllow);
+}
 //跳转失败的时候调用
 -(void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error{
     NSLog(@"跳转失败%@", error);
@@ -172,7 +179,8 @@ static void *kProgressViewContext = &kProgressViewContext;
         _wkWebView.navigationDelegate = self;
         _wkWebView.allowsBackForwardNavigationGestures = YES; //允许手势滑动前进后退
         [_wkWebView addObserver:self forKeyPath:NSStringFromSelector(@selector(estimatedProgress)) options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:kProgressViewContext];
-        
+        _wkWebView.allowsBackForwardNavigationGestures = YES;  //手势触摸
+        [_wkWebView sizeToFit];
     }
     return _wkWebView;
 }
