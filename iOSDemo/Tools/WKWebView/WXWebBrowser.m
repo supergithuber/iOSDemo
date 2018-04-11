@@ -116,6 +116,38 @@ static void *kProgressViewContext = &kProgressViewContext;
     
     self.progressView.hidden = NO;
 }
+//当内容开始返回时调用
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation{
+    NSLog(@"内容开始返回");
+}
+//页面加载完成
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+    NSLog(@"页面加载完成");
+}
+//页面加载失败时调用
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(nonnull NSError *)error{
+    NSLog(@"页面加载失败%@", error);
+}
+//接收到服务器跳转请求之后调用
+- (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation{
+    NSLog(@"收到服务器跳转请求");
+}
+//在收到响应后，决定是否跳转
+//- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler{
+//
+//}
+// 在发送请求之前，决定是否跳转
+//- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
+//
+//}
+//跳转失败的时候调用
+-(void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error{
+    NSLog(@"跳转失败%@", error);
+}
+//进度条结束
+-(void)webViewWebContentProcessDidTerminate:(WKWebView *)webView{
+    
+}
 //MARK: - WKScriptMessageHandler
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
     
