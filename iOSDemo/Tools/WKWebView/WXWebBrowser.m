@@ -157,6 +157,22 @@ static void *kProgressViewContext = &kProgressViewContext;
     [self updateNavigationItems];
     decisionHandler(WKNavigationActionPolicyAllow);
 }
+- (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler{
+    // 判断服务器采用的验证方法
+    if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust){
+        if (challenge.previousFailureCount == 0){
+            // 如果没有错误的情况下 创建一个凭证，并使用证书
+            NSURLCredential * credential = [[NSURLCredential alloc] initWithTrust:challenge.protectionSpace.serverTrust];
+            completionHandler(NSURLSessionAuthChallengeUseCredential, credential);
+            
+        }else{
+            // 验证失败，取消本次验证
+            completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
+        }
+    }else{
+        completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
+    }
+}
 //跳转失败的时候调用
 -(void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error{
     NSLog(@"跳转失败%@", error);
