@@ -73,6 +73,7 @@
 		CC8BB951207C8FAD00CAD849 /* WXBlurNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BB950207C8FAD00CAD849 /* WXBlurNavigationBar.swift */; };
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
 		CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */; };
+		CCB0AF96207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB0AF95207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.m */; };
 		CCD7FC952057840C00AA35AF /* UIView+WXFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD7FC942057840C00AA35AF /* UIView+WXFrame.m */; };
 		CCE21BB82059823000F992BF /* WXCyclicScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE21BB72059823000F992BF /* WXCyclicScrollLabel.m */; };
 		CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915120073BDA0055C51D /* UIImage+Scale.m */; };
@@ -232,6 +233,8 @@
 		CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXVolumeButtonHandler.m; sourceTree = "<group>"; };
 		CCAD93F4202D3E5E00414E47 /* WXBaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXBaseNavigationViewController.h; sourceTree = "<group>"; };
 		CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXBaseNavigationViewController.m; sourceTree = "<group>"; };
+		CCB0AF94207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXWebBrowserScriptMeaasgeDelegate.h; sourceTree = "<group>"; };
+		CCB0AF95207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXWebBrowserScriptMeaasgeDelegate.m; sourceTree = "<group>"; };
 		CCD7FC932057840C00AA35AF /* UIView+WXFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WXFrame.h"; sourceTree = "<group>"; };
 		CCD7FC942057840C00AA35AF /* UIView+WXFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXFrame.m"; sourceTree = "<group>"; };
 		CCE21BB62059823000F992BF /* WXCyclicScrollLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCyclicScrollLabel.h; sourceTree = "<group>"; };
@@ -605,6 +608,8 @@
 			children = (
 				CC8BB94D207B696100CAD849 /* WXWebBrowser.h */,
 				CC8BB94E207B696100CAD849 /* WXWebBrowser.m */,
+				CCB0AF94207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.h */,
+				CCB0AF95207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.m */,
 			);
 			path = WKWebView;
 			sourceTree = "<group>";
@@ -850,6 +855,7 @@
 				CC56C30620411A5400783A9F /* WXQRCodeScanManager.m in Sources */,
 				CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */,
 				CC34C957206C863500D00A52 /* WXFingerPrintViewController.m in Sources */,
+				CCB0AF96207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.m in Sources */,
 				CC1BCE5C202C2D90009A0BCF /* WXInitTabBarViewController.m in Sources */,
 				CCFB57FF2019B9D20030BFF1 /* WXRotateImageViewController.m in Sources */,
 				CC40F6641E6E5F88009D144C /* ViewController.m in Sources */,

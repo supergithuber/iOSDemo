@@ -8,6 +8,7 @@
 
 #import "WXWebBrowser.h"
 #import <WebKit/WebKit.h>
+#import "WXWebBrowserScriptMeaasgeDelegate.h"
 
 static NSString *const kScriptMessageHandlerFirstKey = @"com.iOSDemo.scriptMessageHandlerFirstKey";
 static void *kProgressViewContext = &kProgressViewContext;
@@ -114,6 +115,10 @@ static void *kProgressViewContext = &kProgressViewContext;
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
 }
+//MARK: - WKScriptMessageHandler
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
+    
+}
 //MARK: - WKNavigationDelegate
 //页面开始加载时
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
@@ -160,10 +165,7 @@ static void *kProgressViewContext = &kProgressViewContext;
 -(void)webViewWebContentProcessDidTerminate:(WKWebView *)webView{
     
 }
-//MARK: - WKScriptMessageHandler
-- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
-    
-}
+
 //MARK: - 一些懒加载
 - (WKWebView *)wkWebView{
     if (!_wkWebView){
@@ -173,9 +175,9 @@ static void *kProgressViewContext = &kProgressViewContext;
         configuration.selectionGranularity = WKSelectionGranularityCharacter;  //选择粒度
         configuration.processPool = [WKProcessPool new];  //https://developer.apple.com/documentation/webkit/wkprocesspool
         configuration.suppressesIncrementalRendering = YES;  //（压制增量渲染）是否全部加载到内存里，才会去渲染
-        //添加脚本信息处理者，需要实现WKScriptMessageHandler这个协议
+        //添加脚本信息处理者，需要实现WKScriptMessageHandler这个协议,另外一个类主要是解决wkwebkit的bug，不会释放的问题
         WKUserContentController *contentController = [[WKUserContentController alloc] init];
-        [contentController addScriptMessageHandler:self name:kScriptMessageHandlerFirstKey];
+        [contentController addScriptMessageHandler:[[WXWebBrowserScriptMeaasgeDelegate alloc] initWithDelegate:self] name:kScriptMessageHandlerFirstKey];
         configuration.userContentController = contentController;
         
         _wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:configuration];
