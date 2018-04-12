@@ -10,6 +10,11 @@
 #import <WebKit/WebKit.h>
 #import "WXWebBrowserScriptMeaasgeDelegate.h"
 
+typedef NS_ENUM(NSUInteger, WXWebBrowserLoadType) {
+    WXWebBrowserLoadTypeURLString,
+    WXWebBrowserLoadTypeHTMLString,
+    WXWebBrowserLoadTypePostURLString
+};
 static NSString *const kScriptMessageHandlerFirstKey = @"com.iOSDemo.scriptMessageHandlerFirstKey";
 static void *kProgressViewContext = &kProgressViewContext;
 
@@ -18,6 +23,9 @@ static void *kProgressViewContext = &kProgressViewContext;
 @property (nonatomic, strong)WKWebView *wkWebView;
 @property (nonatomic)UIBarButtonItem *backBarButtonItem;
 @property (nonatomic)UIBarButtonItem *closeBarButtonItem;
+
+@property (nonatomic, assign)WXWebBrowserLoadType loadType;
+@property (nonatomic, copy)NSString *URLString;
 
 @property (nonatomic, copy)NSString *remoteURL;
 
@@ -40,6 +48,7 @@ static void *kProgressViewContext = &kProgressViewContext;
     [super viewDidLoad];
     
     [self setupView];
+    [self loadPages];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -64,6 +73,21 @@ static void *kProgressViewContext = &kProgressViewContext;
     [self.view addSubview:self.progressView];
     UIBarButtonItem *roadLoad = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(roadLoadClicked)];
     self.navigationItem.rightBarButtonItem = roadLoad;
+}
+- (void)loadPages {
+    switch (self.loadType) {
+        case WXWebBrowserLoadTypeURLString:{
+            NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.URLString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+            [self.wkWebView loadRequest:request];
+            break;
+        }
+        case WXWebBrowserLoadTypeHTMLString:
+            break;
+        case WXWebBrowserLoadTypePostURLString:
+            break;
+        default:
+            break;
+    }
 }
 - (void)updateNavigationItems {
     if ([self.wkWebView canGoBack]){
@@ -94,8 +118,9 @@ static void *kProgressViewContext = &kProgressViewContext;
 }
 //MARK: - public
 - (void)loadRemoteURLString:(NSString *)URLString{
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:URLString] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-    [self.wkWebView loadRequest:request];
+    self.URLString = URLString;
+    self.loadType = WXWebBrowserLoadTypeURLString;
+    
 }
 //MARK: - KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
@@ -157,22 +182,22 @@ static void *kProgressViewContext = &kProgressViewContext;
     [self updateNavigationItems];
     decisionHandler(WKNavigationActionPolicyAllow);
 }
-- (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler{
-    // 判断服务器采用的验证方法
-    if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust){
-        if (challenge.previousFailureCount == 0){
-            // 如果没有错误的情况下 创建一个凭证，并使用证书
-            NSURLCredential * credential = [[NSURLCredential alloc] initWithTrust:challenge.protectionSpace.serverTrust];
-            completionHandler(NSURLSessionAuthChallengeUseCredential, credential);
-            
-        }else{
-            // 验证失败，取消本次验证
-            completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
-        }
-    }else{
-        completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
-    }
-}
+//- (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler{
+//    // 判断服务器采用的验证方法
+//    if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust){
+//        if (challenge.previousFailureCount == 0){
+//            // 如果没有错误的情况下 创建一个凭证，并使用证书
+//            NSURLCredential * credential = [[NSURLCredential alloc] initWithTrust:challenge.protectionSpace.serverTrust];
+//            completionHandler(NSURLSessionAuthChallengeUseCredential, credential);
+//
+//        }else{
+//            // 验证失败，取消本次验证
+//            completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
+//        }
+//    }else{
+//        completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
+//    }
+//}
 //跳转失败的时候调用
 -(void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error{
     NSLog(@"跳转失败%@", error);
