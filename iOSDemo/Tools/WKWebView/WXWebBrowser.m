@@ -29,7 +29,11 @@ static void *kProgressViewContext = &kProgressViewContext;
 
 - (void)dealloc {
     [self.wkWebView removeObserver:self forKeyPath:NSStringFromSelector(@selector(estimatedProgress))];
-    
+    //移除代理
+    self.wkWebView.UIDelegate = nil;
+    self.wkWebView.navigationDelegate = nil;
+    //移除usercontent
+    [self.wkWebView.configuration.userContentController removeScriptMessageHandlerForName:kScriptMessageHandlerFirstKey];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -138,6 +142,7 @@ static void *kProgressViewContext = &kProgressViewContext;
 //}
 // 在发送请求之前，决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
+    NSLog(@"在发送请求之前，决定是否跳转");
     switch (navigationAction.navigationType) {
         case WKNavigationTypeLinkActivated:
             break;
