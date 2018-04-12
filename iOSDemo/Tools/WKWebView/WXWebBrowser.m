@@ -216,8 +216,14 @@ static void *kProgressViewContext = &kProgressViewContext;
         }
         // 设置进度条的色彩
         [_progressView setTrackTintColor:[UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:1.0]];
-        _progressView.progressTintColor = [UIColor greenColor];
+        _progressView.progressTintColor = self.progressColor;
     }
     return _progressView;
+}
+- (UIColor *)progressColor{
+    if (!_progressColor){
+        _progressColor = [UIColor blueColor];
+    }
+    return _progressColor;
 }
 @end

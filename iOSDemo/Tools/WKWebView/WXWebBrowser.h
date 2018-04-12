@@ -11,6 +11,7 @@
 @interface WXWebBrowser : UIViewController
 
 @property (nonatomic, assign)BOOL isNavigationHidden;
+@property (nonatomic, strong)UIColor *progressColor;
 
 - (void)loadRemoteURLString:(NSString *)URLString;
 
