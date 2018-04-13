@@ -24,8 +24,15 @@
 /**
  加载本地html文件
 
- @param fileName 本地html文件名
+ @param string 本地html文件名
  */
-- (void)loadLocalHTMLString:(NSString *)fileName;
-
+- (void)loadLocalHTMLString:(NSString *)string;
+/**
+ 加载外部链接POST请求
+ postData请求块 注意格式：@"\"username\":\"xxxx\",\"password\":\"xxxx\""
+ 
+ @param string 需要POST的URL地址
+ @param postData post请求块
+ */
+- (void)postWebURLSring:(NSString *)string postData:(NSString *)postData;
 @end

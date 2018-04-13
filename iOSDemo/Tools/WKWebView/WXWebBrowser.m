@@ -25,7 +25,10 @@ static void *kProgressViewContext = &kProgressViewContext;
 @property (nonatomic)UIBarButtonItem *closeBarButtonItem;
 
 @property (nonatomic, assign)WXWebBrowserLoadType loadType;
+//仅当第一次的时候加载本地JS
+@property (nonatomic,assign)BOOL needLoadJSPOST;
 @property (nonatomic, copy)NSString *URLString;
+@property (nonatomic, copy)NSString *postData;
 
 @property (nonatomic, copy)NSString *remoteURL;
 
@@ -86,7 +89,8 @@ static void *kProgressViewContext = &kProgressViewContext;
             break;
         }
         case WXWebBrowserLoadTypePostURLString:{
-            
+            self.needLoadJSPOST = YES;
+            [self loadHostPathURL:@"WKJSPOST"];
             break;
         }
         default:
@@ -108,6 +112,13 @@ static void *kProgressViewContext = &kProgressViewContext;
     NSString *path = [[NSBundle mainBundle] pathForResource:url ofType:@"html"];
     NSString *html = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     [self.wkWebView loadHTMLString:html baseURL:[[NSBundle mainBundle] bundleURL]];
+}
+- (void)postRequestWithJS {
+    // 拼装成调用JavaScript的字符串
+    NSString *jscript = [NSString stringWithFormat:@"post('%@',{%@});", self.URLString, self.postData];
+    // 调用JS代码
+    [self.wkWebView evaluateJavaScript:jscript completionHandler:^(id object, NSError * _Nullable error) {
+    }];
 }
 //MARK: - Action
 - (void)roadLoadClicked {
@@ -131,10 +142,15 @@ static void *kProgressViewContext = &kProgressViewContext;
     self.loadType = WXWebBrowserLoadTypeURLString;
     
 }
-- (void)loadLocalHTMLString:(NSString *)fileName {
-    self.URLString = fileName;
+- (void)loadLocalHTMLString:(NSString *)string {
+    self.URLString = string;
     self.loadType = WXWebBrowserLoadTypeHTMLString;
     
+}
+- (void)postWebURLSring:(NSString *)string postData:(NSString *)postData{
+    self.URLString = string;
+    self.postData = postData;
+    self.loadType = WXWebBrowserLoadTypePostURLString;
 }
 //MARK: - KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
@@ -173,6 +189,17 @@ static void *kProgressViewContext = &kProgressViewContext;
 //页面加载完成
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
     NSLog(@"页面加载完成");
+    //当网页的内容全部显示（网页内的所有图片必须都正常显示）的时候调用（不是出现的时候就调用），部分显示时这个方法就不调用
+    // 判断是否需要加载（仅在第一次加载）
+    if (self.needLoadJSPOST) {
+        // 调用使用JS发送POST请求的方法
+        [self postRequestWithJS];
+        // 将Flag置为NO（后面就不需要加载了）
+        self.needLoadJSPOST = NO;
+    }
+    self.title = self.wkWebView.title;
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    [self updateNavigationItems];
 }
 //页面加载失败时调用
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(null_unspecified WKNavigation *)navigation withError:(nonnull NSError *)error{
