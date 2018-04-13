@@ -81,10 +81,14 @@ static void *kProgressViewContext = &kProgressViewContext;
             [self.wkWebView loadRequest:request];
             break;
         }
-        case WXWebBrowserLoadTypeHTMLString:
+        case WXWebBrowserLoadTypeHTMLString:{
+            [self loadHostPathURL:self.URLString];
             break;
-        case WXWebBrowserLoadTypePostURLString:
+        }
+        case WXWebBrowserLoadTypePostURLString:{
+            
             break;
+        }
         default:
             break;
     }
@@ -99,6 +103,11 @@ static void *kProgressViewContext = &kProgressViewContext;
         self.navigationController.interactivePopGestureRecognizer.enabled = YES;
         [self.navigationItem setLeftBarButtonItems:@[self.backBarButtonItem]];
     }
+}
+- (void)loadHostPathURL:(NSString *)url{
+    NSString *path = [[NSBundle mainBundle] pathForResource:url ofType:@"html"];
+    NSString *html = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    [self.wkWebView loadHTMLString:html baseURL:[[NSBundle mainBundle] bundleURL]];
 }
 //MARK: - Action
 - (void)roadLoadClicked {
@@ -120,6 +129,11 @@ static void *kProgressViewContext = &kProgressViewContext;
 - (void)loadRemoteURLString:(NSString *)URLString{
     self.URLString = URLString;
     self.loadType = WXWebBrowserLoadTypeURLString;
+    
+}
+- (void)loadLocalHTMLString:(NSString *)fileName {
+    self.URLString = fileName;
+    self.loadType = WXWebBrowserLoadTypeHTMLString;
     
 }
 //MARK: - KVO
@@ -206,6 +220,9 @@ static void *kProgressViewContext = &kProgressViewContext;
 -(void)webViewWebContentProcessDidTerminate:(WKWebView *)webView{
     
 }
+
+//MARK: - WKUIDelegate
+
 
 //MARK: - 一些懒加载
 - (WKWebView *)wkWebView{
