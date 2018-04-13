@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, WXWebBrowserLoadType) {
     WXWebBrowserLoadTypeHTMLString,
     WXWebBrowserLoadTypePostURLString
 };
-static NSString *const kScriptMessageHandlerFirstKey = @"com.iOSDemo.scriptMessageHandlerFirstKey";
+static NSString *const kScriptMessageHandlerFirstKey = @"scriptMessageHandlerFirstKey";
 static void *kProgressViewContext = &kProgressViewContext;
 
 @interface WXWebBrowser ()<WKScriptMessageHandler, WKUIDelegate, WKNavigationDelegate>
@@ -156,7 +156,9 @@ static void *kProgressViewContext = &kProgressViewContext;
 }
 //MARK: - WKScriptMessageHandler
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
-    
+    if ([message.name isEqualToString:kScriptMessageHandlerFirstKey]){
+        NSLog(@"message body:%@", message.body);
+    }
 }
 //MARK: - WKNavigationDelegate
 //页面开始加载时
@@ -234,6 +236,10 @@ static void *kProgressViewContext = &kProgressViewContext;
         configuration.processPool = [WKProcessPool new];  //https://developer.apple.com/documentation/webkit/wkprocesspool
         configuration.suppressesIncrementalRendering = YES;  //（压制增量渲染）是否全部加载到内存里，才会去渲染
         //添加脚本信息处理者，需要实现WKScriptMessageHandler这个协议,另外一个类主要是解决wkwebkit的bug，不会释放的问题
+        //WKUserContentController是用来给给JS注入对象的，之后JS端就可以使用
+        //window.webkit.messageHandlers.scriptMessageHandlerFirstKey.postMessage({body: '传数据'})来传数据
+        //传数据NSNumber, NSString, NSDate, NSArray,NSDictionary, and NSNull这些类型
+        //JS调用完后，我们可以在代理里收到数据
         WKUserContentController *contentController = [[WKUserContentController alloc] init];
         [contentController addScriptMessageHandler:[[WXWebBrowserScriptMeaasgeDelegate alloc] initWithDelegate:self] name:kScriptMessageHandlerFirstKey];
         configuration.userContentController = contentController;
