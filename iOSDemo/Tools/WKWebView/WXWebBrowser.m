@@ -173,7 +173,7 @@ static void *kProgressViewContext = &kProgressViewContext;
 //MARK: - WKScriptMessageHandler
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message{
     if ([message.name isEqualToString:kScriptMessageHandlerFirstKey]){
-        NSLog(@"message body:%@", message.body);
+        NSLog(@"name:%@\\\\n body:%@\\\\n frameInfo:%@\\\\n",message.name,message.body,message.frameInfo);
     }
 }
 //MARK: - WKNavigationDelegate
