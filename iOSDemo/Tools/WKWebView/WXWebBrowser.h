@@ -28,7 +28,7 @@
  */
 - (void)loadLocalHTMLString:(NSString *)string;
 /**
- 加载外部链接POST请求
+ 加载外部链接POST请求,本质上是通过先加载本地的一个html，在finish的时候注入以下数据，所以本地需要一个文件WKJSPOST.html
  postData请求块 注意格式：@"\"username\":\"xxxx\",\"password\":\"xxxx\""
  
  @param string 需要POST的URL地址
