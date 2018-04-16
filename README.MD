@@ -31,3 +31,4 @@ supported:iOS 11 or higher, iPhone 6s or later
 21. Apple touchID use
 22. recognize Device Model 
 23. run horse light(continue)
+24. A webBrowser whitch can load remote url, local url, interactive with javascript
