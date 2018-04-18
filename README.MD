@@ -20,7 +20,7 @@ supported:iOS 11 or higher, iPhone 6s or later
 10. coreMotion use
 11. custom print log to screen 
 12. ARText demo
-13. frequency use #define
+13. Frequent used #define
 14. YYKit storage(disk and cache)
 15. appConfiguration
 16. dynamic change application icon
