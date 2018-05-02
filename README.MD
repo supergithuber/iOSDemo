@@ -8,7 +8,7 @@ supported:iOS 11 or higher, iPhone 6s or later
 
 ### contain
 
-1. recognize faces in imageView
+1. Recognize faces in imageView
 2. recognize faces in image
 3. scale image to any size
 4. add hint badge to view
