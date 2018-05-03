@@ -32,4 +32,24 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+- (void)wx_showAlertWithTitle:(NSString *)title message:(NSString *)message sureBlock:(void (^)())sureBlock cancelBlock:(void (^)())cancelBlock{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    
+    if (sureBlock){
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"sure" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            sureBlock();
+        }];
+        [alert addAction:action];
+    }
+    if (cancelBlock){
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            cancelBlock();
+        }];
+        [alert addAction:cancelAction];
+    }
+    [self presentViewController:alert animated:YES completion:nil];
+}
+- (void)wx_showAlertWithTitle:(NSString *)title message:(NSString *)message suerBlock:(void (^)())sureBlock{
+    [self wx_showAlertWithTitle:title message:message sureBlock:sureBlock cancelBlock:nil];
+}
 @end
