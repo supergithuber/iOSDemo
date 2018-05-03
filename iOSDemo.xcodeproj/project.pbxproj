@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */; };
 		CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */; };
 		CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C8C200F8FE600B9B69C /* UIImageView+FaceCenter.m */; };
 		CC095C90201DA33F00B9B69C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C8F201DA33F00B9B69C /* SnapKit.framework */; };
@@ -122,6 +123,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C72D0F5E209B142A00D37FD0 /* UIImage+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
+		C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
 		CC095C87200F8C3E00B9B69C /* UIImage+FaceRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+FaceRecognizer.h"; sourceTree = "<group>"; };
 		CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FaceRecognizer.m"; sourceTree = "<group>"; };
 		CC095C8B200F8FE600B9B69C /* UIImageView+FaceCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FaceCenter.h"; sourceTree = "<group>"; };
@@ -668,6 +671,8 @@
 				CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */,
 				CCFB58002019C25E0030BFF1 /* UIImage+Color.h */,
 				CCFB58012019C25E0030BFF1 /* UIImage+Color.m */,
+				C72D0F5E209B142A00D37FD0 /* UIImage+Convert.h */,
+				C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -885,6 +890,7 @@
 				CC56C309204160EF00783A9F /* WXQRCodeAlbumManager.m in Sources */,
 				CC8BB951207C8FAD00CAD849 /* WXBlurNavigationBar.swift in Sources */,
 				CCFB580A201B03720030BFF1 /* DiskStorage.swift in Sources */,
+				C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */,
 				CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */,
 				CC33E1692071C7A7002B49FC /* DeviceType.swift in Sources */,
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
