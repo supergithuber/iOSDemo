@@ -10,6 +10,7 @@
 #import "UIImage+Scale.h"
 #import "UIImage+Convert.h"
 #import <CoreML/CoreML.h>
+#import <Vision/Vision.h>
 #import "GoogLeNetPlaces.h"
 
 @interface WXCoreMLViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -65,7 +66,12 @@
         NSError *error = nil;
         GoogLeNetPlacesOutput *output = [[[GoogLeNetPlaces alloc] init] predictionFromSceneImage:pixelBuffer error:&error];
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self LogToResultTextView:[NSString stringWithFormat:@"%@", output.sceneLabelProbs]];
+            if (error){
+                [self LogToResultTextView:[NSString stringWithFormat:@"识别出错%@", error]];
+            }else{
+                [self LogToResultTextView:[NSString stringWithFormat:@"%@", output.sceneLabelProbs]];
+            }
+            
         });
         
     });
@@ -75,13 +81,42 @@
 //使用vision+coreML
 - (void)analysisImageWithVision:(UIImage *)image {
     if (image == nil) return;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        MLModel *model = [[[GoogLeNetPlaces alloc] init] model];
+        NSError *error = nil;
+        VNCoreMLModel *visionModel = [VNCoreMLModel modelForMLModel:model error:&error];
+        WS(weakSelf);
+        if (error){
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self LogToResultTextView:[NSString stringWithFormat:@"转换模型出错%@", error]];
+            });
+        }else {
+            VNCoreMLRequest *request = [[VNCoreMLRequest alloc] initWithModel:visionModel completionHandler:^(VNRequest * _Nonnull request, NSError * _Nullable error) {
+                if (error){
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [weakSelf LogToResultTextView:[NSString stringWithFormat:@"识别失败%@", error]];
+                        return;
+                    });
+                    
+                }
+            }];
+            NSArray<VNClassificationObservation *> *result = request.results;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self LogToResultTextView:[NSString stringWithFormat:@"%@", result]];
+            });
+            
+            
+        }
+    });
+    
+    
 }
 
 //MARK: - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     UIImage *image = info[@"UIImagePickerControllerOriginalImage"];
     self.imageView.image = image;
-    [self analyseImageWithoutVision:image];
+    [self analysisImageWithVision:image];
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 @end
