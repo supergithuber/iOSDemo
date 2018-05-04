@@ -28,6 +28,7 @@
     NSParameterAssert(status == kCVReturnSuccess && pxbuffer != NULL);
     
     CVPixelBufferLockBaseAddress(pxbuffer, 0);
+    
     void *pxdata = CVPixelBufferGetBaseAddress(pxbuffer);
     
     CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
@@ -46,8 +47,8 @@
                                            CGImageGetHeight(image)), image);
     CGColorSpaceRelease(rgbColorSpace);
     CGContextRelease(context);
-    
     CVPixelBufferUnlockBaseAddress(pxbuffer, 0);
+    
     return pxbuffer;
 }
 
