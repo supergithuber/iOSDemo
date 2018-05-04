@@ -11,6 +11,8 @@
 @interface UIImage (Scale)
 
 //裁剪图像的指定区域
--(UIImage*)getSubImage:(CGRect)rect;
+- (UIImage *)getSubImage:(CGRect)rect;
 
+//将图像压缩到指定大小
+- (UIImage *)scaleToSize:(CGSize)size;
 @end

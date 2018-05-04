@@ -10,8 +10,7 @@
 
 @implementation UIImage (Scale)
 
--(UIImage*)getSubImage:(CGRect)rect
-{
+-(UIImage*)getSubImage:(CGRect)rect{
     CGImageRef subImageRef = CGImageCreateWithImageInRect(self.CGImage, rect);
     CGRect smallBounds = CGRectMake(0, 0, CGImageGetWidth(subImageRef), CGImageGetHeight(subImageRef));
     
@@ -24,4 +23,12 @@
     return smallImage;
 }
 
+- (UIImage *)scaleToSize:(CGSize)size{
+    
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
+    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 @end

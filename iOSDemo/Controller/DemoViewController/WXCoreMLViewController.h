@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WXCoreMLViewController : UIViewController
+@interface WXCoreMLViewController : WXConsoleViewController
 
 @end
