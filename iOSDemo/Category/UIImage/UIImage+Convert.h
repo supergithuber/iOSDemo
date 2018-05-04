@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreVideo/CoreVideo.h>
 
 @interface UIImage (Convert)
 
-//- (CVPixelBuffer)pixelBuffer;
+- (CVPixelBufferRef)convertToPixelBufferRef;
 
 @end

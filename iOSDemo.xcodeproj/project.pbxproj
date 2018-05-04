@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */; };
+		C72D0F62209C125400D37FD0 /* UIImage+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */; };
 		CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */; };
 		CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C8C200F8FE600B9B69C /* UIImageView+FaceCenter.m */; };
 		CC095C90201DA33F00B9B69C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C8F201DA33F00B9B69C /* SnapKit.framework */; };
@@ -125,6 +126,7 @@
 /* Begin PBXFileReference section */
 		C72D0F5E209B142A00D37FD0 /* UIImage+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
 		C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
+		C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Convert.swift"; sourceTree = "<group>"; };
 		CC095C87200F8C3E00B9B69C /* UIImage+FaceRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+FaceRecognizer.h"; sourceTree = "<group>"; };
 		CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FaceRecognizer.m"; sourceTree = "<group>"; };
 		CC095C8B200F8FE600B9B69C /* UIImageView+FaceCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FaceCenter.h"; sourceTree = "<group>"; };
@@ -673,6 +675,7 @@
 				CCFB58012019C25E0030BFF1 /* UIImage+Color.m */,
 				C72D0F5E209B142A00D37FD0 /* UIImage+Convert.h */,
 				C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */,
+				C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -871,6 +874,7 @@
 				CC2BF30D20088D73009F1D9E /* WXSerialOperation.m in Sources */,
 				CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */,
 				CC71085C2033111E00E09BC5 /* WXPresentTransition.m in Sources */,
+				C72D0F62209C125400D37FD0 /* UIImage+Convert.swift in Sources */,
 				CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */,
 				CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */,
 				CC6EB22A2021CE0B0002BA14 /* WXARText.m in Sources */,
