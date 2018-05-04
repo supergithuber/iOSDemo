@@ -83,6 +83,7 @@
     if (image == nil) return;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         MLModel *model = [[[GoogLeNetPlaces alloc] init] model];
+        
         NSError *error = nil;
         VNCoreMLModel *visionModel = [VNCoreMLModel modelForMLModel:model error:&error];
         WS(weakSelf);
@@ -116,7 +117,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     UIImage *image = info[@"UIImagePickerControllerOriginalImage"];
     self.imageView.image = image;
-    [self analysisImageWithVision:image];
+    [self analyseImageWithoutVision:image];
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 @end
