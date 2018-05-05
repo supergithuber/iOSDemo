@@ -25,7 +25,8 @@
 
 - (UIImage *)scaleToSize:(CGSize)size{
     
-    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
+//    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);   这里会改变image的scale
+    UIGraphicsBeginImageContext(size);
     [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
