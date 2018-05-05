@@ -16,6 +16,8 @@
 @interface WXCoreMLViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong)UIButton *albumButton;
+@property (nonatomic, strong)UIButton *coreMLButton;
+@property (nonatomic, strong)UIButton *visionButton;
 @property (nonatomic, strong)UIImageView *imageView;
 
 @end
@@ -35,12 +37,28 @@
 
 - (void)setupView {
     UIButton *openAlbum = [UIButton buttonWithType: UIButtonTypeCustom];
-    openAlbum.frame = CGRectMake(20, 80, 200, 40);
+    openAlbum.frame = CGRectMake(20, 80, 100, 40);
     [openAlbum setBackgroundColor:[UIColor redColor]];
     [openAlbum setTitle:@"打开相册" forState:UIControlStateNormal];
     [openAlbum addTarget:self action:@selector(openAlbum:) forControlEvents:UIControlEventTouchUpInside];
     self.albumButton = openAlbum;
     [self.view addSubview:openAlbum];
+    
+    UIButton *coreMLButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    coreMLButton.frame = CGRectMake(120, 80, 100, 40);
+    [coreMLButton setBackgroundColor:[UIColor blueColor]];
+    [coreMLButton setTitle:@"coreML" forState:UIControlStateNormal];
+    [coreMLButton addTarget:self action:@selector(analyseImageWithoutVision:) forControlEvents:UIControlEventTouchUpInside];
+    self.coreMLButton = coreMLButton;
+    [self.view addSubview:coreMLButton];
+    
+    UIButton *visionButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    visionButton.frame = CGRectMake(220, 80, 100, 40);
+    [visionButton setBackgroundColor:[UIColor blackColor]];
+    [visionButton setTitle:@"vision" forState:UIControlStateNormal];
+    [visionButton addTarget:self action:@selector(analysisImageWithVision:) forControlEvents:UIControlEventTouchUpInside];
+    self.visionButton = visionButton;
+    [self.view addSubview:visionButton];
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 130, 300, 300)];
     [imageView setBackgroundColor:[UIColor lightTextColor]];
@@ -55,7 +73,8 @@
     [self presentViewController:controller animated:YES completion:nil];
 }
 //不使用vision，只使用coreML
-- (void)analyseImageWithoutVision:(UIImage *)image{
+- (void)analyseImageWithoutVision:(UIButton *)button{
+    UIImage *image = self.imageView.image;
     if (image == nil) return;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //1. 转换到输入指定的224大小
@@ -80,7 +99,8 @@
 }
 //https://developer.apple.com/documentation/vision/classifying_images_with_vision_and_core_ml?language=objc
 //使用vision+coreML
-- (void)analysisImageWithVision:(UIImage *)image {
+- (void)analysisImageWithVision:(UIButton *)button {
+    UIImage *image = self.imageView.image;
     if (image == nil) return;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         MLModel *model = [[[GoogLeNetPlaces alloc] init] model];
@@ -99,15 +119,18 @@
                         [weakSelf LogToResultTextView:[NSString stringWithFormat:@"识别失败%@", error]];
                         return;
                     });
-                    
+                }else {
+                    NSArray<VNClassificationObservation *> *result = request.results;
+                    VNClassificationObservation *observation = [result firstObject];
+                    NSString *resultObject = [observation identifier];
+                    VNConfidence probability = [observation confidence];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self LogToResultTextView:[NSString stringWithFormat:@"最有可能%@，可能性%f", resultObject, probability]];
+                    });
                 }
             }];
-            NSArray<VNClassificationObservation *> *result = request.results;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self LogToResultTextView:[NSString stringWithFormat:@"%@", result]];
-            });
-            
-            
+            VNImageRequestHandler *handler = [[VNImageRequestHandler alloc] initWithCGImage:image.CGImage options:@{}];
+            [handler performRequests:@[request] error:&error];
         }
     });
     
@@ -118,7 +141,6 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     UIImage *image = info[@"UIImagePickerControllerOriginalImage"];
     self.imageView.image = image;
-    [self analyseImageWithoutVision:image];
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 @end
