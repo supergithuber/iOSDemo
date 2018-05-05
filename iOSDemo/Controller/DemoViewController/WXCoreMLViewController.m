@@ -58,10 +58,8 @@
 - (void)analyseImageWithoutVision:(UIImage *)image{
     if (image == nil) return;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //1. 转换到输入指定的224大小, 由于转换到pixelbuffer的时候，会乘以scale，所以要先放大
-        CGFloat imageScale = image.scale;
-        CGFloat size = 224 / imageScale;
-        UIImage *scaleImage = [image scaleToSize:CGSizeMake(size, size)];
+        //1. 转换到输入指定的224大小
+        UIImage *scaleImage = [image scaleToSize:CGSizeMake(224, 224)];
         //2. 转换成CVPixelBufferRef对象
         CVPixelBufferRef pixelBuffer = [scaleImage convertToPixelBufferRef];
         //3. GoogLeNetPlaces
