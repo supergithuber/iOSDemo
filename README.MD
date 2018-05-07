@@ -18,7 +18,23 @@ supported:iOS 11 or higher, iPhone 6s or later
 6. NSTimer的用法，如何避免不容易发现的循环引用，block携带参数
 7. 信号量的用法，控制线程个数
 8. NSOperation的用法，block，invocation，custom
-
+9. 序列化和反序列化自定义对象
+10. iOS coreMotion的使用，主要两种方式
+11. 把调试内容打印到手机上，方便调试，支持开关
+12. ARText的使用，自定义虚拟现实文字
+13. 经常使用到的宏定义
+14. YYKit的存储，磁盘存储和内存存储
+15. APP启动和关闭时基本配置信息的记录
+16. 动态改变APP的icon，可以通过方法交换拦截系统弹框
+17. NSDate的工具分类
+18. 从预览流扫描二维码和一维码的组件，也可以识别照片中的码
+19. iPhone小震动和大震动接口
+20. UIBezier取现的所有接口的调用
+21. 苹果touchID的使用
+22. 识别当前机型的组件
+23. 跑马灯的label
+24. 浏览器组件，可以加载远程的URL，本地的URL，支持和JS的交互
+25. iOS 11中coreML和Vision的使用，可以识别照片中的物体所属类别，最大可能所属类别
 
 ---
 
