@@ -12,7 +12,7 @@
 @protocol WXQRCodeScanDelegate <NSObject>
 
 @required
-//扫码的输出结果，数组中包含的都是：AVMetadataMachineReadableCodeObject若干个对象
+//扫码的输出结果，数组中包含的都是：AVMetadataMachineReadableCodeObject若干个对象，拿出它的stringValue对象
 - (void)WXQRCodeScanManager:(WXQRCodeScanManager *)manager outputMetadataObjects:(NSArray *)metadataObjects;
 @optional
 //输出光线强度，数值在大约在：-5~~12之间，越大越亮
@@ -29,7 +29,7 @@
 /**
  设置manager的必须属性
 
- @param preset 识别码预览流的分辨率
+ @param preset 识别码预览流的分辨率,系统定义好的字符串，形如：AVCaptureSessionPreset1920x1080
  @param controller 当前的controller，用来承载预览流
  */
 - (void)setPreset:(NSString *)preset currentController:(UIViewController *)controller;
