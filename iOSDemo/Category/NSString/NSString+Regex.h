@@ -10,4 +10,13 @@
 
 @interface NSString (Regex)
 
+
+/**
+ 基本函数，用谓词表达式
+ 
+ @param regex 一段正则表达式
+ @return 是否符合匹配
+ */
+- (BOOL)regexMatchWithPattern:(NSString *)regex;
+
 @end

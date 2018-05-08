@@ -10,4 +10,8 @@
 
 @implementation NSString (Regex)
 
+- (BOOL)regexMatchWithPattern:(NSString *)regex{
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [pred evaluateWithObject:self];
+}
 @end
