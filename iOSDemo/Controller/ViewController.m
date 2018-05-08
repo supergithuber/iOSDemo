@@ -33,7 +33,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTableView];
-    
 }
 
 - (void)didReceiveMemoryWarning {

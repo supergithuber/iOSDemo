@@ -19,6 +19,11 @@ typedef NS_OPTIONS(NSUInteger, WXRegexType) {
     WXRegexTypeAt          = 1 << 6,  //@
 };
 
+//下面都有可能会随着时代变化，去源码里修改一下就好
+extern NSString *const WXPhoneNumberRegex;   //中国手机号
+extern NSString *const WXIDNumberRegex;    //中国身份证
+extern NSString *const WXEmailRegex;    //邮箱
+
 @interface NSString (Regex)
 
 

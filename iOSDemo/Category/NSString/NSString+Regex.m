@@ -8,6 +8,10 @@
 
 #import "NSString+Regex.h"
 
+NSString *const WXPhoneNumberRegex = @"^1(3[0-9]|4[57]|5[0-35-9]|8[0-9]|7[01678])\\d{8}$";
+NSString *const WXIDNumberRegex = @"^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9]|X)$";
+NSString *const WXEmailRegex = @"^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$";
+
 @implementation NSString (Regex)
 
 //MARK: - public
