@@ -35,6 +35,7 @@ supported:iOS 11 or higher, iPhone 6s or later
 23. 跑马灯的label
 24. 浏览器组件，可以加载远程的URL，本地的URL，支持和JS的交互
 25. iOS 11中coreML和Vision的使用，可以识别照片中的物体所属类别，最大可能所属类别
+26. NSString的正则表达式拓展，提供常用的正则表达式定义
 
 ---
 
@@ -63,3 +64,4 @@ supported:iOS 11 or higher, iPhone 6s or later
 23. run horse light(continue)
 24. A webBrowser whitch can load remote url, local url, interactive with javascript
 25. coreML and vision usage
+26. NSString category for regular expression, frequent used regular expression
