@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C72A2EA720A1416C00D7E7E8 /* NSString+Regex.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */; };
 		C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */; };
 		C72D0F62209C125400D37FD0 /* UIImage+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */; };
 		CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */; };
@@ -124,6 +125,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C72A2EA520A1416C00D7E7E8 /* NSString+Regex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Regex.h"; sourceTree = "<group>"; };
+		C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regex.m"; sourceTree = "<group>"; };
 		C72D0F5E209B142A00D37FD0 /* UIImage+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
 		C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
 		C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Convert.swift"; sourceTree = "<group>"; };
@@ -290,6 +293,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C72A2EA420A140DF00D7E7E8 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				C72A2EA520A1416C00D7E7E8 /* NSString+Regex.h */,
+				C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
 		CC095C8A200F8FA800B9B69C /* UIImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +441,7 @@
 		CC3D2EAD2005F9D6009E87F6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C72A2EA420A140DF00D7E7E8 /* NSString */,
 				CC56C2F2204009BA00783A9F /* NSDate */,
 				CC095C8A200F8FA800B9B69C /* UIImageView */,
 				CCE7915520073DE80055C51D /* UIImage */,
@@ -875,6 +888,7 @@
 				CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */,
 				CC71085C2033111E00E09BC5 /* WXPresentTransition.m in Sources */,
 				C72D0F62209C125400D37FD0 /* UIImage+Convert.swift in Sources */,
+				C72A2EA720A1416C00D7E7E8 /* NSString+Regex.m in Sources */,
 				CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */,
 				CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */,
 				CC6EB22A2021CE0B0002BA14 /* WXARText.m in Sources */,

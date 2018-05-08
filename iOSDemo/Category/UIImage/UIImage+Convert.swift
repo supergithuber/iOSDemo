@@ -2,7 +2,7 @@
 //  UIImage+Convert.swift
 //  iOSDemo
 //
-//  Created by HFY on 2018/5/4.
+//  Created by Wuxi on 2018/5/4.
 //  Copyright © 2018年 Wuxi. All rights reserved.
 //
 
