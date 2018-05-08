@@ -317,8 +317,7 @@
 				CC095C91201DA34700B9B69C /* YYKit.framework */,
 				CC095C8F201DA33F00B9B69C /* SnapKit.framework */,
 			);
-			name = Carthage;
-			path = "New Group";
+			path = Carthage;
 			sourceTree = "<group>";
 		};
 		CC0FFC90206F3E4E00179FC1 /* CoreMLModel */ = {
