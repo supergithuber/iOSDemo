@@ -6,7 +6,6 @@
 //  Copyright © 2018年 Wuxi. All rights reserved.
 //
 
-//https://www.jianshu.com/p/c059463f80cb
 
 #import <Foundation/Foundation.h>
 //预先定义好的一些正则，都是指包含一个或者多个

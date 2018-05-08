@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C72A2EA720A1416C00D7E7E8 /* NSString+Regex.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */; };
+		C72A2EE420A1A13600D7E7E8 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EE320A1A13600D7E7E8 /* NSString+Encryption.m */; };
 		C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */; };
 		C72D0F62209C125400D37FD0 /* UIImage+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */; };
 		CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */; };
@@ -127,6 +128,8 @@
 /* Begin PBXFileReference section */
 		C72A2EA520A1416C00D7E7E8 /* NSString+Regex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Regex.h"; sourceTree = "<group>"; };
 		C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regex.m"; sourceTree = "<group>"; };
+		C72A2EE220A1A13600D7E7E8 /* NSString+Encryption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
+		C72A2EE320A1A13600D7E7E8 /* NSString+Encryption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
 		C72D0F5E209B142A00D37FD0 /* UIImage+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
 		C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
 		C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Convert.swift"; sourceTree = "<group>"; };
@@ -298,6 +301,8 @@
 			children = (
 				C72A2EA520A1416C00D7E7E8 /* NSString+Regex.h */,
 				C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */,
+				C72A2EE220A1A13600D7E7E8 /* NSString+Encryption.h */,
+				C72A2EE320A1A13600D7E7E8 /* NSString+Encryption.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -907,6 +912,7 @@
 				CC56C309204160EF00783A9F /* WXQRCodeAlbumManager.m in Sources */,
 				CC8BB951207C8FAD00CAD849 /* WXBlurNavigationBar.swift in Sources */,
 				CCFB580A201B03720030BFF1 /* DiskStorage.swift in Sources */,
+				C72A2EE420A1A13600D7E7E8 /* NSString+Encryption.m in Sources */,
 				C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */,
 				CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */,
 				CC33E1692071C7A7002B49FC /* DeviceType.swift in Sources */,
