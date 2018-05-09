@@ -12,12 +12,34 @@
 
 
 /**
- @return 常规32位MD5码
+ @return 常规MD5码（32位）
  */
 - (NSString *)md5;
 
 /**
- @return 16位的MD5码
+ @return 取中间部分的MD5码（16位）
  */
 - (NSString *)md5_16;
+
+/**
+ @return 40位
+ */
+- (NSString *)sha1;
+
+/**
+ @return 64位
+ */
+- (NSString *)sha256;
+
+- (NSString *)sha384;   //96位
+- (NSString *)sha512;   //128位
+
+//base64加密和解密
+- (NSString *)base64Encode;
+- (nullable NSString *)base64Decode;
+
+//DES对称加密和解密
+- (NSString *)encryptWithKey:(NSString *)key;
+- (NSString *)decryptWithKey:(NSString *)key;
+
 @end
