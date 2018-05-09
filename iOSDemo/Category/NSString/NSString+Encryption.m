@@ -2,7 +2,7 @@
 //  NSString+Encryption.m
 //  iOSDemo
 //
-//  Created by HFY on 2018/5/8.
+//  Created by Wuxi on 2018/5/8.
 //  Copyright © 2018年 Wuxi. All rights reserved.
 //
 
