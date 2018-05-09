@@ -10,6 +10,7 @@
 		C72A2EA720A1416C00D7E7E8 /* NSString+Regex.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */; };
 		C72A2EE420A1A13600D7E7E8 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EE320A1A13600D7E7E8 /* NSString+Encryption.m */; };
 		C72A2EEB20A2D1C500D7E7E8 /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EEA20A2D1C500D7E7E8 /* UIButton+CountDown.m */; };
+		C72A2EEE20A2EAC600D7E7E8 /* UIView+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EED20A2EAC600D7E7E8 /* UIView+ScreenShot.m */; };
 		C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */; };
 		C72D0F62209C125400D37FD0 /* UIImage+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */; };
 		CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */; };
@@ -133,6 +134,8 @@
 		C72A2EE320A1A13600D7E7E8 /* NSString+Encryption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
 		C72A2EE920A2D1C500D7E7E8 /* UIButton+CountDown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDown.h"; sourceTree = "<group>"; };
 		C72A2EEA20A2D1C500D7E7E8 /* UIButton+CountDown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDown.m"; sourceTree = "<group>"; };
+		C72A2EEC20A2EAC600D7E7E8 /* UIView+ScreenShot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ScreenShot.h"; sourceTree = "<group>"; };
+		C72A2EED20A2EAC600D7E7E8 /* UIView+ScreenShot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ScreenShot.m"; sourceTree = "<group>"; };
 		C72D0F5E209B142A00D37FD0 /* UIImage+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
 		C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
 		C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Convert.swift"; sourceTree = "<group>"; };
@@ -690,6 +693,8 @@
 				CC3D2EB52005FBAC009E87F6 /* UIView+Badge.m */,
 				CCD7FC932057840C00AA35AF /* UIView+WXFrame.h */,
 				CCD7FC942057840C00AA35AF /* UIView+WXFrame.m */,
+				C72A2EEC20A2EAC600D7E7E8 /* UIView+ScreenShot.h */,
+				C72A2EED20A2EAC600D7E7E8 /* UIView+ScreenShot.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -929,6 +934,7 @@
 				C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */,
 				C72A2EEB20A2D1C500D7E7E8 /* UIButton+CountDown.m in Sources */,
 				CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */,
+				C72A2EEE20A2EAC600D7E7E8 /* UIView+ScreenShot.m in Sources */,
 				CC33E1692071C7A7002B49FC /* DeviceType.swift in Sources */,
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
 				CC0FFC92206F3E4E00179FC1 /* GoogLeNetPlaces.mlmodel in Sources */,
