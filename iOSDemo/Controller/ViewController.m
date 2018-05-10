@@ -18,7 +18,6 @@
 #import "WXQRCodeViewController.h"
 #import "WXBezierViewController.h"
 #import "WXCoreMLViewController.h"
-#import "UIApplication+Size.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
