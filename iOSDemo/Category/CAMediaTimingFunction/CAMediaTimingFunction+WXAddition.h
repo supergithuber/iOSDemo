@@ -40,4 +40,28 @@
 +(CAMediaTimingFunction *)wx_easeInExpo;
 +(CAMediaTimingFunction *)wx_easeOutExpo;
 +(CAMediaTimingFunction *)wx_easeInOutExpo;
+///---------------------------------------------------------------------------------------
+/// @name Sine Easing
+///---------------------------------------------------------------------------------------
++(CAMediaTimingFunction *)wx_easeInSine;
++(CAMediaTimingFunction *)wx_easeOutSine;
++(CAMediaTimingFunction *)wx_easeInOutSine;
+///---------------------------------------------------------------------------------------
+/// @name Quart Easing
+///---------------------------------------------------------------------------------------
++(CAMediaTimingFunction *)wx_easeInQuart;
++(CAMediaTimingFunction *)wx_easeOutQuart;
++(CAMediaTimingFunction *)wx_easeInOutQuart;
+///---------------------------------------------------------------------------------------
+/// @name Quint Easing
+///---------------------------------------------------------------------------------------
++(CAMediaTimingFunction *)wx_easeInQuint;
++(CAMediaTimingFunction *)wx_easeOutQuint;
++(CAMediaTimingFunction *)wx_easeInOutQuint;
+///---------------------------------------------------------------------------------------
+/// @name Back Easing
+///---------------------------------------------------------------------------------------
++(CAMediaTimingFunction *)wx_easeInBack;
++(CAMediaTimingFunction *)wx_easeOutBack;
++(CAMediaTimingFunction *)wx_easeInOutBack;
 @end
