@@ -11,6 +11,7 @@
 		C72A2EE420A1A13600D7E7E8 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EE320A1A13600D7E7E8 /* NSString+Encryption.m */; };
 		C72A2EEB20A2D1C500D7E7E8 /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EEA20A2D1C500D7E7E8 /* UIButton+CountDown.m */; };
 		C72A2EEE20A2EAC600D7E7E8 /* UIView+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EED20A2EAC600D7E7E8 /* UIView+ScreenShot.m */; };
+		C72A2EF220A3E7F700D7E7E8 /* CAMediaTimingFunction+WXAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EF120A3E7F700D7E7E8 /* CAMediaTimingFunction+WXAddition.m */; };
 		C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */; };
 		C72D0F62209C125400D37FD0 /* UIImage+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */; };
 		CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */; };
@@ -136,6 +137,8 @@
 		C72A2EEA20A2D1C500D7E7E8 /* UIButton+CountDown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDown.m"; sourceTree = "<group>"; };
 		C72A2EEC20A2EAC600D7E7E8 /* UIView+ScreenShot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ScreenShot.h"; sourceTree = "<group>"; };
 		C72A2EED20A2EAC600D7E7E8 /* UIView+ScreenShot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ScreenShot.m"; sourceTree = "<group>"; };
+		C72A2EF020A3E7F700D7E7E8 /* CAMediaTimingFunction+WXAddition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAMediaTimingFunction+WXAddition.h"; sourceTree = "<group>"; };
+		C72A2EF120A3E7F700D7E7E8 /* CAMediaTimingFunction+WXAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CAMediaTimingFunction+WXAddition.m"; sourceTree = "<group>"; };
 		C72D0F5E209B142A00D37FD0 /* UIImage+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
 		C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
 		C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Convert.swift"; sourceTree = "<group>"; };
@@ -322,6 +325,15 @@
 			path = UIButton;
 			sourceTree = "<group>";
 		};
+		C72A2EEF20A3E6FC00D7E7E8 /* CAMediaTimingFunction */ = {
+			isa = PBXGroup;
+			children = (
+				C72A2EF020A3E7F700D7E7E8 /* CAMediaTimingFunction+WXAddition.h */,
+				C72A2EF120A3E7F700D7E7E8 /* CAMediaTimingFunction+WXAddition.m */,
+			);
+			path = CAMediaTimingFunction;
+			sourceTree = "<group>";
+		};
 		CC095C8A200F8FA800B9B69C /* UIImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +472,7 @@
 		CC3D2EAD2005F9D6009E87F6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C72A2EEF20A3E6FC00D7E7E8 /* CAMediaTimingFunction */,
 				C72A2EE820A2D18B00D7E7E8 /* UIButton */,
 				C72A2EA420A140DF00D7E7E8 /* NSString */,
 				CC56C2F2204009BA00783A9F /* NSDate */,
@@ -890,6 +903,7 @@
 				CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */,
 				CCFB5808201ACC860030BFF1 /* WXStorageBaseModel.swift in Sources */,
 				CC0FFC8E206F372800179FC1 /* main.m in Sources */,
+				C72A2EF220A3E7F700D7E7E8 /* CAMediaTimingFunction+WXAddition.m in Sources */,
 				CC8BB94F207B696100CAD849 /* WXWebBrowser.m in Sources */,
 				CC6EB22D2022B51E0002BA14 /* WXARTextNode.m in Sources */,
 				CC71D3D0203E763D00CFDDEA /* WXIconCollectionViewCell.m in Sources */,
