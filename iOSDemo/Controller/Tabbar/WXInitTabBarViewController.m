@@ -32,16 +32,17 @@
     self.tabBar.tintColor = [UIColor purpleColor];
     self.tabBar.unselectedItemTintColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
     
-    UIViewController *viewController = [[WXBaseNavigationViewController alloc] initWithRootViewController:[[ViewController alloc] init]];
-    viewController.tabBarItem.title = @"首页";
-    viewController.tabBarItem.image = [UIImage imageNamed:@"tab_ic_explore_a"];
+    [self addChildTabWithController:[[ViewController alloc] init] image:@"tab_ic_explore_a" selectedImage:@"" title:@"首页"];
+    [self addChildTabWithController:[[WXSettingsViewController alloc] init] image:@"tab_ic_setting_a" selectedImage:@"" title:@"设置"];
     
-    UIViewController *settingsController = [[WXBaseNavigationViewController alloc] initWithRootViewController:[[WXSettingsViewController alloc] init]];
-    settingsController.tabBarItem.title = @"设置";
-    settingsController.tabBarItem.image = [UIImage imageNamed:@"tab_ic_setting_a"];
-    
+}
+
+- (void)addChildTabWithController:(UIViewController *)controller image:(NSString *)image selectedImage:(NSString *)selectedImage title:(NSString *)title{
+    UIViewController *viewController = [[WXBaseNavigationViewController alloc] initWithRootViewController:controller];
+    viewController.tabBarItem.title = title;
+    viewController.tabBarItem.image = [UIImage imageNamed:image];
+    viewController.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
     [self addChildViewController:viewController];
-    [self addChildViewController:settingsController];
 }
 
 @end
