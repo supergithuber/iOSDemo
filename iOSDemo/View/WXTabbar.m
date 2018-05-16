@@ -25,4 +25,20 @@ NSInteger kButtonSize = 50;
     _centerButton.adjustsImageWhenHighlighted = NO;
     [self addSubview:_centerButton];
 }
+
+//处理超出区域点击无效的问题
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
+    UIView *view = [super hitTest:point withEvent:event];
+    if (view == nil){
+        //转换坐标
+        CGPoint tempPoint = [self.centerButton convertPoint:point fromView:self];
+        //判断点击的点是否在按钮区域内
+        if (CGRectContainsPoint(self.centerButton.bounds, tempPoint)){
+            //返回按钮
+            return _centerButton;
+        }
+    }
+    return view;
+}
 @end

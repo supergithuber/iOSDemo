@@ -36,6 +36,7 @@
     _wxTabBar.tintColor = [UIColor purpleColor];
     _wxTabBar.unselectedItemTintColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
     
+    [_wxTabBar.centerButton addTarget:self action:@selector(centerButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self setValue:_wxTabBar forKeyPath:@"tabBar"];
     self.delegate = self;
     [self initSubController];
@@ -63,4 +64,8 @@
     [self addChildViewController:viewController];
 }
 
+//MARK: 按钮
+- (void)centerButtonAction:(UIButton *)button{
+    
+}
 @end
