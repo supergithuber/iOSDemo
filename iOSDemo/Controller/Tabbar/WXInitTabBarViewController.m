@@ -10,16 +10,20 @@
 #import "WXBaseNavigationViewController.h"
 #import "ViewController.h"
 #import "WXSettingsViewController.h"
+#import "WXCenterViewController.h"
+#import "WXTabbar.h"
 
-@interface WXInitTabBarViewController ()
+@interface WXInitTabBarViewController ()<UITabBarControllerDelegate>
 
+@property (nonatomic, strong)WXTabBar *wxTabBar;
 @end
 
 @implementation WXInitTabBarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initSubController];
+    [self setupTabBar];
+    
     
 }
 
@@ -27,12 +31,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)setupTabBar{
+    _wxTabBar = [[WXTabBar alloc] init];
+    _wxTabBar.tintColor = [UIColor purpleColor];
+    _wxTabBar.unselectedItemTintColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
+    
+    [self setValue:_wxTabBar forKeyPath:@"tabBar"];
+    self.delegate = self;
+    [self initSubController];
+}
 - (void)initSubController {
-    self.tabBar.tintColor = [UIColor purpleColor];
-    self.tabBar.unselectedItemTintColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
+    
+//    self.tabBar.tintColor = [UIColor purpleColor];
+//    self.tabBar.unselectedItemTintColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
     
     [self addChildTabWithController:[[ViewController alloc] init] image:@"tab_ic_explore_a" selectedImage:@"" title:@"首页"];
+    [self addChildTabWithController:[[WXCenterViewController alloc] init] image:@"" selectedImage:@"" title:@"空"];
     [self addChildTabWithController:[[WXSettingsViewController alloc] init] image:@"tab_ic_setting_a" selectedImage:@"" title:@"设置"];
     
 }
