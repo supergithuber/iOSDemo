@@ -37,6 +37,7 @@
     _wxTabBar.unselectedItemTintColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
     
     [_wxTabBar.centerButton addTarget:self action:@selector(centerButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    //由于tabBar是readonly，用kvc赋值
     [self setValue:_wxTabBar forKeyPath:@"tabBar"];
     self.delegate = self;
     [self initSubController];
@@ -67,5 +68,25 @@
 //MARK: 按钮
 - (void)centerButtonAction:(UIButton *)button{
     
+    self.selectedIndex = 1;//关联中间按钮
+    [self rotationAnimation];
+}
+
+//MARK: UITabBarControllerDelegate
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    if (tabBarController.selectedIndex == 1){
+        [self rotationAnimation];
+    }else{
+        [_wxTabBar.centerButton.layer removeAllAnimations];
+    }
+}
+//MARK: rotation
+- (void)rotationAnimation{
+    CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation.toValue = [NSNumber numberWithFloat:M_PI/4.0];
+    rotationAnimation.duration = 0.2;
+    rotationAnimation.removedOnCompletion = NO;
+    rotationAnimation.repeatCount = 0;
+    [_wxTabBar.centerButton.layer addAnimation:rotationAnimation forKey:@"key"];
 }
 @end
