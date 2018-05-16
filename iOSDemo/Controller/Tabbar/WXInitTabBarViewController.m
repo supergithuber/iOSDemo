@@ -45,17 +45,21 @@
 //    self.tabBar.tintColor = [UIColor purpleColor];
 //    self.tabBar.unselectedItemTintColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
     
-    [self addChildTabWithController:[[ViewController alloc] init] image:@"tab_ic_explore_a" selectedImage:@"" title:@"首页"];
-    [self addChildTabWithController:[[WXCenterViewController alloc] init] image:@"" selectedImage:@"" title:@"空"];
-    [self addChildTabWithController:[[WXSettingsViewController alloc] init] image:@"tab_ic_setting_a" selectedImage:@"" title:@"设置"];
+    [self addChildTabWithController:[[ViewController alloc] init] image:@"tab_ic_explore_a" selectedImage:nil title:@"首页"];
+    [self addChildTabWithController:[[WXCenterViewController alloc] init] image:nil selectedImage:nil title:@"空"];
+    [self addChildTabWithController:[[WXSettingsViewController alloc] init] image:@"tab_ic_setting_a" selectedImage:nil title:@"设置"];
     
 }
 
 - (void)addChildTabWithController:(UIViewController *)controller image:(NSString *)image selectedImage:(NSString *)selectedImage title:(NSString *)title{
     UIViewController *viewController = [[WXBaseNavigationViewController alloc] initWithRootViewController:controller];
     viewController.tabBarItem.title = title;
-    viewController.tabBarItem.image = [UIImage imageNamed:image];
-    viewController.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
+    if (image){
+        viewController.tabBarItem.image = [UIImage imageNamed:image];
+    }
+    if (selectedImage){
+        viewController.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
+    }
     [self addChildViewController:viewController];
 }
 
