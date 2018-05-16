@@ -411,7 +411,7 @@
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
-		CC2BF30620086301009F1D9E /* DemoViewController */ = {
+		CC2BF30620086301009F1D9E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				CC72CD601F8F163500CADF32 /* TimerViewController.h */,
@@ -435,7 +435,7 @@
 				CC0FFC84206F2BDA00179FC1 /* WXCoreMLViewController.h */,
 				CC0FFC85206F2BDA00179FC1 /* WXCoreMLViewController.m */,
 			);
-			path = DemoViewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		CC2EC35E20494715000750F8 /* Files */ = {
@@ -463,7 +463,7 @@
 				CC7108532032F9B500E09BC5 /* PushAndPop */,
 				CC1BCE59202C2D90009A0BCF /* Tabbar */,
 				CC1BCE4B202C2A6E009A0BCF /* BaseViewController */,
-				CC2BF30620086301009F1D9E /* DemoViewController */,
+				CC2BF30620086301009F1D9E /* ViewController */,
 				CC40F6621E6E5F88009D144C /* ViewController.h */,
 				CC40F6631E6E5F88009D144C /* ViewController.m */,
 				CC1BCE56202C2D68009A0BCF /* WXSettingsViewController.h */,
