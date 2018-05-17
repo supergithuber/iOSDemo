@@ -83,10 +83,11 @@
 //MARK: rotation
 - (void)rotationAnimation{
     CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation.fromValue = [NSNumber numberWithFloat:0];
     rotationAnimation.toValue = [NSNumber numberWithFloat:M_PI/4.0];
     rotationAnimation.duration = 0.2;
+    rotationAnimation.fillMode = kCAFillModeForwards;
     rotationAnimation.removedOnCompletion = NO;
-    rotationAnimation.repeatCount = 0;
     [_wxTabBar.centerButton.layer addAnimation:rotationAnimation forKey:@"key"];
 }
 @end
