@@ -43,8 +43,13 @@
 - (void)resetBrightnessOutput;
 - (void)cancelBrightnessOutput;
 
+//MARK: - 功能函数
 //播放一段声音
 - (void)playSoundFileName:(NSString *)name;
+//打开关闭后置手电筒，你可以在光线输出代理里头调用，就可以自动打开关闭
+- (void)setTorchStatus:(BOOL)open;
+
+
 //手机震动，就是点按iPhone7 以及以上机型home按键那种震动，需要iphone7以及以上
 - (void)lightJarDevice;
 //手机震动，来信息的时候的那种震动，需要iphone6S以及以上

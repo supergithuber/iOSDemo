@@ -124,6 +124,17 @@ void soundCompleteCallback(SystemSoundID soundID, void *clientData){
 - (void)strongJarDevice{
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
+- (void)setTorchStatus:(BOOL)open{
+    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    NSError *error = nil;
+    if ([device hasTorch]){
+        BOOL locked = [device lockForConfiguration:&error];
+        if (locked){
+            device.torchMode = open ? AVCaptureTorchModeOn : AVCaptureTorchModeOff;
+            [device unlockForConfiguration];
+        }
+    }
+}
 
 //MARK: - AVCaptureVideoDataOutputSampleBufferDelegate，输出光线强度
 - (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection{
