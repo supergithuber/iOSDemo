@@ -51,6 +51,7 @@ NSString *const kAppVersionKey = @"iOSDemo.appVersion";
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [self addCoverToWindow];
 }
 
 
@@ -61,6 +62,7 @@ NSString *const kAppVersionKey = @"iOSDemo.appVersion";
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [self removeCoverFromWindow];
 }
 
 
@@ -86,6 +88,25 @@ NSString *const kAppVersionKey = @"iOSDemo.appVersion";
         return YES;
     }else{
         return NO;
+    }
+}
+//在进入后台的时候加上view
+- (void)addCoverToWindow{
+    UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+    UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(window.bounds), CGRectGetHeight(window.bounds))];
+    view.backgroundColor = [UIColor redColor];
+    view.alpha = 0.5;
+    view.tag = 1111;
+    
+    [window addSubview:view];
+}
+//在进入前台的时候移除view
+- (void)removeCoverFromWindow{
+    NSArray* array = [[UIApplication sharedApplication] keyWindow].subviews;
+    for(UIView *view in array){
+        if (view.tag == 1111){
+            [view removeFromSuperview];
+        }
     }
 }
 
