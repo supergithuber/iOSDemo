@@ -16,6 +16,7 @@
 		C72A2F0E20A42DCC00D7E7E8 /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2F0D20A42DCC00D7E7E8 /* UIColor+HEX.m */; };
 		C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */; };
 		C72D0F62209C125400D37FD0 /* UIImage+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */; };
+		C75175E520B3FDE000B89EE5 /* WXLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75175E420B3FDE000B89EE5 /* WXLockViewController.m */; };
 		C779D7A120AC0DE60083EE35 /* WXTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A020AC0DE60083EE35 /* WXTabbar.m */; };
 		C779D7A420AC170A0083EE35 /* WXCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A320AC170A0083EE35 /* WXCenterViewController.m */; };
 		CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */; };
@@ -150,6 +151,8 @@
 		C72D0F5E209B142A00D37FD0 /* UIImage+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
 		C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
 		C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Convert.swift"; sourceTree = "<group>"; };
+		C75175E320B3FDE000B89EE5 /* WXLockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXLockViewController.h; sourceTree = "<group>"; };
+		C75175E420B3FDE000B89EE5 /* WXLockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXLockViewController.m; sourceTree = "<group>"; };
 		C779D79F20AC0DE60083EE35 /* WXTabbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTabbar.h; sourceTree = "<group>"; };
 		C779D7A020AC0DE60083EE35 /* WXTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTabbar.m; sourceTree = "<group>"; };
 		C779D7A220AC170A0083EE35 /* WXCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCenterViewController.h; sourceTree = "<group>"; };
@@ -434,6 +437,8 @@
 				CC2EC366204D3A73000750F8 /* WXBezierViewController.m */,
 				CC0FFC84206F2BDA00179FC1 /* WXCoreMLViewController.h */,
 				CC0FFC85206F2BDA00179FC1 /* WXCoreMLViewController.m */,
+				C75175E320B3FDE000B89EE5 /* WXLockViewController.h */,
+				C75175E420B3FDE000B89EE5 /* WXLockViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -993,6 +998,7 @@
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
 				CC0FFC92206F3E4E00179FC1 /* GoogLeNetPlaces.mlmodel in Sources */,
 				CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */,
+				C75175E520B3FDE000B89EE5 /* WXLockViewController.m in Sources */,
 				CC1BCE4E202C2A6E009A0BCF /* WXConsoleViewController.m in Sources */,
 				CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */,
 				CC6A280E201593A8001D3A91 /* WXCoderViewController.m in Sources */,

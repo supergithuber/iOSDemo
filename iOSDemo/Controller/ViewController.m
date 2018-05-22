@@ -18,6 +18,7 @@
 #import "WXQRCodeViewController.h"
 #import "WXBezierViewController.h"
 #import "WXCoreMLViewController.h"
+#import "WXLockViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -39,6 +40,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+}
 
 - (void)setupTableView{
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
@@ -47,7 +52,7 @@
     [self.view addSubview:self.tableView];
     
     self.sectionArray = [NSMutableArray arrayWithObjects:@"第一部分", nil];
-    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", @"ARTextDemo",@"push and pop", @"scan QR code", @"Bezier Path", @"CoreML(GoogLeNetPlaces)", nil];
+    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", @"ARTextDemo",@"push and pop", @"scan QR code", @"Bezier Path", @"CoreML(GoogLeNetPlaces)", @"Lock Demo", nil];
     
 }
 
@@ -104,6 +109,9 @@
             break;
         case 10:
             controller = [[WXCoreMLViewController alloc] init];
+            break;
+        case 11:
+            controller = [[WXLockViewController alloc] init];
             break;
         default:
             break;
