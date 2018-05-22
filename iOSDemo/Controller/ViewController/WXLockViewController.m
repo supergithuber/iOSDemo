@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self wx_recursiveLock:5];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,6 +43,9 @@
         [self wx_recursiveLock:value];
     }
     [self.recursiveLock unlock];
+}
+- (void)wx_semaphore{
+    //参考SemaphoreViewController
 }
 
 //MARK: GET
