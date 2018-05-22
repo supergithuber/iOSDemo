@@ -11,6 +11,7 @@
 @interface WXLockViewController ()
 
 @property (nonatomic, strong)NSLock *lock;
+@property (nonatomic, strong)NSRecursiveLock *recursiveLock;
 
 @end
 
@@ -18,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self wx_recursiveLock:5];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,10 +35,28 @@
     [self.lock unlock];
 }
 
+- (void)wx_recursiveLock:(int)value{
+    [self.recursiveLock lock];
+    if (value != 0){
+        --value;
+        NSLog(@"当前的value:%i", value);
+        [self wx_recursiveLock:value];
+    }
+    [self.recursiveLock unlock];
+}
+
+//MARK: GET
 - (NSLock *)lock{
     if (_lock){
         _lock = [[NSLock alloc] init];
     }
     return _lock;
 }
+- (NSRecursiveLock *)recursiveLock{
+    if (_recursiveLock){
+        _recursiveLock = [[NSRecursiveLock alloc] init];
+    }
+    return _recursiveLock;
+}
+
 @end
