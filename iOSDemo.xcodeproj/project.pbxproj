@@ -19,6 +19,8 @@
 		C75175E520B3FDE000B89EE5 /* WXLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75175E420B3FDE000B89EE5 /* WXLockViewController.m */; };
 		C779D7A120AC0DE60083EE35 /* WXTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A020AC0DE60083EE35 /* WXTabbar.m */; };
 		C779D7A420AC170A0083EE35 /* WXCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A320AC170A0083EE35 /* WXCenterViewController.m */; };
+		C79DCCB320B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DCCB220B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m */; };
+		C79DCCB720B7EBC300C13117 /* WXSecondPushedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DCCB620B7EBC300C13117 /* WXSecondPushedViewController.m */; };
 		CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */; };
 		CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C8C200F8FE600B9B69C /* UIImageView+FaceCenter.m */; };
 		CC095C90201DA33F00B9B69C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C8F201DA33F00B9B69C /* SnapKit.framework */; };
@@ -157,6 +159,10 @@
 		C779D7A020AC0DE60083EE35 /* WXTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTabbar.m; sourceTree = "<group>"; };
 		C779D7A220AC170A0083EE35 /* WXCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCenterViewController.h; sourceTree = "<group>"; };
 		C779D7A320AC170A0083EE35 /* WXCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXCenterViewController.m; sourceTree = "<group>"; };
+		C79DCCB120B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSystemPushAndPopTableViewController.h; sourceTree = "<group>"; };
+		C79DCCB220B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSystemPushAndPopTableViewController.m; sourceTree = "<group>"; };
+		C79DCCB520B7EBC300C13117 /* WXSecondPushedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSecondPushedViewController.h; sourceTree = "<group>"; };
+		C79DCCB620B7EBC300C13117 /* WXSecondPushedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSecondPushedViewController.m; sourceTree = "<group>"; };
 		CC095C87200F8C3E00B9B69C /* UIImage+FaceRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+FaceRecognizer.h"; sourceTree = "<group>"; };
 		CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FaceRecognizer.m"; sourceTree = "<group>"; };
 		CC095C8B200F8FE600B9B69C /* UIImageView+FaceCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FaceCenter.h"; sourceTree = "<group>"; };
@@ -365,6 +371,17 @@
 				C72A2F0D20A42DCC00D7E7E8 /* UIColor+HEX.m */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		C79DCCB420B7EA9300C13117 /* PushedPresented */ = {
+			isa = PBXGroup;
+			children = (
+				CC7108572033092E00E09BC5 /* WXSecondPresentedViewController.h */,
+				CC7108582033092E00E09BC5 /* WXSecondPresentedViewController.m */,
+				C79DCCB520B7EBC300C13117 /* WXSecondPushedViewController.h */,
+				C79DCCB620B7EBC300C13117 /* WXSecondPushedViewController.m */,
+			);
+			path = PushedPresented;
 			sourceTree = "<group>";
 		};
 		CC095C8A200F8FA800B9B69C /* UIImageView */ = {
@@ -650,12 +667,13 @@
 		CC7108532032F9B500E09BC5 /* PushAndPop */ = {
 			isa = PBXGroup;
 			children = (
+				C79DCCB420B7EA9300C13117 /* PushedPresented */,
 				CC7108542032F9B500E09BC5 /* PushAndPopViewController.h */,
 				CC7108552032F9B500E09BC5 /* PushAndPopViewController.m */,
-				CC7108572033092E00E09BC5 /* WXSecondPresentedViewController.h */,
-				CC7108582033092E00E09BC5 /* WXSecondPresentedViewController.m */,
 				CC71085A2033111E00E09BC5 /* WXPresentTransition.h */,
 				CC71085B2033111E00E09BC5 /* WXPresentTransition.m */,
+				C79DCCB120B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.h */,
+				C79DCCB220B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m */,
 			);
 			path = PushAndPop;
 			sourceTree = "<group>";
@@ -939,6 +957,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC7108592033092E00E09BC5 /* WXSecondPresentedViewController.m in Sources */,
+				C79DCCB320B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m in Sources */,
 				CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */,
 				CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */,
 				CC3D2EB62005FBAC009E87F6 /* UIView+Badge.m in Sources */,
@@ -1001,6 +1020,7 @@
 				C75175E520B3FDE000B89EE5 /* WXLockViewController.m in Sources */,
 				CC1BCE4E202C2A6E009A0BCF /* WXConsoleViewController.m in Sources */,
 				CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */,
+				C79DCCB720B7EBC300C13117 /* WXSecondPushedViewController.m in Sources */,
 				CC6A280E201593A8001D3A91 /* WXCoderViewController.m in Sources */,
 				CC6A280B20158EB8001D3A91 /* WXUserInfoModel.m in Sources */,
 				CCE7915720074B710055C51D /* ClosureInitScrollView.swift in Sources */,

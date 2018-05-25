@@ -36,10 +36,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-//MARK - delegate
+//MARK - UIViewControllerTransitioningDelegate
+//确定谁负责消失动画
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
     return [WXPresentTransition transitionWithPresentedTransitionType:WXPresentedTransitionTypeDismiss];
 }
+//确定谁负责弹出
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
     return [WXPresentTransition transitionWithPresentedTransitionType:WXPresentedTransitionTypePresent];
 }
