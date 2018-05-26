@@ -7,8 +7,12 @@
 //
 
 #import "WXSystemPushAndPopTableViewController.h"
+#import "WXSecondPresentedViewController.h"
+#import "WXSecondPushedViewController.h"
 
 @interface WXSystemPushAndPopTableViewController ()
+
+@property (nonatomic, copy)NSArray *names;
 
 @end
 
@@ -16,12 +20,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _names = @[@"Fade",
+               @"Push",@"Push",@"Push",@"Push",
+               @"Reveal",@"Reveal",@"Reveal",@"Reveal",
+               @"MoveIn",@"MoveIn",@"MoveIn",@"MoveIn",
+               @"Cube",@"Cube",@"Cube",@"Cube",
+               @"suckEffect",
+               @"oglFlip",@"oglFlip",@"oglFlip",@"oglFlip",
+               @"rippleEffect",
+               @"pageCurl",@"pageCurl",@"pageCurl",@"pageCurl",
+               @"pageUnCurl",@"pageUnCurl",@"pageUnCurl",@"pageUnCurl",
+               @"CameraIrisHollowOpen",
+               @"CameraIrisHollowClose"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,67 +42,32 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _names.count;
 }
-
-/*
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return section == 0 ? @"push" : @"present";
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    static NSString *identifier = @"identifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    cell.textLabel.text = indexPath.row < _names.count ? _names[indexPath.row] : @"转场动画";
+    cell.backgroundColor = [UIColor whiteColor] ;
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 0) {
+//        WXSecondPushedViewController *pushedVC = [[WXSecondPushedViewController alloc] init];
+        
+    }else{
+//        WXSecondPresentedViewController * presentedVC = [[WXSecondPresentedViewController alloc] init];
+    }
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
