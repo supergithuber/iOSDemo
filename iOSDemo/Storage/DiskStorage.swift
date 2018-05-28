@@ -13,9 +13,12 @@ private let kDiskStorageKey = "com.iOSDemo.diskStorage"
 
 private let kAppConfigutationKey = "com.insta360.StorageBucket.configuretion"
 
+private let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last!
+private let yycachePath = "\(documentPath)/YYDISK_DOCUMENT"
+
 class DiskStorage: NSObject {
     static let shared = DiskStorage()
-    private let diskStorage: YYCache = YYCache(name: kDiskStorageKey)!
+    private let diskStorage: YYDiskCache = YYDiskCache(path: yycachePath)!
     
     private override init() {
         super.init()
