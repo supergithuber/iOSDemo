@@ -43,10 +43,6 @@
     [self initSubController];
 }
 - (void)initSubController {
-    
-//    self.tabBar.tintColor = [UIColor purpleColor];
-//    self.tabBar.unselectedItemTintColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
-    
     [self addChildTabWithController:[[ViewController alloc] init] image:@"tab_ic_explore_a" selectedImage:nil title:@"首页"];
     [self addChildTabWithController:[[WXCenterViewController alloc] init] image:nil selectedImage:nil title:@"空"];
     [self addChildTabWithController:[[WXSettingsViewController alloc] init] image:@"tab_ic_setting_a" selectedImage:nil title:@"设置"];
