@@ -7,7 +7,7 @@
 //
 
 #import "UIView+WXBadge.h"
-
+//https://github.com/Minitour/EasyNotificationBadge
 static int kBadgeTagNumber = 9898;
 
 @implementation UIView (WXBadge)
