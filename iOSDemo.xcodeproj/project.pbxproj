@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C71AAA9620BBEA3B00DB7152 /* UIView+WXBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = C71AAA9520BBEA3B00DB7152 /* UIView+WXBadge.m */; };
 		C72A2EA720A1416C00D7E7E8 /* NSString+Regex.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */; };
 		C72A2EE420A1A13600D7E7E8 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EE320A1A13600D7E7E8 /* NSString+Encryption.m */; };
 		C72A2EEB20A2D1C500D7E7E8 /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EEA20A2D1C500D7E7E8 /* UIButton+CountDown.m */; };
@@ -136,6 +137,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C71AAA9420BBEA3B00DB7152 /* UIView+WXBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WXBadge.h"; sourceTree = "<group>"; };
+		C71AAA9520BBEA3B00DB7152 /* UIView+WXBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXBadge.m"; sourceTree = "<group>"; };
 		C72A2EA520A1416C00D7E7E8 /* NSString+Regex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Regex.h"; sourceTree = "<group>"; };
 		C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regex.m"; sourceTree = "<group>"; };
 		C72A2EE220A1A13600D7E7E8 /* NSString+Encryption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
@@ -767,6 +770,8 @@
 				CCD7FC942057840C00AA35AF /* UIView+WXFrame.m */,
 				C72A2EEC20A2EAC600D7E7E8 /* UIView+ScreenShot.h */,
 				C72A2EED20A2EAC600D7E7E8 /* UIView+ScreenShot.m */,
+				C71AAA9420BBEA3B00DB7152 /* UIView+WXBadge.h */,
+				C71AAA9520BBEA3B00DB7152 /* UIView+WXBadge.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -1001,6 +1006,7 @@
 				CCD7FC952057840C00AA35AF /* UIView+WXFrame.m in Sources */,
 				CC33E16B2071C8B1002B49FC /* Device.swift in Sources */,
 				CCFB580C201B04FF0030BFF1 /* AppConfiguration.swift in Sources */,
+				C71AAA9620BBEA3B00DB7152 /* UIView+WXBadge.m in Sources */,
 				CC7793C9205A06DC00587D86 /* WXSingleScrollLabel.m in Sources */,
 				CC71D3BC203E64DF00CFDDEA /* WXChangeIconViewController.m in Sources */,
 				CC1BCE58202C2D68009A0BCF /* WXSettingsViewController.m in Sources */,
