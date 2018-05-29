@@ -56,7 +56,21 @@ static int kBadgeTagNumber = 9898;
     if (isBadgeExist){
         oldWidth = badgeLabel.frame.size.width;
     }
-    //
+    //设置属性
+    badgeLabel.text = badgeText;
+    badgeLabel.font = [UIFont systemFontOfSize:appearance.textSize];
+    [badgeLabel sizeToFit];
+    badgeLabel.textAlignment = appearance.textAlignment;
+    badgeLabel.layer.backgroundColor = appearance.backgroundColor.CGColor;
+    badgeLabel.textColor = appearance.textColor;
+    //调整尺寸
+    CGSize badgeSize = badgeLabel.frame.size;
+    CGFloat height = MAX(18.0, badgeSize.height + 5.0);
+    CGFloat width = MAX(height, badgeSize.width + 10.0);
+    
+    CGRect originFrame = badgeLabel.frame;
+    originFrame.size = CGSizeMake(width, height);
+    badgeLabel.frame = originFrame;
 }
 @end
 
