@@ -13,10 +13,11 @@ static int kBadgeTagNumber = 9898;
 @implementation UIView (WXBadge)
 
 - (void)wx_showBadge:(NSString *)badgeText{
-    
+    WXBadgeAppearance *appearance = [WXBadgeAppearance new];
+    [self wx_showBadge:badgeText appearance:appearance];
 }
 - (void)wx_showBadge:(NSString *)badgeText appearance:(nonnull WXBadgeAppearance *)appearance{
-    
+    [self wx_showBadge:badgeText appearance:appearance edgeInset:UIEdgeInsetsZero];
 }
 - (void)wx_showBadge:(NSString *)badgeText appearance:(nonnull WXBadgeAppearance *)appearance edgeInset:(UIEdgeInsets)inset{
     UILabel *badgeLabel = nil;
@@ -71,6 +72,51 @@ static int kBadgeTagNumber = 9898;
     CGRect originFrame = badgeLabel.frame;
     originFrame.size = CGSizeMake(width, height);
     badgeLabel.frame = originFrame;
+    //add
+    if (isBadgeExist){
+        [badgeLabel removeFromSuperview];
+    }
+    [self addSubview:badgeLabel];
+    
+    CGPoint centerPoint = badgeLabel.center;
+    centerPoint = CGPointMake(self.bounds.size.width, 0);
+    badgeLabel.center = centerPoint;
+    
+ 
+    badgeLabel.layer.borderColor = appearance.borderColor.CGColor;
+    badgeLabel.layer.borderWidth = appearance.borderWidth;
+    badgeLabel.layer.cornerRadius = badgeLabel.bounds.size.height / 2.0;
+    if (appearance.allowShadow){
+        badgeLabel.layer.shadowOffset = CGSizeMake(1, 1);
+        badgeLabel.layer.shadowRadius = 1;
+        badgeLabel.layer.shadowOpacity = 0.5;
+        badgeLabel.layer.shadowColor = [UIColor blackColor].CGColor;
+    }
+    
+    if (!isBadgeExist){
+        //新的
+        if (appearance.animated){
+            badgeLabel.transform = CGAffineTransformMakeScale(0, 0);
+            [UIView animateWithDuration:appearance.duration delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionTransitionNone animations:^{
+                badgeLabel.transform = CGAffineTransformIdentity;
+            } completion:^(BOOL finished) {
+                
+            }];
+        }
+    }else{
+        if (appearance.animated){
+            CGFloat currentWidth = badgeLabel.frame.size.width;
+            
+            CGRect oldFrame = badgeLabel.frame;
+            oldFrame.size.width = oldWidth;
+            badgeLabel.frame = oldFrame;
+            [UIView animateWithDuration:appearance.duration animations:^{
+                CGRect oldFrame = badgeLabel.frame;
+                oldFrame.size.width = currentWidth;
+                badgeLabel.frame = oldFrame;
+            }];
+        }
+    }
 }
 @end
 
@@ -85,6 +131,7 @@ static int kBadgeTagNumber = 9898;
         _textAlignment = NSTextAlignmentCenter;
         _duration = 0.2;
         _borderWidth = 0;
+        _borderColor = [UIColor clearColor];
         _backgroundColor = [UIColor redColor];
         _animated = true;
         _allowShadow = false;

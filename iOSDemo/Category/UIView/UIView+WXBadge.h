@@ -23,11 +23,13 @@
 @property (nonatomic, strong)UIColor* backgroundColor;
 @property (nonatomic, assign)CGFloat textSize;
 @property (nonatomic, strong)UIColor* textColor;
+@property (nonatomic, strong)UIColor* borderColor;
 @property (nonatomic, assign)CGFloat borderWidth;
 @property (nonatomic, assign)NSTextAlignment textAlignment;
 @property (nonatomic, assign)BOOL animated;
 @property (nonatomic, assign)NSTimeInterval duration;
 @property (nonatomic, assign)BOOL allowShadow;
+//内容在XY方向上的偏移，注意正负
 @property (nonatomic, assign)CGFloat distanceFromCenterX;
 @property (nonatomic, assign)CGFloat distanceFromCenterY;
 
