@@ -13,7 +13,7 @@ supported:iOS 11 or higher, iPhone 6s or later
 1. 识别imageView中的人脸
 2. 识别图片中的人脸
 3. 把图片变换到指定尺寸
-4. 给所有view添加特定的小圆点
+4. 给所有view添加特定的小圆点(两种)
 5. 封装系统alert，自定义的alert
 6. NSTimer的用法，如何避免不容易发现的循环引用，block携带参数
 7. 信号量的用法，控制线程个数
@@ -45,7 +45,7 @@ supported:iOS 11 or higher, iPhone 6s or later
 1. Recognize faces in imageView
 2. recognize faces in image
 3. scale image to any size
-4. add hint badge to view
+4. add hint badge to view(two kinds)
 5. custom alert category
 6. timer use, avoid retaincycle,carry block parameter
 7. semaphore to control number of thread
