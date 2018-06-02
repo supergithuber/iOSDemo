@@ -24,7 +24,6 @@ NSString *const kAppVersionKey = @"iOSDemo.appVersion";
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
     //是不是当前版本首次启动
     if ([self isCurrentVersionLaunchFirstTime]){
         NSLog(@"当前版本%@：首次启动",kAppVersion);
