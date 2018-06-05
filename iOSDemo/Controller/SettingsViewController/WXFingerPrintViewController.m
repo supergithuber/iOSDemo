@@ -60,6 +60,8 @@ static NSString *const kOpenTouchIDKey = @"com.iOSDemo.openTouchIDKey";
                 }
                 [self updateResultLable];
             }];
+        }else{
+            [self LogToResultTextView:@"不支持生物识别，可能是没设置指纹（脸）或者机型不支持"];
         }
     });
 }
