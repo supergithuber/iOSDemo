@@ -32,14 +32,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-//MARK: NSLock
+//MARK: - NSLock
 - (void)wx_lockUsage{
     [self.lock lock];
     //do something
     
     [self.lock unlock];
 }
-//MARK: NSRecursiveLock
+//MARK: - NSRecursiveLock
 - (void)wx_recursiveLock:(int)value{
     [self.recursiveLock lock];
     if (value != 0){
@@ -49,11 +49,11 @@
     }
     [self.recursiveLock unlock];
 }
-//MARK: semaphore
+//MARK: - semaphore
 - (void)wx_semaphore{
     //参考SemaphoreViewController
 }
-//MARK: semaphore
+//MARK: - NSConditionLock
 - (void)wx_condition{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self.conditionLock lock];
@@ -72,7 +72,7 @@
         [self.conditionLock unlock];
     });
 }
-//MARK: GET
+//MARK: - GET
 - (NSLock *)lock{
     if (_lock){
         _lock = [[NSLock alloc] init];
