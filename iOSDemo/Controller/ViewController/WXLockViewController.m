@@ -133,6 +133,12 @@
 //
 //    OSSpinLockUnlock(&spinLock);   // 解锁
 }
+//MARK: - synchronized
+- (void)wx_synchronized{
+    @synchronized(self){
+        //你自己的加锁代码......
+    }
+}
 //MARK: - GET
 - (NSLock *)lock{
     if (_lock){
