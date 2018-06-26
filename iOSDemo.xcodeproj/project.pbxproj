@@ -23,6 +23,7 @@
 		C779D7A420AC170A0083EE35 /* WXCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A320AC170A0083EE35 /* WXCenterViewController.m */; };
 		C79DCCB320B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DCCB220B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m */; };
 		C79DCCB720B7EBC300C13117 /* WXSecondPushedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DCCB620B7EBC300C13117 /* WXSecondPushedViewController.m */; };
+		C79FC2E020E2353300D21B69 /* testLocalWebview.html in Resources */ = {isa = PBXBuildFile; fileRef = C79FC2DF20E2353300D21B69 /* testLocalWebview.html */; };
 		CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */; };
 		CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C8C200F8FE600B9B69C /* UIImageView+FaceCenter.m */; };
 		CC095C90201DA33F00B9B69C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C8F201DA33F00B9B69C /* SnapKit.framework */; };
@@ -169,6 +170,7 @@
 		C79DCCB220B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSystemPushAndPopTableViewController.m; sourceTree = "<group>"; };
 		C79DCCB520B7EBC300C13117 /* WXSecondPushedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSecondPushedViewController.h; sourceTree = "<group>"; };
 		C79DCCB620B7EBC300C13117 /* WXSecondPushedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSecondPushedViewController.m; sourceTree = "<group>"; };
+		C79FC2DF20E2353300D21B69 /* testLocalWebview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = testLocalWebview.html; sourceTree = "<group>"; };
 		CC095C87200F8C3E00B9B69C /* UIImage+FaceRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+FaceRecognizer.h"; sourceTree = "<group>"; };
 		CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FaceRecognizer.m"; sourceTree = "<group>"; };
 		CC095C8B200F8FE600B9B69C /* UIImageView+FaceCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FaceCenter.h"; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 		CC2EC35E20494715000750F8 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				C79FC2DF20E2353300D21B69 /* testLocalWebview.html */,
 				CC2EC35F20494715000750F8 /* sound.caf */,
 			);
 			path = Files;
@@ -947,6 +950,7 @@
 				CC71D3C9203E6AB400CFDDEA /* icon_blue@2x.png in Resources */,
 				CC40F6671E6E5F88009D144C /* Main.storyboard in Resources */,
 				CCA219382081D7F2004A0951 /* WKJSPOST.html in Resources */,
+				C79FC2E020E2353300D21B69 /* testLocalWebview.html in Resources */,
 				CC2EC36020494715000750F8 /* sound.caf in Resources */,
 				CC71D3C7203E6AB400CFDDEA /* icon_red@2x.png in Resources */,
 				CC71D3CD203E6B3900CFDDEA /* icon_demo@3x.png in Resources */,
