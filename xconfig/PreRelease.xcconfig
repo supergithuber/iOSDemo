@@ -7,3 +7,5 @@
 //
 
 #include "Generator.xconfig"
+
+IPHONEOS_DEPLOYMENT_TARGET = 11.0

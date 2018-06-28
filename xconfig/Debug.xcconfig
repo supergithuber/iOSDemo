@@ -9,6 +9,8 @@
 
 #include "Generator.xconfig"
 
-MACH_O_TYPE = mh_dylib
+//:configuration = Debug
+IPHONEOS_DEPLOYMENT_TARGET = 11.0
+
 
 
