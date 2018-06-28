@@ -1,0 +1,10 @@
+//
+//  iOSDemo.xcconfig
+//  iOSDemo
+//
+//  Created by Wuxi on 2018/6/28.
+//  Copyright © 2018年 Wuxi. All rights reserved.
+//
+
+
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited)

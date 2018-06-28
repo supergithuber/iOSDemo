@@ -171,6 +171,10 @@
 		C79DCCB520B7EBC300C13117 /* WXSecondPushedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSecondPushedViewController.h; sourceTree = "<group>"; };
 		C79DCCB620B7EBC300C13117 /* WXSecondPushedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSecondPushedViewController.m; sourceTree = "<group>"; };
 		C79FC2DF20E2353300D21B69 /* testLocalWebview.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = testLocalWebview.html; sourceTree = "<group>"; };
+		C79FC2E520E48F4600D21B69 /* Generator.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Generator.xcconfig; sourceTree = "<group>"; };
+		C79FC2E620E491A900D21B69 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		C79FC2E720E491B200D21B69 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		C79FC2EC20E493CB00D21B69 /* PreRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PreRelease.xcconfig; sourceTree = "<group>"; };
 		CC095C87200F8C3E00B9B69C /* UIImage+FaceRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+FaceRecognizer.h"; sourceTree = "<group>"; };
 		CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FaceRecognizer.m"; sourceTree = "<group>"; };
 		CC095C8B200F8FE600B9B69C /* UIImageView+FaceCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FaceCenter.h"; sourceTree = "<group>"; };
@@ -401,6 +405,17 @@
 			path = PushedPresented;
 			sourceTree = "<group>";
 		};
+		C79FC2E420E48F1F00D21B69 /* xconfig */ = {
+			isa = PBXGroup;
+			children = (
+				C79FC2E520E48F4600D21B69 /* Generator.xcconfig */,
+				C79FC2E620E491A900D21B69 /* Debug.xcconfig */,
+				C79FC2E720E491B200D21B69 /* Release.xcconfig */,
+				C79FC2EC20E493CB00D21B69 /* PreRelease.xcconfig */,
+			);
+			path = xconfig;
+			sourceTree = "<group>";
+		};
 		CC095C8A200F8FA800B9B69C /* UIImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -570,6 +585,7 @@
 				CC40F6751E6E5F88009D144C /* iOSDemoTests */,
 				CC40F6801E6E5F88009D144C /* iOSDemoUITests */,
 				CC40F65A1E6E5F88009D144C /* Products */,
+				C79FC2E420E48F1F00D21B69 /* xconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1117,8 +1133,112 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C79FC2ED20E493D100D21B69 /* PreRelease */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C79FC2EC20E493CB00D21B69 /* PreRelease.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = PreRelease;
+		};
+		C79FC2EE20E493D100D21B69 /* PreRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KYFVDC483X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Checkouts/SnapKit/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Framework",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDemo/Supporting Files/iOSDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				INFOPLIST_FILE = "iOSDemo/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sivan.iOSDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSDemo/Supporting Files/iOSDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = PreRelease;
+		};
+		C79FC2EF20E493D100D21B69 /* PreRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = iOSDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sivan.com.iOSDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSDemo.app/iOSDemo";
+			};
+			name = PreRelease;
+		};
+		C79FC2F020E493D100D21B69 /* PreRelease */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = iOSDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sivan.com.iOSDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = iOSDemo;
+			};
+			name = PreRelease;
+		};
 		CC40F6841E6E5F88009D144C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C79FC2E620E491A900D21B69 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -1168,6 +1288,7 @@
 		};
 		CC40F6851E6E5F88009D144C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C79FC2E720E491B200D21B69 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -1229,6 +1350,7 @@
 					"$(PROJECT_DIR)/Framework",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDemo/Supporting Files/iOSDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1 ";
 				INFOPLIST_FILE = "iOSDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1263,6 +1385,7 @@
 					"$(PROJECT_DIR)/Framework",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSDemo/Supporting Files/iOSDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = "iOSDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1334,6 +1457,7 @@
 			buildConfigurations = (
 				CC40F6841E6E5F88009D144C /* Debug */,
 				CC40F6851E6E5F88009D144C /* Release */,
+				C79FC2ED20E493D100D21B69 /* PreRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1343,6 +1467,7 @@
 			buildConfigurations = (
 				CC40F6871E6E5F88009D144C /* Debug */,
 				CC40F6881E6E5F88009D144C /* Release */,
+				C79FC2EE20E493D100D21B69 /* PreRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1352,6 +1477,7 @@
 			buildConfigurations = (
 				CC40F68A1E6E5F88009D144C /* Debug */,
 				CC40F68B1E6E5F88009D144C /* Release */,
+				C79FC2EF20E493D100D21B69 /* PreRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1361,6 +1487,7 @@
 			buildConfigurations = (
 				CC40F68D1E6E5F88009D144C /* Debug */,
 				CC40F68E1E6E5F88009D144C /* Release */,
+				C79FC2F020E493D100D21B69 /* PreRelease */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

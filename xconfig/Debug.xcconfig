@@ -1,0 +1,14 @@
+//
+//  Debug.xcconfig
+//  iOSDemo
+//
+//  Created by HFY on 2018/6/28.
+//  Copyright © 2018年 Wuxi. All rights reserved.
+//
+
+
+#include "Generator.xconfig"
+
+MACH_O_TYPE = mh_dylib
+
+
