@@ -33,7 +33,7 @@ supported:iOS 11 or higher, iPhone 6s or later
 21. 苹果touchID的使用
 22. 识别当前机型的组件
 23. 跑马灯的label(continue)
-24. 浏览器组件，可以加载远程的URL，本地的URL，支持和JS的交互
+24. 浏览器组件，可以加载远程的URL，本地的URL，支持和JS的交互(准备抽离单独的库)
 25. iOS 11中coreML和Vision的使用，可以识别照片中的物体所属类别，最大可能所属类别
 26. NSString的正则表达式拓展，提供常用的正则表达式定义
 27. 很多种经常使用的Category
