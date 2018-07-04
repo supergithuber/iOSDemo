@@ -33,12 +33,11 @@ supported:iOS 11 or higher, iPhone 6s or later
 21. 苹果touchID的使用
 22. 识别当前机型的组件
 23. 跑马灯的label(continue)
-24. 浏览器组件，可以加载远程的URL，本地的URL，支持和JS的交互(准备抽离单独的库)
-25. iOS 11中coreML和Vision的使用，可以识别照片中的物体所属类别，最大可能所属类别
-26. NSString的正则表达式拓展，提供常用的正则表达式定义
-27. 很多种经常使用的Category
-28. tabbar中间的突出按钮
-29. 各种锁
+24. iOS 11中coreML和Vision的使用，可以识别照片中的物体所属类别，最大可能所属类别
+25. NSString的正则表达式拓展，提供常用的正则表达式定义
+26. 很多种经常使用的Category
+27. tabbar中间的突出按钮
+28. 各种锁
 
 ---
 
@@ -65,9 +64,8 @@ supported:iOS 11 or higher, iPhone 6s or later
 21. Apple touchID use
 22. recognize Device Model 
 23. run horse light(continue)
-24. A webBrowser whitch can load remote url, local url, interactive with javascript
-25. coreML and vision usage
-26. NSString category for regular expression, frequent used regular expression
-27. Various of Catogories which are frequency used
-28. tabbar center circular button
-29. Lock
+24. coreML and vision usage
+25. NSString category for regular expression, frequent used regular expression
+26. Various of Catogories which are frequency used
+27. tabbar center circular button
+28. Lock
