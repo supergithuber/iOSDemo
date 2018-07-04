@@ -86,12 +86,9 @@
 		CC71D3D0203E763D00CFDDEA /* WXIconCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC71D3CF203E763D00CFDDEA /* WXIconCollectionViewCell.m */; };
 		CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC72CD611F8F163500CADF32 /* TimerViewController.m */; };
 		CC7793C9205A06DC00587D86 /* WXSingleScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7793C8205A06DC00587D86 /* WXSingleScrollLabel.m */; };
-		CC8BB94F207B696100CAD849 /* WXWebBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8BB94E207B696100CAD849 /* WXWebBrowser.m */; };
 		CC8BB951207C8FAD00CAD849 /* WXBlurNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8BB950207C8FAD00CAD849 /* WXBlurNavigationBar.swift */; };
-		CCA219382081D7F2004A0951 /* WKJSPOST.html in Resources */ = {isa = PBXBuildFile; fileRef = CCA219372081D7F1004A0951 /* WKJSPOST.html */; };
 		CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */; };
 		CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */; };
-		CCB0AF96207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB0AF95207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.m */; };
 		CCD7FC952057840C00AA35AF /* UIView+WXFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD7FC942057840C00AA35AF /* UIView+WXFrame.m */; };
 		CCE21BB82059823000F992BF /* WXCyclicScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE21BB72059823000F992BF /* WXCyclicScrollLabel.m */; };
 		CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE7915120073BDA0055C51D /* UIImage+Scale.m */; };
@@ -280,16 +277,11 @@
 		CC72CD611F8F163500CADF32 /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		CC7793C7205A06DC00587D86 /* WXSingleScrollLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSingleScrollLabel.h; sourceTree = "<group>"; };
 		CC7793C8205A06DC00587D86 /* WXSingleScrollLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSingleScrollLabel.m; sourceTree = "<group>"; };
-		CC8BB94D207B696100CAD849 /* WXWebBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXWebBrowser.h; sourceTree = "<group>"; };
-		CC8BB94E207B696100CAD849 /* WXWebBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXWebBrowser.m; sourceTree = "<group>"; };
 		CC8BB950207C8FAD00CAD849 /* WXBlurNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXBlurNavigationBar.swift; sourceTree = "<group>"; };
-		CCA219372081D7F1004A0951 /* WKJSPOST.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WKJSPOST.html; sourceTree = "<group>"; };
 		CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXVolumeButtonHandler.h; sourceTree = "<group>"; };
 		CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXVolumeButtonHandler.m; sourceTree = "<group>"; };
 		CCAD93F4202D3E5E00414E47 /* WXBaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXBaseNavigationViewController.h; sourceTree = "<group>"; };
 		CCAD93F5202D3E5E00414E47 /* WXBaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXBaseNavigationViewController.m; sourceTree = "<group>"; };
-		CCB0AF94207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXWebBrowserScriptMeaasgeDelegate.h; sourceTree = "<group>"; };
-		CCB0AF95207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXWebBrowserScriptMeaasgeDelegate.m; sourceTree = "<group>"; };
 		CCD7FC932057840C00AA35AF /* UIView+WXFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WXFrame.h"; sourceTree = "<group>"; };
 		CCD7FC942057840C00AA35AF /* UIView+WXFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXFrame.m"; sourceTree = "<group>"; };
 		CCE21BB62059823000F992BF /* WXCyclicScrollLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCyclicScrollLabel.h; sourceTree = "<group>"; };
@@ -750,22 +742,9 @@
 			path = WXScrollLabel;
 			sourceTree = "<group>";
 		};
-		CC8BB94C207B686000CAD849 /* WKWebView */ = {
-			isa = PBXGroup;
-			children = (
-				CCA219372081D7F1004A0951 /* WKJSPOST.html */,
-				CC8BB94D207B696100CAD849 /* WXWebBrowser.h */,
-				CC8BB94E207B696100CAD849 /* WXWebBrowser.m */,
-				CCB0AF94207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.h */,
-				CCB0AF95207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.m */,
-			);
-			path = WKWebView;
-			sourceTree = "<group>";
-		};
 		CCA8D59420103FF100B225B6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				CC8BB94C207B686000CAD849 /* WKWebView */,
 				CC33E1652071C3C5002B49FC /* Device */,
 				CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */,
 				CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */,
@@ -965,7 +944,6 @@
 				CC71D3C6203E6AB400CFDDEA /* icon_blue@3x.png in Resources */,
 				CC71D3C9203E6AB400CFDDEA /* icon_blue@2x.png in Resources */,
 				CC40F6671E6E5F88009D144C /* Main.storyboard in Resources */,
-				CCA219382081D7F2004A0951 /* WKJSPOST.html in Resources */,
 				C79FC2E020E2353300D21B69 /* testLocalWebview.html in Resources */,
 				CC2EC36020494715000750F8 /* sound.caf in Resources */,
 				CC71D3C7203E6AB400CFDDEA /* icon_red@2x.png in Resources */,
@@ -1003,7 +981,6 @@
 				CC0FFC8E206F372800179FC1 /* main.m in Sources */,
 				C72A2EF220A3E7F700D7E7E8 /* CAMediaTimingFunction+WXAddition.m in Sources */,
 				C72A2F0A20A4252100D7E7E8 /* UIApplication+Size.m in Sources */,
-				CC8BB94F207B696100CAD849 /* WXWebBrowser.m in Sources */,
 				CC6EB22D2022B51E0002BA14 /* WXARTextNode.m in Sources */,
 				CC71D3D0203E763D00CFDDEA /* WXIconCollectionViewCell.m in Sources */,
 				CCFB580F201B19580030BFF1 /* WXLocalLanguage.m in Sources */,
@@ -1015,7 +992,6 @@
 				CC56C30620411A5400783A9F /* WXQRCodeScanManager.m in Sources */,
 				CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */,
 				CC34C957206C863500D00A52 /* WXFingerPrintViewController.m in Sources */,
-				CCB0AF96207F317D00D545F6 /* WXWebBrowserScriptMeaasgeDelegate.m in Sources */,
 				CC1BCE5C202C2D90009A0BCF /* WXInitTabBarViewController.m in Sources */,
 				CCFB57FF2019B9D20030BFF1 /* WXRotateImageViewController.m in Sources */,
 				CC40F6641E6E5F88009D144C /* ViewController.m in Sources */,

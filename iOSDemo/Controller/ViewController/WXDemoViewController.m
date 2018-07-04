@@ -9,7 +9,6 @@
 #import "WXDemoViewController.h"
 #import "TimerViewController.h"
 #import "WXCyclicScrollLabel.h"
-#import "WXWebBrowser.h"
 #import "iOSDemo-Swift.h"
 
 typedef void(^myBlock)();
@@ -40,9 +39,6 @@ typedef void(^myBlock)();
 - (void)push:(UIButton *)button{
 //    TimerViewController *controller = [[TimerViewController alloc] init];
 //    [self.navigationController pushViewController:controller animated:YES];
-    WXWebBrowser *browser = [WXWebBrowser new];
-    [browser loadRemoteURLString:@"https://www.baidu.com"];
-    [self.navigationController pushViewController:browser animated:YES];
 }
 //MARK: - setupScrollLabel
 - (void)setupScrollLabel{
