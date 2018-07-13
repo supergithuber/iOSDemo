@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, WXScrollType){
 @property (nonatomic, strong)UIFont *scrollTextFont;
 @property (nonatomic, assign)NSTextAlignment textAliment;
 
-@property (nonatomic, assign)CGFloat scrollVelocity; //越大越慢，实际上就是隔多久刷新一次，单位不是秒 【0.1， 5】
+@property (nonatomic, assign)CGFloat scrollVelocity; //越大越慢，就是定时器的timeInterval 【0.1， 5】
 @property (nonatomic, copy) NSString *scrollTitle;
 @property (nonatomic, strong)UIColor *scrollTitleColor;
 

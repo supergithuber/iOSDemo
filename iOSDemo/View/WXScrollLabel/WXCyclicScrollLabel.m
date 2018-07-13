@@ -60,9 +60,10 @@
         _scrollType = type;
         self.scrollVelocity = velocity;
         _options = animationOptions;
-        self.scrollInsets = insets;
+        _scrollInsets = insets;
         _scrollSpace = scrollSpace;
         _scrollTextFont = font;
+        [self setupSubviewsLayout];
     }
     return self;
 }
