@@ -125,6 +125,7 @@
             break;
         case WXScrollTypeFlipRepeat:{
             [self setupSubviewsLayout_Flip];
+            [self setupScrollTitle:_scrollTitle];
         }
             break;
         case WXScrollTypeFlipNoRepeat:{

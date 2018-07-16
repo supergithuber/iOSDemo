@@ -11,8 +11,8 @@
 typedef NS_ENUM(NSInteger, WXScrollType){
     WXScrollTypeLeftRight = 0,
     WXScrollTypeUpDown,
-    WXScrollTypeFlipRepeat,
-    WXScrollTypeFlipNoRepeat
+    WXScrollTypeFlipRepeat,  //这种动画方式决定了是不会自适应高度的，所以初始化的时候，frame要定好
+    WXScrollTypeFlipNoRepeat,
 };
 @class WXCyclicScrollLabel;
 
