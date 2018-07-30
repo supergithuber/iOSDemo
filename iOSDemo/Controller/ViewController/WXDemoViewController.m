@@ -8,11 +8,10 @@
 
 #import "WXDemoViewController.h"
 #import "TimerViewController.h"
-#import "WXCyclicScrollLabel.h"
 #import "iOSDemo-Swift.h"
 
 typedef void(^myBlock)();
-@interface WXDemoViewController ()<WXCyclicScrollLabelDelegate>
+@interface WXDemoViewController ()
 
 @property (nonatomic, weak)NSTimer *timer;
 
