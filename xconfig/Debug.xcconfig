@@ -7,7 +7,7 @@
 //
 
 
-#include "Generator.xconfig"
+#include "Generator.xcconfig"
 
 //:configuration = Debug
 IPHONEOS_DEPLOYMENT_TARGET = 11.0
