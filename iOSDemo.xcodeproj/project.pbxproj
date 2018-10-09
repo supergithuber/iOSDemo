@@ -21,6 +21,8 @@
 		C7579DBD20CA743E00B71380 /* UIScrollView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C7579DBC20CA743E00B71380 /* UIScrollView+Snapshot.m */; };
 		C779D7A120AC0DE60083EE35 /* WXTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A020AC0DE60083EE35 /* WXTabbar.m */; };
 		C779D7A420AC170A0083EE35 /* WXCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A320AC170A0083EE35 /* WXCenterViewController.m */; };
+		C7898008216CE38700DCC2D8 /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7898007216CE38700DCC2D8 /* Device.framework */; };
+		C7898009216CE38D00DCC2D8 /* Device.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7898007216CE38700DCC2D8 /* Device.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C79DCCB320B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DCCB220B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m */; };
 		C79DCCB720B7EBC300C13117 /* WXSecondPushedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DCCB620B7EBC300C13117 /* WXSecondPushedViewController.m */; };
 		C79FC2E020E2353300D21B69 /* testLocalWebview.html in Resources */ = {isa = PBXBuildFile; fileRef = C79FC2DF20E2353300D21B69 /* testLocalWebview.html */; };
@@ -44,9 +46,6 @@
 		CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2BF30F20089037009F1D9E /* WXConcurrentOperation.m */; };
 		CC2EC36020494715000750F8 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = CC2EC35F20494715000750F8 /* sound.caf */; };
 		CC2EC367204D3A73000750F8 /* WXBezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2EC366204D3A73000750F8 /* WXBezierViewController.m */; };
-		CC33E1672071C3FA002B49FC /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33E1662071C3FA002B49FC /* DeviceModel.swift */; };
-		CC33E1692071C7A7002B49FC /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33E1682071C7A7002B49FC /* DeviceType.swift */; };
-		CC33E16B2071C8B1002B49FC /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33E16A2071C8B1002B49FC /* Device.swift */; };
 		CC34C957206C863500D00A52 /* WXFingerPrintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC34C956206C863500D00A52 /* WXFingerPrintViewController.m */; };
 		CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EA92005F1C3009E87F6 /* SemaphoreViewController.m */; };
 		CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3D2EB22005FAA0009E87F6 /* UIViewController+GetViewController.m */; };
@@ -124,6 +123,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C7898009216CE38D00DCC2D8 /* Device.framework in Embed Frameworks */,
 				CC095C93201DB07100B9B69C /* YYKit.framework in Embed Frameworks */,
 				CC095C94201DB07100B9B69C /* SnapKit.framework in Embed Frameworks */,
 				CC6A2812201598FA001D3A91 /* Masonry.framework in Embed Frameworks */,
@@ -161,6 +161,7 @@
 		C779D7A020AC0DE60083EE35 /* WXTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTabbar.m; sourceTree = "<group>"; };
 		C779D7A220AC170A0083EE35 /* WXCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCenterViewController.h; sourceTree = "<group>"; };
 		C779D7A320AC170A0083EE35 /* WXCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXCenterViewController.m; sourceTree = "<group>"; };
+		C7898007216CE38700DCC2D8 /* Device.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Device.framework; path = Build/iOS/Device.framework; sourceTree = "<group>"; };
 		C79DCCB120B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSystemPushAndPopTableViewController.h; sourceTree = "<group>"; };
 		C79DCCB220B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSystemPushAndPopTableViewController.m; sourceTree = "<group>"; };
 		C79DCCB520B7EBC300C13117 /* WXSecondPushedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSecondPushedViewController.h; sourceTree = "<group>"; };
@@ -206,9 +207,6 @@
 		CC2EC35F20494715000750F8 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
 		CC2EC365204D3A73000750F8 /* WXBezierViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXBezierViewController.h; sourceTree = "<group>"; };
 		CC2EC366204D3A73000750F8 /* WXBezierViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXBezierViewController.m; sourceTree = "<group>"; };
-		CC33E1662071C3FA002B49FC /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
-		CC33E1682071C7A7002B49FC /* DeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
-		CC33E16A2071C8B1002B49FC /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		CC34C955206C863500D00A52 /* WXFingerPrintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXFingerPrintViewController.h; sourceTree = "<group>"; };
 		CC34C956206C863500D00A52 /* WXFingerPrintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXFingerPrintViewController.m; sourceTree = "<group>"; };
 		CC3D2EA82005F1C3009E87F6 /* SemaphoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemaphoreViewController.h; sourceTree = "<group>"; };
@@ -301,6 +299,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7898008216CE38700DCC2D8 /* Device.framework in Frameworks */,
 				CC095C92201DA34700B9B69C /* YYKit.framework in Frameworks */,
 				CC6A2811201598EF001D3A91 /* Masonry.framework in Frameworks */,
 				CC095C90201DA33F00B9B69C /* SnapKit.framework in Frameworks */,
@@ -414,6 +413,7 @@
 		CC095C8E201DA32E00B9B69C /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				C7898007216CE38700DCC2D8 /* Device.framework */,
 				CC095C91201DA34700B9B69C /* YYKit.framework */,
 				CC095C8F201DA33F00B9B69C /* SnapKit.framework */,
 			);
@@ -485,16 +485,6 @@
 				CC2EC35F20494715000750F8 /* sound.caf */,
 			);
 			path = Files;
-			sourceTree = "<group>";
-		};
-		CC33E1652071C3C5002B49FC /* Device */ = {
-			isa = PBXGroup;
-			children = (
-				CC33E1662071C3FA002B49FC /* DeviceModel.swift */,
-				CC33E1682071C7A7002B49FC /* DeviceType.swift */,
-				CC33E16A2071C8B1002B49FC /* Device.swift */,
-			);
-			path = Device;
 			sourceTree = "<group>";
 		};
 		CC3D2EA72005F0C0009E87F6 /* Controller */ = {
@@ -727,7 +717,6 @@
 		CCA8D59420103FF100B225B6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				CC33E1652071C3C5002B49FC /* Device */,
 				CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */,
 				CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */,
 				CCFB580D201B19580030BFF1 /* WXLocalLanguage.h */,
@@ -990,11 +979,9 @@
 				CC2EC367204D3A73000750F8 /* WXBezierViewController.m in Sources */,
 				CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */,
 				CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */,
-				CC33E1672071C3FA002B49FC /* DeviceModel.swift in Sources */,
 				CC40F6611E6E5F88009D144C /* AppDelegate.m in Sources */,
 				CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */,
 				CCD7FC952057840C00AA35AF /* UIView+WXFrame.m in Sources */,
-				CC33E16B2071C8B1002B49FC /* Device.swift in Sources */,
 				CCFB580C201B04FF0030BFF1 /* AppConfiguration.swift in Sources */,
 				C71AAA9620BBEA3B00DB7152 /* UIView+WXBadge.m in Sources */,
 				CC71D3BC203E64DF00CFDDEA /* WXChangeIconViewController.m in Sources */,
@@ -1008,7 +995,6 @@
 				C72A2EEB20A2D1C500D7E7E8 /* UIButton+CountDown.m in Sources */,
 				CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */,
 				C72A2EEE20A2EAC600D7E7E8 /* UIView+ScreenShot.m in Sources */,
-				CC33E1692071C7A7002B49FC /* DeviceType.swift in Sources */,
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
 				CC0FFC92206F3E4E00179FC1 /* GoogLeNetPlaces.mlmodel in Sources */,
 				CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */,
