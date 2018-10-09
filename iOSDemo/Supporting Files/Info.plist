@@ -2,6 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeShuffle</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>3D Touch 测试按钮</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>0</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeLove</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>出来吧，Demo！</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>1</string>
+		</dict>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>NSAppTransportSecurity</key>
