@@ -34,6 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTableView];
+    [self reportShortcutsToSiri];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +55,17 @@
     self.sectionArray = [NSMutableArray arrayWithObjects:@"第一部分", nil];
     self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", @"ARTextDemo",@"push and pop", @"scan QR code", @"Bezier Path", @"CoreML(GoogLeNetPlaces)", @"Lock Demo", nil];
     
+}
+- (void)reportShortcutsToSiri{
+    NSUserActivity *userActivity = [[NSUserActivity alloc] initWithActivityType:kSiriShortString];
+    userActivity.eligibleForSearch = YES;
+    if (@available(iOS 12.0, *)) // 如果要支持老版本，加上判断
+    {
+        userActivity.eligibleForPrediction = YES;
+    }
+    userActivity.title = @"测试标题";
+    userActivity.userInfo = @{@"testKey" : @"testValue"};
+    self.userActivity = userActivity;
 }
 
 

@@ -45,3 +45,5 @@
 //系统是否高于指定版本：大版本号，小版本号，补丁版本号
 //iOS进程类NSProcessInfo，这个类可以获取很多系统信息
 #define isOperatingSystemAtLeastVersion(majorVersion, minorVersion, patchVersion)[[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion: (NSOperatingSystemVersion) {majorVersion, minorVersion, patchVersion}]
+//shortCuts
+#define kSiriShortString @"com.sivanWu.userActivity"

@@ -69,6 +69,14 @@ NSString *const kAppVersionKey = @"iOSDemo.appVersion";
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler {
+    if ([userActivity.activityType isEqualToString:kSiriShortString]){
+        NSLog(@"Siri唤醒");
+    }
+    
+    return YES;
+}
+
 //记录启动时间
 - (void)registerLaunchDateString{
     NSLog(@"last launch app time: %@", DiskStorage.shared.appConfiguration.lastLaunchDateString);
