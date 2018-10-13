@@ -66,6 +66,7 @@
     userActivity.title = @"测试标题";
     userActivity.userInfo = @{@"testKey" : @"testValue"};
     self.userActivity = userActivity;
+    
 }
 
 
