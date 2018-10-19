@@ -34,7 +34,6 @@
 		CC095C94201DB07100B9B69C /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C8F201DA33F00B9B69C /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC0FFC86206F2BDA00179FC1 /* WXCoreMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFC85206F2BDA00179FC1 /* WXCoreMLViewController.m */; };
 		CC0FFC8E206F372800179FC1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFC8A206F372800179FC1 /* main.m */; };
-		CC0FFC8F206F372800179FC1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC0FFC8D206F372800179FC1 /* Info.plist */; };
 		CC0FFC92206F3E4E00179FC1 /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFC91206F3E4E00179FC1 /* GoogLeNetPlaces.mlmodel */; };
 		CC1BCE47202C2851009A0BCF /* WXLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC1BCE49202C2851009A0BCF /* WXLocalizable.strings */; };
 		CC1BCE4E202C2A6E009A0BCF /* WXConsoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1BCE4D202C2A6E009A0BCF /* WXConsoleViewController.m */; };
@@ -910,7 +909,6 @@
 				CC71D3C4203E6AB400CFDDEA /* icon_red@3x.png in Resources */,
 				CC71D3C8203E6AB400CFDDEA /* icon_ball@3x.png in Resources */,
 				CC40F6691E6E5F88009D144C /* Assets.xcassets in Resources */,
-				CC0FFC8F206F372800179FC1 /* Info.plist in Resources */,
 				CC1BCE47202C2851009A0BCF /* WXLocalizable.strings in Resources */,
 				CC71D3C6203E6AB400CFDDEA /* icon_blue@3x.png in Resources */,
 				CC71D3C9203E6AB400CFDDEA /* icon_blue@2x.png in Resources */,
