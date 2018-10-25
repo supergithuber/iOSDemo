@@ -6,7 +6,7 @@ supported:iOS 11 or higher, iPhone 6s or later
 
 --- 
 
-### contain
+### 包含
 
 ---
 
@@ -38,6 +38,10 @@ supported:iOS 11 or higher, iPhone 6s or later
 26. 很多种经常使用的Category
 27. tabbar中间的突出按钮
 28. 各种锁
+
+---
+
+### Contain
 
 ---
 
