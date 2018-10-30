@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C71AAA9620BBEA3B00DB7152 /* UIView+WXBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = C71AAA9520BBEA3B00DB7152 /* UIView+WXBadge.m */; };
+		C723E1212187F728004AF284 /* UIImage+PDFVector.m in Sources */ = {isa = PBXBuildFile; fileRef = C723E1202187F728004AF284 /* UIImage+PDFVector.m */; };
 		C72A2EA720A1416C00D7E7E8 /* NSString+Regex.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */; };
 		C72A2EE420A1A13600D7E7E8 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EE320A1A13600D7E7E8 /* NSString+Encryption.m */; };
 		C72A2EEB20A2D1C500D7E7E8 /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EEA20A2D1C500D7E7E8 /* UIButton+CountDown.m */; };
@@ -135,6 +136,8 @@
 /* Begin PBXFileReference section */
 		C71AAA9420BBEA3B00DB7152 /* UIView+WXBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WXBadge.h"; sourceTree = "<group>"; };
 		C71AAA9520BBEA3B00DB7152 /* UIView+WXBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXBadge.m"; sourceTree = "<group>"; };
+		C723E11F2187F728004AF284 /* UIImage+PDFVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+PDFVector.h"; sourceTree = "<group>"; };
+		C723E1202187F728004AF284 /* UIImage+PDFVector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PDFVector.m"; sourceTree = "<group>"; };
 		C72A2EA520A1416C00D7E7E8 /* NSString+Regex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Regex.h"; sourceTree = "<group>"; };
 		C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regex.m"; sourceTree = "<group>"; };
 		C72A2EE220A1A13600D7E7E8 /* NSString+Encryption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
@@ -769,6 +772,8 @@
 				C72D0F5E209B142A00D37FD0 /* UIImage+Convert.h */,
 				C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */,
 				C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */,
+				C723E11F2187F728004AF284 /* UIImage+PDFVector.h */,
+				C723E1202187F728004AF284 /* UIImage+PDFVector.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -996,6 +1001,7 @@
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
 				CC0FFC92206F3E4E00179FC1 /* GoogLeNetPlaces.mlmodel in Sources */,
 				CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */,
+				C723E1212187F728004AF284 /* UIImage+PDFVector.m in Sources */,
 				C75175E520B3FDE000B89EE5 /* WXLockViewController.m in Sources */,
 				CC1BCE4E202C2A6E009A0BCF /* WXConsoleViewController.m in Sources */,
 				CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */,
