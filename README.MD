@@ -72,4 +72,4 @@ supported:iOS 11 or higher, iPhone 6s or later
 25. NSString category for regular expression, frequent used regular expression
 26. Various of Catogories which are frequency used
 27. tabbar center circular button
-28. Lock
+28. Locks
