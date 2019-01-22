@@ -19,6 +19,7 @@
 		C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */; };
 		C72D0F62209C125400D37FD0 /* UIImage+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */; };
 		C75175E520B3FDE000B89EE5 /* WXLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75175E420B3FDE000B89EE5 /* WXLockViewController.m */; };
+		C75222D921F6F67A0012DEF7 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = C75222D821F6F67A0012DEF7 /* UIColor+Expanded.m */; };
 		C7579DBD20CA743E00B71380 /* UIScrollView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C7579DBC20CA743E00B71380 /* UIScrollView+Snapshot.m */; };
 		C779D7A120AC0DE60083EE35 /* WXTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A020AC0DE60083EE35 /* WXTabbar.m */; };
 		C779D7A420AC170A0083EE35 /* WXCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A320AC170A0083EE35 /* WXCenterViewController.m */; };
@@ -157,6 +158,8 @@
 		C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Convert.swift"; sourceTree = "<group>"; };
 		C75175E320B3FDE000B89EE5 /* WXLockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXLockViewController.h; sourceTree = "<group>"; };
 		C75175E420B3FDE000B89EE5 /* WXLockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXLockViewController.m; sourceTree = "<group>"; };
+		C75222D721F6F67A0012DEF7 /* UIColor+Expanded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Expanded.h"; sourceTree = "<group>"; };
+		C75222D821F6F67A0012DEF7 /* UIColor+Expanded.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
 		C7579DBB20CA743E00B71380 /* UIScrollView+Snapshot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Snapshot.h"; sourceTree = "<group>"; };
 		C7579DBC20CA743E00B71380 /* UIScrollView+Snapshot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Snapshot.m"; sourceTree = "<group>"; };
 		C779D79F20AC0DE60083EE35 /* WXTabbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTabbar.h; sourceTree = "<group>"; };
@@ -368,6 +371,8 @@
 			children = (
 				C72A2F0C20A42DCC00D7E7E8 /* UIColor+HEX.h */,
 				C72A2F0D20A42DCC00D7E7E8 /* UIColor+HEX.m */,
+				C75222D721F6F67A0012DEF7 /* UIColor+Expanded.h */,
+				C75222D821F6F67A0012DEF7 /* UIColor+Expanded.m */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -958,6 +963,7 @@
 				CC6EB22D2022B51E0002BA14 /* WXARTextNode.m in Sources */,
 				CC71D3D0203E763D00CFDDEA /* WXIconCollectionViewCell.m in Sources */,
 				CCFB580F201B19580030BFF1 /* WXLocalLanguage.m in Sources */,
+				C75222D921F6F67A0012DEF7 /* UIColor+Expanded.m in Sources */,
 				CC56C2F820401A8700783A9F /* WXQRCodeViewController.m in Sources */,
 				CC7108562032F9B500E09BC5 /* PushAndPopViewController.m in Sources */,
 				CC0FFC86206F2BDA00179FC1 /* WXCoreMLViewController.m in Sources */,
