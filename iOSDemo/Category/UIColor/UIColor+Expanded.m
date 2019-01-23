@@ -99,6 +99,18 @@
     
     return YES;
 }
+
+- (BOOL)isColorEqualToColor:(UIColor *)color {
+    NSAssert(self.canProvideRGBComponents, @"Only support RGB Color");
+    CGFloat r,g,b,a;
+    CGFloat r1,g1,b1,a1;
+    if (![self wx_red:&r green:&g blue:&b alpha:&a]) return NO;
+    if (![color wx_red:&r1 green:&g1 blue:&b1 alpha:&a1]) return NO;
+    if (r != r1 || g != g1 || b != b1 || a != a1) return NO;
+    return YES;
+    
+}
+
 - (BOOL)canProvideRGBComponents {
     switch (self.colorSpaceModel) {
         case kCGColorSpaceModelRGB:

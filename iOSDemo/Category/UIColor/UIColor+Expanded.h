@@ -36,6 +36,13 @@ NS_ASSUME_NONNULL_BEGIN
           blue:(CGFloat *)blue
          alpha:(CGFloat *)alpha;
 
+
+/**
+ 两个颜色是否相等
+ 只比较RGB颜色
+ */
+- (BOOL)isColorEqualToColor:(UIColor *)color;
+
 /**
  4个函数分别对应：
  颜色四个分量分别乘以，加上，取最大值，取最小值
