@@ -25,6 +25,10 @@
 
 @implementation UIColor (Expanded)
 
+- (CGColorSpaceModel)colorSpaceModel {
+    return CGColorSpaceGetModel(CGColorGetColorSpace(self.CGColor));
+}
+
 + (UIColor *)wx_randomColor {
     return [UIColor colorWithRed:arc4random() / 0x100000000
                            green:arc4random() / 0x100000000
@@ -42,7 +46,7 @@
                             blue:b / 255.0f
                            alpha:1.0f];
 }
-+ (UIColor *)wx_colorWithHexString:(NSString *)stringToConvert {
++ (nullable UIColor *)wx_colorWithHexString:(NSString *)stringToConvert {
     NSString *strippedString = [stringToConvert stringByReplacingOccurrencesOfString:@"#" withString:@""];
     NSScanner *scanner = [NSScanner scannerWithString:strippedString];
     unsigned hexNum;
@@ -62,4 +66,105 @@
     float a = fromComponents[3] + ((toComponents[3] - fromComponents[3]) * ratio);
     return [UIColor colorWithRed:r green:g blue:b alpha:a];
 }
+
+//MARK: - 对颜色的修改
+//MARK: 工具方法
+- (BOOL)wx_red:(CGFloat *)red
+         green:(CGFloat *)green
+          blue:(CGFloat *)blue
+         alpha:(CGFloat *)alpha {
+    const CGFloat *components = CGColorGetComponents(self.CGColor);
+    
+    CGFloat r,g,b,a;
+    
+    switch (self.colorSpaceModel) {
+        case kCGColorSpaceModelMonochrome:
+            r = g = b = components[0];
+            a = components[1];
+            break;
+        case kCGColorSpaceModelRGB:
+            r = components[0];
+            g = components[1];
+            b = components[2];
+            a = components[3];
+            break;
+        default:    // We don't know how to handle this model
+            return NO;
+    }
+    
+    if (red) *red = r;
+    if (green) *green = g;
+    if (blue) *blue = b;
+    if (alpha) *alpha = a;
+    
+    return YES;
+}
+- (BOOL)canProvideRGBComponents {
+    switch (self.colorSpaceModel) {
+        case kCGColorSpaceModelRGB:
+        case kCGColorSpaceModelMonochrome:
+            return YES;
+        default:
+            return NO;
+    }
+}
+//MARK: 具体修改方法
+- (nullable UIColor *)wx_colorByMultiplyingByRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
+    NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmetic operations");
+    
+    CGFloat r,g,b,a;
+    if (![self wx_red:&r green:&g blue:&b alpha:&a]) return nil;
+    
+    return [UIColor colorWithRed:MAX(0.0, MIN(1.0, r * red))
+                           green:MAX(0.0, MIN(1.0, g * green))
+                            blue:MAX(0.0, MIN(1.0, b * blue))
+                           alpha:MAX(0.0, MIN(1.0, a * alpha))];
+}
+- (nullable UIColor *)       wx_colorByAddingRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
+    NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmetic operations");
+    
+    CGFloat r,g,b,a;
+    if (![self wx_red:&r green:&g blue:&b alpha:&a]) return nil;
+    
+    return [UIColor colorWithRed:MAX(0.0, MIN(1.0, r + red))
+                           green:MAX(0.0, MIN(1.0, g + green))
+                            blue:MAX(0.0, MIN(1.0, b + blue))
+                           alpha:MAX(0.0, MIN(1.0, a + alpha))];
+}
+- (nullable UIColor *) wx_colorByLighteningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
+    NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmetic operations");
+    
+    CGFloat r,g,b,a;
+    if (![self wx_red:&r green:&g blue:&b alpha:&a]) return nil;
+    
+    return [UIColor colorWithRed:MAX(r, red)
+                           green:MAX(g, green)
+                            blue:MAX(b, blue)
+                           alpha:MAX(a, alpha)];
+}
+- (nullable UIColor *)  wx_colorByDarkeningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha {
+    NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmetic operations");
+    
+    CGFloat r,g,b,a;
+    if (![self wx_red:&r green:&g blue:&b alpha:&a]) return nil;
+    
+    return [UIColor colorWithRed:MIN(r, red)
+                           green:MIN(g, green)
+                            blue:MIN(b, blue)
+                           alpha:MIN(a, alpha)];
+}
+//MARK: 上面的便利方法
+- (nullable UIColor *)wx_colorByMultiplyingBy:(CGFloat)f {
+    return [self wx_colorByMultiplyingByRed:f green:f blue:f alpha:1.0f];
+}
+- (nullable UIColor *)       wx_colorByAdding:(CGFloat)f {
+    return [self wx_colorByMultiplyingByRed:f green:f blue:f alpha:0.0f];
+}
+- (nullable UIColor *) wx_colorByLighteningTo:(CGFloat)f {
+    return [self wx_colorByLighteningToRed:f green:f blue:f alpha:0.0f];
+}
+- (nullable UIColor *)  wx_colorByDarkeningTo:(CGFloat)f {
+    return [self wx_colorByDarkeningToRed:f green:f blue:f alpha:1.0f];
+}
+
 @end

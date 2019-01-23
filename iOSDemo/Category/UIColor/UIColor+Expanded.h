@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIColor *)wx_randomColor;//随机颜色
 + (UIColor *)wx_colorWithRGBHex:(UInt32)hex; //0x430234
-+ (UIColor *)wx_colorWithHexString:(NSString *)stringToConvert;//"#ffffff", "0xffffff"
++ (nullable UIColor *)wx_colorWithHexString:(NSString *)stringToConvert;//"#ffffff", "0xffffff"
 
 /**
  取两个颜色之间的线性差值
@@ -26,6 +26,35 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *)wx_colorByLerpingFromColor:(UIColor *)fromColor
                                 toColor:(UIColor *)toColor
                                   ratio:(CGFloat)ratio;
+
+/**
+ 取出颜色对应的rgba值
+ @return 取出成功返回yes
+ */
+- (BOOL)wx_red:(CGFloat *)red
+         green:(CGFloat *)green
+          blue:(CGFloat *)blue
+         alpha:(CGFloat *)alpha;
+
+/**
+ 4个函数分别对应：
+ 颜色四个分量分别乘以，加上，取最大值，取最小值
+ 初始颜色空间不是RGB时返回nil
+ 
+ */
+- (nullable UIColor *)wx_colorByMultiplyingByRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
+- (nullable UIColor *)       wx_colorByAddingRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
+- (nullable UIColor *) wx_colorByLighteningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
+- (nullable UIColor *)  wx_colorByDarkeningToRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha;
+
+/**
+ 上面四个方法的遍历操作，rgb都使用f值，不改变alpha值
+
+ */
+- (nullable UIColor *)wx_colorByMultiplyingBy:(CGFloat)f;
+- (nullable UIColor *)       wx_colorByAdding:(CGFloat)f;
+- (nullable UIColor *) wx_colorByLighteningTo:(CGFloat)f;
+- (nullable UIColor *)  wx_colorByDarkeningTo:(CGFloat)f;
 @end
 
 NS_ASSUME_NONNULL_END
