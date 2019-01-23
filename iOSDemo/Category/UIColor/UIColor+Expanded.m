@@ -28,7 +28,7 @@
 - (CGColorSpaceModel)colorSpaceModel {
     return CGColorSpaceGetModel(CGColorGetColorSpace(self.CGColor));
 }
-
+//MARK: - 类方法
 + (UIColor *)wx_randomColor {
     return [UIColor colorWithRed:arc4random() / 0x100000000
                            green:arc4random() / 0x100000000
