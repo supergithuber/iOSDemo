@@ -167,4 +167,68 @@
     return [self wx_colorByDarkeningToRed:f green:f blue:f alpha:1.0f];
 }
 
+- (nullable UIColor *)wx_colorByMultiplyingByColor:(UIColor *)color {
+    NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmetic operations");
+    
+    CGFloat r,g,b,a;
+    if (![self wx_red:&r green:&g blue:&b alpha:&a]) return nil;
+    
+    return [self wx_colorByMultiplyingByRed:r green:g blue:b alpha:1.0f];
+}
+- (nullable UIColor *)       wx_colorByAddingColor:(UIColor *)color {
+    NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmetic operations");
+    
+    CGFloat r,g,b,a;
+    if (![self wx_red:&r green:&g blue:&b alpha:&a]) return nil;
+    
+    return [self wx_colorByAddingRed:r green:g blue:b alpha:0.0f];
+}
+- (nullable UIColor *) wx_colorByLighteningToColor:(UIColor *)color {
+    NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmetic operations");
+    
+    CGFloat r,g,b,a;
+    if (![self wx_red:&r green:&g blue:&b alpha:&a]) return nil;
+    
+    return [self wx_colorByLighteningToRed:r green:g blue:b alpha:0.0f];
+}
+- (nullable UIColor *)  wx_colorByDarkeningToColor:(UIColor *)color {
+    NSAssert(self.canProvideRGBComponents, @"Must be a RGB color to use arithmetic operations");
+    
+    CGFloat r,g,b,a;
+    if (![self wx_red:&r green:&g blue:&b alpha:&a]) return nil;
+    
+    return [self wx_colorByDarkeningToRed:r green:g blue:b alpha:1.0f];
+}
+
+//MARK: - private get
+- (CGFloat)red {
+    NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -red");
+    const CGFloat *c = CGColorGetComponents(self.CGColor);
+    return c[0];
+}
+
+- (CGFloat)green {
+    NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -green");
+    const CGFloat *c = CGColorGetComponents(self.CGColor);
+    if (self.colorSpaceModel == kCGColorSpaceModelMonochrome) return c[0];
+    return c[1];
+}
+
+- (CGFloat)blue {
+    NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -blue");
+    const CGFloat *c = CGColorGetComponents(self.CGColor);
+    if (self.colorSpaceModel == kCGColorSpaceModelMonochrome) return c[0];
+    return c[2];
+}
+
+- (CGFloat)white {
+    NSAssert(self.colorSpaceModel == kCGColorSpaceModelMonochrome, @"Must be a Monochrome color to use -white");
+    const CGFloat *c = CGColorGetComponents(self.CGColor);
+    return c[0];
+}
+
+- (CGFloat)alpha {
+    return CGColorGetAlpha(self.CGColor);
+}
+
 @end

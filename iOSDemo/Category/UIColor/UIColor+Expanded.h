@@ -55,6 +55,15 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable UIColor *)       wx_colorByAdding:(CGFloat)f;
 - (nullable UIColor *) wx_colorByLighteningTo:(CGFloat)f;
 - (nullable UIColor *)  wx_colorByDarkeningTo:(CGFloat)f;
+
+/**
+ 从一种颜色到另一种颜色的渐变，对应RGB的乘，加，取较小，取较大, alpla不变
+
+ */
+- (nullable UIColor *)wx_colorByMultiplyingByColor:(UIColor *)color;
+- (nullable UIColor *)       wx_colorByAddingColor:(UIColor *)color;
+- (nullable UIColor *) wx_colorByLighteningToColor:(UIColor *)color;
+- (nullable UIColor *)  wx_colorByDarkeningToColor:(UIColor *)color;
 @end
 
 NS_ASSUME_NONNULL_END
