@@ -15,7 +15,6 @@
 		C72A2EEE20A2EAC600D7E7E8 /* UIView+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EED20A2EAC600D7E7E8 /* UIView+ScreenShot.m */; };
 		C72A2EF220A3E7F700D7E7E8 /* CAMediaTimingFunction+WXAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EF120A3E7F700D7E7E8 /* CAMediaTimingFunction+WXAddition.m */; };
 		C72A2F0A20A4252100D7E7E8 /* UIApplication+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2F0920A4252100D7E7E8 /* UIApplication+Size.m */; };
-		C72A2F0E20A42DCC00D7E7E8 /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2F0D20A42DCC00D7E7E8 /* UIColor+HEX.m */; };
 		C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */; };
 		C72D0F62209C125400D37FD0 /* UIImage+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */; };
 		C75175E520B3FDE000B89EE5 /* WXLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75175E420B3FDE000B89EE5 /* WXLockViewController.m */; };
@@ -151,8 +150,6 @@
 		C72A2EF120A3E7F700D7E7E8 /* CAMediaTimingFunction+WXAddition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CAMediaTimingFunction+WXAddition.m"; sourceTree = "<group>"; };
 		C72A2F0820A4252100D7E7E8 /* UIApplication+Size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Size.h"; sourceTree = "<group>"; };
 		C72A2F0920A4252100D7E7E8 /* UIApplication+Size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Size.m"; sourceTree = "<group>"; };
-		C72A2F0C20A42DCC00D7E7E8 /* UIColor+HEX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
-		C72A2F0D20A42DCC00D7E7E8 /* UIColor+HEX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HEX.m"; sourceTree = "<group>"; };
 		C72D0F5E209B142A00D37FD0 /* UIImage+Convert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Convert.h"; sourceTree = "<group>"; };
 		C72D0F5F209B142A00D37FD0 /* UIImage+Convert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Convert.m"; sourceTree = "<group>"; };
 		C72D0F61209C125400D37FD0 /* UIImage+Convert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Convert.swift"; sourceTree = "<group>"; };
@@ -369,8 +366,6 @@
 		C72A2F0B20A42DAD00D7E7E8 /* UIColor */ = {
 			isa = PBXGroup;
 			children = (
-				C72A2F0C20A42DCC00D7E7E8 /* UIColor+HEX.h */,
-				C72A2F0D20A42DCC00D7E7E8 /* UIColor+HEX.m */,
 				C75222D721F6F67A0012DEF7 /* UIColor+Expanded.h */,
 				C75222D821F6F67A0012DEF7 /* UIColor+Expanded.m */,
 			);
@@ -974,7 +969,6 @@
 				CC1BCE5C202C2D90009A0BCF /* WXInitTabBarViewController.m in Sources */,
 				CCFB57FF2019B9D20030BFF1 /* WXRotateImageViewController.m in Sources */,
 				CC40F6641E6E5F88009D144C /* ViewController.m in Sources */,
-				C72A2F0E20A42DCC00D7E7E8 /* UIColor+HEX.m in Sources */,
 				C779D7A420AC170A0083EE35 /* WXCenterViewController.m in Sources */,
 				CC2BF30D20088D73009F1D9E /* WXSerialOperation.m in Sources */,
 				CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */,
