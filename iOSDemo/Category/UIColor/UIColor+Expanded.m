@@ -158,7 +158,7 @@
     return [self wx_colorByMultiplyingByRed:f green:f blue:f alpha:1.0f];
 }
 - (nullable UIColor *)       wx_colorByAdding:(CGFloat)f {
-    return [self wx_colorByMultiplyingByRed:f green:f blue:f alpha:0.0f];
+    return [self wx_colorByAddingRed:f green:f blue:f alpha:0.0f];
 }
 - (nullable UIColor *) wx_colorByLighteningTo:(CGFloat)f {
     return [self wx_colorByLighteningToRed:f green:f blue:f alpha:0.0f];
