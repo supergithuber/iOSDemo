@@ -20,6 +20,7 @@
 		C75175E520B3FDE000B89EE5 /* WXLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C75175E420B3FDE000B89EE5 /* WXLockViewController.m */; };
 		C75222D921F6F67A0012DEF7 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = C75222D821F6F67A0012DEF7 /* UIColor+Expanded.m */; };
 		C7579DBD20CA743E00B71380 /* UIScrollView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C7579DBC20CA743E00B71380 /* UIScrollView+Snapshot.m */; };
+		C7617E112277F0C2004E2106 /* CVPixelBuffer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7617E102277F0C2004E2106 /* CVPixelBuffer+Helpers.swift */; };
 		C779D7A120AC0DE60083EE35 /* WXTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A020AC0DE60083EE35 /* WXTabbar.m */; };
 		C779D7A420AC170A0083EE35 /* WXCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A320AC170A0083EE35 /* WXCenterViewController.m */; };
 		C7898008216CE38700DCC2D8 /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7898007216CE38700DCC2D8 /* Device.framework */; };
@@ -159,6 +160,7 @@
 		C75222D821F6F67A0012DEF7 /* UIColor+Expanded.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Expanded.m"; sourceTree = "<group>"; };
 		C7579DBB20CA743E00B71380 /* UIScrollView+Snapshot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Snapshot.h"; sourceTree = "<group>"; };
 		C7579DBC20CA743E00B71380 /* UIScrollView+Snapshot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Snapshot.m"; sourceTree = "<group>"; };
+		C7617E102277F0C2004E2106 /* CVPixelBuffer+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helpers.swift"; sourceTree = "<group>"; };
 		C779D79F20AC0DE60083EE35 /* WXTabbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTabbar.h; sourceTree = "<group>"; };
 		C779D7A020AC0DE60083EE35 /* WXTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTabbar.m; sourceTree = "<group>"; };
 		C779D7A220AC170A0083EE35 /* WXCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCenterViewController.h; sourceTree = "<group>"; };
@@ -381,6 +383,14 @@
 			path = UIScrollView;
 			sourceTree = "<group>";
 		};
+		C7617E0F2277F09B004E2106 /* CVPixelBuffer */ = {
+			isa = PBXGroup;
+			children = (
+				C7617E102277F0C2004E2106 /* CVPixelBuffer+Helpers.swift */,
+			);
+			path = CVPixelBuffer;
+			sourceTree = "<group>";
+		};
 		C79DCCB420B7EA9300C13117 /* PushedPresented */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,6 +548,7 @@
 		CC3D2EAD2005F9D6009E87F6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C7617E0F2277F09B004E2106 /* CVPixelBuffer */,
 				C7579DBA20CA73AE00B71380 /* UIScrollView */,
 				C72A2F0B20A42DAD00D7E7E8 /* UIColor */,
 				C72A2F0720A4250B00D7E7E8 /* UIApplication */,
@@ -995,6 +1006,7 @@
 				CC56C309204160EF00783A9F /* WXQRCodeAlbumManager.m in Sources */,
 				CC8BB951207C8FAD00CAD849 /* WXBlurNavigationBar.swift in Sources */,
 				CCFB580A201B03720030BFF1 /* DiskStorage.swift in Sources */,
+				C7617E112277F0C2004E2106 /* CVPixelBuffer+Helpers.swift in Sources */,
 				C72A2EE420A1A13600D7E7E8 /* NSString+Encryption.m in Sources */,
 				C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */,
 				C72A2EEB20A2D1C500D7E7E8 /* UIButton+CountDown.m in Sources */,
