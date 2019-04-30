@@ -48,7 +48,7 @@ class WXStorageBaseModel: NSObject, NSCoding {
         for index in 0..<count{
             let variable = varList[Int(index)]
             //property_getName?
-            if let name = String(utf8String: ivar_getName(variable)){
+            if let name = String(utf8String: ivar_getName(variable)!){
                 names.append(name)
             }
         }

@@ -12,7 +12,7 @@ class ClosureInitScrollView: UIScrollView {
 
     //这里通过闭包来返回标签数量和内容
     //构造函数的重载，oc中没有重载，swift中可以
-    init(frame: CGRect, numberOfLabel: ()->Int, labelOfIndex: (_ index: Int)->UILabel) {
+    @objc init(frame: CGRect, numberOfLabel: ()->Int, labelOfIndex: (_ index: Int)->UILabel) {
         //swift中的构造函数不需要返回值
         super.init(frame: frame)
         //实例化scrollView，并指定大小和位置

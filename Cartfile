@@ -1,3 +1,3 @@
-github "SnapKit/SnapKit" == 4.0.0
+github "SnapKit/SnapKit" == 4.2.0
 github "ibireme/YYKit" == 1.0.9
 github "supergithuber/Device" ~> 0.7.4

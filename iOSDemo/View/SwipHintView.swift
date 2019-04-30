@@ -28,7 +28,7 @@ class SwipHintView: UIVisualEffectView {
         return label
     }()
     
-    init(hintImage: UIImage, hintText: String) {
+    @objc init(hintImage: UIImage, hintText: String) {
         self.hintImage = hintImage
         self.hintText = hintText
         super.init(effect: UIBlurEffect(style: .dark))
