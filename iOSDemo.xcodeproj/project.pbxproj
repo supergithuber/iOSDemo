@@ -28,6 +28,8 @@
 		C79DCCB320B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DCCB220B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m */; };
 		C79DCCB720B7EBC300C13117 /* WXSecondPushedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DCCB620B7EBC300C13117 /* WXSecondPushedViewController.m */; };
 		C79FC2E020E2353300D21B69 /* testLocalWebview.html in Resources */ = {isa = PBXBuildFile; fileRef = C79FC2DF20E2353300D21B69 /* testLocalWebview.html */; };
+		C7C5F64322963D3900509992 /* WXCrashHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5F64022963D3800509992 /* WXCrashHandler.swift */; };
+		C7C5F64422963D3900509992 /* WXCrashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C5F64122963D3800509992 /* WXCrashHelper.m */; };
 		CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */; };
 		CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C8C200F8FE600B9B69C /* UIImageView+FaceCenter.m */; };
 		CC095C90201DA33F00B9B69C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C8F201DA33F00B9B69C /* SnapKit.framework */; };
@@ -175,6 +177,9 @@
 		C79FC2E620E491A900D21B69 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		C79FC2E720E491B200D21B69 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		C79FC2EC20E493CB00D21B69 /* PreRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PreRelease.xcconfig; sourceTree = "<group>"; };
+		C7C5F64022963D3800509992 /* WXCrashHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXCrashHandler.swift; sourceTree = "<group>"; };
+		C7C5F64122963D3800509992 /* WXCrashHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCrashHelper.m; sourceTree = "<group>"; };
+		C7C5F64222963D3900509992 /* WXCrashHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCrashHelper.h; sourceTree = "<group>"; };
 		CC095C87200F8C3E00B9B69C /* UIImage+FaceRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+FaceRecognizer.h"; sourceTree = "<group>"; };
 		CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FaceRecognizer.m"; sourceTree = "<group>"; };
 		CC095C8B200F8FE600B9B69C /* UIImageView+FaceCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FaceCenter.h"; sourceTree = "<group>"; };
@@ -411,6 +416,16 @@
 				C79FC2EC20E493CB00D21B69 /* PreRelease.xcconfig */,
 			);
 			path = xconfig;
+			sourceTree = "<group>";
+		};
+		C7C5F63F22963C9500509992 /* WXCrashKit */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5F64022963D3800509992 /* WXCrashHandler.swift */,
+				C7C5F64222963D3900509992 /* WXCrashHelper.h */,
+				C7C5F64122963D3800509992 /* WXCrashHelper.m */,
+			);
+			path = WXCrashKit;
 			sourceTree = "<group>";
 		};
 		CC095C8A200F8FA800B9B69C /* UIImageView */ = {
@@ -730,6 +745,7 @@
 		CCA8D59420103FF100B225B6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C7C5F63F22963C9500509992 /* WXCrashKit */,
 				CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */,
 				CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */,
 				CCFB580D201B19580030BFF1 /* WXLocalLanguage.h */,
@@ -976,6 +992,7 @@
 				CC7108562032F9B500E09BC5 /* PushAndPopViewController.m in Sources */,
 				CC0FFC86206F2BDA00179FC1 /* WXCoreMLViewController.m in Sources */,
 				CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */,
+				C7C5F64322963D3900509992 /* WXCrashHandler.swift in Sources */,
 				CC56C30620411A5400783A9F /* WXQRCodeScanManager.m in Sources */,
 				CCFB58022019C25E0030BFF1 /* UIImage+Color.m in Sources */,
 				CC34C957206C863500D00A52 /* WXFingerPrintViewController.m in Sources */,
@@ -1011,6 +1028,7 @@
 				C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */,
 				C72A2EEB20A2D1C500D7E7E8 /* UIButton+CountDown.m in Sources */,
 				CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */,
+				C7C5F64422963D3900509992 /* WXCrashHelper.m in Sources */,
 				C72A2EEE20A2EAC600D7E7E8 /* UIView+ScreenShot.m in Sources */,
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
 				CC0FFC92206F3E4E00179FC1 /* GoogLeNetPlaces.mlmodel in Sources */,

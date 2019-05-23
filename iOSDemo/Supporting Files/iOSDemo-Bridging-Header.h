@@ -3,3 +3,4 @@
 //
 
 #import "NSString+Encryption.h"
+#import "WXCrashHelper.h"
