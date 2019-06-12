@@ -30,6 +30,9 @@
 		C79FC2E020E2353300D21B69 /* testLocalWebview.html in Resources */ = {isa = PBXBuildFile; fileRef = C79FC2DF20E2353300D21B69 /* testLocalWebview.html */; };
 		C7C5F64322963D3900509992 /* WXCrashHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5F64022963D3800509992 /* WXCrashHandler.swift */; };
 		C7C5F64422963D3900509992 /* WXCrashHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C5F64122963D3800509992 /* WXCrashHelper.m */; };
+		C7E35FD122B0FFA5001CB95A /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E35FD022B0FFA5001CB95A /* Downloader.swift */; };
+		C7E35FD322B10246001CB95A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E35FD222B10246001CB95A /* Alamofire.framework */; };
+		C7E35FD422B102DD001CB95A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7E35FD222B10246001CB95A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */; };
 		CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC095C8C200F8FE600B9B69C /* UIImageView+FaceCenter.m */; };
 		CC095C90201DA33F00B9B69C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC095C8F201DA33F00B9B69C /* SnapKit.framework */; };
@@ -126,6 +129,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C7E35FD422B102DD001CB95A /* Alamofire.framework in Embed Frameworks */,
 				C7898009216CE38D00DCC2D8 /* Device.framework in Embed Frameworks */,
 				CC095C93201DB07100B9B69C /* YYKit.framework in Embed Frameworks */,
 				CC095C94201DB07100B9B69C /* SnapKit.framework in Embed Frameworks */,
@@ -180,6 +184,8 @@
 		C7C5F64022963D3800509992 /* WXCrashHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXCrashHandler.swift; sourceTree = "<group>"; };
 		C7C5F64122963D3800509992 /* WXCrashHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXCrashHelper.m; sourceTree = "<group>"; };
 		C7C5F64222963D3900509992 /* WXCrashHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXCrashHelper.h; sourceTree = "<group>"; };
+		C7E35FD022B0FFA5001CB95A /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		C7E35FD222B10246001CB95A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		CC095C87200F8C3E00B9B69C /* UIImage+FaceRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+FaceRecognizer.h"; sourceTree = "<group>"; };
 		CC095C88200F8C3E00B9B69C /* UIImage+FaceRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FaceRecognizer.m"; sourceTree = "<group>"; };
 		CC095C8B200F8FE600B9B69C /* UIImageView+FaceCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FaceCenter.h"; sourceTree = "<group>"; };
@@ -311,6 +317,7 @@
 				C7898008216CE38700DCC2D8 /* Device.framework in Frameworks */,
 				CC095C92201DA34700B9B69C /* YYKit.framework in Frameworks */,
 				CC6A2811201598EF001D3A91 /* Masonry.framework in Frameworks */,
+				C7E35FD322B10246001CB95A /* Alamofire.framework in Frameworks */,
 				CC095C90201DA33F00B9B69C /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +435,14 @@
 			path = WXCrashKit;
 			sourceTree = "<group>";
 		};
+		C7E35FCF22B0FF89001CB95A /* Downloader */ = {
+			isa = PBXGroup;
+			children = (
+				C7E35FD022B0FFA5001CB95A /* Downloader.swift */,
+			);
+			path = Downloader;
+			sourceTree = "<group>";
+		};
 		CC095C8A200F8FA800B9B69C /* UIImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +455,7 @@
 		CC095C8E201DA32E00B9B69C /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				C7E35FD222B10246001CB95A /* Alamofire.framework */,
 				C7898007216CE38700DCC2D8 /* Device.framework */,
 				CC095C91201DA34700B9B69C /* YYKit.framework */,
 				CC095C8F201DA33F00B9B69C /* SnapKit.framework */,
@@ -745,6 +761,7 @@
 		CCA8D59420103FF100B225B6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C7E35FCF22B0FF89001CB95A /* Downloader */,
 				C7C5F63F22963C9500509992 /* WXCrashKit */,
 				CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */,
 				CCA8D5962010409200B225B6 /* WXVolumeButtonHandler.m */,
@@ -1025,6 +1042,7 @@
 				CCFB580A201B03720030BFF1 /* DiskStorage.swift in Sources */,
 				C7617E112277F0C2004E2106 /* CVPixelBuffer+Helpers.swift in Sources */,
 				C72A2EE420A1A13600D7E7E8 /* NSString+Encryption.m in Sources */,
+				C7E35FD122B0FFA5001CB95A /* Downloader.swift in Sources */,
 				C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */,
 				C72A2EEB20A2D1C500D7E7E8 /* UIButton+CountDown.m in Sources */,
 				CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */,
