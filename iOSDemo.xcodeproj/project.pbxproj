@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C7006B4D22D86A67002FA090 /* DateOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7006B4C22D86A67002FA090 /* DateOperators.swift */; };
 		C7006B4F22D86A92002FA090 /* DateSuger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7006B4E22D86A92002FA090 /* DateSuger.swift */; };
+		C7006B5122D87F02002FA090 /* Regular in Resources */ = {isa = PBXBuildFile; fileRef = C7006B5022D87F02002FA090 /* Regular */; };
 		C71AAA9620BBEA3B00DB7152 /* UIView+WXBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = C71AAA9520BBEA3B00DB7152 /* UIView+WXBadge.m */; };
 		C723E1212187F728004AF284 /* UIImage+PDFVector.m in Sources */ = {isa = PBXBuildFile; fileRef = C723E1202187F728004AF284 /* UIImage+PDFVector.m */; };
 		C72A2EA720A1416C00D7E7E8 /* NSString+Regex.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */; };
@@ -145,6 +146,7 @@
 /* Begin PBXFileReference section */
 		C7006B4C22D86A67002FA090 /* DateOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOperators.swift; sourceTree = "<group>"; };
 		C7006B4E22D86A92002FA090 /* DateSuger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSuger.swift; sourceTree = "<group>"; };
+		C7006B5022D87F02002FA090 /* Regular */ = {isa = PBXFileReference; lastKnownFileType = text; path = Regular; sourceTree = "<group>"; };
 		C71AAA9420BBEA3B00DB7152 /* UIView+WXBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WXBadge.h"; sourceTree = "<group>"; };
 		C71AAA9520BBEA3B00DB7152 /* UIView+WXBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXBadge.m"; sourceTree = "<group>"; };
 		C723E11F2187F728004AF284 /* UIImage+PDFVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+PDFVector.h"; sourceTree = "<group>"; };
@@ -853,6 +855,7 @@
 			children = (
 				CC2EC35E20494715000750F8 /* Files */,
 				CC40F6681E6E5F88009D144C /* Assets.xcassets */,
+				C7006B5022D87F02002FA090 /* Regular */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -982,6 +985,7 @@
 				CC2EC36020494715000750F8 /* sound.caf in Resources */,
 				CC71D3C7203E6AB400CFDDEA /* icon_red@2x.png in Resources */,
 				CC71D3CD203E6B3900CFDDEA /* icon_demo@3x.png in Resources */,
+				C7006B5122D87F02002FA090 /* Regular in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
