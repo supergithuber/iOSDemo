@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7006B4D22D86A67002FA090 /* DateOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7006B4C22D86A67002FA090 /* DateOperators.swift */; };
+		C7006B4F22D86A92002FA090 /* DateSuger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7006B4E22D86A92002FA090 /* DateSuger.swift */; };
 		C71AAA9620BBEA3B00DB7152 /* UIView+WXBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = C71AAA9520BBEA3B00DB7152 /* UIView+WXBadge.m */; };
 		C723E1212187F728004AF284 /* UIImage+PDFVector.m in Sources */ = {isa = PBXBuildFile; fileRef = C723E1202187F728004AF284 /* UIImage+PDFVector.m */; };
 		C72A2EA720A1416C00D7E7E8 /* NSString+Regex.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */; };
@@ -141,6 +143,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C7006B4C22D86A67002FA090 /* DateOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOperators.swift; sourceTree = "<group>"; };
+		C7006B4E22D86A92002FA090 /* DateSuger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSuger.swift; sourceTree = "<group>"; };
 		C71AAA9420BBEA3B00DB7152 /* UIView+WXBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WXBadge.h"; sourceTree = "<group>"; };
 		C71AAA9520BBEA3B00DB7152 /* UIView+WXBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXBadge.m"; sourceTree = "<group>"; };
 		C723E11F2187F728004AF284 /* UIImage+PDFVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+PDFVector.h"; sourceTree = "<group>"; };
@@ -339,6 +343,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7006B4B22D86A1D002FA090 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				C7006B4C22D86A67002FA090 /* DateOperators.swift */,
+				C7006B4E22D86A92002FA090 /* DateSuger.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
 		C72A2EA420A140DF00D7E7E8 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
@@ -674,6 +687,7 @@
 		CC56C2F2204009BA00783A9F /* NSDate */ = {
 			isa = PBXGroup;
 			children = (
+				C7006B4B22D86A1D002FA090 /* Date */,
 				CC56C2F3204009E800783A9F /* NSDate+dateTools.h */,
 				CC56C2F4204009E800783A9F /* NSDate+dateTools.m */,
 			);
@@ -993,6 +1007,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC7108592033092E00E09BC5 /* WXSecondPresentedViewController.m in Sources */,
+				C7006B4D22D86A67002FA090 /* DateOperators.swift in Sources */,
 				C79DCCB320B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m in Sources */,
 				CC095C8D200F8FE600B9B69C /* UIImageView+FaceCenter.m in Sources */,
 				CC2BF30520085B02009F1D9E /* WXDemoViewController.m in Sources */,
@@ -1061,6 +1076,7 @@
 				CCE7915720074B710055C51D /* ClosureInitScrollView.swift in Sources */,
 				C7579DBD20CA743E00B71380 /* UIScrollView+Snapshot.m in Sources */,
 				CC56C2F5204009E800783A9F /* NSDate+dateTools.m in Sources */,
+				C7006B4F22D86A92002FA090 /* DateSuger.swift in Sources */,
 				CC6EB22220215E050002BA14 /* UIViewController+Alert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
