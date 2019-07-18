@@ -19,6 +19,7 @@
 #import "WXBezierViewController.h"
 #import "WXCoreMLViewController.h"
 #import "WXLockViewController.h"
+#import "WXBasicAnimationViewController.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -53,7 +54,7 @@
     [self.view addSubview:self.tableView];
     
     self.sectionArray = [NSMutableArray arrayWithObjects:@"第一部分", nil];
-    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", @"ARTextDemo",@"push and pop", @"scan QR code", @"Bezier Path", @"CoreML(GoogLeNetPlaces)", @"Lock Demo", nil];
+    self.firstSectionTitle = [NSMutableArray arrayWithObjects:@"Demo", @"Timer", @"Semaphore control number", @"3 kinds of Operation", @"Runtime NSCoder", @"rotate Static Image", @"ARTextDemo",@"push and pop", @"scan QR code", @"Bezier Path", @"CoreML(GoogLeNetPlaces)", @"Lock Demo", @"动画", nil];
     
 }
 - (void)reportShortcutsToSiri{
@@ -124,6 +125,9 @@
             break;
         case 11:
             controller = [[WXLockViewController alloc] init];
+            break;
+        case 12:
+            controller = [[WXBasicAnimationViewController alloc] init];
             break;
         default:
             break;

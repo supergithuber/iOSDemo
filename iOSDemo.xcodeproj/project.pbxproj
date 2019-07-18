@@ -11,6 +11,8 @@
 		C7006B4F22D86A92002FA090 /* DateSuger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7006B4E22D86A92002FA090 /* DateSuger.swift */; };
 		C7006B5122D87F02002FA090 /* Regular in Resources */ = {isa = PBXBuildFile; fileRef = C7006B5022D87F02002FA090 /* Regular */; };
 		C71AAA9620BBEA3B00DB7152 /* UIView+WXBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = C71AAA9520BBEA3B00DB7152 /* UIView+WXBadge.m */; };
+		C71E2CBB22E0714700E287B3 /* WXBasicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C71E2CBA22E0714700E287B3 /* WXBasicAnimationViewController.m */; };
+		C71E2CBF22E0735000E287B3 /* WXBasicAnimationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C71E2CBE22E0735000E287B3 /* WXBasicAnimationTool.m */; };
 		C723E1212187F728004AF284 /* UIImage+PDFVector.m in Sources */ = {isa = PBXBuildFile; fileRef = C723E1202187F728004AF284 /* UIImage+PDFVector.m */; };
 		C72A2EA720A1416C00D7E7E8 /* NSString+Regex.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EA620A1416C00D7E7E8 /* NSString+Regex.m */; };
 		C72A2EE420A1A13600D7E7E8 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = C72A2EE320A1A13600D7E7E8 /* NSString+Encryption.m */; };
@@ -149,6 +151,10 @@
 		C7006B5022D87F02002FA090 /* Regular */ = {isa = PBXFileReference; lastKnownFileType = text; path = Regular; sourceTree = "<group>"; };
 		C71AAA9420BBEA3B00DB7152 /* UIView+WXBadge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WXBadge.h"; sourceTree = "<group>"; };
 		C71AAA9520BBEA3B00DB7152 /* UIView+WXBadge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXBadge.m"; sourceTree = "<group>"; };
+		C71E2CB922E0714700E287B3 /* WXBasicAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXBasicAnimationViewController.h; sourceTree = "<group>"; };
+		C71E2CBA22E0714700E287B3 /* WXBasicAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXBasicAnimationViewController.m; sourceTree = "<group>"; };
+		C71E2CBD22E0735000E287B3 /* WXBasicAnimationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXBasicAnimationTool.h; sourceTree = "<group>"; };
+		C71E2CBE22E0735000E287B3 /* WXBasicAnimationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXBasicAnimationTool.m; sourceTree = "<group>"; };
 		C723E11F2187F728004AF284 /* UIImage+PDFVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+PDFVector.h"; sourceTree = "<group>"; };
 		C723E1202187F728004AF284 /* UIImage+PDFVector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PDFVector.m"; sourceTree = "<group>"; };
 		C72A2EA520A1416C00D7E7E8 /* NSString+Regex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Regex.h"; sourceTree = "<group>"; };
@@ -354,6 +360,15 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		C71E2CBC22E0732300E287B3 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				C71E2CBD22E0735000E287B3 /* WXBasicAnimationTool.h */,
+				C71E2CBE22E0735000E287B3 /* WXBasicAnimationTool.m */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		C72A2EA420A140DF00D7E7E8 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +547,8 @@
 				CC0FFC85206F2BDA00179FC1 /* WXCoreMLViewController.m */,
 				C75175E320B3FDE000B89EE5 /* WXLockViewController.h */,
 				C75175E420B3FDE000B89EE5 /* WXLockViewController.m */,
+				C71E2CB922E0714700E287B3 /* WXBasicAnimationViewController.h */,
+				C71E2CBA22E0714700E287B3 /* WXBasicAnimationViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -777,6 +794,7 @@
 		CCA8D59420103FF100B225B6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C71E2CBC22E0732300E287B3 /* Animation */,
 				C7E35FCF22B0FF89001CB95A /* Downloader */,
 				C7C5F63F22963C9500509992 /* WXCrashKit */,
 				CCA8D5952010409200B225B6 /* WXVolumeButtonHandler.h */,
@@ -1052,7 +1070,9 @@
 				CCE7915220073BDA0055C51D /* UIImage+Scale.m in Sources */,
 				CCD7FC952057840C00AA35AF /* UIView+WXFrame.m in Sources */,
 				CCFB580C201B04FF0030BFF1 /* AppConfiguration.swift in Sources */,
+				C71E2CBF22E0735000E287B3 /* WXBasicAnimationTool.m in Sources */,
 				C71AAA9620BBEA3B00DB7152 /* UIView+WXBadge.m in Sources */,
+				C71E2CBB22E0714700E287B3 /* WXBasicAnimationViewController.m in Sources */,
 				CC71D3BC203E64DF00CFDDEA /* WXChangeIconViewController.m in Sources */,
 				CC1BCE58202C2D68009A0BCF /* WXSettingsViewController.m in Sources */,
 				CCFB57F32018869F0030BFF1 /* WXUserDefaults.m in Sources */,
