@@ -12,6 +12,7 @@
 @interface WXBasicAnimationViewController ()
 
 @property (nonatomic, strong)UIView *redView;
+@property (nonatomic, strong)UIView *secondRedView;
 
 @end
 
@@ -24,24 +25,42 @@
 
 - (void)setupView{
     UIView *redView = [[UIView alloc] init];
-    redView.frame = CGRectMake(100, 100, 50, 50);
+    redView.frame = CGRectMake(50, 100, 80, 80);
     redView.layer.backgroundColor = [UIColor redColor].CGColor;
     _redView = redView;
+    
+    UIView *secondRedView = [[UIView alloc] init];
+    secondRedView.frame = CGRectMake(280, 100, 80, 80);
+    secondRedView.layer.backgroundColor = [UIColor redColor].CGColor;
+    _secondRedView = secondRedView;
+    
     [self.view addSubview:redView];
+    [self.view addSubview:secondRedView];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapRedView:)];
     [redView addGestureRecognizer:tap];
+    
+    UITapGestureRecognizer *secondTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(secondTapRedView:)];
+    [secondRedView addGestureRecognizer:secondTap];
 }
 
 
 - (void)tapRedView:(UITapGestureRecognizer *)tapGesture{
+    
     [[WXBasicAnimationTool sharedInstance] startAnimationandView:self.redView
                                                          andRect:self.redView.frame
-                                                   andFinisnRect:CGPointMake(SCREEN_WIDTH - 50, SCREEN_HEIGHT - 50)
+                                                   andFinisnRect:CGRectMake(SCREEN_WIDTH/2.0, SCREEN_HEIGHT-100, 20, 20)
                                                   andFinishBlock:^(BOOL finish) {
                                                       
                                                   }];
 }
 
-
+- (void)secondTapRedView:(UITapGestureRecognizer *)tapGesture{
+    [[WXBasicAnimationTool sharedInstance] startAnimationandView:self.secondRedView
+                                                         andRect:self.secondRedView.frame
+                                                   andFinisnRect:CGRectMake(SCREEN_WIDTH/2.0, SCREEN_HEIGHT-100, 20, 20)
+                                                  andFinishBlock:^(BOOL finish) {
+                                                      
+                                                  }];
+}
 @end

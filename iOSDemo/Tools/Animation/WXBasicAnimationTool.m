@@ -39,7 +39,7 @@ static WXBasicAnimationTool *_instance = nil;
 
 - (void)startAnimationandView:(UIView *)view
                       andRect:(CGRect)rect
-                andFinisnRect:(CGPoint)finishPoint
+                andFinisnRect:(CGRect)finishRect
                andFinishBlock:(AnimationFinisnBlock)completion {
     if (_state == WXBasicAnimationStateStarted) {return;}
     
@@ -50,11 +50,9 @@ static WXBasicAnimationTool *_instance = nil;
     layer.contentsGravity = kCAGravityResizeAspect;
     
     // 改变做动画图片的大小
-    rect.size.width = 60;
-    rect.size.height = 60;   //重置图层尺寸
+    rect.size.width = rect.size.width * 0.9;
+    rect.size.height = rect.size.height * 0.9;   //重置图层尺寸
     layer.bounds = rect;
-//    layer.cornerRadius = rect.size.width/2;
-//    layer.masksToBounds = YES;          //圆角
     _layer = layer;
     
     AppDelegate *delegate = [UIApplication sharedApplication].delegate;
@@ -66,32 +64,37 @@ static WXBasicAnimationTool *_instance = nil;
     [path moveToPoint:layer.position];
     
     //确定抛物线的最高点位置  controlPoint
-    [path addQuadCurveToPoint:finishPoint controlPoint:CGPointMake(SCREEN_WIDTH/2 , rect.origin.y-80)];
+    [path addQuadCurveToPoint:CGPointMake(CGRectGetMidX(finishRect), CGRectGetMidY(finishRect)) controlPoint:CGPointMake(SCREEN_WIDTH/2 , rect.origin.y + rect.size.height / 2.0)];
     //关键帧动画
     CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     pathAnimation.path = path.CGPath;
     
+    //透明度变化
+    CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    opacityAnimation.fromValue = [NSNumber numberWithFloat:0];
+    opacityAnimation.toValue = [NSNumber numberWithFloat:1];
+    opacityAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    
+    //size变化
+    CABasicAnimation *sizeAnimation = [CABasicAnimation animationWithKeyPath:@"bounds"];
+    sizeAnimation.toValue = [NSValue valueWithCGRect:finishRect];
+    sizeAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    
     //往下抛时旋转小动画
-    CABasicAnimation *rotateAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-    rotateAnimation.removedOnCompletion = YES;
-    rotateAnimation.fromValue = [NSNumber numberWithFloat:0];
-    rotateAnimation.toValue = [NSNumber numberWithFloat:3];
+//    CABasicAnimation *rotateAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+//    rotateAnimation.removedOnCompletion = YES;
+//    rotateAnimation.fromValue = [NSNumber numberWithFloat:0];
+//    rotateAnimation.toValue = [NSNumber numberWithFloat:3];
+//
     
-    /**
-     *   kCAMediaTimingFunctionLinear   动画从头到尾的速度是相同的
-     kCAMediaTimingFunctionEaseIn   动画以低速开始。
-     kCAMediaTimingFunctionEaseOut  动画以低速结束。
-     kCAMediaTimingFunctionEaseInEaseOut   动画以低速开始和结束。
-     kCAMediaTimingFunctionDefault
-     */
-    
-    rotateAnimation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//    rotateAnimation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     CAAnimationGroup *groups = [CAAnimationGroup animation];
-    groups.animations = @[pathAnimation,rotateAnimation];
-    groups.duration = 1.2f;
+    groups.animations = @[pathAnimation, opacityAnimation, sizeAnimation];
+    groups.duration = 0.5f;
     
     //设置之后做动画的layer不会回到一开始的位置
-    groups.removedOnCompletion=NO;
+    groups.removedOnCompletion = NO;
     groups.fillMode=kCAFillModeForwards;
     
     groups.delegate = self;

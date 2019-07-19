@@ -21,13 +21,13 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param view 动画的view
  @param rect view的frame
- @param finishPoint 结束点
+ @param finishRect 结束点
  @param completion 结束回调
  */
 - (void)startAnimationandView:(UIView *)view
-                     andRect:(CGRect)rect
-               andFinisnRect:(CGPoint)finishPoint
-              andFinishBlock:(AnimationFinisnBlock)completion;
+                      andRect:(CGRect)rect
+                andFinisnRect:(CGRect)finishRect
+               andFinishBlock:(AnimationFinisnBlock)completion;
 
 @end
 
