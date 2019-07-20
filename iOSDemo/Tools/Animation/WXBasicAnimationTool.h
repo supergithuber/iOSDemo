@@ -2,7 +2,7 @@
 //  WXBasicAnimationTool.h
 //  iOSDemo
 //
-//  Created by HFY on 2019/7/18.
+//  Created by Wuxi on 2019/7/18.
 //  Copyright © 2019 Wuxi. All rights reserved.
 //
 
