@@ -26,6 +26,9 @@
 		C75222D921F6F67A0012DEF7 /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = C75222D821F6F67A0012DEF7 /* UIColor+Expanded.m */; };
 		C7579DBD20CA743E00B71380 /* UIScrollView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C7579DBC20CA743E00B71380 /* UIScrollView+Snapshot.m */; };
 		C7617E112277F0C2004E2106 /* CVPixelBuffer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7617E102277F0C2004E2106 /* CVPixelBuffer+Helpers.swift */; };
+		C773325122F7D0D0002F4438 /* WXMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C773324D22F7D0D0002F4438 /* WXMenuCell.m */; };
+		C773325322F7D0D0002F4438 /* WXMenuAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C773324F22F7D0D0002F4438 /* WXMenuAction.m */; };
+		C773325422F7D0D0002F4438 /* WXMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C773325022F7D0D0002F4438 /* WXMenuView.m */; };
 		C779D7A120AC0DE60083EE35 /* WXTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A020AC0DE60083EE35 /* WXTabbar.m */; };
 		C779D7A420AC170A0083EE35 /* WXCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A320AC170A0083EE35 /* WXCenterViewController.m */; };
 		C7898008216CE38700DCC2D8 /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7898007216CE38700DCC2D8 /* Device.framework */; };
@@ -179,6 +182,12 @@
 		C7579DBB20CA743E00B71380 /* UIScrollView+Snapshot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Snapshot.h"; sourceTree = "<group>"; };
 		C7579DBC20CA743E00B71380 /* UIScrollView+Snapshot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Snapshot.m"; sourceTree = "<group>"; };
 		C7617E102277F0C2004E2106 /* CVPixelBuffer+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CVPixelBuffer+Helpers.swift"; sourceTree = "<group>"; };
+		C773324A22F7D0D0002F4438 /* WXMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXMenuCell.h; sourceTree = "<group>"; };
+		C773324B22F7D0D0002F4438 /* WXMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXMenuView.h; sourceTree = "<group>"; };
+		C773324C22F7D0D0002F4438 /* WXMenuAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXMenuAction.h; sourceTree = "<group>"; };
+		C773324D22F7D0D0002F4438 /* WXMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMenuCell.m; sourceTree = "<group>"; };
+		C773324F22F7D0D0002F4438 /* WXMenuAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMenuAction.m; sourceTree = "<group>"; };
+		C773325022F7D0D0002F4438 /* WXMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMenuView.m; sourceTree = "<group>"; };
 		C779D79F20AC0DE60083EE35 /* WXTabbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTabbar.h; sourceTree = "<group>"; };
 		C779D7A020AC0DE60083EE35 /* WXTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTabbar.m; sourceTree = "<group>"; };
 		C779D7A220AC170A0083EE35 /* WXCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCenterViewController.h; sourceTree = "<group>"; };
@@ -433,6 +442,28 @@
 			path = CVPixelBuffer;
 			sourceTree = "<group>";
 		};
+		C773324722F7D072002F4438 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				C779D79F20AC0DE60083EE35 /* WXTabbar.h */,
+				C779D7A020AC0DE60083EE35 /* WXTabbar.m */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		C773324822F7D0D0002F4438 /* PopMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				C773324C22F7D0D0002F4438 /* WXMenuAction.h */,
+				C773324F22F7D0D0002F4438 /* WXMenuAction.m */,
+				C773324A22F7D0D0002F4438 /* WXMenuCell.h */,
+				C773324D22F7D0D0002F4438 /* WXMenuCell.m */,
+				C773324B22F7D0D0002F4438 /* WXMenuView.h */,
+				C773325022F7D0D0002F4438 /* WXMenuView.m */,
+			);
+			path = PopMenuView;
+			sourceTree = "<group>";
+		};
 		C79DCCB420B7EA9300C13117 /* PushedPresented */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,13 +614,13 @@
 		CC3D2EAB2005F553009E87F6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C773324822F7D0D0002F4438 /* PopMenuView */,
+				C773324722F7D072002F4438 /* Tabbar */,
 				CC6A21691FE7A39D00B18D36 /* SwipHintView.swift */,
 				CCE7915620074B710055C51D /* ClosureInitScrollView.swift */,
 				CC71D3CE203E763D00CFDDEA /* WXIconCollectionViewCell.h */,
 				CC71D3CF203E763D00CFDDEA /* WXIconCollectionViewCell.m */,
 				CC8BB950207C8FAD00CAD849 /* WXBlurNavigationBar.swift */,
-				C779D79F20AC0DE60083EE35 /* WXTabbar.h */,
-				C779D7A020AC0DE60083EE35 /* WXTabbar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1045,6 +1076,7 @@
 				CC56C2F820401A8700783A9F /* WXQRCodeViewController.m in Sources */,
 				CC7108562032F9B500E09BC5 /* PushAndPopViewController.m in Sources */,
 				CC0FFC86206F2BDA00179FC1 /* WXCoreMLViewController.m in Sources */,
+				C773325422F7D0D0002F4438 /* WXMenuView.m in Sources */,
 				CCA8D5972010409200B225B6 /* WXVolumeButtonHandler.m in Sources */,
 				C7C5F64322963D3900509992 /* WXCrashHandler.swift in Sources */,
 				CC56C30620411A5400783A9F /* WXQRCodeScanManager.m in Sources */,
@@ -1058,6 +1090,8 @@
 				CCAD93F6202D3E5E00414E47 /* WXBaseNavigationViewController.m in Sources */,
 				CC71085C2033111E00E09BC5 /* WXPresentTransition.m in Sources */,
 				C779D7A120AC0DE60083EE35 /* WXTabbar.m in Sources */,
+				C773325322F7D0D0002F4438 /* WXMenuAction.m in Sources */,
+				C773325122F7D0D0002F4438 /* WXMenuCell.m in Sources */,
 				C72D0F62209C125400D37FD0 /* UIImage+Convert.swift in Sources */,
 				C72A2EA720A1416C00D7E7E8 /* NSString+Regex.m in Sources */,
 				CC2BF31020089037009F1D9E /* WXConcurrentOperation.m in Sources */,
