@@ -31,8 +31,6 @@
 		C773325422F7D0D0002F4438 /* WXMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C773325022F7D0D0002F4438 /* WXMenuView.m */; };
 		C779D7A120AC0DE60083EE35 /* WXTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A020AC0DE60083EE35 /* WXTabbar.m */; };
 		C779D7A420AC170A0083EE35 /* WXCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A320AC170A0083EE35 /* WXCenterViewController.m */; };
-		C7898008216CE38700DCC2D8 /* Device.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7898007216CE38700DCC2D8 /* Device.framework */; };
-		C7898009216CE38D00DCC2D8 /* Device.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7898007216CE38700DCC2D8 /* Device.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C79DCCB320B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DCCB220B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m */; };
 		C79DCCB720B7EBC300C13117 /* WXSecondPushedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DCCB620B7EBC300C13117 /* WXSecondPushedViewController.m */; };
 		C79FC2E020E2353300D21B69 /* testLocalWebview.html in Resources */ = {isa = PBXBuildFile; fileRef = C79FC2DF20E2353300D21B69 /* testLocalWebview.html */; };
@@ -138,7 +136,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C7E35FD422B102DD001CB95A /* Alamofire.framework in Embed Frameworks */,
-				C7898009216CE38D00DCC2D8 /* Device.framework in Embed Frameworks */,
 				CC095C93201DB07100B9B69C /* YYKit.framework in Embed Frameworks */,
 				CC095C94201DB07100B9B69C /* SnapKit.framework in Embed Frameworks */,
 				CC6A2812201598FA001D3A91 /* Masonry.framework in Embed Frameworks */,
@@ -192,7 +189,6 @@
 		C779D7A020AC0DE60083EE35 /* WXTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTabbar.m; sourceTree = "<group>"; };
 		C779D7A220AC170A0083EE35 /* WXCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCenterViewController.h; sourceTree = "<group>"; };
 		C779D7A320AC170A0083EE35 /* WXCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXCenterViewController.m; sourceTree = "<group>"; };
-		C7898007216CE38700DCC2D8 /* Device.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Device.framework; path = Build/iOS/Device.framework; sourceTree = "<group>"; };
 		C79DCCB120B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSystemPushAndPopTableViewController.h; sourceTree = "<group>"; };
 		C79DCCB220B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXSystemPushAndPopTableViewController.m; sourceTree = "<group>"; };
 		C79DCCB520B7EBC300C13117 /* WXSecondPushedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXSecondPushedViewController.h; sourceTree = "<group>"; };
@@ -335,7 +331,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7898008216CE38700DCC2D8 /* Device.framework in Frameworks */,
 				CC095C92201DA34700B9B69C /* YYKit.framework in Frameworks */,
 				CC6A2811201598EF001D3A91 /* Masonry.framework in Frameworks */,
 				C7E35FD322B10246001CB95A /* Alamofire.framework in Frameworks */,
@@ -517,7 +512,6 @@
 			isa = PBXGroup;
 			children = (
 				C7E35FD222B10246001CB95A /* Alamofire.framework */,
-				C7898007216CE38700DCC2D8 /* Device.framework */,
 				CC095C91201DA34700B9B69C /* YYKit.framework */,
 				CC095C8F201DA33F00B9B69C /* SnapKit.framework */,
 			);

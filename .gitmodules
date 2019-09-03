@@ -1,0 +1,3 @@
+[submodule "submodules/WXDevice"]
+	path = submodules/WXDevice
+	url = https://github.com/supergithuber/Device
