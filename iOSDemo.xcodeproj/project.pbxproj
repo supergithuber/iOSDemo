@@ -29,6 +29,10 @@
 		C773325122F7D0D0002F4438 /* WXMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C773324D22F7D0D0002F4438 /* WXMenuCell.m */; };
 		C773325322F7D0D0002F4438 /* WXMenuAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C773324F22F7D0D0002F4438 /* WXMenuAction.m */; };
 		C773325422F7D0D0002F4438 /* WXMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C773325022F7D0D0002F4438 /* WXMenuView.m */; };
+		C775910D231E12FD009A2746 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = C77590F5231E12FD009A2746 /* README.MD */; };
+		C7759112231E12FD009A2746 /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77590FE231E12FD009A2746 /* DeviceModel.swift */; };
+		C7759113231E12FD009A2746 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77590FF231E12FD009A2746 /* Device.swift */; };
+		C7759114231E12FD009A2746 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7759100231E12FD009A2746 /* DeviceType.swift */; };
 		C779D7A120AC0DE60083EE35 /* WXTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A020AC0DE60083EE35 /* WXTabbar.m */; };
 		C779D7A420AC170A0083EE35 /* WXCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C779D7A320AC170A0083EE35 /* WXCenterViewController.m */; };
 		C79DCCB320B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C79DCCB220B7E8BE00C13117 /* WXSystemPushAndPopTableViewController.m */; };
@@ -185,6 +189,10 @@
 		C773324D22F7D0D0002F4438 /* WXMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMenuCell.m; sourceTree = "<group>"; };
 		C773324F22F7D0D0002F4438 /* WXMenuAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMenuAction.m; sourceTree = "<group>"; };
 		C773325022F7D0D0002F4438 /* WXMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMenuView.m; sourceTree = "<group>"; };
+		C77590F5231E12FD009A2746 /* README.MD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
+		C77590FE231E12FD009A2746 /* DeviceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
+		C77590FF231E12FD009A2746 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		C7759100231E12FD009A2746 /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		C779D79F20AC0DE60083EE35 /* WXTabbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTabbar.h; sourceTree = "<group>"; };
 		C779D7A020AC0DE60083EE35 /* WXTabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTabbar.m; sourceTree = "<group>"; };
 		C779D7A220AC170A0083EE35 /* WXCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXCenterViewController.h; sourceTree = "<group>"; };
@@ -459,6 +467,41 @@
 			path = PopMenuView;
 			sourceTree = "<group>";
 		};
+		C77590F0231E12FD009A2746 /* submodules */ = {
+			isa = PBXGroup;
+			children = (
+				C77590F1231E12FD009A2746 /* WXDevice */,
+			);
+			path = submodules;
+			sourceTree = "<group>";
+		};
+		C77590F1231E12FD009A2746 /* WXDevice */ = {
+			isa = PBXGroup;
+			children = (
+				C77590F5231E12FD009A2746 /* README.MD */,
+				C77590F6231E12FD009A2746 /* WXDevice */,
+			);
+			path = WXDevice;
+			sourceTree = "<group>";
+		};
+		C77590F6231E12FD009A2746 /* WXDevice */ = {
+			isa = PBXGroup;
+			children = (
+				C77590FD231E12FD009A2746 /* Device */,
+			);
+			path = WXDevice;
+			sourceTree = "<group>";
+		};
+		C77590FD231E12FD009A2746 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				C77590FE231E12FD009A2746 /* DeviceModel.swift */,
+				C77590FF231E12FD009A2746 /* Device.swift */,
+				C7759100231E12FD009A2746 /* DeviceType.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
 		C79DCCB420B7EA9300C13117 /* PushedPresented */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,6 +698,7 @@
 		CC40F6501E6E5F87009D144C = {
 			isa = PBXGroup;
 			children = (
+				C77590F0231E12FD009A2746 /* submodules */,
 				CC095C8E201DA32E00B9B69C /* Carthage */,
 				CC6A280F201598EF001D3A91 /* Framework */,
 				CC40F65B1E6E5F88009D144C /* iOSDemo */,
@@ -1020,6 +1064,7 @@
 				CC71D3C4203E6AB400CFDDEA /* icon_red@3x.png in Resources */,
 				CC71D3C8203E6AB400CFDDEA /* icon_ball@3x.png in Resources */,
 				CC40F6691E6E5F88009D144C /* Assets.xcassets in Resources */,
+				C775910D231E12FD009A2746 /* README.MD in Resources */,
 				CC1BCE47202C2851009A0BCF /* WXLocalizable.strings in Resources */,
 				CC71D3C6203E6AB400CFDDEA /* icon_blue@3x.png in Resources */,
 				CC71D3C9203E6AB400CFDDEA /* icon_blue@2x.png in Resources */,
@@ -1092,6 +1137,7 @@
 				CC3D2EAA2005F1C3009E87F6 /* SemaphoreViewController.m in Sources */,
 				CC6EB22A2021CE0B0002BA14 /* WXARText.m in Sources */,
 				CC2EC367204D3A73000750F8 /* WXBezierViewController.m in Sources */,
+				C7759113231E12FD009A2746 /* Device.swift in Sources */,
 				CC095C89200F8C3E00B9B69C /* UIImage+FaceRecognizer.m in Sources */,
 				CC2BF3012008528B009F1D9E /* OperationViewController.m in Sources */,
 				CC40F6611E6E5F88009D144C /* AppDelegate.m in Sources */,
@@ -1118,7 +1164,9 @@
 				CC3D2EB32005FAA0009E87F6 /* UIViewController+GetViewController.m in Sources */,
 				CC0FFC92206F3E4E00179FC1 /* GoogLeNetPlaces.mlmodel in Sources */,
 				CC6A216A1FE7A39D00B18D36 /* SwipHintView.swift in Sources */,
+				C7759112231E12FD009A2746 /* DeviceModel.swift in Sources */,
 				C723E1212187F728004AF284 /* UIImage+PDFVector.m in Sources */,
+				C7759114231E12FD009A2746 /* DeviceType.swift in Sources */,
 				C75175E520B3FDE000B89EE5 /* WXLockViewController.m in Sources */,
 				CC1BCE4E202C2A6E009A0BCF /* WXConsoleViewController.m in Sources */,
 				CC72CD621F8F163500CADF32 /* TimerViewController.m in Sources */,
