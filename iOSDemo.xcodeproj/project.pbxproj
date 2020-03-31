@@ -1015,7 +1015,7 @@
 				TargetAttributes = {
 					CC40F6581E6E5F88009D144C = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = KYFVDC483X;
+						DevelopmentTeam = 3X56GW5H23;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
@@ -1453,7 +1453,7 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = KYFVDC483X;
+				DEVELOPMENT_TEAM = 3X56GW5H23;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
