@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE8FB8EA2432EA610000E067 /* WXMachOImageLoader.c in Sources */ = {isa = PBXBuildFile; fileRef = BE8FB8E92432EA610000E067 /* WXMachOImageLoader.c */; };
 		C7006B4D22D86A67002FA090 /* DateOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7006B4C22D86A67002FA090 /* DateOperators.swift */; };
 		C7006B4F22D86A92002FA090 /* DateSuger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7006B4E22D86A92002FA090 /* DateSuger.swift */; };
 		C7006B5122D87F02002FA090 /* Regular in Resources */ = {isa = PBXBuildFile; fileRef = C7006B5022D87F02002FA090 /* Regular */; };
@@ -150,6 +151,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE8FB8E82432EA610000E067 /* WXMachOImageLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXMachOImageLoader.h; sourceTree = "<group>"; };
+		BE8FB8E92432EA610000E067 /* WXMachOImageLoader.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = WXMachOImageLoader.c; sourceTree = "<group>"; };
 		C7006B4C22D86A67002FA090 /* DateOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateOperators.swift; sourceTree = "<group>"; };
 		C7006B4E22D86A92002FA090 /* DateSuger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSuger.swift; sourceTree = "<group>"; };
 		C7006B5022D87F02002FA090 /* Regular */ = {isa = PBXFileReference; lastKnownFileType = text; path = Regular; sourceTree = "<group>"; };
@@ -363,6 +366,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE8FB8E42432E7850000E067 /* MachOImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				BE8FB8E82432EA610000E067 /* WXMachOImageLoader.h */,
+				BE8FB8E92432EA610000E067 /* WXMachOImageLoader.c */,
+			);
+			path = MachOImageLoader;
+			sourceTree = "<group>";
+		};
 		C7006B4B22D86A1D002FA090 /* Date */ = {
 			isa = PBXGroup;
 			children = (
@@ -863,6 +875,7 @@
 		CCA8D59420103FF100B225B6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				BE8FB8E42432E7850000E067 /* MachOImageLoader */,
 				C71E2CBC22E0732300E287B3 /* Animation */,
 				C7E35FCF22B0FF89001CB95A /* Downloader */,
 				C7C5F63F22963C9500509992 /* WXCrashKit */,
@@ -1156,6 +1169,7 @@
 				C7617E112277F0C2004E2106 /* CVPixelBuffer+Helpers.swift in Sources */,
 				C72A2EE420A1A13600D7E7E8 /* NSString+Encryption.m in Sources */,
 				C7E35FD122B0FFA5001CB95A /* Downloader.swift in Sources */,
+				BE8FB8EA2432EA610000E067 /* WXMachOImageLoader.c in Sources */,
 				C72D0F60209B142A00D37FD0 /* UIImage+Convert.m in Sources */,
 				C72A2EEB20A2D1C500D7E7E8 /* UIButton+CountDown.m in Sources */,
 				CC6EB225202162250002BA14 /* WXARTextViewController.m in Sources */,

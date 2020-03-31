@@ -15,6 +15,9 @@
 
 #endif /* iOSDemo_prefix_pch */
 
+//这个宏定义的作用是保证只有oc文件可以调用pch里面的头文件，一些非oc语言不能调用，比如.cpp,.mm, .c。如果不加入，那么如果代码中带有.cpp,.mm, .c文件，那么将报错。NSObjCRuntime.h  NSObject.h  NSZone.h将会报出编译异常。
+#ifdef __OBJC__
+
 #import "WXConsoleViewController.h"
 
 //common define
@@ -47,3 +50,5 @@
 #define isOperatingSystemAtLeastVersion(majorVersion, minorVersion, patchVersion)[[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion: (NSOperatingSystemVersion) {majorVersion, minorVersion, patchVersion}]
 //shortCuts
 #define kSiriShortString @"com.sivanWu.userActivity"
+
+#endif
